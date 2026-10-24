@@ -1,0 +1,1587 @@
+{
+  "source_report": "벼 옥수수 병해 자료 수집.md",
+  "checked_date": "2026-10-23",
+  "note": "텍스트의 Markdown 링크 [이름](URL)이 각 주장의 출처이며, '미확인'은 원문 그대로 유지됨.",
+  "diseases": [
+    {
+      "no": 1,
+      "crop": "벼",
+      "user_name": "도열병",
+      "official_kr_name": "도열병(NCPMS 잎도열병·이삭도열병, LPDK)",
+      "scientific_name": "*Pyricularia oryzae*",
+      "kr_occurrence": "있음(LPDK 1918)",
+      "kr_quarantine": "규제비검역병해충(벼 종자, 고시상 \"이삭마름병\")",
+      "commercial_image": "있음(Bugwood 주의)",
+      "section_title": "도열병 (Rice blast) — *Pyricularia oryzae*",
+      "fields": {
+        "f1_names": {
+          "label": "공식 국명·영문명·학명·동의어",
+          "text": "NCPMS는 작물 '논벼' 아래 **잎도열병**과 **이삭도열병**(稻熱病, Blast)을 별도 항목으로 등재한다([NCPMS 잎도열병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00004234&totalSearchYn=Y), 기본정보; [NCPMS 이삭도열병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000815&totalSearchYn=Y), 기본정보). 한국식물병명목록(LPDK)은 병명 '도열병'(Blast)에 두 번째 이름 '이삭마름병'(穗枯病, Ear blight)을 병기하고, 현행 병원체를 *Pyricularia oryzae* Cavara(유성세대 *Magnaporthe oryzae* B.C. Couch)로 적는다. 같은 병명 아래 *P. grisea*(유성세대 *M. grisea*) 행도 남아 있다([LPDK](https://genebank.rda.go.kr/english/plntDissInfoMain.do), 기주 Rice 도열병 2개 행). NCPMS는 옛 이름 *Magnaporthe grisea*를 병원체명으로 쓰고 \"[=분생자시대 *Pyricularia oryzae*]\"로 병기한다([NCPMS 잎도열병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00004234&totalSearchYn=Y), 병원체 정보). EPPO 우선명은 *Pyricularia oryzae* Cavara(PYRIOR)이고 이명은 *Dactylaria oryzae*, *Magnaporthe oryzae*, 영명은 rice blast, rotten neck of rice, seedling blight of rice 등이다([EPPO PYRIOR](https://gd.eppo.int/taxon/PYRIOR), Overview). IRRI는 'Blast (leaf and collar)'와 'Blast (node and neck)' 두 fact sheet로 나눈다([IRRI RKB 잎·잎목](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-leaf-collar)). APS 표준 영명은 페이지 403으로 미확인이다.",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00004234&totalSearchYn=Y",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000815&totalSearchYn=Y",
+            "https://genebank.rda.go.kr/english/plntDissInfoMain.do",
+            "https://gd.eppo.int/taxon/PYRIOR",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-leaf-collar"
+          ],
+          "contains_미확인": true
+        },
+        "f2_parts_stages": {
+          "label": "피해 부위와 생육 단계",
+          "text": "잎, 잎목, 마디, 이삭목, 이삭 등 지상부 전체를 침해하며, 모든 생육단계에서 발생하지만 성체저항성이 생기면 잎도열병은 줄고, 묘~분얼기에는 식물을 죽일 수 있다([IRRI RKB 잎·잎목](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-leaf-collar), What it does·Why and where it occurs). 국내에서는 종자 전염으로 육묘상부터 병반이 생기고, 본답에서는 주로 **6월 하순**부터 발생하며, 이삭도열병은 출수기 전후에 감염되고 상위엽 병반이 주 전염원이다([NCPMS 잎도열병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00004234&totalSearchYn=Y), 발생환경). 유숙기 전에 이삭목이 감염되면 낟알이 형성되지 않는다([IRRI RKB 마디·이삭목](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-node-neck), How to identify).",
+          "source_urls": [
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-leaf-collar",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00004234&totalSearchYn=Y",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-node-neck"
+          ],
+          "contains_미확인": false
+        },
+        "f3_symptoms": {
+          "label": "주요 증상",
+          "text": "잎에는 흰색~회녹색 초기 병반이 짙은 녹색 테두리를 갖고, 오래되면 **중앙이 회백색이고 가장자리가 적갈색인 방추형·마름모꼴 병반**이 된다([IRRI RKB 잎·잎목](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-leaf-collar), How to identify). NCPMS는 만성형은 가장자리가 붉고 급성형은 잿빛 곰팡이(분생포자)가 덮으며, 심하면 포기 전체가 붉어지고 자라지 못한다(좌지)고 적는다([NCPMS 잎도열병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00004234&totalSearchYn=Y), 증상설명). 마디에는 띠 모양 흑색~회갈색 병반이 생겨 꺾이고, 이삭목은 회갈색 병반이 둘러싸 이삭이 쭉정이가 된다([IRRI RKB 마디·이삭목](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-node-neck); [NCPMS 이삭도열병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000815&totalSearchYn=Y), 증상설명).",
+          "source_urls": [
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-leaf-collar",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00004234&totalSearchYn=Y",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-node-neck",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000815&totalSearchYn=Y"
+          ],
+          "contains_미확인": false
+        },
+        "f4_confusions": {
+          "label": "혼동하기 쉬운 병과 비생물적 장해",
+          "text": "깨씨무늬병은 병반이 더 둥글고 갈색이며 노란 halo가 있다([IRRI RKB 잎·잎목](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-leaf-collar), 하단 비교 문단). 깨씨무늬병은 도열병처럼 이삭 끝부터 빠르게 침해하거나 백수를 만들지 않는다([NCPMS 깨씨무늬병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y), 증상설명 끝). 이삭목·마디도열병의 백수(whitehead)는 이화명나방 피해와 비슷하다([IRRI RKB 마디·이삭목](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-node-neck)). LPDK에는 이름이 비슷한 '거짓도열병'(*Alternaria oryzae*, *Cladosporium herbarum*)이 따로 있다([LPDK](https://genebank.rda.go.kr/english/plntDissInfoMain.do), 거짓도열병 행). 냉해·제초제 약해·칼륨 결핍과 직접 비교한 공식 출처는 미확인이다.",
+          "source_urls": [
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-leaf-collar",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-node-neck",
+            "https://genebank.rda.go.kr/english/plntDissInfoMain.do"
+          ],
+          "contains_미확인": true
+        },
+        "f5_differentiation": {
+          "label": "구별을 위한 추가 사진·질문·검사",
+          "text": "*사진만으로 구별 가능한 특징:* 방추형·마름모꼴 병반, 회백색 중앙과 적갈색 테두리, 초기의 짙은 녹색 테두리, 마디의 띠 모양 흑갈색 병반, 이삭목을 둘러싼 회갈색 병반, 급성형 병반 표면의 잿빛 곰팡이([IRRI RKB 잎·잎목](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-leaf-collar); [NCPMS 잎도열병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00004234&totalSearchYn=Y), 증상설명). 깨씨무늬병과는 품종에 따라 병반이 겹칠 수 있다(IRRI 두 페이지가 상호 혼동을 명시).\n*추가로 받을 사진·질문·현장 검사:* 백수 줄기를 잡아당겨 빠지면 이화명나방, 빠지지 않으면 이삭목·마디도열병([IRRI RKB 마디·이삭목](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-node-neck), How to identify 글머리표). 질소·가축분 퇴비 시용량, 냉수 유입, 출수기 강우를 묻는다([NCPMS 잎도열병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00004234&totalSearchYn=Y), 발생환경·방제방법).\n*실험실 검사가 필요한 특징:* 분생포자는 무색 서양배 모양, 격막 2개, 14~37 × 5~12 µm이며 배지에서 흑갈색 자낭각을 만든다([NCPMS 잎도열병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00004234&totalSearchYn=Y), 병원체 특징). 깨씨무늬병균의 원통형 6~14격막 포자와 확연히 다르므로 검경으로 두 병을 확정 구별할 수 있다. PCR·ELISA 공식 프로토콜과 습실처리 표준 절차는 미확인이다.",
+          "source_urls": [
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-leaf-collar",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00004234&totalSearchYn=Y",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-node-neck"
+          ],
+          "contains_미확인": true,
+          "parts": {
+            "f5a_photo_only": "방추형·마름모꼴 병반, 회백색 중앙과 적갈색 테두리, 초기의 짙은 녹색 테두리, 마디의 띠 모양 흑갈색 병반, 이삭목을 둘러싼 회갈색 병반, 급성형 병반 표면의 잿빛 곰팡이([IRRI RKB 잎·잎목](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-leaf-collar); [NCPMS 잎도열병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00004234&totalSearchYn=Y), 증상설명). 깨씨무늬병과는 품종에 따라 병반이 겹칠 수 있다(IRRI 두 페이지가 상호 혼동을 명시).",
+            "f5b_extra_requests": "백수 줄기를 잡아당겨 빠지면 이화명나방, 빠지지 않으면 이삭목·마디도열병([IRRI RKB 마디·이삭목](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-node-neck), How to identify 글머리표). 질소·가축분 퇴비 시용량, 냉수 유입, 출수기 강우를 묻는다([NCPMS 잎도열병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00004234&totalSearchYn=Y), 발생환경·방제방법).",
+            "f5c_lab_tests": "분생포자는 무색 서양배 모양, 격막 2개, 14~37 × 5~12 µm이며 배지에서 흑갈색 자낭각을 만든다([NCPMS 잎도열병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00004234&totalSearchYn=Y), 병원체 특징). 깨씨무늬병균의 원통형 6~14격막 포자와 확연히 다르므로 검경으로 두 병을 확정 구별할 수 있다. PCR·ELISA 공식 프로토콜과 습실처리 표준 절차는 미확인이다."
+          }
+        },
+        "f6_conditions": {
+          "label": "발생 조건과 근거",
+          "text": "병원균 생육온도 8~37 ℃, 적온 25~28 ℃, 분생포자 형성온도 12~34 ℃(원논문 표기 없음)이며, 비가 잦고 여름 기온이 낮은 해(특히 냉해)와 출수기 전후 음습한 날씨에 대발생하고 질소 과다 시 심해진다([NCPMS 잎도열병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00004234&totalSearchYn=Y), 병원체 특징·발생환경). IRRI는 낮은 토양수분, 잦고 긴 소나기, 서늘한 낮 기온, 큰 일교차로 인한 이슬을 들고 규소 결핍 토양에서 규산 시용이 발생을 줄인다고 적는다([IRRI RKB 잎·잎목](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-leaf-collar), Why and where it occurs·How to manage). 감염에 필요한 잎 젖음 시간과 상대습도 임계값은 미확인이다.",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00004234&totalSearchYn=Y",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-leaf-collar"
+          ],
+          "contains_미확인": true
+        },
+        "f7_occurrence": {
+          "label": "한국 및 해외 발생 기록",
+          "text": "한국: LPDK의 최초 문헌은 瀧元淸透, 舊朝鮮農會報 13(12):34 (**1918**)이고, *P. oryzae* 행에는 강창식 등 1972, 권진숙 등 1985가 있다([LPDK](https://genebank.rda.go.kr/english/plntDissInfoMain.do), 도열병 행 문헌정보). 해외: EPPO는 국가별 분포를 제공하며 한국·북한을 \"Present, no details\"로 적는다([EPPO PYRIOR distribution](https://gd.eppo.int/taxon/PYRIOR/distribution), Asia 표). CABI 분포는 미확인이다.",
+          "source_urls": [
+            "https://genebank.rda.go.kr/english/plntDissInfoMain.do",
+            "https://gd.eppo.int/taxon/PYRIOR/distribution"
+          ],
+          "contains_미확인": true
+        },
+        "f8_quarantine": {
+          "label": "국가별 검역 지위",
+          "text": "한국: **규제비검역병해충**(고시 별표 3 \"1. 곡물종자류 가. 벼\" 3번, 국문명 \"이삭마름병\", 최고한도 원원종/원종/보급종 5.0/10.0/10.0 %, 4번 깨씨무늬병과 합산, \"기타병\")이며 금지·관리병해충에는 미등재(확인)([KR-고시 별표 3](https://www.law.go.kr/LSW/flDownload.do?flSeq=169519071); [KR-고시 별표 2](https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059)). EPPO: A1/A2 미등재(확인), 국가 항목은 이집트 RNQP(2018)뿐([EPPO PYRIOR](https://gd.eppo.int/taxon/PYRIOR/categorization)). EU: 미등재(확인)([EU-2072](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015)). 미국: select agent 아님(확인), 규제병해충표 미확인([US-331](https://www.ecfr.gov/current/title-7/section-331.3)). 중국: 미등재(확인)([CN](https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc)). 일본: 미등재(확인)([JP](https://laws.e-gov.go.jp/law/325M50010000073)). 호주: 미확인.",
+          "source_urls": [
+            "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519071",
+            "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059",
+            "https://gd.eppo.int/taxon/PYRIOR/categorization",
+            "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+            "https://www.ecfr.gov/current/title-7/section-331.3",
+            "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+            "https://laws.e-gov.go.jp/law/325M50010000073"
+          ],
+          "contains_미확인": true
+        },
+        "f9_images": {
+          "label": "사용 가능한 이미지와 이용허락",
+          "text": "상업 이용 후보: [Bugwood 5390479](https://www.ipmimages.org/browse/image/5390479)(Donald Groth, LSU AgCenter, CC BY 3.0 US; 5390481·5390509도 CC BY, Bugwood 정책상 상업 이용 시 요청 권고). Commons: [Rice blast symptoms.jpg](https://commons.wikimedia.org/wiki/File:Rice_blast_symptoms.jpg)(Public domain 표기, Groth/Bugwood — **Bugwood 원본 CC BY와 표기 충돌**), [Conidia of Pyricularia oryzae](https://commons.wikimedia.org/wiki/File:Conidia_of_Pyricularia_oryzae_(rice_blast_fungus).jpg)(CC0, 분생포자), [Magnaporthe grisea.jpg](https://commons.wikimedia.org/wiki/File:Magnaporthe_grisea.jpg)(CC BY 2.5). \"Rice blast Magnaporthe grisea.jpg\"(PD, 작성자 공란)는 출처 검증이 필요해 후보에서 뺐다. 비상업·허락 필요: [IRRI Flickr 5575811721](https://www.flickr.com/photos/ricephotos/5575811721/)(CC BY-NC-SA 2.0 ⛔), [EPPO PYRIOR photos](https://gd.eppo.int/taxon/PYRIOR/photos) #8941·#13798(교육용만 ⛔; #17389·#17390은 손가락조 도열병이라 벼 아님), IRRI RKB 사진(CC BY-NC-SA 3.0 배지 ⛔), NCPMS 사진(잎도열병 병 2·병원체 2, 이삭도열병 병 4·병원체 2; 상업적 이용금지 ⛔).",
+          "source_urls": [
+            "https://www.ipmimages.org/browse/image/5390479",
+            "https://commons.wikimedia.org/wiki/File:Rice_blast_symptoms.jpg",
+            "https://commons.wikimedia.org/wiki/File:Conidia_of_Pyricularia_oryzae_(rice_blast_fungus",
+            "https://commons.wikimedia.org/wiki/File:Magnaporthe_grisea.jpg",
+            "https://www.flickr.com/photos/ricephotos/5575811721/",
+            "https://gd.eppo.int/taxon/PYRIOR/photos"
+          ],
+          "contains_미확인": false
+        }
+      },
+      "source_urls": [
+        "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00004234&totalSearchYn=Y",
+        "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000815&totalSearchYn=Y",
+        "https://genebank.rda.go.kr/english/plntDissInfoMain.do",
+        "https://gd.eppo.int/taxon/PYRIOR",
+        "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-leaf-collar",
+        "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-node-neck",
+        "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y",
+        "https://gd.eppo.int/taxon/PYRIOR/distribution",
+        "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519071",
+        "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059",
+        "https://gd.eppo.int/taxon/PYRIOR/categorization",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+        "https://www.ecfr.gov/current/title-7/section-331.3",
+        "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+        "https://laws.e-gov.go.jp/law/325M50010000073",
+        "https://www.ipmimages.org/browse/image/5390479",
+        "https://commons.wikimedia.org/wiki/File:Rice_blast_symptoms.jpg",
+        "https://commons.wikimedia.org/wiki/File:Conidia_of_Pyricularia_oryzae_(rice_blast_fungus",
+        "https://commons.wikimedia.org/wiki/File:Magnaporthe_grisea.jpg",
+        "https://www.flickr.com/photos/ricephotos/5575811721/",
+        "https://gd.eppo.int/taxon/PYRIOR/photos"
+      ]
+    },
+    {
+      "no": 2,
+      "crop": "벼",
+      "user_name": "잎집무늬마름병",
+      "official_kr_name": "잎집무늬마름병",
+      "scientific_name": "*Rhizoctonia solani*",
+      "kr_occurrence": "있음(LPDK 1930)",
+      "kr_quarantine": "벼에는 미등재(감자 씨감자 RNQP만)",
+      "commercial_image": "있음(Commons PD, Bugwood)",
+      "section_title": "잎집무늬마름병 (Sheath blight) — *Rhizoctonia solani*",
+      "fields": {
+        "f1_names": {
+          "label": "공식 국명·영문명·학명·동의어",
+          "text": "NCPMS는 **잎집무늬마름병**(紋枯病, Sheath blight)으로 등재하고 병원체를 *Thanatephorus cucumeris* (Frank) Donk로 적는다([NCPMS 잎집무늬마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000813&totalSearchYn=Y), 기본정보·병원체 정보). LPDK는 현행 병원체를 *Rhizoctonia solani* J.G. Kühn, 유성세대를 *T. cucumeris*, 이명을 *Moniliopsis solani*, *Pellicularia solani*로 적는다([LPDK](https://genebank.rda.go.kr/english/plntDissInfoMain.do), 잎집무늬마름병 행). EPPO 우선명은 *R. solani* Kühn(RHIZSO)이고 이명에 *Corticium solani*, *Pellicularia filamentosa*, *Hypochnus solani* 등이 있으며, 일반명 목록에서 \"sheath blight of rice\"는 확인하지 못했다(목록이 잘림)([EPPO RHIZSO](https://gd.eppo.int/taxon/RHIZSO), Overview). **균사융합군 AG1-IA 표기는 LPDK·NCPMS·IRRI 어디에도 없다**([IRRI RKB 잎집무늬마름병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight), What it does).",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000813&totalSearchYn=Y",
+            "https://genebank.rda.go.kr/english/plntDissInfoMain.do",
+            "https://gd.eppo.int/taxon/RHIZSO",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight"
+          ],
+          "contains_미확인": false
+        },
+        "f2_parts_stages": {
+          "label": "피해 부위와 생육 단계",
+          "text": "보통 분얼기~유숙기에 증상이 보이며, 담수 논에서는 수면 바로 위 잎집에서 시작해 위쪽 잎집과 잎, 이웃 포기로 번진다([IRRI RKB 잎집무늬마름병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight), How to identify·What it does). 국내에서는 **7월 하순~8월 상순**에 대부분 균핵을 만들고 병반이 점차 위로 올라간다([NCPMS 잎집무늬마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000813&totalSearchYn=Y), 증상설명).",
+          "source_urls": [
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000813&totalSearchYn=Y"
+          ],
+          "contains_미확인": false
+        },
+        "f3_symptoms": {
+          "label": "주요 증상",
+          "text": "잎집에 길이 1~3 cm의 타원형 회녹색 병반이 생기고, 오래되면 중앙이 회백색이고 테두리가 갈색이 된다([IRRI RKB 잎집무늬마름병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight), How to identify). NCPMS는 데친 것 같은 수침상 타원형 병반이 암녹색으로 커지고 주변이 연갈색으로 변하며, **균핵은 대개 1~2 mm 갈색 원형**이라고 적는다([NCPMS 잎집무늬마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000813&totalSearchYn=Y), 증상설명·병원체 특징).",
+          "source_urls": [
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000813&totalSearchYn=Y"
+          ],
+          "contains_미확인": false
+        },
+        "f4_confusions": {
+          "label": "혼동하기 쉬운 병과 비생물적 장해",
+          "text": "IRRI는 stem rot과 stem borer 피해를 혼동 대상으로 들며, 잎집 병반 형태와 균핵 유무로 확인하라고 한다([IRRI RKB 잎집무늬마름병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight), 마지막 문단; [Rice Doctor Sheath blight](https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Sheath_blight.htm)). LPDK에는 국내 유사 균핵병 계열이 따로 있다: 잎집눈무늬병(*R. cerealis*), 적색균핵병(*R. oryzae*), 갈색균핵병(*R. oryzae-sativae*), 공균핵병, 회색균핵병, 좀공균핵병(Stem rot, *Magnaporthe salvinii*), 잎집썩음병(*Sarocladium*, *Pantoea ananatis*), 잎집갈색썩음병(*Pseudomonas fuscovaginae*)([LPDK](https://genebank.rda.go.kr/english/plntDissInfoMain.do), 해당 행). 이들과의 증상 차이를 서술한 출처와 비생물적 장해 비교 출처는 미확인이다.",
+          "source_urls": [
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight",
+            "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Sheath_blight.htm",
+            "https://genebank.rda.go.kr/english/plntDissInfoMain.do"
+          ],
+          "contains_미확인": true
+        },
+        "f5_differentiation": {
+          "label": "구별을 위한 추가 사진·질문·검사",
+          "text": "*사진만으로 구별 가능한 특징:* 수면·지면 가까운 잎집에서 시작하는 1~3 cm 회녹색 타원 병반, 회백색 중앙과 갈색 테두리, 1~2 mm 갈색 균핵([IRRI RKB 잎집무늬마름병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight); [NCPMS 잎집무늬마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000813&totalSearchYn=Y), 병원체 특징). 다만 다른 *Rhizoctonia*류 균핵병과 겹치므로 '의심' 단계로 다룬다.\n*추가로 받을 사진·질문·현장 검사:* 균핵 근접 사진, 질소 시비량·밀식 여부·품종([NCPMS 잎집무늬마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000813&totalSearchYn=Y), 발생환경).\n*실험실 검사가 필요한 특징:* 병원균은 공기 전염 포자를 만들지 않고 균사로 퍼진다([IRRI RKB 잎집무늬마름병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight)). AG 판정(균사융합검정, ITS 등)과 유사 *Rhizoctonia* 종 구별에 관한 공식 기관 절차는 미확인이다. 국내 AG-1 IA 비율에 관한 연구(2,276균주 중 AG-1 1,091, IA 791)는 검색 스니펫으로만 보여 원문 미확인이다.",
+          "source_urls": [
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000813&totalSearchYn=Y"
+          ],
+          "contains_미확인": true,
+          "parts": {
+            "f5a_photo_only": "수면·지면 가까운 잎집에서 시작하는 1~3 cm 회녹색 타원 병반, 회백색 중앙과 갈색 테두리, 1~2 mm 갈색 균핵([IRRI RKB 잎집무늬마름병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight); [NCPMS 잎집무늬마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000813&totalSearchYn=Y), 병원체 특징). 다만 다른 *Rhizoctonia*류 균핵병과 겹치므로 '의심' 단계로 다룬다.",
+            "f5b_extra_requests": "균핵 근접 사진, 질소 시비량·밀식 여부·품종([NCPMS 잎집무늬마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000813&totalSearchYn=Y), 발생환경).",
+            "f5c_lab_tests": "병원균은 공기 전염 포자를 만들지 않고 균사로 퍼진다([IRRI RKB 잎집무늬마름병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight)). AG 판정(균사융합검정, ITS 등)과 유사 *Rhizoctonia* 종 구별에 관한 공식 기관 절차는 미확인이다. 국내 AG-1 IA 비율에 관한 연구(2,276균주 중 AG-1 1,091, IA 791)는 검색 스니펫으로만 보여 원문 미확인이다."
+          }
+        },
+        "f6_conditions": {
+          "label": "발생 조건과 근거",
+          "text": "국내 기준: 침입 가능 온도 **22~35 ℃, 최적 30~32 ℃**, 포기 사이 **습도 96% 이상** 지속 시 다발생, 질소 과다·밀식·재배시기·품종이 영향(원논문 표기 없음)([NCPMS 잎집무늬마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000813&totalSearchYn=Y), 발생환경). IRRI 기준: 28~32 ℃, 고질소, 캐노피 RH 85~100%, 우기, 밀식, 물에 뜬 균핵, 다수확 품종; 이병 작물은 m²당 최대 200만 개 균핵을 만든다([IRRI RKB 잎집무늬마름병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight), Why and where it occurs). Rice Doctor는 균핵 수치의 출처를 Chien et al. 1969로 적는다([Rice Doctor Sheath blight](https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Sheath_blight.htm)). IRRI는 재배용 저항성 품종이 없다고 적는다.",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000813&totalSearchYn=Y",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight",
+            "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Sheath_blight.htm"
+          ],
+          "contains_미확인": false
+        },
+        "f7_occurrence": {
+          "label": "한국 및 해외 발생 기록",
+          "text": "한국: LPDK 최초 문헌은 武內晴好 등, 朝鮮總督府 農事試驗場彙報 5(6):406 (**1930**)이고 이후 1962, 1988, 1990년 문헌이 있다([LPDK](https://genebank.rda.go.kr/english/plntDissInfoMain.do), 잎집무늬마름병 행). 해외: EPPO RHIZSO에는 Distribution 탭이 없다([EPPO RHIZSO](https://gd.eppo.int/taxon/RHIZSO)). IRRI는 일본 최대 20% 손실(12만~19만 ha), 미국 감수성 품종 50%, 열대 아시아 6% 손실 사례를 든다([IRRI RKB 잎집무늬마름병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight), Why is it important). 국가별 분포표는 미확인이다.",
+          "source_urls": [
+            "https://genebank.rda.go.kr/english/plntDissInfoMain.do",
+            "https://gd.eppo.int/taxon/RHIZSO",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight"
+          ],
+          "contains_미확인": true
+        },
+        "f8_quarantine": {
+          "label": "국가별 검역 지위",
+          "text": "한국: **벼에 대해서는 미등재**이며, *R. solani*는 고시 별표 3 \"4. 종서류 가. 감자\" 5번 \"검은무늬썩음병\"(1.0/3.0/5.0 %)으로 **씨감자에 대해서만 규제비검역병해충**이다. 관리병해충에는 *R. leguminicola*, *R. tuliparum*만 있다([KR-고시 별표 3](https://www.law.go.kr/LSW/flDownload.do?flSeq=169519071); [KR-고시 별표 2](https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059)). EPPO: A1/A2 미등재, 국가 항목은 멕시코 QP(2018), 스위스 RNQP(2019), 영국 RNQP(2020)([EPPO RHIZSO](https://gd.eppo.int/taxon/RHIZSO/categorization)). EU: **씨감자 RNQP**(Annex IV Part G, \"Black scurf as caused by *Thanatephorus cucumeris*\")([EU-2072](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015)). 미국: select agent 아님([US-331](https://www.ecfr.gov/current/title-7/section-331.3)). 중국: 미등재(확인; *R. fragariae*만 등재)([CN](https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc)). 일본: 미등재(확인)([JP](https://laws.e-gov.go.jp/law/325M50010000073)). 호주: 미확인.",
+          "source_urls": [
+            "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519071",
+            "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059",
+            "https://gd.eppo.int/taxon/RHIZSO/categorization",
+            "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+            "https://www.ecfr.gov/current/title-7/section-331.3",
+            "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+            "https://laws.e-gov.go.jp/law/325M50010000073"
+          ],
+          "contains_미확인": true
+        },
+        "f9_images": {
+          "label": "사용 가능한 이미지와 이용허락",
+          "text": "상업 이용 후보: [Commons RiceSheathArk.jpg](https://commons.wikimedia.org/wiki/File:RiceSheathArk.jpg)(Peggy Greb, USDA ARS, Public domain ✅, \"typical watermark lesions\"), [Bugwood 5390538](https://www.ipmimages.org/browse/image/5390538)(Groth, CC BY 3.0 US; 5390539·5390544도 CC BY, 상업 시 요청 권고). 비상업·허락 필요: [IRRI Flickr 6233351235](https://www.flickr.com/photos/ricephotos/6233351235/)(CC BY-NC-SA 2.0 ⛔), IRRI RKB 사진 sheath-blight-1·-2(⛔), NCPMS(병원체 사진 4장만, 병 사진 없음, ⛔). EPPO RHIZSO 사진은 감자·잠두·바질 등뿐이고 벼 사진은 없다([EPPO RHIZSO photos](https://gd.eppo.int/taxon/RHIZSO/photos)). Bugwood Rhizoctonia 주제(465장)는 전수 확인하지 않았다.",
+          "source_urls": [
+            "https://commons.wikimedia.org/wiki/File:RiceSheathArk.jpg",
+            "https://www.ipmimages.org/browse/image/5390538",
+            "https://www.flickr.com/photos/ricephotos/6233351235/",
+            "https://gd.eppo.int/taxon/RHIZSO/photos"
+          ],
+          "contains_미확인": false
+        }
+      },
+      "source_urls": [
+        "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000813&totalSearchYn=Y",
+        "https://genebank.rda.go.kr/english/plntDissInfoMain.do",
+        "https://gd.eppo.int/taxon/RHIZSO",
+        "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight",
+        "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Sheath_blight.htm",
+        "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519071",
+        "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059",
+        "https://gd.eppo.int/taxon/RHIZSO/categorization",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+        "https://www.ecfr.gov/current/title-7/section-331.3",
+        "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+        "https://laws.e-gov.go.jp/law/325M50010000073",
+        "https://commons.wikimedia.org/wiki/File:RiceSheathArk.jpg",
+        "https://www.ipmimages.org/browse/image/5390538",
+        "https://www.flickr.com/photos/ricephotos/6233351235/",
+        "https://gd.eppo.int/taxon/RHIZSO/photos"
+      ]
+    },
+    {
+      "no": 3,
+      "crop": "벼",
+      "user_name": "깨씨무늬병",
+      "official_kr_name": "깨씨무늬병",
+      "scientific_name": "*Bipolaris oryzae*",
+      "kr_occurrence": "있음(LPDK 1928)",
+      "kr_quarantine": "규제비검역병해충(벼 종자)",
+      "commercial_image": "있음(Bugwood 주의, Commons CC BY)",
+      "section_title": "깨씨무늬병 (Brown spot) — *Bipolaris oryzae*",
+      "fields": {
+        "f1_names": {
+          "label": "공식 국명·영문명·학명·동의어",
+          "text": "NCPMS는 **깨씨무늬병**(胡麻葉枯病)으로 등재하며 영문명 칸은 \"Heliminthosporium blight, Helminthosporium leaf\"로 오탈자가 있다. 병원체는 *Cochliobolus miyabeanus* (Ito & Kuribayashi) Drechsler ex Dastur, 무성세대로 *Helminthosporium oryzae*, *Drechslera oryzae*, *Bipolaris oryzae*를 병기한다([NCPMS 깨씨무늬병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y), 기본정보·병원체 정보). LPDK는 현행명 *Bipolaris oryzae* (Breda de Haan) Shoemaker, 이명 *C. miyabeanus* 등, 영문명 Helminthosporium blight/leaf spot, Brown spot·Ear blight, 두 번째 국명 '이삭마름병'을 싣는다([LPDK](https://genebank.rda.go.kr/english/plntDissInfoMain.do), 깨씨무늬병 행). EPPO 우선명은 *B. oryzae*(COCHMI)이고 이명에 *Ophiobolus miyabeanus*가 추가되며, 영명은 brown spot of rice 등이다([EPPO COCHMI](https://gd.eppo.int/taxon/COCHMI), Overview).",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y",
+            "https://genebank.rda.go.kr/english/plntDissInfoMain.do",
+            "https://gd.eppo.int/taxon/COCHMI"
+          ],
+          "contains_미확인": false
+        },
+        "f2_parts_stages": {
+          "label": "피해 부위와 생육 단계",
+          "text": "자엽초, 잎, 잎집, 이삭가지, 영, 소수를 감염하며, 모든 단계에서 발생하나 **최고분얼기~등숙기** 감염이 가장 중요하다([IRRI RKB 깨씨무늬병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot), What it does). 국내에서는 유수형성기 이후 급증하고, 하엽일수록 잘 걸리며, 수량에 영향을 주는 이삭 발병은 **출수 후 25일까지**다([NCPMS 깨씨무늬병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y), 발생환경).",
+          "source_urls": [
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y"
+          ],
+          "contains_미확인": false
+        },
+        "f3_symptoms": {
+          "label": "주요 증상",
+          "text": "잎에는 작고 둥근 암갈색~자갈색 반점이 원형~타원형으로 커지며 중앙이 담갈색~회색, 가장자리가 적갈색이다. 감수성 품종 병반은 **5~14 mm**, 저항성 품종에서는 핀머리 크기다. 영과 이삭가지에는 암갈색~흑색 타원 반점, 낟알에는 'pecky rice'가 생긴다([IRRI RKB 깨씨무늬병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot), How to identify). NCPMS는 초기 병반의 **암갈색 괴사부를 둘러싼 황색 중독부**, 이후의 윤문, 이삭줄기의 흑갈색 줄무늬를 기술한다([NCPMS 깨씨무늬병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y), 증상설명).",
+          "source_urls": [
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y"
+          ],
+          "contains_미확인": false
+        },
+        "f4_confusions": {
+          "label": "혼동하기 쉬운 병과 비생물적 장해",
+          "text": "일부 품종에서 도열병으로 오인될 수 있다([IRRI RKB 깨씨무늬병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot), 마지막 문단). 비생물적 요인과 밀접하다: 비담수·양분결핍·독성물질 축적 토양에서 흔하고([IRRI RKB 깨씨무늬병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot), Why and where it occurs), 국내에서도 노후화답·이탄토·사질토·얕은 경토에서 많다([NCPMS 깨씨무늬병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y), 발생환경). 아연 결핍은 상위엽에 \"dusty brown spots\", 하위엽에 갈색 blotch·streak를 만들며 철 결핍·철 독성과 비슷하다고 기술되지만, 이 페이지는 깨씨무늬병과 직접 비교하지 않는다(간접 근거)([Rice Doctor Zinc deficiency](https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Zinc_deficiency.htm)).",
+          "source_urls": [
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y",
+            "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Zinc_deficiency.htm"
+          ],
+          "contains_미확인": false
+        },
+        "f5_differentiation": {
+          "label": "구별을 위한 추가 사진·질문·검사",
+          "text": "*사진만으로 구별 가능한 특징:* 원형 갈색 병반, 회색 중앙과 적갈색 테두리, 황색 halo, 감수성 품종의 5~14 mm 크기, 낟알 반점([IRRI RKB 깨씨무늬병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot)). 도열병과의 경계 사례는 사진만으로 확정하기 어렵다.\n*추가로 받을 사진·질문·현장 검사:* 토양 상태(사질토·노후화답), 비료 이력, 담수 여부, 조기·조식 재배와 재식본수([NCPMS 깨씨무늬병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y), 발생환경). 아연 결핍 의심 시 토양·식물체 분석([Rice Doctor Zinc deficiency](https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Zinc_deficiency.htm)).\n*실험실 검사가 필요한 특징:* 분생포자는 거의 원통형으로 휘어 있고 엷은 갈색~황갈색, **격막 6~14개, 63~153 × 14~22 µm**이며 끝세포에서 발아하고, 분생자경은 약 600 µm다. 독소 ophiobolin을 생성한다([NCPMS 깨씨무늬병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y), 병원체 특징). PCR 등 분자진단 공식 프로토콜은 미확인이다.",
+          "source_urls": [
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y",
+            "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Zinc_deficiency.htm"
+          ],
+          "contains_미확인": true,
+          "parts": {
+            "f5a_photo_only": "원형 갈색 병반, 회색 중앙과 적갈색 테두리, 황색 halo, 감수성 품종의 5~14 mm 크기, 낟알 반점([IRRI RKB 깨씨무늬병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot)). 도열병과의 경계 사례는 사진만으로 확정하기 어렵다.",
+            "f5b_extra_requests": "토양 상태(사질토·노후화답), 비료 이력, 담수 여부, 조기·조식 재배와 재식본수([NCPMS 깨씨무늬병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y), 발생환경). 아연 결핍 의심 시 토양·식물체 분석([Rice Doctor Zinc deficiency](https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Zinc_deficiency.htm)).",
+            "f5c_lab_tests": "분생포자는 거의 원통형으로 휘어 있고 엷은 갈색~황갈색, **격막 6~14개, 63~153 × 14~22 µm**이며 끝세포에서 발아하고, 분생자경은 약 600 µm다. 독소 ophiobolin을 생성한다([NCPMS 깨씨무늬병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y), 병원체 특징). PCR 등 분자진단 공식 프로토콜은 미확인이다."
+          }
+        },
+        "f6_conditions": {
+          "label": "발생 조건과 근거",
+          "text": "IRRI: **RH 86~100%, 16~36 ℃, 잎 젖음 8~24시간**, 종자에서 4년 넘게 생존(원논문 표기 없음)([IRRI RKB 깨씨무늬병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot), Why and where it occurs). NCPMS: 분생포자 발아 최적 20~30 ℃(3시간에 90% 발아), 침입에 필요한 공기습도는 개화기 70%·호숙기 90%, 포자는 08~09시부터 15시까지 많이 비산한다(인용 형식이나 원논문 미표기)([NCPMS 깨씨무늬병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y), 발생환경).",
+          "source_urls": [
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y"
+          ],
+          "contains_미확인": false
+        },
+        "f7_occurrence": {
+          "label": "한국 및 해외 발생 기록",
+          "text": "한국: LPDK 최초 문헌은 中田覺五郎 등, 朝鮮總督府 勸業模範場 硏究報告 15:2 (**1928**)이며 1959, 1968, 1972, 1985년 문헌이 이어진다([LPDK](https://genebank.rda.go.kr/english/plntDissInfoMain.do), 깨씨무늬병 행). 해외: EPPO COCHMI에는 분포 탭이 없다([EPPO COCHMI](https://gd.eppo.int/taxon/COCHMI)). IRRI는 남·동남아 저지대 평균 5%(심하면 45%) 수량 손실과 1943년 벵골 대기근의 주요 요인으로 기술한다([IRRI RKB 깨씨무늬병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot), Why is it important).",
+          "source_urls": [
+            "https://genebank.rda.go.kr/english/plntDissInfoMain.do",
+            "https://gd.eppo.int/taxon/COCHMI",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot"
+          ],
+          "contains_미확인": false
+        },
+        "f8_quarantine": {
+          "label": "국가별 검역 지위",
+          "text": "한국: **규제비검역병해충**(고시 별표 3 \"가. 벼\" 4번 \"깨씨무늬병 *Cochliobolus miyabeanus*\", 3번과 같은 칸 5.0/10.0/10.0 %, 기타병)([KR-고시 별표 3](https://www.law.go.kr/LSW/flDownload.do?flSeq=169519071)). 고시가 구 유성세대명으로 적고 있어 현행명 *B. oryzae*로만 검색하면 누락된다. EPPO: Categorization 항목 없음([EPPO COCHMI](https://gd.eppo.int/taxon/COCHMI/categorization)). EU·중국·일본: 미등재(확인)([EU-2072](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015); [CN](https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc); [JP](https://laws.e-gov.go.jp/law/325M50010000073)). 미국: select agent 아님([US-331](https://www.ecfr.gov/current/title-7/section-331.3)). 호주: 미확인.",
+          "source_urls": [
+            "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519071",
+            "https://gd.eppo.int/taxon/COCHMI/categorization",
+            "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+            "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+            "https://laws.e-gov.go.jp/law/325M50010000073",
+            "https://www.ecfr.gov/current/title-7/section-331.3"
+          ],
+          "contains_미확인": true
+        },
+        "f9_images": {
+          "label": "사용 가능한 이미지와 이용허락",
+          "text": "상업 이용 후보: [Bugwood 5390485](https://www.ipmimages.org/browse/image/5390485)(Groth, CC BY 3.0 US, 상업 시 요청 권고), [Commons Cochliobolus miyabeanus.jpg](https://commons.wikimedia.org/wiki/File:Cochliobolus_miyabeanus.jpg)(Groth, CC BY 3.0 US ✅), [Commons Helminthosporium oryzae at Oryza sativa (01).jpg](https://commons.wikimedia.org/wiki/File:Helminthosporium_oryzae_at_Oryza_sativa_(01).jpg)(William M. Brown Jr., CC BY 3.0 US 표기 — Bugwood 원본 대조 필요). 데이터셋: UCI Rice Leaf Diseases(Brown spot 포함, CC BY 4.0 ✅)([UCI 486](https://archive.ics.uci.edu/dataset/486/rice+leaf+diseases)). 비상업·허락 필요: [EPPO COCHMI photos](https://gd.eppo.int/taxon/COCHMI/photos)(#8906, #13241~13246, #13788~13790, 교육용만 ⛔), NCPMS(병 10·병원체 4장, ⛔), IRRI RKB 사진(⛔), Rice Doctor(\"All rights reserved\" ⛔)([Rice Doctor Brown spot](https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Brown_spot.htm)).",
+          "source_urls": [
+            "https://www.ipmimages.org/browse/image/5390485",
+            "https://commons.wikimedia.org/wiki/File:Cochliobolus_miyabeanus.jpg",
+            "https://commons.wikimedia.org/wiki/File:Helminthosporium_oryzae_at_Oryza_sativa_(01",
+            "https://archive.ics.uci.edu/dataset/486/rice+leaf+diseases",
+            "https://gd.eppo.int/taxon/COCHMI/photos",
+            "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Brown_spot.htm"
+          ],
+          "contains_미확인": false
+        }
+      },
+      "source_urls": [
+        "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y",
+        "https://genebank.rda.go.kr/english/plntDissInfoMain.do",
+        "https://gd.eppo.int/taxon/COCHMI",
+        "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot",
+        "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Zinc_deficiency.htm",
+        "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519071",
+        "https://gd.eppo.int/taxon/COCHMI/categorization",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+        "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+        "https://laws.e-gov.go.jp/law/325M50010000073",
+        "https://www.ecfr.gov/current/title-7/section-331.3",
+        "https://www.ipmimages.org/browse/image/5390485",
+        "https://commons.wikimedia.org/wiki/File:Cochliobolus_miyabeanus.jpg",
+        "https://commons.wikimedia.org/wiki/File:Helminthosporium_oryzae_at_Oryza_sativa_(01",
+        "https://archive.ics.uci.edu/dataset/486/rice+leaf+diseases",
+        "https://gd.eppo.int/taxon/COCHMI/photos",
+        "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Brown_spot.htm"
+      ]
+    },
+    {
+      "no": 4,
+      "crop": "벼",
+      "user_name": "흰잎마름병",
+      "official_kr_name": "흰잎마름병",
+      "scientific_name": "*Xanthomonas oryzae* pv. *oryzae*",
+      "kr_occurrence": "있음(LPDK 1930)",
+      "kr_quarantine": "미등재(확인)",
+      "commercial_image": "있음(Bugwood 1장)",
+      "section_title": "흰잎마름병 (Bacterial blight) — *Xanthomonas oryzae* pv. *oryzae*",
+      "fields": {
+        "f1_names": {
+          "label": "공식 국명·영문명·학명·동의어",
+          "text": "NCPMS는 **흰잎마름병**(白葉枯病, Bacterial blight)으로 등재하지만 병원체명 칸에는 옛 이름 *X. campestris* pv. *oryzae* (Ishiyama) Dye를, 같은 페이지 '병원체 특징' 본문에는 *X. oryzae* pv. *oryzae*를 적어 표기가 엇갈린다([NCPMS 흰잎마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744&totalSearchYn=Y), 병원체 정보). LPDK는 흰잎마름병(Bacterial leaf blight)의 현행명을 *X. oryzae* pv. *oryzae* (Ishiyama) Swings et al., 이명을 *X. campestris* pv. *oryzae*로 적는다([LPDK](https://genebank.rda.go.kr/english/plntDissInfoMain.do), 흰잎마름병 행). EPPO(XANTOR) 이명은 *Bacillus/Bacterium/Phytomonas/Pseudomonas oryzae*, *X. campestris* pv. *oryzae*, *Xanthomonas kresek*이고, 영명은 bacterial blight of rice, bacterial leaf blight(BLB), kresek disease다([EPPO XANTOR](https://gd.eppo.int/taxon/XANTOR), Overview).",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744&totalSearchYn=Y",
+            "https://genebank.rda.go.kr/english/plntDissInfoMain.do",
+            "https://gd.eppo.int/taxon/XANTOR"
+          ],
+          "contains_미확인": false
+        },
+        "f2_parts_stages": {
+          "label": "피해 부위와 생육 단계",
+          "text": "묘의 위조(kresek)와 잎의 황화·건조를 일으키고, 수잉기 감염은 수량보다 품질과 싸라기 비율에 영향을 준다([IRRI RKB 흰잎마름병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-blight), What it does). 국내에서는 보통 **출수기 전후**에 나타나지만 상습지에서는 본답 초기, 드물게 묘판에서도 나타나며, 이앙 후 20~30일부터 분얼 최성기까지는 묘가 갑자기 말라 죽는 증상이 있다. 병징은 주로 엽신·엽초, 때로 벼알에 나타난다([NCPMS 흰잎마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744&totalSearchYn=Y), 증상설명).",
+          "source_urls": [
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-blight",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744&totalSearchYn=Y"
+          ],
+          "contains_미확인": false
+        },
+        "f3_symptoms": {
+          "label": "주요 증상",
+          "text": "잎끝·가장자리·상처에서 수침상~황등색 줄무늬가 생기고 **가장자리가 물결 모양**으로 잎 기부 쪽으로 진전한다. 어린 병반에는 이른 아침 우유빛 세균 ooze가 맺히고, 마르면 노란 구슬이 된다. 오래된 병반은 황색~회백색이 되고 부생균으로 검은 점이 생긴다([IRRI RKB 흰잎마름병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-blight), How to identify). NCPMS는 엽신 선단 5~6 cm 아래 가장자리의 침윤상 소병반이 2~3일 뒤 황색·등황색으로 위아래로 번지고 백색~회백색으로 퇴색한다고 적는다([NCPMS 흰잎마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744&totalSearchYn=Y), 증상설명).",
+          "source_urls": [
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-blight",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744&totalSearchYn=Y"
+          ],
+          "contains_미확인": false
+        },
+        "f4_confusions": {
+          "label": "혼동하기 쉬운 병과 비생물적 장해",
+          "text": "kresek은 초기 이화명나방 피해와 혼동된다([IRRI RKB 흰잎마름병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-blight)). 세균성 줄무늬병(Xoc)과 잎 증상이 매우 비슷하며 진행 후에는 구별이 어렵다([EPPO XANTOR datasheet](https://gd.eppo.int/taxon/XANTOR/datasheet), Identity·Symptoms). LPDK의 '세균줄무늬병'(*Acidovorax avenae* subsp. *avenae*, 영문 표기 \"Bacterial blight\")은 이름이 겹치지만 다른 병이다([LPDK](https://genebank.rda.go.kr/english/plntDissInfoMain.do), 세균 검색 결과). 비생물적 장해와의 비교 출처는 미확인이다.",
+          "source_urls": [
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-blight",
+            "https://gd.eppo.int/taxon/XANTOR/datasheet",
+            "https://genebank.rda.go.kr/english/plntDissInfoMain.do"
+          ],
+          "contains_미확인": true
+        },
+        "f5_differentiation": {
+          "label": "구별을 위한 추가 사진·질문·검사",
+          "text": "*사진만으로 구별 가능한 특징:* 잎끝·가장자리에서 시작하는 물결 모양 경계의 황등색~황백색 병반, 이른 아침 어린 병반의 우유빛 ooze 방울, 마른 노란 구슬([IRRI RKB 흰잎마름병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-blight)). Xoc의 직선형 가장자리와 대비된다([EPPO XANTTO datasheet](https://gd.eppo.int/taxon/XANTTO/datasheet), Symptoms).\n*추가로 받을 사진·질문·현장 검사:* kresek 묘 하부를 짜서 노란 ooze 확인, 쉽게 뽑히지 않는지 확인; 어린 병반을 잘라 맑은 물에 넣고 몇 분 뒤 절단면에서 탁한 액이 흘러나오는지 보는 유리컵 검사([IRRI RKB 흰잎마름병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-blight), How to identify). 최근 침수 여부와 시간, 태풍, 질소 시비량([NCPMS 흰잎마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744&totalSearchYn=Y), 발생환경).\n*실험실 검사가 필요한 특징:* 그람음성 간상균(1~2 × 0.8 µm, 극모 1개), 영양배지에서 3~4일에 노란 둥근 집락, 최적 26~30 ℃([NCPMS 흰잎마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744&totalSearchYn=Y), 병원체 특징). PSA·NBY·GF·반선택배지 분리, seedling test, bacteriophage, IF, ELISA, (real-time) PCR, 종자 bio-PCR, **Xoo/Xoc 구별 TaqMan multiplex PCR·LAMP**, 국내 K3a 레이스용 race-specific PCR(Song et al. 2012, 2014)이 있으며 상세 절차는 EPPO PM 7/80에 있다([EPPO XANTOR datasheet](https://gd.eppo.int/taxon/XANTOR/datasheet), Detection and identification).",
+          "source_urls": [
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-blight",
+            "https://gd.eppo.int/taxon/XANTTO/datasheet",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744&totalSearchYn=Y",
+            "https://gd.eppo.int/taxon/XANTOR/datasheet"
+          ],
+          "contains_미확인": false,
+          "parts": {
+            "f5a_photo_only": "잎끝·가장자리에서 시작하는 물결 모양 경계의 황등색~황백색 병반, 이른 아침 어린 병반의 우유빛 ooze 방울, 마른 노란 구슬([IRRI RKB 흰잎마름병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-blight)). Xoc의 직선형 가장자리와 대비된다([EPPO XANTTO datasheet](https://gd.eppo.int/taxon/XANTTO/datasheet), Symptoms).",
+            "f5b_extra_requests": "kresek 묘 하부를 짜서 노란 ooze 확인, 쉽게 뽑히지 않는지 확인; 어린 병반을 잘라 맑은 물에 넣고 몇 분 뒤 절단면에서 탁한 액이 흘러나오는지 보는 유리컵 검사([IRRI RKB 흰잎마름병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-blight), How to identify). 최근 침수 여부와 시간, 태풍, 질소 시비량([NCPMS 흰잎마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744&totalSearchYn=Y), 발생환경).",
+            "f5c_lab_tests": "그람음성 간상균(1~2 × 0.8 µm, 극모 1개), 영양배지에서 3~4일에 노란 둥근 집락, 최적 26~30 ℃([NCPMS 흰잎마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744&totalSearchYn=Y), 병원체 특징). PSA·NBY·GF·반선택배지 분리, seedling test, bacteriophage, IF, ELISA, (real-time) PCR, 종자 bio-PCR, **Xoo/Xoc 구별 TaqMan multiplex PCR·LAMP**, 국내 K3a 레이스용 race-specific PCR(Song et al. 2012, 2014)이 있으며 상세 절차는 EPPO PM 7/80에 있다([EPPO XANTOR datasheet](https://gd.eppo.int/taxon/XANTOR/datasheet), Detection and identification)."
+          }
+        },
+        "f6_conditions": {
+          "label": "발생 조건과 근거",
+          "text": "IRRI·EPPO: **25~34 ℃, RH 70% 초과**, 강풍과 지속 폭우(태풍)로 ooze가 퍼지며 질소 과다 시 심해진다(EPPO는 Mew et al. 1993 인용, 홍수·관개수가 주 전파 경로)([IRRI RKB 흰잎마름병](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-blight); [EPPO XANTOR datasheet](https://gd.eppo.int/taxon/XANTOR/datasheet), Biology). 국내: **7월 평균기온 22~24 ℃**에서 다발생, **7월 강수량 200 mm 이상·풍속 15 m/s 이상**이면 대발생, 12시간 침수 논 발병률 8.8% 대 48시간 침수 72.7%, 7월 하순~8월 하순 강우가 중요, 기주 잡초는 겨풀·나도겨풀, 박테리오파지 밀도로 10~15일 전 예찰 가능(원논문 표기 없음)([NCPMS 흰잎마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744&totalSearchYn=Y), 발생환경). 위험도 모델에는 국내 수치를 우선하고 IRRI·EPPO 수치를 참고 범위로 병기하는 것이 맞다.",
+          "source_urls": [
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-blight",
+            "https://gd.eppo.int/taxon/XANTOR/datasheet",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744&totalSearchYn=Y"
+          ],
+          "contains_미확인": false
+        },
+        "f7_occurrence": {
+          "label": "한국 및 해외 발생 기록",
+          "text": "한국: LPDK 최초 문헌은 武內晴好, 朝鮮總督府 農事試驗場彙報 5:62 (**1930**)와 이경휘 등 1965다([LPDK](https://genebank.rda.go.kr/english/plntDissInfoMain.do), 흰잎마름병 행). EPPO datasheet는 한국 논문을 인용해 2002~2005년 국내 발생 면적이 10배 넘게 늘어 약 27,000 ha에 이르렀고(Noh et al. 2007), 2003년 대발생이 새 레이스 **K3a** 출현과 함께 큰 손실을 냈다고 적는다(Jeung et al. 2006; 원논문 미열람, 재인용)([EPPO XANTOR datasheet](https://gd.eppo.int/taxon/XANTOR/datasheet), Impact). 해외: EPPO는 한국·북한을 \"Present, restricted distribution\"으로 적고, 아시아 분포국으로 방글라데시, 중국, 인도, 인도네시아, 일본(혼슈·규슈), 필리핀, 베트남 등을 들며 EPPO 지역에서는 발생이 알려져 있지 않다([EPPO XANTOR distribution](https://gd.eppo.int/taxon/XANTOR/distribution)).",
+          "source_urls": [
+            "https://genebank.rda.go.kr/english/plntDissInfoMain.do",
+            "https://gd.eppo.int/taxon/XANTOR/datasheet",
+            "https://gd.eppo.int/taxon/XANTOR/distribution"
+          ],
+          "contains_미확인": false
+        },
+        "f8_quarantine": {
+          "label": "국가별 검역 지위",
+          "text": "한국: **미등재(확인)** — 시행규칙 별표 1, 고시 별표 1·2·3 어디에도 없고 관리병해충에는 pv. *oryzicola*만 있다([KR-고시 별표 2](https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059)). EPPO: **A1 list(1975)**, 국가 항목 다수(미국 QP 1989, 중국 QP 2021, 러시아 A1, 튀르키예 A1 등)([EPPO XANTOR](https://gd.eppo.int/taxon/XANTOR/categorization)). EU: **Union quarantine pest**(Annex II Part A, 1. Bacteria, 항목 9)이며 우선병해충은 아님([EU-2072](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015); [EU-1702](https://eur-lex.europa.eu/eli/reg_del/2019/1702/oj)). 미국: **PPQ select agent**(7 CFR 331.3(b)(6) \"Xanthomonas oryzae\", 종 단위라 pv. *oryzae* 포함), APHIS Pests of Concern 등재([US-331](https://www.ecfr.gov/current/title-7/section-331.3); [US-PoC](https://www.aphis.usda.gov/laws-regs/animal-plant-diseases-pests-concern)). 중국: **检疫性有害生物** \"水稻白叶枯病菌\"([CN](https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc)). 일본: 미등재(확인)([JP](https://laws.e-gov.go.jp/law/325M50010000073)). 호주: 미확인. 국내 토착 병이므로 한국 목록에 없는 것은 법 정의(국내 미분포 병해충)와 모순되지 않지만, 해외 규제 지위를 한국 지위로 옮겨 적으면 안 된다.",
+          "source_urls": [
+            "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059",
+            "https://gd.eppo.int/taxon/XANTOR/categorization",
+            "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+            "https://eur-lex.europa.eu/eli/reg_del/2019/1702/oj",
+            "https://www.ecfr.gov/current/title-7/section-331.3",
+            "https://www.aphis.usda.gov/laws-regs/animal-plant-diseases-pests-concern",
+            "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+            "https://laws.e-gov.go.jp/law/325M50010000073"
+          ],
+          "contains_미확인": true
+        },
+        "f9_images": {
+          "label": "사용 가능한 이미지와 이용허락",
+          "text": "상업 이용 후보: [Bugwood 5390468](https://www.ipmimages.org/browse/image/5390468)(Groth, CC BY 3.0 US; **이 주제에서 CC BY는 1장뿐**이고 나머지 13장은 BY-NC). 데이터셋: UCI Rice Leaf Diseases(Bacterial leaf blight 포함, CC BY 4.0 ✅)([UCI 486](https://archive.ics.uci.edu/dataset/486/rice+leaf+diseases)). Commons에서는 벼 흰잎마름병 증상 사진을 찾지 못했다(미확인). 비상업·허락 필요: [IRRI Flickr 11924040066](https://www.flickr.com/photos/ricephotos/11924040066/)(CC BY-NC-SA 2.0 ⛔), [EPPO XANTOR photos](https://gd.eppo.int/taxon/XANTOR/photos) #1733(ooze 방울)·#1734(kresek)·#1735(교육용만 ⛔), IRRI RKB 사진(bacterial-ooze.jpg 등 ⛔), NCPMS(병 3·병원체 2장 ⛔).",
+          "source_urls": [
+            "https://www.ipmimages.org/browse/image/5390468",
+            "https://archive.ics.uci.edu/dataset/486/rice+leaf+diseases",
+            "https://www.flickr.com/photos/ricephotos/11924040066/",
+            "https://gd.eppo.int/taxon/XANTOR/photos"
+          ],
+          "contains_미확인": true
+        }
+      },
+      "source_urls": [
+        "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744&totalSearchYn=Y",
+        "https://genebank.rda.go.kr/english/plntDissInfoMain.do",
+        "https://gd.eppo.int/taxon/XANTOR",
+        "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-blight",
+        "https://gd.eppo.int/taxon/XANTOR/datasheet",
+        "https://gd.eppo.int/taxon/XANTTO/datasheet",
+        "https://gd.eppo.int/taxon/XANTOR/distribution",
+        "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059",
+        "https://gd.eppo.int/taxon/XANTOR/categorization",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+        "https://eur-lex.europa.eu/eli/reg_del/2019/1702/oj",
+        "https://www.ecfr.gov/current/title-7/section-331.3",
+        "https://www.aphis.usda.gov/laws-regs/animal-plant-diseases-pests-concern",
+        "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+        "https://laws.e-gov.go.jp/law/325M50010000073",
+        "https://www.ipmimages.org/browse/image/5390468",
+        "https://archive.ics.uci.edu/dataset/486/rice+leaf+diseases",
+        "https://www.flickr.com/photos/ricephotos/11924040066/",
+        "https://gd.eppo.int/taxon/XANTOR/photos"
+      ]
+    },
+    {
+      "no": 5,
+      "crop": "벼",
+      "user_name": "세균성 줄무늬병(Xoc)",
+      "official_kr_name": "미확인(공식 국명 없음)",
+      "scientific_name": "*X. oryzae* pv. *oryzicola*",
+      "kr_occurrence": "국내 발생 기록 미확인",
+      "kr_quarantine": "관리병해충",
+      "commercial_image": "있음(Bugwood 1장, Commons 합성 CC BY 4.0)",
+      "section_title": "세균성 줄무늬병 (Bacterial leaf streak, Xoc) — *Xanthomonas oryzae* pv. *oryzicola*",
+      "fields": {
+        "f1_names": {
+          "label": "공식 국명·영문명·학명·동의어",
+          "text": "**공식 국명: 미확인(등재 없음).** LPDK에서 기주 벼의 세균병 9건과 속명 *Xanthomonas* 전체를 조회했으나 *oryzicola* 레코드는 0건이었고([LPDK 검색](https://genebank.rda.go.kr/plntDissInfoMain.do), 기주 벼 세균 결과표·*Xanthomonas* 결과표), NCPMS 병명 검색에도 Xoc 항목이 없다([NCPMS 병 목록](https://ncpms.rda.go.kr/npms/SicknsInfoListRM.np), 한글명/영문명 검색). **주의: LPDK의 \"벼 세균줄무늬병\"(DSNM_NO 869)은 *Acidovorax avenae* subsp. *avenae*의 병**이며(정후섭 등 1980), EPPO는 이 *Acidovorax* 병을 \"bacterial brown stripe of rice\"로 부른다([LPDK 검색](https://genebank.rda.go.kr/plntDissInfoMain.do); [EPPO XANTTO datasheet](https://gd.eppo.int/taxon/XANTTO/datasheet), Detection 문단). 국내 검역 리뷰는 국내 미발생 세균병을 영명으로 통일해 \"Bacterial leaf streak\"로만 적는다([홍연석 외 2020](https://koreascience.or.kr/article/JAKO202029462559364.pdf), 서론 마지막 문단·Table 1 No. 38). EPPO 우선명은 *X. oryzae* pv. *oryzicola* (Fang et al.) Swings et al.(XANTTO)이고 이명은 *X. campestris* pv. *oryzicola*, *X. oryzicola*, *X. translucens* f. sp. *oryzicola*, 영명은 bacterial leaf streak(BLS)다([EPPO XANTTO](https://gd.eppo.int/taxon/XANTTO), Overview). 1918년 필리핀에서 처음 관찰되었으나 오랫동안 흰잎마름병으로 오인되었고, 1957년 중국에서 *X. oryzicola*로 명명, 1990년 pathovar로 재분류되었다([EPPO XANTTO datasheet](https://gd.eppo.int/taxon/XANTTO/datasheet), Notes on taxonomy).",
+          "source_urls": [
+            "https://genebank.rda.go.kr/plntDissInfoMain.do",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoListRM.np",
+            "https://gd.eppo.int/taxon/XANTTO/datasheet",
+            "https://koreascience.or.kr/article/JAKO202029462559364.pdf",
+            "https://gd.eppo.int/taxon/XANTTO"
+          ],
+          "contains_미확인": true
+        },
+        "f2_parts_stages": {
+          "label": "피해 부위와 생육 단계",
+          "text": "주로 엽신을 침해하고, 감염 소화는 갈변·흑변, 감염 종자는 영 갈변과 배유 괴사를 보인다([EPPO XANTTO datasheet](https://gd.eppo.int/taxon/XANTTO/datasheet), Symptoms). 최고분얼기~유수형성기에 영향을 주며 성숙한 벼는 쉽게 회복한다([IRRI RKB BLS](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-leaf-streak), Why and where it occurs). 두 pathovar 모두 종피에서 분리되지만 종자 전염이 보고된 것은 Xoc뿐이며, 15~30 ℃ 저장 종자에서 최대 5개월 생존한다([EPPO XANTTO datasheet](https://gd.eppo.int/taxon/XANTTO/datasheet), Biology).",
+          "source_urls": [
+            "https://gd.eppo.int/taxon/XANTTO/datasheet",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-leaf-streak"
+          ],
+          "contains_미확인": false
+        },
+        "f3_symptoms": {
+          "label": "주요 증상",
+          "text": "엽맥 사이의 좁고 짙은 녹색 수침상 줄무늬가 노란 테두리를 띠며 황등색~갈색으로 변해 합쳐지고, 호박색 작은 세균 점액 방울이 생기며, 말기에 갈색~회색으로 말라 죽는다([EPPO XANTTO datasheet](https://gd.eppo.int/taxon/XANTTO/datasheet), Symptoms). 병반은 **빛에 비추면 반투명**하다([IRRI RKB BLS](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-leaf-streak), How to identify). 혹나방 유충·벼잎벌레 식흔과 동반되는 경우가 많다([EPPO XANTTO datasheet](https://gd.eppo.int/taxon/XANTTO/datasheet), Symptoms).",
+          "source_urls": [
+            "https://gd.eppo.int/taxon/XANTTO/datasheet",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-leaf-streak"
+          ],
+          "contains_미확인": false
+        },
+        "f4_confusions": {
+          "label": "혼동하기 쉬운 병과 비생물적 장해",
+          "text": "흰잎마름병과는 진행 단계에서 구별이 어렵지만 Xoc 병반 가장자리는 **직선적**, 흰잎마름병은 **물결 모양**이며 같은 포기에 동시 발생할 수 있다. 침입 경로도 다르다(Xoc는 기공·상처로 들어가 엽육 세포간극에서 증식, Xoo는 수공으로 들어가 관다발에서 증식)([EPPO XANTTO datasheet](https://gd.eppo.int/taxon/XANTTO/datasheet), Symptoms·Biology). 초기에는 흰잎마름병과 같아 보여 확정에 생화학·병원성·혈청학적 검정이 필요하다([IRRI RKB BLS](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-leaf-streak)). 갈색줄무늬병(narrow brown spot, 국내 공식명, *Cercospora oryzae*)은 반투명하지 않고 점액이 없다([IRRI RKB BLS](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-leaf-streak); [LPDK 검색](https://genebank.rda.go.kr/plntDissInfoMain.do)). 비생물적 장해와의 비교 출처는 미확인이다.",
+          "source_urls": [
+            "https://gd.eppo.int/taxon/XANTTO/datasheet",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-leaf-streak",
+            "https://genebank.rda.go.kr/plntDissInfoMain.do"
+          ],
+          "contains_미확인": true
+        },
+        "f5_differentiation": {
+          "label": "구별을 위한 추가 사진·질문·검사",
+          "text": "*사진만으로 구별 가능한 특징:* 엽맥 사이의 좁은 수침상 줄무늬, 직선적 병반 가장자리, 역광 반투명, 호박색 점액 방울, 해충 식흔 동반([EPPO XANTTO datasheet](https://gd.eppo.int/taxon/XANTTO/datasheet); [IRRI RKB BLS](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-leaf-streak)). 단, 흰잎마름병과의 확정 구별과 pathovar 판정은 사진으로 불가능하다.\n*추가로 받을 사진·질문·현장 검사:* 병반 진전부를 잘라 물컵에 넣으면 5분 뒤 물이 탁해지는 현장 검사([IRRI RKB BLS](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-leaf-streak)). 수입 종자·육종재료 사용 여부(장거리 확산 주경로가 종자), 최근 강우·강풍·고온, 질소 시비량([EPPO XANTTO datasheet](https://gd.eppo.int/taxon/XANTTO/datasheet), Pathways·Biology).\n*실험실 검사가 필요한 특징:* PSA·NBY·GF·반선택배지 분리(종자용 XOS 배지; 부생 *Pantoea*가 느리게 자라는 Xoc를 덮을 수 있음), detached leaf 접종법, IF·ELISA(상용 키트), Xoc 특이 PCR(Kang et al. 2008), Xoc/Xoo 구별 TaqMan multiplex, LAMP, Xoc·Xoo·*B. glumae* 동시 검출 multiplex PCR, 생화학 구별(Xoc는 acetoin 생성·L-alanine 단독 탄소원 생장·0.2% casamino acids 생장 양성, Cu(NO₃)₂ 0.001% 내성 음성), 감수성 품종 30~45일묘 병원성 검정([EPPO XANTTO datasheet](https://gd.eppo.int/taxon/XANTTO/datasheet), Detection and identification methods). EPPO 진단표준 PM 7/80이 있다(존재만 확인)([EPPO XANTTO documents](https://gd.eppo.int/taxon/XANTTO/documents)). 국내 문헌은 GF 배지(노란 집락)나 mXOS 배지(붉은 집락) 도말 후 TXT/TXT4R 프라이머 검출을 요약한다([홍연석 외 2020](https://koreascience.or.kr/article/JAKO202029462559364.pdf), p.140 부근). 국내 미기록·관리병해충이므로 의심 시료는 검역기관 확인이 필요하다.",
+          "source_urls": [
+            "https://gd.eppo.int/taxon/XANTTO/datasheet",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-leaf-streak",
+            "https://gd.eppo.int/taxon/XANTTO/documents",
+            "https://koreascience.or.kr/article/JAKO202029462559364.pdf"
+          ],
+          "contains_미확인": false,
+          "parts": {
+            "f5a_photo_only": "엽맥 사이의 좁은 수침상 줄무늬, 직선적 병반 가장자리, 역광 반투명, 호박색 점액 방울, 해충 식흔 동반([EPPO XANTTO datasheet](https://gd.eppo.int/taxon/XANTTO/datasheet); [IRRI RKB BLS](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-leaf-streak)). 단, 흰잎마름병과의 확정 구별과 pathovar 판정은 사진으로 불가능하다.",
+            "f5b_extra_requests": "병반 진전부를 잘라 물컵에 넣으면 5분 뒤 물이 탁해지는 현장 검사([IRRI RKB BLS](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-leaf-streak)). 수입 종자·육종재료 사용 여부(장거리 확산 주경로가 종자), 최근 강우·강풍·고온, 질소 시비량([EPPO XANTTO datasheet](https://gd.eppo.int/taxon/XANTTO/datasheet), Pathways·Biology).",
+            "f5c_lab_tests": "PSA·NBY·GF·반선택배지 분리(종자용 XOS 배지; 부생 *Pantoea*가 느리게 자라는 Xoc를 덮을 수 있음), detached leaf 접종법, IF·ELISA(상용 키트), Xoc 특이 PCR(Kang et al. 2008), Xoc/Xoo 구별 TaqMan multiplex, LAMP, Xoc·Xoo·*B. glumae* 동시 검출 multiplex PCR, 생화학 구별(Xoc는 acetoin 생성·L-alanine 단독 탄소원 생장·0.2% casamino acids 생장 양성, Cu(NO₃)₂ 0.001% 내성 음성), 감수성 품종 30~45일묘 병원성 검정([EPPO XANTTO datasheet](https://gd.eppo.int/taxon/XANTTO/datasheet), Detection and identification methods). EPPO 진단표준 PM 7/80이 있다(존재만 확인)([EPPO XANTTO documents](https://gd.eppo.int/taxon/XANTTO/documents)). 국내 문헌은 GF 배지(노란 집락)나 mXOS 배지(붉은 집락) 도말 후 TXT/TXT4R 프라이머 검출을 요약한다([홍연석 외 2020](https://koreascience.or.kr/article/JAKO202029462559364.pdf), p.140 부근). 국내 미기록·관리병해충이므로 의심 시료는 검역기관 확인이 필요하다."
+          }
+        },
+        "f6_conditions": {
+          "label": "발생 조건과 근거",
+          "text": "감염 후 온도가 주 결정 요인으로 **26~32 ℃에서 진전, 22 ℃ 미만에서 억제**된다(Devadath 1984 인용). 지속 강우 없이는 2차 감염이 일어나지 않고 매우 습한 조건에서만 피해가 나며, 다량의 질소가 발병을 조장한다. 물속에서는 15~20 ℃ 최대 90일, 25~45 ℃ 최대 60일 생존한다([EPPO XANTTO datasheet](https://gd.eppo.int/taxon/XANTTO/datasheet), Biology 5~7문단). 수량 손실은 우기 8~17%, 건기 1~3%(IRRI), 인도 중부 5~30%, 중국 남부 10~20%(최대 40%), 우간다 최대 60%다([IRRI RKB BLS](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-leaf-streak), Why is it important; [EPPO XANTTO datasheet](https://gd.eppo.int/taxon/XANTTO/datasheet), Economic impact).",
+          "source_urls": [
+            "https://gd.eppo.int/taxon/XANTTO/datasheet",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-leaf-streak"
+          ],
+          "contains_미확인": false
+        },
+        "f7_occurrence": {
+          "label": "한국 및 해외 발생 기록",
+          "text": "한국: **국내 발생 기록 미확인.** LPDK·NCPMS에 없고, EPPO 분포표(2026-09-25 갱신)에는 한국 행 자체가 없다(존재·부재 어느 쪽으로도 미기재)([EPPO XANTTO distribution](https://gd.eppo.int/taxon/XANTTO/distribution)). EPPO datasheet는 온대 지역에서 보고되지 않았다고 적는다(Geographical distribution). \"국내 미발생\"을 명시한 국가 공식 문서는 찾지 못했다. 해외: 아프리카(부르키나파소, 케냐, 마다가스카르, 나이지리아, 우간다 등), 아시아(방글라데시, 캄보디아, 중국 12개 성, 인도, 인도네시아, 필리핀, 태국, 베트남 등), 호주 노던준주; 대만은 \"Absent, unreliable record\", 러시아는 \"pest no longer present\"다([EPPO XANTTO distribution](https://gd.eppo.int/taxon/XANTTO/distribution)). IRRI는 남미도 분포지로 적지만 EPPO 표에는 남미 국가가 없어 출처 간 차이가 있다([IRRI RKB BLS](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-leaf-streak)).",
+          "source_urls": [
+            "https://gd.eppo.int/taxon/XANTTO/distribution",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-leaf-streak"
+          ],
+          "contains_미확인": true
+        },
+        "f8_quarantine": {
+          "label": "국가별 검역 지위",
+          "text": "한국: **관리병해충(검역병해충)** — 시행규칙 제4조제2호 → 고시 제3조 별표 2 \"1. 병원체 … 세균 *Xanthomonas oryzae* pv. *oryzicola* (Fang et al.) Swings et al.\"([KR-고시 별표 2](https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059)). 2020년 리뷰의 \"restricted(관리병해충), No. 38\" 기록과 일치한다([홍연석 외 2020](https://koreascience.or.kr/article/JAKO202029462559364.pdf), Table 1). EPPO: **A1 list(1975)**; 국가 항목에 미국 QP(1994), 중국 QP(2021), 기니 RNQP(2022) 등이며 한국 항목은 없다([EPPO XANTTO](https://gd.eppo.int/taxon/XANTTO/categorization)). EU: **Union QP**(Annex II Part A, 1. Bacteria, 항목 10)([EU-2072](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015)). 미국: **PPQ select agent**(7 CFR 331.3(b)(6), *X. oryzae* 종 단위), APHIS Pests of Concern 8번 \"Bacterial leaf streak\"([US-331](https://www.ecfr.gov/current/title-7/section-331.3); [US-PoC](https://www.aphis.usda.gov/laws-regs/animal-plant-diseases-pests-concern)). 중국: **检疫性有害生物** \"水稻细菌性条斑病菌\"([CN](https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc)). 일본: **検疫有害動植物 + 輸入禁止 + 侵入調査 대상**(別表一; 別表二 十五の項, 조선반도·대만 제외 지역산 벼·볏짚·벼·왕겨; 別表八)([JP](https://laws.e-gov.go.jp/law/325M50010000073)). 호주: 미확인.",
+          "source_urls": [
+            "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059",
+            "https://koreascience.or.kr/article/JAKO202029462559364.pdf",
+            "https://gd.eppo.int/taxon/XANTTO/categorization",
+            "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+            "https://www.ecfr.gov/current/title-7/section-331.3",
+            "https://www.aphis.usda.gov/laws-regs/animal-plant-diseases-pests-concern",
+            "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+            "https://laws.e-gov.go.jp/law/325M50010000073"
+          ],
+          "contains_미확인": true
+        },
+        "f9_images": {
+          "label": "사용 가능한 이미지와 이용허락",
+          "text": "상업 이용 후보: [Bugwood 5390469](https://www.ipmimages.org/browse/image/5390469)(Groth, CC BY 3.0 US, 상업 시 요청 권고), [Commons Xanthomonas-disease.jpg](https://commons.wikimedia.org/wiki/File:Xanthomonas-disease.jpg)(여러 *Xanthomonas* 병 합성 이미지 중 (v)·(vi)이 Xoc, CC BY 4.0, An SQ·Potnis N·Dow M 등 ✅). 비상업·허락 필요: [IRRI Flickr 5576388878](https://www.flickr.com/photos/ricephotos/5576388878/)(CC BY-NC-SA 2.0 ⛔), [EPPO XANTTO photos](https://gd.eppo.int/taxon/XANTTO/photos) #1759~1762(IRRI, T.W. Mew; 교육용만 ⛔), IRRI RKB 사진(\"Linear lesions\" 등, CC BY-NC-SA 3.0 배지 ⛔). NCPMS에는 항목이 없어 이미지도 없다.",
+          "source_urls": [
+            "https://www.ipmimages.org/browse/image/5390469",
+            "https://commons.wikimedia.org/wiki/File:Xanthomonas-disease.jpg",
+            "https://www.flickr.com/photos/ricephotos/5576388878/",
+            "https://gd.eppo.int/taxon/XANTTO/photos"
+          ],
+          "contains_미확인": false
+        }
+      },
+      "source_urls": [
+        "https://genebank.rda.go.kr/plntDissInfoMain.do",
+        "https://ncpms.rda.go.kr/npms/SicknsInfoListRM.np",
+        "https://gd.eppo.int/taxon/XANTTO/datasheet",
+        "https://koreascience.or.kr/article/JAKO202029462559364.pdf",
+        "https://gd.eppo.int/taxon/XANTTO",
+        "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bacterial-leaf-streak",
+        "https://gd.eppo.int/taxon/XANTTO/documents",
+        "https://gd.eppo.int/taxon/XANTTO/distribution",
+        "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059",
+        "https://gd.eppo.int/taxon/XANTTO/categorization",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+        "https://www.ecfr.gov/current/title-7/section-331.3",
+        "https://www.aphis.usda.gov/laws-regs/animal-plant-diseases-pests-concern",
+        "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+        "https://laws.e-gov.go.jp/law/325M50010000073",
+        "https://www.ipmimages.org/browse/image/5390469",
+        "https://commons.wikimedia.org/wiki/File:Xanthomonas-disease.jpg",
+        "https://www.flickr.com/photos/ricephotos/5576388878/",
+        "https://gd.eppo.int/taxon/XANTTO/photos"
+      ]
+    },
+    {
+      "no": 6,
+      "crop": "벼",
+      "user_name": "키다리병",
+      "official_kr_name": "키다리병",
+      "scientific_name": "*Fusarium fujikuroi*",
+      "kr_occurrence": "있음(LPDK 1928)",
+      "kr_quarantine": "규제비검역병해충(벼 종자)",
+      "commercial_image": "증상 사진 없음(포자 사진만 CC BY 2.0)",
+      "section_title": "키다리병 (Bakanae disease) — *Fusarium fujikuroi* species complex",
+      "fields": {
+        "f1_names": {
+          "label": "공식 국명·영문명·학명·동의어",
+          "text": "NCPMS는 **키다리병**(馬塵苗病, Bakanae disease)으로 등재하고 병원체를 *Fusarium moniliforme*, *Gibberella fujikuroi* (Sawada) **Ito** [무성세대 *F. fujikuroi*]로 적는다([NCPMS 키다리병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752), 기본정보·병원체 정보). LPDK는 *Fusarium fujikuroi* Nirenberg를 병원균으로, *G. fujikuroi* (Sawada) **Wollenw.**를 이명으로 싣는다([LPDK 검색](https://genebank.rda.go.kr/plntDissInfoMain.do), 기주 벼 결과표). EPPO 우선명은 *F. fujikuroi* Nirenberg(GIBBFU), 이명은 *G. fujikuroi* (Sawada) Wollenweber, *Lisea fujikuroi*다([EPPO GIBBFU](https://gd.eppo.int/taxon/GIBBFU), Overview). 이명 명명자 표기가 NCPMS(Ito)와 LPDK·EPPO(Wollenw.)에서 다르다. 아시아 10개국 벼 종자 연구에서 *F. fujikuroi*가 우점했고 *F. fujikuroi*·*F. concentricum*은 전형적 키다리 증상, *F. proliferatum*·*F. verticillioides*는 위축만 일으켰다(검색 요약으로 확인, 본문 미열람)([PMC3905127](https://pmc.ncbi.nlm.nih.gov/articles/PMC3905127)). 국내 FFSC 보존균주 재동정에서 옛 \"*F. proliferatum*\" 표기 다수가 *F. annulatum* 등으로 바뀌었다는 보고도 있다(검색 요약)([JBNU](https://pure.jbnu.ac.kr/en/publications/the-fusarium-fujikuroi-species-complex-in-korea-taxonomic-revisio/)).",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752",
+            "https://genebank.rda.go.kr/plntDissInfoMain.do",
+            "https://gd.eppo.int/taxon/GIBBFU",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC3905127",
+            "https://pure.jbnu.ac.kr/en/publications/the-fusarium-fujikuroi-species-complex-in-korea-taxonomic-revisio/"
+          ],
+          "contains_미확인": false
+        },
+        "f2_parts_stages": {
+          "label": "피해 부위와 생육 단계",
+          "text": "종자 전염으로 시작해 육묘기(파종 후 10일경부터), 본답 분얼기, 최고분얼기 이후, 수잉기, 출수기에 나타나며, 개화기에 포자가 벼꽃으로 들어가 종자에 잠복한다([NCPMS 키다리병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752), 발생환경·증상설명). 뿌리·관부로 침입해 전신 생장한다([IRRI RKB Bakanae](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bakanae), What it does).",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bakanae"
+          ],
+          "contains_미확인": false
+        },
+        "f3_symptoms": {
+          "label": "주요 증상",
+          "text": "육묘기에 정상보다 **1.5배 이상 웃자란 뒤 1~2주 안에 위축·고사**하며, 심한 감염 종자는 웃자람 없이 고사한다. 본답에서는 2~3주 뒤 잎집에 흰 균사층과 포자, 담갈색 마디, 위쪽 마디의 기근, 출수 불량·불임이 나타난다([NCPMS 키다리병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752), 증상설명). IRRI도 가늘고 긴 황록색 식물, 적은 분얼, 줄기 아래 흰 가루 균, 지상 마디 뿌리를 들며 감염주가 위축되거나 정상처럼 보일 수 있다고 적는다([IRRI RKB Bakanae](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bakanae), How to identify). **국내 *F. fujikuroi* 야외 분리주 15주 중 9주는 위축형, 6주만 전형적 키다리형**이었고, 위축형은 지베렐린을 생산하지 않거나 10~15배 적게 생산했다([Niehaus et al. 2017](https://pmc.ncbi.nlm.nih.gov/articles/PMC5675463/), Virulence assay·Population analyses).",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bakanae",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC5675463/"
+          ],
+          "contains_미확인": false
+        },
+        "f4_confusions": {
+          "label": "혼동하기 쉬운 병과 비생물적 장해",
+          "text": "일반 도장묘(고온·과밀·질소 과다)와의 구별: 키다리병 묘는 1·2본엽 사이가 45° 이상 벌어지거나 2·3본엽이 나오지 않고, 뽑으면 줄기와 종자가 쉽게 분리된다(도장묘는 함께 뽑힘). 웃자람만으로 판정하면 실제 잠복 감염률이 10배 이상 높을 수 있다([NCPMS 키다리병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752), 증상설명). 질소 과다 웃자람 자체를 다룬 공식 비교 자료는 미확인이다.",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752"
+          ],
+          "contains_미확인": true
+        },
+        "f5_differentiation": {
+          "label": "구별을 위한 추가 사진·질문·검사",
+          "text": "*사진만으로 구별 가능한 특징:* 묘판 내 키 차이(1.5배 이상), 연녹·황록 엽색, 1·2본엽 각도 45° 이상, 2·3본엽 미출현, 줄기 기부 흰 균사·포자, 지상 마디 기근, 마디 갈변([NCPMS 키다리병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752); [IRRI RKB Bakanae](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bakanae)). 단일 개체보다 묘판 전체 사진이 필요하다. **키다리 증상이 없다고 음성 판정하면 안 된다**(위축형 다수).\n*추가로 받을 사진·질문·현장 검사:* 한 주씩 뽑아 종자·줄기 분리 여부를 찍은 사진. 종자 출처와 소독(온탕 60 ℃ 10분, 염수선 비중 1.13), 육묘 온도, 밭못자리·시설육묘·밀파 여부([NCPMS 키다리병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752), 방제방법·발생환경).\n*실험실 검사가 필요한 특징:* 위축형·무증상 감염 판정, 병원균 분리와 형태(대형분생포자 3~5격막 36~66 × 3~3.5 µm, 소형분생포자 연쇄상 5~12 × 2~3 µm)([NCPMS 키다리병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752), 병원체 특징), TEF1α·RPB2 염기서열 종 동정, PKS51/NRPS31 마커로 병원형 구별([Niehaus et al. 2017](https://pmc.ncbi.nlm.nih.gov/articles/PMC5675463/), Methods). 표준 국내 종자검사 프로토콜은 미확인이다.",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bakanae",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC5675463/"
+          ],
+          "contains_미확인": true,
+          "parts": {
+            "f5a_photo_only": "묘판 내 키 차이(1.5배 이상), 연녹·황록 엽색, 1·2본엽 각도 45° 이상, 2·3본엽 미출현, 줄기 기부 흰 균사·포자, 지상 마디 기근, 마디 갈변([NCPMS 키다리병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752); [IRRI RKB Bakanae](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bakanae)). 단일 개체보다 묘판 전체 사진이 필요하다. **키다리 증상이 없다고 음성 판정하면 안 된다**(위축형 다수).",
+            "f5b_extra_requests": "한 주씩 뽑아 종자·줄기 분리 여부를 찍은 사진. 종자 출처와 소독(온탕 60 ℃ 10분, 염수선 비중 1.13), 육묘 온도, 밭못자리·시설육묘·밀파 여부([NCPMS 키다리병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752), 방제방법·발생환경).",
+            "f5c_lab_tests": "위축형·무증상 감염 판정, 병원균 분리와 형태(대형분생포자 3~5격막 36~66 × 3~3.5 µm, 소형분생포자 연쇄상 5~12 × 2~3 µm)([NCPMS 키다리병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752), 병원체 특징), TEF1α·RPB2 염기서열 종 동정, PKS51/NRPS31 마커로 병원형 구별([Niehaus et al. 2017](https://pmc.ncbi.nlm.nih.gov/articles/PMC5675463/), Methods). 표준 국내 종자검사 프로토콜은 미확인이다."
+          }
+        },
+        "f6_conditions": {
+          "label": "발생 조건과 근거",
+          "text": "파종 후 묘상 온도 **35 ℃에서 발병 최적**, 25 ℃ 정도에서도 발병, **20 ℃에서는 병징 없음**, 균 생육 최적 27~30 ℃, 포자 형성 최적 24~32 ℃이며 밤이나 약한 비에 비산한다. 호기성이라 밭못자리·시설육묘에서 잘 퍼지고 물못자리에서 적으며, 밀파할수록 증가하고, 본답 토양을 통한 2차 감염 보고는 없다([NCPMS 키다리병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752), 발생환경). 감염 종자 사용 시 가장 많고 오염된 침종수로도 퍼진다([IRRI RKB Bakanae](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bakanae), Why and where it occurs). 질소 영향의 정량 근거는 미확인이다.",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bakanae"
+          ],
+          "contains_미확인": true
+        },
+        "f7_occurrence": {
+          "label": "한국 및 해외 발생 기록",
+          "text": "한국: LPDK 최초 문헌은 中田覺五郎 등 **1928**(朝鮮總督府 勸業模範場 硏究報告 15:3)이다([LPDK 검색](https://genebank.rda.go.kr/plntDissInfoMain.do)). 2007년부터 못자리뿐 아니라 본논에서도 크게 문제가 되었다(농진청 2011 보도)([농촌진흥청 보도자료 2011-08-08](https://www.korea.kr/briefing/pressReleaseView.do?newsId=155775584), 본문 2문단). 2014~2016년 국내 벼 낟알과 논 상공 공기 시료에서 분리주 연구가 있다([Niehaus et al. 2017](https://pmc.ncbi.nlm.nih.gov/articles/PMC5675463/)). 해외: 수량 손실 일본 20~50%, 인도 15%, 태국 3.7%([IRRI RKB Bakanae](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bakanae), Why is it important). EPPO 분포 페이지는 404였고 CABI는 미열람이다.",
+          "source_urls": [
+            "https://genebank.rda.go.kr/plntDissInfoMain.do",
+            "https://www.korea.kr/briefing/pressReleaseView.do?newsId=155775584",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC5675463/",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bakanae"
+          ],
+          "contains_미확인": false
+        },
+        "f8_quarantine": {
+          "label": "국가별 검역 지위",
+          "text": "한국: **규제비검역병해충**(고시 별표 3 \"가. 벼\" 1번 \"키다리병 *Gibberella fujikuroi*\", 최고한도 2.0/5.0/5.0 %, \"특정병\", 2번 *Aphelenchoides besseyi*와 같은 칸)([KR-고시 별표 3](https://www.law.go.kr/LSW/flDownload.do?flSeq=169519071)). EPPO: A1/A2 미등재, 국가 항목은 멕시코 QP(2018), 스위스 RNQP(2019)([EPPO GIBBFU](https://gd.eppo.int/taxon/GIBBFU/categorization)). EU: **RNQP**(Annex IV Part B, 곡물 종자, *Oryza sativa*, \"Practically free\"; Annex V Part B 포장 측정조치 200 m²당 증상주 2주 이하)([EU-2072](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015)). 미국: select agent 아님([US-331](https://www.ecfr.gov/current/title-7/section-331.3)). 중국·일본: 미등재(확인)([CN](https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc); [JP](https://laws.e-gov.go.jp/law/325M50010000073)). 호주: 미확인.",
+          "source_urls": [
+            "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519071",
+            "https://gd.eppo.int/taxon/GIBBFU/categorization",
+            "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+            "https://www.ecfr.gov/current/title-7/section-331.3",
+            "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+            "https://laws.e-gov.go.jp/law/325M50010000073"
+          ],
+          "contains_미확인": true
+        },
+        "f9_images": {
+          "label": "사용 가능한 이미지와 이용허락",
+          "text": "**상업 이용 가능한 키다리 증상 사진은 찾지 못했다.** [Commons Bakanae Disease sporulation JIRCAS.jpg](https://commons.wikimedia.org/wiki/File:Bakanae_Disease_sporulation_JIRCAS.jpg)는 CC BY 2.0(JIRCAS Photo Archive) ✅이지만 포자 형성 사진이고, 파일 설명에 \"정부표준이용약관 2.0(CC BY 4.0 호환)\"도 있어 표기가 이중이다. Commons \"File:Gibberella fujikuroi.jpg\"(CC BY 3.0)는 **목화 피해 사진이므로 쓰면 안 된다**([Commons](https://commons.wikimedia.org/wiki/File:Gibberella_fujikuroi.jpg), Description). 비상업·허락 필요: [Bugwood 5408848](https://www.ipmimages.org/browse/image/5408848)(Yuan-Min Shen, CC BY-NC 3.0 US ⛔; 5436333·5476518도 BY-NC), NCPMS(병 9·병원체 3장, 공공누리 제2유형 ⛔), IRRI RKB 사진(⛔), LPDK 워터마크 이미지 18점(이용조건 미확인). EPPO GIBBFU에는 사진이 없다.",
+          "source_urls": [
+            "https://commons.wikimedia.org/wiki/File:Bakanae_Disease_sporulation_JIRCAS.jpg",
+            "https://commons.wikimedia.org/wiki/File:Gibberella_fujikuroi.jpg",
+            "https://www.ipmimages.org/browse/image/5408848"
+          ],
+          "contains_미확인": true
+        }
+      },
+      "source_urls": [
+        "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752",
+        "https://genebank.rda.go.kr/plntDissInfoMain.do",
+        "https://gd.eppo.int/taxon/GIBBFU",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3905127",
+        "https://pure.jbnu.ac.kr/en/publications/the-fusarium-fujikuroi-species-complex-in-korea-taxonomic-revisio/",
+        "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/bakanae",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5675463/",
+        "https://www.korea.kr/briefing/pressReleaseView.do?newsId=155775584",
+        "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519071",
+        "https://gd.eppo.int/taxon/GIBBFU/categorization",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+        "https://www.ecfr.gov/current/title-7/section-331.3",
+        "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+        "https://laws.e-gov.go.jp/law/325M50010000073",
+        "https://commons.wikimedia.org/wiki/File:Bakanae_Disease_sporulation_JIRCAS.jpg",
+        "https://commons.wikimedia.org/wiki/File:Gibberella_fujikuroi.jpg",
+        "https://www.ipmimages.org/browse/image/5408848"
+      ]
+    },
+    {
+      "no": 7,
+      "crop": "벼",
+      "user_name": "이삭누룩병",
+      "official_kr_name": "이삭누룩병",
+      "scientific_name": "*Ustilaginoidea virens*",
+      "kr_occurrence": "있음(LPDK 1927)",
+      "kr_quarantine": "미등재(확인)",
+      "commercial_image": "있음(Bugwood, Commons CC BY-SA)",
+      "section_title": "이삭누룩병 (False smut) — *Ustilaginoidea virens*",
+      "fields": {
+        "f1_names": {
+          "label": "공식 국명·영문명·학명·동의어",
+          "text": "NCPMS는 **이삭누룩병**(稻麴病, False smut), 병원체 *Ustilaginoidea virens* (Cooke) Takahashi로 등재한다([NCPMS 이삭누룩병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000814), 기본정보; [농사로 미러](https://www.nongsaro.go.kr/portal/ps/pss/pssa/sicknsSearchDtl.ps?pageIndex=1&pageSize=10&sicknsCode=D00000814&menuId=PS00202)). LPDK도 같은 이름·학명이며 이명 기재가 없다([LPDK 검색](https://genebank.rda.go.kr/plntDissInfoMain.do)). EPPO(USTNVI) 이명은 *Claviceps virens*, *Ustilaginoidea oryzae*, *Ustilago virens*, *Villosiclava virens*, 영명은 false smut, green smut of rice다([EPPO USTNVI](https://gd.eppo.int/taxon/USTNVI), Overview). 유성세대 *Villosiclava virens*는 Tanaka et al.(Mycotaxon 106:491–501)이 제안했다(검색 요약)([PestInfo wiki](https://wiki.pestinfo.org/wiki/Mycotaxon_(2009)_106,_491-501)). 현행 분류(Index Fungorum/MycoBank)는 미확인이다.",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000814",
+            "https://www.nongsaro.go.kr/portal/ps/pss/pssa/sicknsSearchDtl.ps?pageIndex=1&pageSize=10&sicknsCode=D00000814&menuId=PS00202",
+            "https://genebank.rda.go.kr/plntDissInfoMain.do",
+            "https://gd.eppo.int/taxon/USTNVI",
+            "https://wiki.pestinfo.org/wiki/Mycotaxon_(2009"
+          ],
+          "contains_미확인": true
+        },
+        "f2_parts_stages": {
+          "label": "피해 부위와 생육 단계",
+          "text": "벼알에서만 발생한다. 균핵·후막포자로 월동하고 7~8월에 균핵이 발아해 자낭포자가 수잉기 엽초에 붙은 뒤 개화기에 벼꽃으로 침입한다([NCPMS 이삭누룩병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000814), 증상설명·발생환경). 이삭이 나온 뒤에야 보인다([IRRI RKB False smut](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/false-smut)).",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000814",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/false-smut"
+          ],
+          "contains_미확인": false
+        },
+        "f3_symptoms": {
+          "label": "주요 증상",
+          "text": "벼알 표면이 황록색으로 변하고 껍질이 열리며 황록색 돌출물이 생긴 뒤 가루 모양 후막포자로 검게 변한다. 속은 흰색, 겉은 짙은 녹색~검은색이다([NCPMS 이삭누룩병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000814), 증상설명). IRRI는 벨벳 같은 포자괴(초기 주황 → 황록·흑록), 막에 싸인 미성숙 포자괴, 이삭 일부 낟알만 감염되고 주변 낟알은 쭉정이가 되기 쉽다고 적는다([IRRI RKB False smut](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/false-smut), How to identify).",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000814",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/false-smut"
+          ],
+          "contains_미확인": false
+        },
+        "f4_confusions": {
+          "label": "혼동하기 쉬운 병과 비생물적 장해",
+          "text": "국내 등재 유사 병으로 벼 먹깜부기병(Kernel smut, *Tilletia barclayana*)이 있으나 두 병의 구별 기준을 적은 공식 출처는 미확인이다([LPDK 검색](https://genebank.rda.go.kr/plntDissInfoMain.do)). 같은 출수기 이삭 병(이삭도열병, 세균벼알마름병)과 시기가 겹친다([농진청 보도자료 2024-08-01](https://www.rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000797460), 도입 문단). 비생물적 장해 비교 출처는 미확인이다.",
+          "source_urls": [
+            "https://genebank.rda.go.kr/plntDissInfoMain.do",
+            "https://www.rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000797460"
+          ],
+          "contains_미확인": true
+        },
+        "f5_differentiation": {
+          "label": "구별을 위한 추가 사진·질문·검사",
+          "text": "*사진만으로 구별 가능한 특징:* 낟알 대신 생긴 둥근 포자괴, 황록 → 흑록 색 변화, 표면 가루, 한 이삭 내 일부 낟알만 이환. NCPMS는 \"이삭에 누룩을 형성하므로 쉽게 식별\"된다고 적는다([NCPMS 이삭누룩병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000814), 증상설명; [IRRI RKB False smut](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/false-smut)). 26개 병 가운데 사진 단독 판별 신뢰도가 높은 편이지만 초기 단계와 먹깜부기병의 구별 기준은 확인되지 않았다.\n*추가로 받을 사진·질문·현장 검사:* 포자괴 단면 사진(속 흰색·겉 녹흑색). 출수기 전후 강우일수·일조, 질소(특히 만기 추비)·유기질 비료 과용, 규산질 비료 사용, 발병 포장 볍씨 사용 여부([NCPMS 이삭누룩병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000814), 발생환경·방제방법).\n*실험실 검사가 필요한 특징:* 먹깜부기병 등과 구별이 모호할 때의 포자 검경(이를 명시한 출처는 미확인, 추론).",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000814",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/false-smut"
+          ],
+          "contains_미확인": true,
+          "parts": {
+            "f5a_photo_only": "낟알 대신 생긴 둥근 포자괴, 황록 → 흑록 색 변화, 표면 가루, 한 이삭 내 일부 낟알만 이환. NCPMS는 \"이삭에 누룩을 형성하므로 쉽게 식별\"된다고 적는다([NCPMS 이삭누룩병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000814), 증상설명; [IRRI RKB False smut](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/false-smut)). 26개 병 가운데 사진 단독 판별 신뢰도가 높은 편이지만 초기 단계와 먹깜부기병의 구별 기준은 확인되지 않았다.",
+            "f5b_extra_requests": "포자괴 단면 사진(속 흰색·겉 녹흑색). 출수기 전후 강우일수·일조, 질소(특히 만기 추비)·유기질 비료 과용, 규산질 비료 사용, 발병 포장 볍씨 사용 여부([NCPMS 이삭누룩병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000814), 발생환경·방제방법).",
+            "f5c_lab_tests": "먹깜부기병 등과 구별이 모호할 때의 포자 검경(이를 명시한 출처는 미확인, 추론)."
+          }
+        },
+        "f6_conditions": {
+          "label": "발생 조건과 근거",
+          "text": "국내: 이삭이 패기 전후 비가 잦아 다습하고, **기온이 25 ℃ 내외로 낮으며** 일조가 적을 때, 질소 과다일 때 잘 발생한다([농진청 보도자료 2024-08-01](https://www.rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000797460)). NCPMS는 저온다습·일조부족·강우일수가 \"절대적인 영향\"을 주며 질소 만기 추비가 조장하고 규산질 비료가 억제한다고 적는다([NCPMS 이삭누룩병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000814), 발생환경·방제방법). IRRI: **RH 90% 초과, 25~35 ℃**, 비·고습·고질소 토양([IRRI RKB False smut](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/false-smut)). 두 표현(\"25 ℃ 내외로 낮을 때\" 대 \"25~35 ℃\")이 달라 병기가 필요하다. 피해는 천립중 감소, 발아율 최대 35% 감소, 다습 시 25% 손실, 인도 7~75%다(같은 IRRI 페이지).",
+          "source_urls": [
+            "https://www.rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000797460",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000814",
+            "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/false-smut"
+          ],
+          "contains_미확인": false
+        },
+        "f7_occurrence": {
+          "label": "한국 및 해외 발생 기록",
+          "text": "한국: LPDK 최초 문헌은 吉井甫 等 **1927**(朝鮮總督府 勸業模範場彙報 7:22)이다([LPDK 검색](https://genebank.rda.go.kr/plntDissInfoMain.do)). 1998년 출수기 강우일수가 많고 일조가 매우 적었던 중부지방에서 대발생했고([NCPMS 이삭누룩병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000814), 발생환경), 2010년에는 평년보다 약 7배 많았다([농진청 보도자료 2011-08-08](https://www.korea.kr/briefing/pressReleaseView.do?newsId=155775584)). 해외: 인도 손실 기록(IRRI) 외에 EPPO 분포 페이지는 404이고 CABI는 미확인이다.",
+          "source_urls": [
+            "https://genebank.rda.go.kr/plntDissInfoMain.do",
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000814",
+            "https://www.korea.kr/briefing/pressReleaseView.do?newsId=155775584"
+          ],
+          "contains_미확인": true
+        },
+        "f8_quarantine": {
+          "label": "국가별 검역 지위",
+          "text": "한국: 미등재(확인)(시행규칙 별표 1, 고시 별표 1~3)([KR-고시 별표 2](https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059); [KR-고시 별표 3](https://www.law.go.kr/LSW/flDownload.do?flSeq=169519071)). EPPO: A1/A2 미등재, 국가 항목은 이집트 RNQP(2018), 멕시코 QP(2018)([EPPO USTNVI](https://gd.eppo.int/taxon/USTNVI/categorization)). EU·중국·일본: 미등재(확인)([EU-2072](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015); [CN](https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc); [JP](https://laws.e-gov.go.jp/law/325M50010000073)). 미국: select agent 아님, 규제표 미확인([US-331](https://www.ecfr.gov/current/title-7/section-331.3)). 호주: 미확인.",
+          "source_urls": [
+            "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059",
+            "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519071",
+            "https://gd.eppo.int/taxon/USTNVI/categorization",
+            "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+            "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+            "https://laws.e-gov.go.jp/law/325M50010000073",
+            "https://www.ecfr.gov/current/title-7/section-331.3"
+          ],
+          "contains_미확인": true
+        },
+        "f9_images": {
+          "label": "사용 가능한 이미지와 이용허락",
+          "text": "상업 이용 후보: [Bugwood 5410631](https://www.ipmimages.org/browse/image/5410631)(Groth, CC BY 3.0 US; 5390500도 CC BY, 상업 시 요청 권고). Commons(모두 ✅SA): [False smut on rice in central Vietnam.jpg](https://commons.wikimedia.org/wiki/File:False_smut_on_rice_in_central_Vietnam.jpg)(Crop Trust, CC BY-SA 4.0), [Rice false smut.jpg](https://commons.wikimedia.org/wiki/File:Rice_false_smut.jpg)(Aciculo, CC BY-SA 3.0), [Rice grains infected with false smut.jpg](https://commons.wikimedia.org/wiki/File:Rice_grains_infected_with_false_smut.jpg)(Windesa, CC BY-SA 4.0), [U.Virens.jpg](https://commons.wikimedia.org/wiki/File:U.Virens.jpg)(Earlycj5, CC BY-SA 3.0 US), [Ustilaginoidea virens 20151031-1.jpg](https://commons.wikimedia.org/wiki/File:Ustilaginoidea_virens_20151031-1.jpg)(Darshank94, CC BY-SA 4.0). 비상업·허락 필요: [IRRI Flickr 6233365479](https://www.flickr.com/photos/ricephotos/6233365479/)(CC BY-NC-SA 2.0 ⛔), [EPPO USTNVI photos](https://gd.eppo.int/taxon/USTNVI/photos) 8점(교육용만 ⛔), NCPMS 병 사진 6점(⛔), IRRI RKB 사진(⛔).",
+          "source_urls": [
+            "https://www.ipmimages.org/browse/image/5410631",
+            "https://commons.wikimedia.org/wiki/File:False_smut_on_rice_in_central_Vietnam.jpg",
+            "https://commons.wikimedia.org/wiki/File:Rice_false_smut.jpg",
+            "https://commons.wikimedia.org/wiki/File:Rice_grains_infected_with_false_smut.jpg",
+            "https://commons.wikimedia.org/wiki/File:U.Virens.jpg",
+            "https://commons.wikimedia.org/wiki/File:Ustilaginoidea_virens_20151031-1.jpg",
+            "https://www.flickr.com/photos/ricephotos/6233365479/",
+            "https://gd.eppo.int/taxon/USTNVI/photos"
+          ],
+          "contains_미확인": false
+        }
+      },
+      "source_urls": [
+        "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000814",
+        "https://www.nongsaro.go.kr/portal/ps/pss/pssa/sicknsSearchDtl.ps?pageIndex=1&pageSize=10&sicknsCode=D00000814&menuId=PS00202",
+        "https://genebank.rda.go.kr/plntDissInfoMain.do",
+        "https://gd.eppo.int/taxon/USTNVI",
+        "https://wiki.pestinfo.org/wiki/Mycotaxon_(2009",
+        "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/false-smut",
+        "https://www.rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000797460",
+        "https://www.korea.kr/briefing/pressReleaseView.do?newsId=155775584",
+        "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059",
+        "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519071",
+        "https://gd.eppo.int/taxon/USTNVI/categorization",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+        "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+        "https://laws.e-gov.go.jp/law/325M50010000073",
+        "https://www.ecfr.gov/current/title-7/section-331.3",
+        "https://www.ipmimages.org/browse/image/5410631",
+        "https://commons.wikimedia.org/wiki/File:False_smut_on_rice_in_central_Vietnam.jpg",
+        "https://commons.wikimedia.org/wiki/File:Rice_false_smut.jpg",
+        "https://commons.wikimedia.org/wiki/File:Rice_grains_infected_with_false_smut.jpg",
+        "https://commons.wikimedia.org/wiki/File:U.Virens.jpg",
+        "https://commons.wikimedia.org/wiki/File:Ustilaginoidea_virens_20151031-1.jpg",
+        "https://www.flickr.com/photos/ricephotos/6233365479/",
+        "https://gd.eppo.int/taxon/USTNVI/photos"
+      ]
+    },
+    {
+      "no": 8,
+      "crop": "벼",
+      "user_name": "세균벼알마름병",
+      "official_kr_name": "세균벼알마름병",
+      "scientific_name": "*Burkholderia glumae*",
+      "kr_occurrence": "있음(LPDK 문헌 1987·1988)",
+      "kr_quarantine": "미등재(확인)",
+      "commercial_image": "있음(Bugwood, Commons CC BY-SA)",
+      "section_title": "세균벼알마름병 (Bacterial grain rot / bacterial panicle blight) — *Burkholderia glumae*",
+      "fields": {
+        "f1_names": {
+          "label": "공식 국명·영문명·학명·동의어",
+          "text": "NCPMS는 **세균벼알마름병**(枯細菌病, Bacterial grain rot), 병원체 *Burkholderia glumae* (Kurita & Tabei) Urakami et al. [= *Pseudomonas glumae*]로 등재한다([NCPMS 세균벼알마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000742), 기본정보·병원체 정보). LPDK는 \"세균벼알마름병 / 세균잎집썩음병\"(DSNM_NO 1418) 아래 *B. glumae*와 ***B. plantarii***를 함께 싣고, ***B. gladioli*는 \"줄기마름병\"(Sheath rot)으로 따로** 싣는다([LPDK 검색](https://genebank.rda.go.kr/plntDissInfoMain.do), 기주 벼 세균 결과표). EPPO(PSDMGM) 영명은 bacterial grain rot, coloured rice, ear blight, seedling blight of rice다([EPPO PSDMGM](https://gd.eppo.int/taxon/PSDMGM)). 아시아에서는 \"bacterial grain rot\", 미국·중남미에서는 \"bacterial panicle blight\"로 부르며, 벼 병원균은 1994년 *Burkholderia* 속으로 옮겨졌다([Ham et al. 2011](https://pmc.ncbi.nlm.nih.gov/articles/PMC6640401/), Introduction). 보도자료와 2001년 논문은 \"세균성 벼알마름병\"이라는 변형 표기를 쓴다.",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000742",
+            "https://genebank.rda.go.kr/plntDissInfoMain.do",
+            "https://gd.eppo.int/taxon/PSDMGM",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC6640401/"
+          ],
+          "contains_미확인": false
+        },
+        "f2_parts_stages": {
+          "label": "피해 부위와 생육 단계",
+          "text": "주로 벼알이고 엽초에도 병징이 있으며, 감염 종자는 발아 불능·부패, 모는 엽초 갈변 후 고사(유묘부패)한다([NCPMS 세균벼알마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000742), 증상설명). 종자에서 월동해 침종 시 건전 종자로 전염되고, 엽초에 잠복하다 출수기에 벼알로 침입한다(같은 페이지, 발생환경). 출수·개화기가 가장 취약하다([Ham et al. 2011](https://pmc.ncbi.nlm.nih.gov/articles/PMC6640401/), Symptoms). 2015년 농진청 보도는 \"벼 알에만 증상이 나타난다\"고 적어 NCPMS(\"엽초에도 병징\")와 표현이 다르다([농진청 보도자료 2015-07-29](https://korea.kr/news/pressReleaseView.do?newsId=156066598)).",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000742",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC6640401/",
+            "https://korea.kr/news/pressReleaseView.do?newsId=156066598"
+          ],
+          "contains_미확인": false
+        },
+        "f3_symptoms": {
+          "label": "주요 증상",
+          "text": "벼알 기부부터 황백색으로 변색되어 전체로 번지고, 일찍 감염된 이삭은 엷은 붉은색을 띠며 **고개를 숙이지 못한 채 꼿꼿이 서서** 쭉정이가 된다. 늦게 감염된 현미는 작고 갈색 줄무늬가 있다([NCPMS 세균벼알마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000742), 증상설명). 미국 기재로는 영의 아래 1/3이 흰~연회색이고 적갈색 경계로 나뉘며 이삭축은 초기에 녹색을 유지하고, 지엽 엽초에 암갈색 병반이 생긴다([Univ. of Arkansas FSA7580](https://www.uaex.uada.edu/publications/pdf/FSA-7580.pdf), Disease Symptoms Fig. 1–7).",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000742",
+            "https://www.uaex.uada.edu/publications/pdf/FSA-7580.pdf"
+          ],
+          "contains_미확인": false
+        },
+        "f4_confusions": {
+          "label": "혼동하기 쉬운 병과 비생물적 장해",
+          "text": "*B. gladioli*·*B. plantarii*는 같은 증상군을 일으키며 gyrB multiplex PCR로 구별한다([Ham et al. 2011](https://pmc.ncbi.nlm.nih.gov/articles/PMC6640401/)). *Acidovorax avenae*(낟알 변색 동반)와 *Pseudomonas fuscovaginae*도 낟알 변색을 일으킨다(같은 논문). 바람 피해, 물 스트레스(부분 불임), 이화명나방 등 해충 피해와 혼동될 수 있다([FSA7580](https://www.uaex.uada.edu/publications/pdf/FSA-7580.pdf), Disease Symptoms 마지막 문단·Fig. 8–9). 국내 \"이삭마름병\"(*Alternaria*, *Curvularia lunata*, *Fusarium* spp. 등 다수 균)과의 감별도 필요하다([LPDK 검색](https://genebank.rda.go.kr/plntDissInfoMain.do)). 고온 불임과 직접 비교한 공식 자료는 미확인이다.",
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC6640401/",
+            "https://www.uaex.uada.edu/publications/pdf/FSA-7580.pdf",
+            "https://genebank.rda.go.kr/plntDissInfoMain.do"
+          ],
+          "contains_미확인": true
+        },
+        "f5_differentiation": {
+          "label": "구별을 위한 추가 사진·질문·검사",
+          "text": "*사진만으로 구별 가능한 특징(의심 단계):* 낟알 기부에서 시작하는 황백~갈색 변색과 적갈색 경계, 직립 이삭, 녹색 이삭축, 지엽 엽초 병반, 포장 내 패치 분포([NCPMS 세균벼알마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000742); [FSA7580](https://www.uaex.uada.edu/publications/pdf/FSA-7580.pdf)). 종 구별과 확진은 사진으로 불가능하다.\n*추가로 받을 사진·질문·현장 검사:* 출수·개화기 전후 최고·야간 기온, 강우·이슬 지속, 종자 소독(염수선 1.13~1.14, 온탕 55 ℃ 60분, 건열 40 ℃ 2일), 최아·육묘 온도(30~35 ℃ 회피), 질소 시비량, 파종량([NCPMS 세균벼알마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000742), 방제방법; [FSA7580](https://www.uaex.uada.edu/publications/pdf/FSA-7580.pdf)).\n*실험실 검사가 필요한 특징:* S-PG 선택배지 집락, King's B 배지의 톡소플라빈 색소(Ham 2011은 노란색, NCPMS는 \"연두색\"으로 표현), 리파아제·펙티나아제 반응, 16S–23S rDNA spacer 프라이머, 종자 정량 real-time PCR, gyrB multiplex, rep-PCR, 담배잎 과민반응([Ham et al. 2011](https://pmc.ncbi.nlm.nih.gov/articles/PMC6640401/), Detection; [NCPMS 세균벼알마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000742), 병원체 특징). 병원균은 그람음성 단간균 0.7 × 1.5~2.5 µm, 극모 1~3개, 최적 30~35 ℃다.",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000742",
+            "https://www.uaex.uada.edu/publications/pdf/FSA-7580.pdf",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC6640401/"
+          ],
+          "contains_미확인": false,
+          "parts": {
+            "f5a_photo_only": "(의심 단계) 낟알 기부에서 시작하는 황백~갈색 변색과 적갈색 경계, 직립 이삭, 녹색 이삭축, 지엽 엽초 병반, 포장 내 패치 분포([NCPMS 세균벼알마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000742); [FSA7580](https://www.uaex.uada.edu/publications/pdf/FSA-7580.pdf)). 종 구별과 확진은 사진으로 불가능하다.",
+            "f5b_extra_requests": "출수·개화기 전후 최고·야간 기온, 강우·이슬 지속, 종자 소독(염수선 1.13~1.14, 온탕 55 ℃ 60분, 건열 40 ℃ 2일), 최아·육묘 온도(30~35 ℃ 회피), 질소 시비량, 파종량([NCPMS 세균벼알마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000742), 방제방법; [FSA7580](https://www.uaex.uada.edu/publications/pdf/FSA-7580.pdf)).",
+            "f5c_lab_tests": "S-PG 선택배지 집락, King's B 배지의 톡소플라빈 색소(Ham 2011은 노란색, NCPMS는 \"연두색\"으로 표현), 리파아제·펙티나아제 반응, 16S–23S rDNA spacer 프라이머, 종자 정량 real-time PCR, gyrB multiplex, rep-PCR, 담배잎 과민반응([Ham et al. 2011](https://pmc.ncbi.nlm.nih.gov/articles/PMC6640401/), Detection; [NCPMS 세균벼알마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000742), 병원체 특징). 병원균은 그람음성 단간균 0.7 × 1.5~2.5 µm, 극모 1~3개, 최적 30~35 ℃다."
+          }
+        },
+        "f6_conditions": {
+          "label": "발생 조건과 근거",
+          "text": "국내: 출수·개화기 고온다습 시 대발생, 병원세균 10² CFU/mL 이상이고 기온 20 ℃ 이상이면 쉽게 발생, 국내 품종 간 저항성 차이 없음([NCPMS 세균벼알마름병](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000742), 발생환경); **출수 전후 30 ℃ 이상 고온 지속 또는 30 mm 내외의 잦은 비**([농진청 보도자료 2015-07-29](https://korea.kr/news/pressReleaseView.do?newsId=156066598)). 1992~2000년 분석에서 다발생 연도(1994·1995·1998·2000)는 중만생종 출수기(8월 상·중순)에 고온 지속과 연속 강우가 겹쳤고, 1993년은 비가 많았으나 저온이라, 1997년은 고온이었으나 비가 적어 발생이 적었다. 출수기 접종 후 24시간 이상 습실 처리 시 10² CFU/mL부터 발병했다([식물병연구 7(3):150-154, 2001](https://koreascience.or.kr/article/JAKO200111921139724.page?lang=ko), 초록). 해외: 생장 11~40 ℃, 최적 30~35 ℃, 특히 **야간 고온**에서 대발생([Ham et al. 2011](https://pmc.ncbi.nlm.nih.gov/articles/PMC6640401/), Epidemiology); 미국에서는 여름밤 고온과 긴 이슬, 고질소·과다 파종이 조장한다([FSA7580](https://www.uaex.uada.edu/publications/pdf/FSA-7580.pdf), Favorable Conditions).",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000742",
+            "https://korea.kr/news/pressReleaseView.do?newsId=156066598",
+            "https://koreascience.or.kr/article/JAKO200111921139724.page?lang=ko",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC6640401/",
+            "https://www.uaex.uada.edu/publications/pdf/FSA-7580.pdf"
+          ],
+          "contains_미확인": false
+        },
+        "f7_occurrence": {
+          "label": "한국 및 해외 발생 기록",
+          "text": "한국: LPDK 문헌 중 가장 이른 것은 茂內靜夫 등 1987(日本植物病理學會報 53(3):402)과 최재을 1988이며, 이것이 국내 최초 보고인지는 미확인이다([LPDK 검색](https://genebank.rda.go.kr/plntDissInfoMain.do)). 다발생 연도는 1994, 1995, 1998, 2000년이다([식물병연구 2001](https://koreascience.or.kr/article/JAKO200111921139724.page?lang=ko)). 참조 균주 BGR1은 한국 이병 이삭 분리주다([Ham et al. 2011](https://pmc.ncbi.nlm.nih.gov/articles/PMC6640401/)). *B. plantarii* 국내 첫 보고는 Ra et al. 2016이다([LPDK 검색](https://genebank.rda.go.kr/plntDissInfoMain.do); [SIPaV](https://sipav.org/en/16/Archive/3767), 제목만 확인). 해외: 1956년 일본 첫 기재, 이후 동아시아·중국·중남미·미국(루이지애나 1995·1998·2000 대발생, 최대 75% 손실)([Ham et al. 2011](https://pmc.ncbi.nlm.nih.gov/articles/PMC6640401/)); 아칸소 1995·2010·2011년 손실([FSA7580](https://www.uaex.uada.edu/publications/pdf/FSA-7580.pdf), About the Disease). EPPO 분포 페이지는 404다.",
+          "source_urls": [
+            "https://genebank.rda.go.kr/plntDissInfoMain.do",
+            "https://koreascience.or.kr/article/JAKO200111921139724.page?lang=ko",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC6640401/",
+            "https://sipav.org/en/16/Archive/3767",
+            "https://www.uaex.uada.edu/publications/pdf/FSA-7580.pdf"
+          ],
+          "contains_미확인": true
+        },
+        "f8_quarantine": {
+          "label": "국가별 검역 지위",
+          "text": "한국: ***B. glumae*는 미등재(확인)**. 고시 별표 2 세균 목록에는 *B. caryophylli*와 ***B. plantarii***가 있다([KR-고시 별표 2](https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059)). *B. plantarii*는 LPDK에 2016년 국내 발생으로 등재되어 있으면서도 관리병해충으로 남아 있는데, 법 정의상 검역병해충에는 \"국내 일부 지역에 분포하지만 발생예찰 등 조치를 취하고 있는 병해충\"도 포함되므로 반드시 모순은 아니다([식물방역법](https://www.law.go.kr/법령/식물방역법), 제2조제5호). EPPO: A1/A2 미등재, 국가 항목은 이집트 A1, 아르헨티나 A1, 브라질 A1, 멕시코 QP, 중국 QP(2021)([EPPO PSDMGM](https://gd.eppo.int/taxon/PSDMGM/categorization)). EU: 미등재(확인)([EU-2072](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015)). 미국: select agent 아님([US-331](https://www.ecfr.gov/current/title-7/section-331.3)). 중국: **检疫性有害生物** \"水稻细菌性谷枯病菌\"([CN](https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc)). 일본: 미등재(확인)([JP](https://laws.e-gov.go.jp/law/325M50010000073)). 호주: 미확인.",
+          "source_urls": [
+            "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059",
+            "https://www.law.go.kr/법령/식물방역법",
+            "https://gd.eppo.int/taxon/PSDMGM/categorization",
+            "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+            "https://www.ecfr.gov/current/title-7/section-331.3",
+            "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+            "https://laws.e-gov.go.jp/law/325M50010000073"
+          ],
+          "contains_미확인": true
+        },
+        "f9_images": {
+          "label": "사용 가능한 이미지와 이용허락",
+          "text": "상업 이용 후보: [Bugwood 5390471](https://www.ipmimages.org/browse/image/5390471)(Groth, CC BY 3.0 US; 5390472~5390475도 CC BY, 상업 시 요청 권고). Commons(✅SA): [Burkholderia glumae.JPG](https://commons.wikimedia.org/wiki/File:Burkholderia_glumae.JPG), [B. glumae.JPG](https://commons.wikimedia.org/wiki/File:B._glumae.JPG)(Felipeveraruiz, CC BY-SA 3.0), [Añublo bacterial.png](https://commons.wikimedia.org/wiki/File:A%C3%B1ublo_bacterial.png)(oximan, CC BY-SA 3.0). 비상업·허락 필요·미확인: NCPMS 병 7·병원체 1장(⛔), FSA7580 그림(이용조건 미확인), [LSU AgCenter 사진 페이지](https://www.lsuagcenter.com/topics/crops/rice/diseases/photos/bacterial-panicle-blight)(라이선스 미확인). EPPO PSDMGM에는 사진이 없고 IRRI RKB에는 이 병의 fact sheet가 없다.",
+          "source_urls": [
+            "https://www.ipmimages.org/browse/image/5390471",
+            "https://commons.wikimedia.org/wiki/File:Burkholderia_glumae.JPG",
+            "https://commons.wikimedia.org/wiki/File:B._glumae.JPG",
+            "https://commons.wikimedia.org/wiki/File:A%C3%B1ublo_bacterial.png",
+            "https://www.lsuagcenter.com/topics/crops/rice/diseases/photos/bacterial-panicle-blight"
+          ],
+          "contains_미확인": true
+        }
+      },
+      "source_urls": [
+        "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000742",
+        "https://genebank.rda.go.kr/plntDissInfoMain.do",
+        "https://gd.eppo.int/taxon/PSDMGM",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6640401/",
+        "https://korea.kr/news/pressReleaseView.do?newsId=156066598",
+        "https://www.uaex.uada.edu/publications/pdf/FSA-7580.pdf",
+        "https://koreascience.or.kr/article/JAKO200111921139724.page?lang=ko",
+        "https://sipav.org/en/16/Archive/3767",
+        "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059",
+        "https://www.law.go.kr/법령/식물방역법",
+        "https://gd.eppo.int/taxon/PSDMGM/categorization",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+        "https://www.ecfr.gov/current/title-7/section-331.3",
+        "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+        "https://laws.e-gov.go.jp/law/325M50010000073",
+        "https://www.ipmimages.org/browse/image/5390471",
+        "https://commons.wikimedia.org/wiki/File:Burkholderia_glumae.JPG",
+        "https://commons.wikimedia.org/wiki/File:B._glumae.JPG",
+        "https://commons.wikimedia.org/wiki/File:A%C3%B1ublo_bacterial.png",
+        "https://www.lsuagcenter.com/topics/crops/rice/diseases/photos/bacterial-panicle-blight"
+      ]
+    },
+    {
+      "no": 9,
+      "crop": "벼",
+      "user_name": "줄무늬잎마름병",
+      "official_kr_name": "줄무늬잎마름병(NCPMS 검색 결과)",
+      "scientific_name": "Rice stripe virus(*Tenuivirus oryzaclavatae*)",
+      "kr_occurrence": "있음(2001·2007·2009 대발생)",
+      "kr_quarantine": "미등재(확인)",
+      "commercial_image": "없음(BY-NC만)",
+      "section_title": "줄무늬잎마름병 (Rice stripe) — Rice stripe virus",
+      "fields": {
+        "f1_names": {
+          "label": "공식 국명·영문명·학명·동의어",
+          "text": "NCPMS 병명 검색에서 \"줄무늬\"로 조회하면 논벼 항목으로 **\"줄무늬잎마름병(Stripe, 바이러스)\"**이 나온다([NCPMS 병 목록](https://ncpms.rda.go.kr/npms/SicknsInfoListRM.np), 한글명/영문명 검색 결과표). 다만 상세 페이지와 한국식물병명목록 원문은 접근하지 못해 미확인이다. 국내 학술지는 \"벼줄무늬잎마름병\", 바이러스명 \"벼줄무늬잎마름바이러스(RSV)\"를 쓴다([Lee et al. 2012, 식물병연구 18(4):402–405](https://koreascience.or.kr/article/JAKO201205759624605.pdf), 제목·1문단; [정봉조 1974](https://koreascience.or.kr/article/JAKO197425720625117.pub), 제목). ICTV 2024 이명법 종명은 ***Tenuivirus oryzaclavatae***(Phenuiviridae, *Tenuivirus*; 이명 Rice stripe tenuivirus)이며 Wikipedia가 ICTV MSL #40을 인용하고([Wikipedia](https://en.wikipedia.org/wiki/Rice_stripe_virus), 분류 상자; ICTV 원문 미열람) EPPO도 같은 이름(RSV000)을 쓴다([EPPO RSV000](https://gd.eppo.int/taxon/RSV000/distribution)).",
+          "source_urls": [
+            "https://ncpms.rda.go.kr/npms/SicknsInfoListRM.np",
+            "https://koreascience.or.kr/article/JAKO201205759624605.pdf",
+            "https://koreascience.or.kr/article/JAKO197425720625117.pub",
+            "https://en.wikipedia.org/wiki/Rice_stripe_virus",
+            "https://gd.eppo.int/taxon/RSV000/distribution"
+          ],
+          "contains_미확인": true
+        },
+        "f2_parts_stages": {
+          "label": "피해 부위와 생육 단계",
+          "text": "잎에 줄무늬가 생기고 이삭은 기형·불임이 되거나 완전히 나오지 못한다. **묘~분얼 초기가 가장 감수성**이 높고 최고분얼기 이후 감염은 증상이 약하다([Lucid/IRRI Factsheet \"Stripe\"](https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus).htm), Symptoms·Conditions). 잠복기는 3~7엽기 접종 시 7~15일, 9~15엽기 접종 시 15~30일이다([정봉조 1974](https://koreascience.or.kr/article/JAKO197425720625117.pub), 초록).",
+          "source_urls": [
+            "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus",
+            "https://koreascience.or.kr/article/JAKO197425720625117.pub"
+          ],
+          "contains_미확인": false
+        },
+        "f3_symptoms": {
+          "label": "주요 증상",
+          "text": "잎에 황백색 줄무늬, 얼룩, 괴사 줄이 생기고, 감염 묘는 잎이 접히고 꼬이며 시들어 늘어진다. 위축되고 분얼·이삭 수가 줄며 이삭은 백색~갈색으로 기형이 된다([Lucid Factsheet \"Stripe\"](https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus).htm), Symptoms). 다른 문헌은 다소 위축되나 분얼 수는 정상이라고 적는다([Wang et al. 2022, Viruses 14:2258](https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/), Table 2). 일본에서는 늘어져 말라 죽는 묘 때문에 \"유령병(Yurei Byo)\"으로 불렸다([Wikipedia](https://en.wikipedia.org/wiki/Rice_stripe_virus), Symptoms).",
+          "source_urls": [
+            "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/",
+            "https://en.wikipedia.org/wiki/Rice_stripe_virus"
+          ],
+          "contains_미확인": false
+        },
+        "f4_confusions": {
+          "label": "혼동하기 쉬운 병과 비생물적 장해",
+          "text": "국내 연구자는 **\"RSV 병징은 육안으로 생리장해와 구별이 매우 어렵다\"**고 명시한다([Lee et al. 2004, 식물병연구 10(1):30–33](https://koreascience.or.kr/article/JAKO200411922293908.page), 초록). 아연결핍은 이앙 2~4주 뒤 윗잎의 먼지 같은 갈색 반점, 어린 잎 기부 중록 황화를 보인다([Lucid Factsheet \"Zinc deficiency\"](https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Zinc_deficiency.htm); 이 페이지는 RSV를 직접 비교하지 않음). 검은줄오갈병(RBSDV, 같은 애멸구 매개)은 분얼 증가, 진녹색 잎, 잎 뒷면 엽맥의 백색~흑색 밀랍질 혹이 있다. grassy stunt(RGSV)는 분얼이 크게 늘고 잎이 짧고 곧으며 담녹~담황색이다. 오갈병(RDV)은 진녹색 잎에 미세 황백색 반점과 분얼 증가가 있고 매개충이 끝동매미충이다([Wang et al. 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/), Table 2·3).",
+          "source_urls": [
+            "https://koreascience.or.kr/article/JAKO200411922293908.page",
+            "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Zinc_deficiency.htm",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/"
+          ],
+          "contains_미확인": false
+        },
+        "f5_differentiation": {
+          "label": "구별을 위한 추가 사진·질문·검사",
+          "text": "*사진만으로 구별 가능한 특징:* 신엽의 황백색 줄무늬와 괴사 줄, 늘어지거나 꼬인 묘(유령병 모양), 정상 또는 감소한 분얼, 이삭 미출수·기형([Lucid Factsheet \"Stripe\"](https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus).htm); [Wang et al. 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/)). 생리장해와의 구별이 어렵다는 국내 명시가 있으므로 사진은 1차 선별에만 쓴다.\n*추가로 받을 사진·질문·현장 검사:* 포기 전체와 신엽 근접 사진, 논둑 가까운 줄의 사진(논둑 쪽에서 많고 중앙으로 갈수록 감소)([정봉조 1974](https://koreascience.or.kr/article/JAKO197425720625117.pub)), 애멸구 유무, 조기이앙·직파, 조생 감수성 품종(운광벼·오대벼·일품벼 등)([Lee et al. 2012](https://koreascience.or.kr/article/JAKO201205759624605.pdf)), 모판 살충제 처리와 보리밭 인접 여부([유승오 2008](https://koreascience.or.kr/article/JAKO200856450901109.pdf)), 서해안 여부와 비래 시기.\n*실험실 검사가 필요한 특징:* RT-PCR(이병주·애멸구에서 RdRp 약 1,023 bp, CP 약 969 bp 증폭)([Lee et al. 2004](https://koreascience.or.kr/article/JAKO200411922293908.page), 초록); 2012년 전국조사는 82개체를 RT-PCR로 진단(700 bp 산물)([Lee et al. 2012](https://koreascience.or.kr/article/JAKO201205759624605.pdf), Fig. 2). 애멸구 보독충 ELISA 검정(경기도농업기술원 보고서, 검색 스니펫만 확인)([경기도농업기술원](https://nongup.gg.go.kr/wp-content/uploads/sites/2/2013/08/20030074.pdf)). 즙액 전염이 잘 되지 않아 즙액 접종 검정은 부적합하다([Wikipedia](https://en.wikipedia.org/wiki/Rice_stripe_virus), Transmission).",
+          "source_urls": [
+            "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/",
+            "https://koreascience.or.kr/article/JAKO197425720625117.pub",
+            "https://koreascience.or.kr/article/JAKO201205759624605.pdf",
+            "https://koreascience.or.kr/article/JAKO200856450901109.pdf",
+            "https://koreascience.or.kr/article/JAKO200411922293908.page",
+            "https://nongup.gg.go.kr/wp-content/uploads/sites/2/2013/08/20030074.pdf",
+            "https://en.wikipedia.org/wiki/Rice_stripe_virus"
+          ],
+          "contains_미확인": false,
+          "parts": {
+            "f5a_photo_only": "신엽의 황백색 줄무늬와 괴사 줄, 늘어지거나 꼬인 묘(유령병 모양), 정상 또는 감소한 분얼, 이삭 미출수·기형([Lucid Factsheet \"Stripe\"](https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus).htm); [Wang et al. 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/)). 생리장해와의 구별이 어렵다는 국내 명시가 있으므로 사진은 1차 선별에만 쓴다.",
+            "f5b_extra_requests": "포기 전체와 신엽 근접 사진, 논둑 가까운 줄의 사진(논둑 쪽에서 많고 중앙으로 갈수록 감소)([정봉조 1974](https://koreascience.or.kr/article/JAKO197425720625117.pub)), 애멸구 유무, 조기이앙·직파, 조생 감수성 품종(운광벼·오대벼·일품벼 등)([Lee et al. 2012](https://koreascience.or.kr/article/JAKO201205759624605.pdf)), 모판 살충제 처리와 보리밭 인접 여부([유승오 2008](https://koreascience.or.kr/article/JAKO200856450901109.pdf)), 서해안 여부와 비래 시기.",
+            "f5c_lab_tests": "RT-PCR(이병주·애멸구에서 RdRp 약 1,023 bp, CP 약 969 bp 증폭)([Lee et al. 2004](https://koreascience.or.kr/article/JAKO200411922293908.page), 초록); 2012년 전국조사는 82개체를 RT-PCR로 진단(700 bp 산물)([Lee et al. 2012](https://koreascience.or.kr/article/JAKO201205759624605.pdf), Fig. 2). 애멸구 보독충 ELISA 검정(경기도농업기술원 보고서, 검색 스니펫만 확인)([경기도농업기술원](https://nongup.gg.go.kr/wp-content/uploads/sites/2/2013/08/20030074.pdf)). 즙액 전염이 잘 되지 않아 즙액 접종 검정은 부적합하다([Wikipedia](https://en.wikipedia.org/wiki/Rice_stripe_virus), Transmission)."
+          }
+        },
+        "f6_conditions": {
+          "label": "발생 조건과 근거",
+          "text": "전염 적온 **25~30 ℃**, **15 ℃ 이하에서는 전염이 드물거나 없음**; 애멸구는 국내 연 5세대; 보독충끼리 교미하면 자손의 **약 90%가 보독**(경란전염), 무독충 획득률 약 7~9%, 3~5령 약충의 전염력이 가장 높음; 작물·목초·잡초 35종 중 21종 감수성([정봉조 1974](https://koreascience.or.kr/article/JAKO197425720625117.pub), 초록). 실내 사육 개체군 보독률은 52~63%였으나 야외 보독충률로 해석하면 안 된다([Yi et al. 2015](https://koreascience.kr/article/JAKO201510659891088.do), 초록). 매개충 체내 순환기간 5~21일([Wang et al. 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/), Table 3). 2007년 대발생 원인으로 모판 살충제 미처리, 조기이앙·직파 포장의 월동 보독충 먹이원 역할, 동절기 평균기온 상승(서천 +0.8 ℃, 부안 +2.0 ℃), 감수성 품종 확대가 제시되었다([유승오 2008](https://koreascience.or.kr/article/JAKO200856450901109.pdf), pp.32–33). 2012년 서해안 첫 비래일은 5월 28일, 전북·충남에 집중, 비래량 1~302마리였다([Lee et al. 2012](https://koreascience.or.kr/article/JAKO201205759624605.pdf)). 위험이 가장 큰 시기는 보독 애멸구가 맥류에서 벼로 이동할 때다([Lucid Factsheet \"Stripe\"](https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus).htm), Conditions).",
+          "source_urls": [
+            "https://koreascience.or.kr/article/JAKO197425720625117.pub",
+            "https://koreascience.kr/article/JAKO201510659891088.do",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/",
+            "https://koreascience.or.kr/article/JAKO200856450901109.pdf",
+            "https://koreascience.or.kr/article/JAKO201205759624605.pdf",
+            "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus"
+          ],
+          "contains_미확인": false
+        },
+        "f7_occurrence": {
+          "label": "한국 및 해외 발생 기록",
+          "text": "한국: 1965년 전국 평균 발병률 약 6.5%, 1980년대 저항성 품종(낙동벼)과 방제로 감소, **2001년 강화 약 4,663 ha, 2007년 전국 14,137 ha, 2009년 서해안 21,541 ha**, 2010년 525 ha, 2011년 7,397 ha; 2012년 전국조사에서 발병필지율이 2008년 19.9%에서 4.9%로 감소([Lee et al. 2012](https://koreascience.or.kr/article/JAKO201205759624605.pdf), 본문·Table 2·Fig. 3). 2007년 서천은 전체 면적 25%인 2,610 ha에서 발생했다([유승오 2008](https://koreascience.or.kr/article/JAKO200856450901109.pdf)). Wikipedia의 \"2007–08년 한국 논의 84% 피해\"는 국내 1차 자료(2008년 발병필지율 19.9%)와 충돌하므로 국내 자료를 우선한다([Wikipedia](https://en.wikipedia.org/wiki/Rice_stripe_virus), Distribution). 2013년 이후 연도별 발생면적은 미확인이다. 해외: EPPO(2020-06-23 갱신)는 중국(restricted), 일본, 북한, **대한민국 \"Present, no details\"**, 대만, 베트남, 러시아 극동·남부를 적는다([EPPO RSV000 distribution](https://gd.eppo.int/taxon/RSV000/distribution)). 1897년 일본 첫 보고, 2002~2004년 중국 동부 30~40% 감수([Wang et al. 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/), Section 2.1).",
+          "source_urls": [
+            "https://koreascience.or.kr/article/JAKO201205759624605.pdf",
+            "https://koreascience.or.kr/article/JAKO200856450901109.pdf",
+            "https://en.wikipedia.org/wiki/Rice_stripe_virus",
+            "https://gd.eppo.int/taxon/RSV000/distribution",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/"
+          ],
+          "contains_미확인": true
+        },
+        "f8_quarantine": {
+          "label": "국가별 검역 지위",
+          "text": "한국: **미등재(확인)**. 고시 별표 2의 \"Rice stripe necrosis virus (= *Benyvirus oryzae*)\"는 다른 바이러스다([KR-고시 별표 2](https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059)). EPPO: A1/A2 미등재, 국가 항목은 멕시코 QP(2018), **미국 QP(1989)**([EPPO RSV000](https://gd.eppo.int/taxon/RSV000/categorization)). EU·중국·일본: 미등재(확인)([EU-2072](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015); [CN](https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc); [JP](https://laws.e-gov.go.jp/law/325M50010000073)). 미국: EPPO 집계상 QP(1989)이나 공식 원문 미확인; 매개충 *Laodelphax striatellus*는 APHIS Pests of Concern 46번(바이러스 자체는 아님)([US-PoC](https://www.aphis.usda.gov/laws-regs/animal-plant-diseases-pests-concern)). 호주: 미확인. 벼 그룹 3 노트의 \"검역 정보 미확인\"은 이 원문 대조로 해소되었다.",
+          "source_urls": [
+            "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059",
+            "https://gd.eppo.int/taxon/RSV000/categorization",
+            "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+            "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+            "https://laws.e-gov.go.jp/law/325M50010000073",
+            "https://www.aphis.usda.gov/laws-regs/animal-plant-diseases-pests-concern"
+          ],
+          "contains_미확인": true
+        },
+        "f9_images": {
+          "label": "사용 가능한 이미지와 이용허락",
+          "text": "**상업 이용 가능한 증상 사진은 찾지 못했다.** [Bugwood 5356976](https://www.ipmimages.org/browse/image/5356976)(William M. Brown Jr., CC BY-NC 3.0 US ⛔; Bugwood의 RSV 이미지 3장 모두 BY-NC), [Lucid/IRRI Factsheet](https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus).htm) 사진(\"© Copyright 2014. All rights reserved\" ⛔), [Lee et al. 2012](https://koreascience.or.kr/article/JAKO201205759624605.pdf) Fig. 1(서천·밀양 이병주; \"Open Access\" 표시이나 CC 종류 미확인). Commons에는 전자현미경 등 논문 그림만 있고 포장 증상 사진은 없다. EPPO 사진 페이지는 404, NCPMS 이미지는 접근 실패로 미확인이다.",
+          "source_urls": [
+            "https://www.ipmimages.org/browse/image/5356976",
+            "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus",
+            "https://koreascience.or.kr/article/JAKO201205759624605.pdf"
+          ],
+          "contains_미확인": true
+        }
+      },
+      "source_urls": [
+        "https://ncpms.rda.go.kr/npms/SicknsInfoListRM.np",
+        "https://koreascience.or.kr/article/JAKO201205759624605.pdf",
+        "https://koreascience.or.kr/article/JAKO197425720625117.pub",
+        "https://en.wikipedia.org/wiki/Rice_stripe_virus",
+        "https://gd.eppo.int/taxon/RSV000/distribution",
+        "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Stripe_(Rice_stripe_virus",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/",
+        "https://koreascience.or.kr/article/JAKO200411922293908.page",
+        "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Zinc_deficiency.htm",
+        "https://koreascience.or.kr/article/JAKO200856450901109.pdf",
+        "https://nongup.gg.go.kr/wp-content/uploads/sites/2/2013/08/20030074.pdf",
+        "https://koreascience.kr/article/JAKO201510659891088.do",
+        "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059",
+        "https://gd.eppo.int/taxon/RSV000/categorization",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+        "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+        "https://laws.e-gov.go.jp/law/325M50010000073",
+        "https://www.aphis.usda.gov/laws-regs/animal-plant-diseases-pests-concern",
+        "https://www.ipmimages.org/browse/image/5356976"
+      ]
+    },
+    {
+      "no": 10,
+      "crop": "벼",
+      "user_name": "오갈병",
+      "official_kr_name": "미확인(학술지 \"벼오갈병\")",
+      "scientific_name": "Rice dwarf virus(*Phytoreovirus alphaoryzae*)",
+      "kr_occurrence": "있음(1986 문헌, EPPO Present)",
+      "kr_quarantine": "미등재(확인)",
+      "commercial_image": "없음(BY-NC만)",
+      "section_title": "오갈병 (Rice dwarf) — Rice dwarf virus",
+      "fields": {
+        "f1_names": {
+          "label": "공식 국명·영문명·학명·동의어",
+          "text": "NCPMS·식물병명목록의 공식 표기는 **미확인**이다. 국내 학술지는 \"벼오갈병\"을 쓰고([이기운 1986, 한국식물병리학회지 2(1):17–21](https://koreascience.or.kr/article/JAKO198630710156433.page), 제목), 김해시 예찰포 조사 대상에 \"오갈병\"과 \"검은줄오갈병\"이 따로 있다(검색 스니펫)([김해시 농업기술센터](https://www.gimhae.go.kr/01547/01952/02047.web)). ICTV 2024 종명은 ***Phytoreovirus alphaoryzae***(Sedoreoviridae, *Phytoreovirus*)이며([Wikipedia](https://en.wikipedia.org/wiki/Rice_dwarf_virus), 분류 상자; ICTV 원문 미열람), EPPO 우선명도 같고(RDV000) 이명은 Rice dwarf phytoreovirus, 일반명은 rice dwarf, rice mosaic, rice stunt다(검색 스니펫)([EPPO RDV000](https://gd.eppo.int/taxon/RDV000)). ICTV Report는 RDV를 *Phytoreovirus*의 exemplar로 든다([ICTV Report](https://ictv.global/report/chapter/sedoreoviridae/sedoreoviridae/phytoreovirus)).",
+          "source_urls": [
+            "https://koreascience.or.kr/article/JAKO198630710156433.page",
+            "https://www.gimhae.go.kr/01547/01952/02047.web",
+            "https://en.wikipedia.org/wiki/Rice_dwarf_virus",
+            "https://gd.eppo.int/taxon/RDV000",
+            "https://ictv.global/report/chapter/sedoreoviridae/sedoreoviridae/phytoreovirus"
+          ],
+          "contains_미확인": true
+        },
+        "f2_parts_stages": {
+          "label": "피해 부위와 생육 단계",
+          "text": "잎(백색 반점·줄)과 식물체 전체(위축, 분얼 과다, 결실 불량)를 침해하며, 식물 레오바이러스 중 유일하게 체관부에 국한되지 않는다([ICTV Report](https://ictv.global/report/chapter/sedoreoviridae/sedoreoviridae/phytoreovirus), RDV symptoms). 생육단계별 감수성 수치는 미확인이다.",
+          "source_urls": [
+            "https://ictv.global/report/chapter/sedoreoviridae/sedoreoviridae/phytoreovirus"
+          ],
+          "contains_미확인": true
+        },
+        "f3_symptoms": {
+          "label": "주요 증상",
+          "text": "잎에 **백색 반점과 줄**, 위축, **분얼 과다**, 이삭 미결실이 나타나고 **혹은 만들지 않는다**([ICTV Report](https://ictv.global/report/chapter/sedoreoviridae/sedoreoviridae/phytoreovirus)). 잎이 짧고 **진녹색**이며 미세 퇴록 반점(fine chlorotic specks)이 있다([Wang et al. 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/), Table 2).",
+          "source_urls": [
+            "https://ictv.global/report/chapter/sedoreoviridae/sedoreoviridae/phytoreovirus",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/"
+          ],
+          "contains_미확인": false
+        },
+        "f4_confusions": {
+          "label": "혼동하기 쉬운 병과 비생물적 장해",
+          "text": "혹위축병(RGDV)은 분얼이 줄고 잎 뒷면 엽맥에 작은 혹이 생긴다. 검은줄오갈병(RBSDV)은 잎끝 꼬임, 엽연 찢어짐, 잎 뒷면 밀랍질 혹이 있고 애멸구가 매개한다. ragged stunt(RRSV)는 진녹색 찢어진 잎과 엽맥 혹, grassy stunt(RGSV)는 담녹·담황색 짧고 곧은 잎이다([Wang et al. 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/), Table 2·3; [ICTV Report](https://ictv.global/report/chapter/sedoreoviridae/sedoreoviridae/phytoreovirus)). 벼 누른오갈병(*Sclerophthora macrospora*, 난균)은 잎 황화 반점, 잎 단축, 이삭 미출수·기형을 보인다([Lee et al. 2003, 식물병연구 9(1):52–56](https://online-rpd.org/journal/view.php?number=895), 초록). 아연결핍도 위축을 일으키지만 분얼이 감소한다([Lucid Factsheet \"Zinc deficiency\"](https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Zinc_deficiency.htm)). RDV와 영양결핍을 직접 비교한 1차 자료는 미확인이다.",
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/",
+            "https://ictv.global/report/chapter/sedoreoviridae/sedoreoviridae/phytoreovirus",
+            "https://online-rpd.org/journal/view.php?number=895",
+            "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Zinc_deficiency.htm"
+          ],
+          "contains_미확인": true
+        },
+        "f5_differentiation": {
+          "label": "구별을 위한 추가 사진·질문·검사",
+          "text": "*사진만으로 구별 가능한 특징:* 포기 높이(위축), 분얼 수(증가), 진녹색 잎, 미세 백색 반점이나 엽맥 방향 백색 줄, 혹 없음(ICTV Report; Wang 2022 Table 2). 잎 뒷면 근접 사진이 있어야 RBSDV·RGDV(혹 있음)를 배제할 수 있다.\n*추가로 받을 사진·질문·현장 검사:* 끝동매미충 유무와 밀도, 그루터기·재생벼 유무, 이삭 결실 여부([이기운 1986](https://koreascience.or.kr/article/JAKO198630710156433.page) 재생벼 감염 자료 근거).\n*실험실 검사가 필요한 특징:* 항혈청 검정(1977년 국내에서 RDV 정제·항혈청 제작, 식물체·매개충 검출에 사용 가능; 검색 스니펫)([이순형 외 1977](https://koreascience.kr/article/JAKO197730710440490.do)). 즙액 전염과 종자 전염이 없어 매개충 접종 검정이 필요하다([ICTV Report](https://ictv.global/report/chapter/sedoreoviridae/sedoreoviridae/phytoreovirus), Transmission). 국내 RT-PCR 프로토콜 출처는 미확인이다.",
+          "source_urls": [
+            "https://koreascience.or.kr/article/JAKO198630710156433.page",
+            "https://koreascience.kr/article/JAKO197730710440490.do",
+            "https://ictv.global/report/chapter/sedoreoviridae/sedoreoviridae/phytoreovirus"
+          ],
+          "contains_미확인": true,
+          "parts": {
+            "f5a_photo_only": "포기 높이(위축), 분얼 수(증가), 진녹색 잎, 미세 백색 반점이나 엽맥 방향 백색 줄, 혹 없음(ICTV Report; Wang 2022 Table 2). 잎 뒷면 근접 사진이 있어야 RBSDV·RGDV(혹 있음)를 배제할 수 있다.",
+            "f5b_extra_requests": "끝동매미충 유무와 밀도, 그루터기·재생벼 유무, 이삭 결실 여부([이기운 1986](https://koreascience.or.kr/article/JAKO198630710156433.page) 재생벼 감염 자료 근거).",
+            "f5c_lab_tests": "항혈청 검정(1977년 국내에서 RDV 정제·항혈청 제작, 식물체·매개충 검출에 사용 가능; 검색 스니펫)([이순형 외 1977](https://koreascience.kr/article/JAKO197730710440490.do)). 즙액 전염과 종자 전염이 없어 매개충 접종 검정이 필요하다([ICTV Report](https://ictv.global/report/chapter/sedoreoviridae/sedoreoviridae/phytoreovirus), Transmission). 국내 RT-PCR 프로토콜 출처는 미확인이다."
+          }
+        },
+        "f6_conditions": {
+          "label": "발생 조건과 근거",
+          "text": "매개충은 *Nephotettix cincticeps*가 가장 중요하고 *N. nigropictus*, *Recilia dorsalis* 등도 매개하며, 증식형으로 공생균 *Candidatus* Sulcia muelleri 경로를 이용해 **경란전염**한다([ICTV Report](https://ictv.global/report/chapter/sedoreoviridae/sedoreoviridae/phytoreovirus)). 순환기간 12~25일([Wang et al. 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/), Table 3). 국내에서 매개충 발생 최성기는 연 5회, 병 발생 최성기는 연 3회이고, 월동세대 성충과 2·3세대 약충이 주 전염원이다. 발생 한계지역 울진에서는 보독 약충이 포장에서 월동하지 못하며, 무독 약충을 감염 재생벼에 11~30일 흡즙시키면 월동 보독충 비율이 13.0~18.2%가 된다. 밀양 상습지 재생 포기 감염률은 22.4~26.8%였다([이기운 1986](https://koreascience.or.kr/article/JAKO198630710156433.page), 초록). 전염·발병의 온습도 수치는 미확인이다.",
+          "source_urls": [
+            "https://ictv.global/report/chapter/sedoreoviridae/sedoreoviridae/phytoreovirus",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/",
+            "https://koreascience.or.kr/article/JAKO198630710156433.page"
+          ],
+          "contains_미확인": true
+        },
+        "f7_occurrence": {
+          "label": "한국 및 해외 발생 기록",
+          "text": "한국: EPPO는 대한민국을 \"Present, no details\"로 적고(분포 2010-03-04 갱신)([EPPO RDV000 distribution](https://gd.eppo.int/taxon/RDV000/distribution)), 1986년 문헌에 밀양 상습발생지와 울진 한계지역이 나온다([이기운 1986](https://koreascience.or.kr/article/JAKO198630710156433.page)). 2000년 이후 국내 발생 통계는 미확인이다. 해외: 1883년 일본 첫 기록, 일본 남부·중부(1889–1979)와 중국 저장성(1969–1973) 다발생([Wang et al. 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/), Section 2.1). EPPO는 일본·북한·한국을 present로, 중국은 국가 단위 \"Absent, unreliable record\"이면서 푸젠·광둥·저장 등 성 단위 present로 표기해 내부적으로 엇갈린다([EPPO RDV000 distribution](https://gd.eppo.int/taxon/RDV000/distribution)).",
+          "source_urls": [
+            "https://gd.eppo.int/taxon/RDV000/distribution",
+            "https://koreascience.or.kr/article/JAKO198630710156433.page",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/"
+          ],
+          "contains_미확인": true
+        },
+        "f8_quarantine": {
+          "label": "국가별 검역 지위",
+          "text": "한국: **미등재(확인)**([KR-고시 별표 2](https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059)). EPPO: A1/A2 미등재, **미국 QP(1989)**, 지역기구 APPPC A2(1988), IAPSC A1(1989), PPPO A2(1993)([EPPO RDV000](https://gd.eppo.int/taxon/RDV000/categorization)). EU·중국·일본: 미등재(확인)([EU-2072](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015); [CN](https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc); [JP](https://laws.e-gov.go.jp/law/325M50010000073)). 미국: 공식 원문 미확인. 호주: 미확인.",
+          "source_urls": [
+            "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059",
+            "https://gd.eppo.int/taxon/RDV000/categorization",
+            "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+            "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+            "https://laws.e-gov.go.jp/law/325M50010000073"
+          ],
+          "contains_미확인": true
+        },
+        "f9_images": {
+          "label": "사용 가능한 이미지와 이용허락",
+          "text": "**상업 이용 가능한 증상 사진은 찾지 못했다.** [Bugwood 5356978](https://www.ipmimages.org/browse/image/5356978)(William M. Brown Jr., CC BY-NC 3.0 US ⛔; Bugwood의 RDV 이미지 1장뿐). Wikipedia 문서의 이미지는 cryo-EM 캡시드 구조 한 장뿐이며 라이선스 미확인이다([Wikipedia](https://en.wikipedia.org/wiki/Rice_dwarf_virus)). EPPO·NCPMS·IRRI 증상 사진은 미확인이다.",
+          "source_urls": [
+            "https://www.ipmimages.org/browse/image/5356978",
+            "https://en.wikipedia.org/wiki/Rice_dwarf_virus"
+          ],
+          "contains_미확인": true
+        }
+      },
+      "source_urls": [
+        "https://koreascience.or.kr/article/JAKO198630710156433.page",
+        "https://www.gimhae.go.kr/01547/01952/02047.web",
+        "https://en.wikipedia.org/wiki/Rice_dwarf_virus",
+        "https://gd.eppo.int/taxon/RDV000",
+        "https://ictv.global/report/chapter/sedoreoviridae/sedoreoviridae/phytoreovirus",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9609659/",
+        "https://online-rpd.org/journal/view.php?number=895",
+        "https://keyserver.lucidcentral.org/key-server/data/0e090d01-0209-460e-810c-0d060708030c/media/Html/Zinc_deficiency.htm",
+        "https://koreascience.kr/article/JAKO197730710440490.do",
+        "https://gd.eppo.int/taxon/RDV000/distribution",
+        "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059",
+        "https://gd.eppo.int/taxon/RDV000/categorization",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+        "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+        "https://laws.e-gov.go.jp/law/325M50010000073",
+        "https://www.ipmimages.org/browse/image/5356978"
+      ]
+    },
+    {
+      "no": 11,
+      "crop": "벼",
+      "user_name": "벼이삭미이라병(udbatta)",
+      "official_kr_name": "병명목록상 미확인; 법령상 \"벼이삭미이라병\"",
+      "scientific_name": "*Balansia oryzae-sativae*",
+      "kr_occurrence": "국내 발생 기록 미확인",
+      "kr_quarantine": "**금지병해충**(시행규칙 별표 1)",
+      "commercial_image": "미확인(이미지 없음)",
+      "section_title": "벼이삭미이라병 (Udbatta disease) — *Balansia oryzae-sativae*",
+      "fields": {
+        "f1_names": {
+          "label": "공식 국명·영문명·학명·동의어",
+          "text": "한국식물병명목록·NCPMS·EPPO 어디에서도 한국 병명을 확인하지 못했다(미확인; 한국어 검색 결과 없음)([EPPO BALAOS](https://gd.eppo.int/taxon/BALAOS), Overview). 그러나 **「식물방역법 시행규칙」 별표 1 제1호는 금지병해충명을 \"벼이삭미이라병 [*Balansia oryzae-sativae*]\"로 적는다**([KR-규칙 별표 1](https://www.law.go.kr/LSW/flDownload.do?gubun=&flSeq=163692257&bylClsCd=110201)). 따라서 법령상 명칭은 확인되며, 병명목록상 명칭은 미확인이다. EPPO 우선명은 *Balansia oryzae-sativae* Hashioka(BALAOS), 이명은 *Balansia oryzae*, *Ephelis oryzae* Sydow, 영명은 black choke of rice, false ergot, incense rod, udbatta disease다([EPPO BALAOS](https://gd.eppo.int/taxon/BALAOS)). 분류 논쟁이 있다. 일본·한국·중국·네팔·인도 *Ephelis* 33개 분리주의 ITS 계통분석은 *E. oryzae*와 *E. japonica*를 나눌 근거가 없다며 명명 우선권에 따라 ***E. japonica***를 제안했고, *Balansia oryzae*는 유효하게 출판되지 않았다고 지적했다([Tanaka et al. 2001](https://www.cambridge.org/core/journals/mycological-research/article/phylogenetic-studies-of-ephelis-species-from-various-locations-and-hosts-in-asia/620F727E95233FBD11FC91864980E3C2), Abstract). 일본 문헌도 *E. oryzae*(= *B. oryzae-sativae*)와 동일시하며 *E. japonica*를 채택한다([Tsukiboshi et al. 2008, JARQ 42(3)](https://www.jircas.go.jp/sites/default/files/publication/jarq/42-03-06_0.pdf), Discussion).",
+          "source_urls": [
+            "https://gd.eppo.int/taxon/BALAOS",
+            "https://www.law.go.kr/LSW/flDownload.do?gubun=&flSeq=163692257&bylClsCd=110201",
+            "https://www.cambridge.org/core/journals/mycological-research/article/phylogenetic-studies-of-ephelis-species-from-various-locations-and-hosts-in-asia/620F727E95233FBD11FC91864980E3C2",
+            "https://www.jircas.go.jp/sites/default/files/publication/jarq/42-03-06_0.pdf"
+          ],
+          "contains_미확인": true
+        },
+        "f2_parts_stages": {
+          "label": "피해 부위와 생육 단계",
+          "text": "출수기 이삭과 지엽(출수 전 엽맥을 따라 흰 균사 줄)을 침해하며, 최고분얼기~유수형성기가 발병에 유리하고 종자감염은 출수할 때 시작된다([TNAU Agritech \"Udbatta\"](https://agritech.tnau.ac.in/expert_system/paddy/cpdisudbtta.html), Symptoms·Favourable conditions). 전신 감염으로 대개 한 포기의 모든 분얼이 감염된다(검색 스니펫)([celkau.in](https://celkau.in/crops/cereals/rice/udbatta.php)).",
+          "source_urls": [
+            "https://agritech.tnau.ac.in/expert_system/paddy/cpdisudbtta.html",
+            "https://celkau.in/crops/cereals/rice/udbatta.php"
+          ],
+          "contains_미확인": false
+        },
+        "f3_symptoms": {
+          "label": "주요 증상",
+          "text": "흰 균사 매트가 이삭 가지를 묶어 **이삭이 곧고 지저분한 색의 원통형 막대(향 모양)**로 나오고 낟알이 생기지 않는다. 출수 전 지엽 엽맥을 따라 흰 균사·분생포자의 좁은 줄이 생긴다([TNAU](https://agritech.tnau.ac.in/expert_system/paddy/cpdisudbtta.html), Symptoms). 일본 문헌은 이삭이 불임이 되고 회색~흑색 자좌로 미라처럼 보인다고 기술한다([Tsukiboshi et al. 2008](https://www.jircas.go.jp/sites/default/files/publication/jarq/42-03-06_0.pdf), p.173).",
+          "source_urls": [
+            "https://agritech.tnau.ac.in/expert_system/paddy/cpdisudbtta.html",
+            "https://www.jircas.go.jp/sites/default/files/publication/jarq/42-03-06_0.pdf"
+          ],
+          "contains_미확인": false
+        },
+        "f4_confusions": {
+          "label": "혼동하기 쉬운 병과 비생물적 장해",
+          "text": "이 병과 다른 병의 감별을 다룬 1차 출처는 **미확인**이다. 이삭누룩병, 이삭도열병, 백수형 해충 피해, 벼줄기선충의 이삭 미출수 등 흔히 떠올리는 후보와의 비교는 근거가 없어 기재하지 않는다.",
+          "source_urls": [],
+          "contains_미확인": true
+        },
+        "f5_differentiation": {
+          "label": "구별을 위한 추가 사진·질문·검사",
+          "text": "*사진만으로 구별 가능한 특징:* 출수기 이삭 전체가 한 덩어리의 막대 모양, 흰색~회흑색 자좌 피막, 지엽 엽맥의 흰 줄, 한 포기의 모든 분얼 감염([TNAU](https://agritech.tnau.ac.in/expert_system/paddy/cpdisudbtta.html); [Tsukiboshi et al. 2008](https://www.jircas.go.jp/sites/default/files/publication/jarq/42-03-06_0.pdf)).\n*추가로 받을 사진·질문·현장 검사:* 주변 화본과 잡초(*Isachne elegans*, *Cynodon dactylon*, *Pennisetum* sp., *Eragrostis tenuifolia* 등 대체기주)의 같은 증상 여부, 종자 출처([TNAU](https://agritech.tnau.ac.in/expert_system/paddy/cpdisudbtta.html), Mode of spread).\n*실험실 검사가 필요한 특징:* *Ephelis*형 분생포자 검경으로 속 판정([Tsukiboshi et al. 2008](https://www.jircas.go.jp/sites/default/files/publication/jarq/42-03-06_0.pdf), Discussion), ITS 염기서열 분석([Tanaka et al. 2001](https://www.cambridge.org/core/journals/mycological-research/article/phylogenetic-studies-of-ephelis-species-from-various-locations-and-hosts-in-asia/620F727E95233FBD11FC91864980E3C2)). 금지병해충이므로 의심 사례는 형태·분자 동정과 검역기관 확인을 병행해야 한다.",
+          "source_urls": [
+            "https://agritech.tnau.ac.in/expert_system/paddy/cpdisudbtta.html",
+            "https://www.jircas.go.jp/sites/default/files/publication/jarq/42-03-06_0.pdf",
+            "https://www.cambridge.org/core/journals/mycological-research/article/phylogenetic-studies-of-ephelis-species-from-various-locations-and-hosts-in-asia/620F727E95233FBD11FC91864980E3C2"
+          ],
+          "contains_미확인": false,
+          "parts": {
+            "f5a_photo_only": "출수기 이삭 전체가 한 덩어리의 막대 모양, 흰색~회흑색 자좌 피막, 지엽 엽맥의 흰 줄, 한 포기의 모든 분얼 감염([TNAU](https://agritech.tnau.ac.in/expert_system/paddy/cpdisudbtta.html); [Tsukiboshi et al. 2008](https://www.jircas.go.jp/sites/default/files/publication/jarq/42-03-06_0.pdf)).",
+            "f5b_extra_requests": "주변 화본과 잡초(*Isachne elegans*, *Cynodon dactylon*, *Pennisetum* sp., *Eragrostis tenuifolia* 등 대체기주)의 같은 증상 여부, 종자 출처([TNAU](https://agritech.tnau.ac.in/expert_system/paddy/cpdisudbtta.html), Mode of spread).",
+            "f5c_lab_tests": "*Ephelis*형 분생포자 검경으로 속 판정([Tsukiboshi et al. 2008](https://www.jircas.go.jp/sites/default/files/publication/jarq/42-03-06_0.pdf), Discussion), ITS 염기서열 분석([Tanaka et al. 2001](https://www.cambridge.org/core/journals/mycological-research/article/phylogenetic-studies-of-ephelis-species-from-various-locations-and-hosts-in-asia/620F727E95233FBD11FC91864980E3C2)). 금지병해충이므로 의심 사례는 형태·분자 동정과 검역기관 확인을 병행해야 한다."
+          }
+        },
+        "f6_conditions": {
+          "label": "발생 조건과 근거",
+          "text": "따뜻한 기온, 높은 습도, 최고분얼기~유수형성기이며 극조기·극만기 파종에서는 적다. 구체 온습도 수치는 출처에 없다. 종자 외부와 내부로 전염되고 잔재에서 생존할 수 있으며, 온탕침지(50~54 ℃ 10분으로 추정; 원문 \"50-540 C\"는 오기)와 Captan·Thiram 종자처리가 방제로 제시된다([TNAU](https://agritech.tnau.ac.in/expert_system/paddy/cpdisudbtta.html), Favourable conditions·Mode of spread·Management). TNAU 페이지는 원인균을 \"bacteria\"로 오기한 부분이 있어 신뢰도가 제한적이다. 인도 비하르·오디샤·마하라슈트라·카르나타카의 고온다습 저지대에서 주로 발생한다(검색 스니펫)([krishikosh](https://krishikosh.egranth.ac.in/items/41efb2d8-68f4-40d3-aca9-889e026e1db2/full)).",
+          "source_urls": [
+            "https://agritech.tnau.ac.in/expert_system/paddy/cpdisudbtta.html",
+            "https://krishikosh.egranth.ac.in/items/41efb2d8-68f4-40d3-aca9-889e026e1db2/full"
+          ],
+          "contains_미확인": false
+        },
+        "f7_occurrence": {
+          "label": "한국 및 해외 발생 기록",
+          "text": "한국: **국내 발생 기록 미확인.** EPPO 분포에 대한민국이 없고([EPPO BALAOS distribution](https://gd.eppo.int/taxon/BALAOS/distribution)), 국내 문헌·NCPMS에서 벼 발생 기록을 찾지 못했다. Tanaka 2001의 \"Korea\" 분리주는 기주(벼 여부)가 초록에 없어 **한국 벼 발생 근거로 쓸 수 없다**. 일본은 EPPO \"Absent, invalid record\"이며 일본 문헌은 벼 발생 보고가 전혀 없고 1904년 억새·참새피 등 화본과에서만 처음 발생했다고 적는다([Tsukiboshi et al. 2008](https://www.jircas.go.jp/sites/default/files/publication/jarq/42-03-06_0.pdf), p.174). 해외(EPPO): 시에라리온, 미국(루이지애나; 플로리다는 unreliable), 중국(홍콩·윈난), 인도(카르나타카·케랄라·마디아프라데시·오디샤), 인도네시아, 뉴칼레도니아, 바누아투([EPPO BALAOS distribution](https://gd.eppo.int/taxon/BALAOS/distribution)). 인도에서는 \"Udbatta\", 중국에서는 \"Yi-Zhu-Xiang\"으로 불린다([Tsukiboshi et al. 2008](https://www.jircas.go.jp/sites/default/files/publication/jarq/42-03-06_0.pdf), p.173).",
+          "source_urls": [
+            "https://gd.eppo.int/taxon/BALAOS/distribution",
+            "https://www.jircas.go.jp/sites/default/files/publication/jarq/42-03-06_0.pdf"
+          ],
+          "contains_미확인": true
+        },
+        "f8_quarantine": {
+          "label": "국가별 검역 지위",
+          "text": "한국: **금지병해충(검역병해충)** — 시행규칙 제4조제1호가목 → **별표 1 제1호**(<개정 2023. 2. 22.>): 금지식물 \"벼·왕겨·볏짚과 그 가공품(껍질을 벗긴 쌀은 제외)\", 금지지역 \"세계 전 지역(일본 및 대만은 제외)\", 금지병해충 \"벼이삭미이라병 [*Balansia oryzae-sativae*]\"; 비고 2에 따라 북한은 금지지역에 포함되지 않는다([KR-규칙 별표 1](https://www.law.go.kr/LSW/flDownload.do?gubun=&flSeq=163692257&bylClsCd=110201)). EPPO: A1/A2 미등재, 국가 항목은 브라질 A1(2018), 멕시코 QP(2018), **대한민국 QP(2018)**, APPPC A2(1993)([EPPO BALAOS](https://gd.eppo.int/taxon/BALAOS/categorization)). EU·중국: 미등재(확인)([EU-2072](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015); [CN](https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc)). 미국: select agent 아님, 규제표 미확인([US-331](https://www.ecfr.gov/current/title-7/section-331.3)). 일본: **検疫有害動植物 + 輸入禁止(別表二 十五の項) + 侵入調査(別表八)**, \"イネミイラ穂病菌\"([JP](https://laws.e-gov.go.jp/law/325M50010000073)). 호주: 미확인. 벼 그룹 3 노트의 \"한국 검역 지정 미확인\"은 법령 원문으로 해소되었다. 일본은 벼 수입금지 지역에서 \"조선반도와 대만\"을, 한국은 \"일본 및 대만\"을 제외하는데, 양국이 서로를 해당 병해충 무발생 지역으로 다루는 것으로 읽히지만 이는 조문 문언 대조에 따른 해석이다.",
+          "source_urls": [
+            "https://www.law.go.kr/LSW/flDownload.do?gubun=&flSeq=163692257&bylClsCd=110201",
+            "https://gd.eppo.int/taxon/BALAOS/categorization",
+            "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+            "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+            "https://www.ecfr.gov/current/title-7/section-331.3",
+            "https://laws.e-gov.go.jp/law/325M50010000073"
+          ],
+          "contains_미확인": true
+        },
+        "f9_images": {
+          "label": "사용 가능한 이미지와 이용허락",
+          "text": "**이미지 미확인.** Bugwood 주제 14277 \"Rice Udbatta Disease\"는 이미지 0장, EPPO BALAOS는 사진 없음(\"Propose photo\"만), Commons 검색은 나방 *Ephelis cruentalis*만 나오고 IRRI Flickr에서도 찾지 못했다([EPPO BALAOS](https://gd.eppo.int/taxon/BALAOS); Bugwood·Commons 조회 결과는 이미지 노트 B-11). [TNAU](https://agritech.tnau.ac.in/expert_system/paddy/cpdisudbtta.html) 사진은 \"Copyright © TNAU | All Rights Reserved\"(⛔), JARQ 2008 논문 사진(화본과 black choke)은 라이선스 미확인이다. IRRI 출판물이나 인도 ICAR 자료는 조사하지 않았다.",
+          "source_urls": [
+            "https://gd.eppo.int/taxon/BALAOS",
+            "https://agritech.tnau.ac.in/expert_system/paddy/cpdisudbtta.html"
+          ],
+          "contains_미확인": true
+        }
+      },
+      "source_urls": [
+        "https://gd.eppo.int/taxon/BALAOS",
+        "https://www.law.go.kr/LSW/flDownload.do?gubun=&flSeq=163692257&bylClsCd=110201",
+        "https://www.cambridge.org/core/journals/mycological-research/article/phylogenetic-studies-of-ephelis-species-from-various-locations-and-hosts-in-asia/620F727E95233FBD11FC91864980E3C2",
+        "https://www.jircas.go.jp/sites/default/files/publication/jarq/42-03-06_0.pdf",
+        "https://agritech.tnau.ac.in/expert_system/paddy/cpdisudbtta.html",
+        "https://celkau.in/crops/cereals/rice/udbatta.php",
+        "https://krishikosh.egranth.ac.in/items/41efb2d8-68f4-40d3-aca9-889e026e1db2/full",
+        "https://gd.eppo.int/taxon/BALAOS/distribution",
+        "https://gd.eppo.int/taxon/BALAOS/categorization",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+        "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+        "https://www.ecfr.gov/current/title-7/section-331.3",
+        "https://laws.e-gov.go.jp/law/325M50010000073"
+      ]
+    },
+    {
+      "no": 12,
+      "crop": "벼",
+      "user_name": "벼줄기선충 피해(ufra)",
+      "official_kr_name": "병명 미확인; 법령상 병해충명 \"벼줄기선충\"",
+      "scientific_name": "*Ditylenchus angustus*",
+      "kr_occurrence": "국내 발생 기록 미확인",
+      "kr_quarantine": "**금지병해충**(시행규칙 별표 1)",
+      "commercial_image": "미확인(이미지 없음)",
+      "section_title": "벼줄기선충 피해 (Ufra disease) — *Ditylenchus angustus*",
+      "fields": {
+        "f1_names": {
+          "label": "공식 국명·영문명·학명·동의어",
+          "text": "\"벼줄기선충\"은 **시행규칙 별표 1 제1호의 금지병해충명**(벼줄기선충 [*Ditylenchus angustus*])으로 확인된다([KR-규칙 별표 1](https://www.law.go.kr/LSW/flDownload.do?gubun=&flSeq=163692257&bylClsCd=110201)). ufra에 해당하는 한국 **병명**과 한국선충학회 표기는 미확인이다. EPPO는 *Ditylenchus angustus* (Butler) Filipjev(DITYAN), 이명 *Anguillulina angusta*, *Tylenchus angustus*, 일반명 akhet-pet, dak pora, rice stem nematode, ufra disease를 싣는다([EPPO DITYAN datasheet](https://gd.eppo.int/taxon/DITYAN/datasheet)). 지역명은 ufra(인도), dak pora(방글라데시), akhet-pet(미얀마), yadngo(태국), tiem dot san(베트남)이며, Butler(1913)가 동벵골에서 기재한 뒤 Goodey(1932), Filipjev(1936)가 속을 옮겼다([USDA CAPS 2016](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf), Common Names·Pest Description). Subbotin & Ryss(2024)가 *Ditylenchus* 범위를 좁게 재정의해 속 분류는 여전히 유동적이다([CDFA 2026](https://blogs.cdfa.ca.gov/Section3162/wp-content/uploads/2026/08/Ditylenchus-angustus.pdf), History & Status).",
+          "source_urls": [
+            "https://www.law.go.kr/LSW/flDownload.do?gubun=&flSeq=163692257&bylClsCd=110201",
+            "https://gd.eppo.int/taxon/DITYAN/datasheet",
+            "https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf",
+            "https://blogs.cdfa.ca.gov/Section3162/wp-content/uploads/2026/08/Ditylenchus-angustus.pdf"
+          ],
+          "contains_미확인": true
+        },
+        "f2_parts_stages": {
+          "label": "피해 부위와 생육 단계",
+          "text": "지상부의 어린 조직(잎, 화서, 어린 종자, 말린 줄기)에 외부기생하고 생장점 아래 절간에는 없다. 묘~지엽기에는 잎 황화, 출수 후에는 이삭 증상이 나타나며, 이식 후 약 2개월에 처음 관찰되고 **출수 초기가 조사 최적기**다([USDA CAPS 2016](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf), Biology and Ecology·Symptoms·Survey).",
+          "source_urls": [
+            "https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf"
+          ],
+          "contains_미확인": false
+        },
+        "f3_symptoms": {
+          "label": "주요 증상",
+          "text": "영양생장기에는 잎 황화와 기형, **어린 잎 기부의 흰 splash 모양 반점**, 잎·엽초의 괴사성 갈색 얼룩, 상위 절간 흑갈변, 어린 잎 기부 꼬임, 하위 마디 팽대와 불규칙 분지가 나타난다. 출수 후에는 이삭이 쭈글쭈글하고 영이 비며, 이삭과 지엽이 꼬이고, **이삭이 부푼 엽초 안에 갇히거나** 일부만 나온다. 포장에는 흑갈색 패치가 생기고, 수확기에 건전주는 쓰러지지만 감염주(빈 이삭)는 곧게 서 있다([USDA CAPS 2016](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf), Symptoms Fig. 2–6; [CDFA 2026](https://blogs.cdfa.ca.gov/Section3162/wp-content/uploads/2026/08/Ditylenchus-angustus.pdf), Symptoms).",
+          "source_urls": [
+            "https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf",
+            "https://blogs.cdfa.ca.gov/Section3162/wp-content/uploads/2026/08/Ditylenchus-angustus.pdf"
+          ],
+          "contains_미확인": false
+        },
+        "f4_confusions": {
+          "label": "혼동하기 쉬운 병과 비생물적 장해",
+          "text": "국내에 있는 벼잎선충(*Aphelenchoides besseyi*, white tip)은 피해와 유충·암컷 형태가 비슷해 저배율에서 구별이 어렵다. *A. besseyi*는 식도선이 장 앞부분과 크게 겹치고 꼬리 끝에 3~4개 돌기가 있으며 수컷에 bursa가 없고 난모세포가 2~4열인 반면, *D. angustus* 수컷은 bursa가 있고 난모세포는 대개 1열이다([USDA CAPS 2016](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf), Easily Confused Pests·Pest Description). 줄기 천공해충(백수)과 비교한 1차 출처는 미확인이다. 토양·식물의 아연결핍이 ufra 감수성과 관련된다는 보고(Miah et al. 1984)와, 피해 부위 갈색 반점이 *Fusarium*, *Sarocladium oryzae* 등의 2차 침입 부위일 수 있다는 기술이 있다([USDA CAPS 2016](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf), Biology·Known Vectors).",
+          "source_urls": [
+            "https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf"
+          ],
+          "contains_미확인": true
+        },
+        "f5_differentiation": {
+          "label": "구별을 위한 추가 사진·질문·검사",
+          "text": "*사진만으로 구별 가능한 특징:* 어린 잎 기부의 흰 splash 반점, 꼬인 잎 기부와 지엽, 부푼 엽초 속에 갇힌 이삭, 상위 절간 흑갈변, 포장 흑갈색 패치, 수확기에 곧게 선 빈 이삭([USDA CAPS 2016](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf), Symptoms). 저밀도 감염은 육안 검출이 어렵다(같은 문서, Survey). 줄기 단면에서 천공·유충이 없다는 점이 해충 피해와의 감별 단서라는 판단은 추론이다.\n*추가로 받을 사진·질문·현장 검사:* 심수답·장기 침수 여부, 관개수 유입 경로, 수입 종자·식물체 반입 이력, 그루터기·재생벼 유무.\n*실험실 검사가 필요한 특징:* 선충 분리(말린 잎·줄기를 약 55 mm로 잘라 세로로 쪼갠 뒤 물에 24시간 침지, 어린 화서 수중 해부, 베르만 깔때기 24시간, 미스트 챔버), 이삭목 위에서 채집([USDA CAPS 2016](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf), Survey). 형태 동정(꼬리 모양·크기, 구침과 후자궁낭의 상대 길이, 측선 4개; 암컷 0.8~1.2 mm, 구침 10~11 µm, V=78~80), esterase·단백질 패턴과 rDNA PCR로 *Aphelenchoides*와 구별(같은 문서, Key Diagnostics). 금지병해충이므로 검역기관 신고가 필요하다.",
+          "source_urls": [
+            "https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf"
+          ],
+          "contains_미확인": false,
+          "parts": {
+            "f5a_photo_only": "어린 잎 기부의 흰 splash 반점, 꼬인 잎 기부와 지엽, 부푼 엽초 속에 갇힌 이삭, 상위 절간 흑갈변, 포장 흑갈색 패치, 수확기에 곧게 선 빈 이삭([USDA CAPS 2016](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf), Symptoms). 저밀도 감염은 육안 검출이 어렵다(같은 문서, Survey). 줄기 단면에서 천공·유충이 없다는 점이 해충 피해와의 감별 단서라는 판단은 추론이다.",
+            "f5b_extra_requests": "심수답·장기 침수 여부, 관개수 유입 경로, 수입 종자·식물체 반입 이력, 그루터기·재생벼 유무.",
+            "f5c_lab_tests": "선충 분리(말린 잎·줄기를 약 55 mm로 잘라 세로로 쪼갠 뒤 물에 24시간 침지, 어린 화서 수중 해부, 베르만 깔때기 24시간, 미스트 챔버), 이삭목 위에서 채집([USDA CAPS 2016](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf), Survey). 형태 동정(꼬리 모양·크기, 구침과 후자궁낭의 상대 길이, 측선 4개; 암컷 0.8~1.2 mm, 구침 10~11 µm, V=78~80), esterase·단백질 패턴과 rDNA PCR로 *Aphelenchoides*와 구별(같은 문서, Key Diagnostics). 금지병해충이므로 검역기관 신고가 필요하다."
+          }
+        },
+        "f6_conditions": {
+          "label": "발생 조건과 근거",
+          "text": "감염 최적 **27~30 ℃**, 생활환 10~20일, 잎 위 이동에 **상대습도 최소 75%** 필요, 관개수로 확산되지만 물속에서는 대부분 수일 내 죽고 물속 선충은 1시간 안에 어린 벼에 침입할 수 있다. 심수답(50 cm 넘는 침수가 1개월 이상)의 주요 해충이고 관개·천수답에서는 산발적이다. 수확기에는 하위 영화의 건조한 영 안에서 무수생존하며 J4가 생존의 주 단계다. 한 작기에 최소 3세대([USDA CAPS 2016](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf), Biology and Ecology·Background). 종자 전염은 보고(Prasad & Varaprasad 2002)와 위험이 작다는 평가(Bridge & Starr 2007, CABI 2021)가 맞서 논쟁 중이다([CDFA 2026](https://blogs.cdfa.ca.gov/Section3162/wp-content/uploads/2026/08/Ditylenchus-angustus.pdf), Transmission). 기주는 *Oryza* spp., *Leersia hexandra*, *Echinochloa colona*, *Sacciolepis interrupta*, 밀이다(같은 문서, Hosts). 수량 손실은 인도·태국 20~90%, 베트남 50~100%, 방글라데시 40~60%다([USDA CAPS 2016](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf), Pest Importance).",
+          "source_urls": [
+            "https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf",
+            "https://blogs.cdfa.ca.gov/Section3162/wp-content/uploads/2026/08/Ditylenchus-angustus.pdf"
+          ],
+          "contains_미확인": false
+        },
+        "f7_occurrence": {
+          "label": "한국 및 해외 발생 기록",
+          "text": "한국: **국내 발생 기록 미확인.** EPPO 분포표에 남북한 모두 없고([EPPO DITYAN distribution](https://gd.eppo.int/taxon/DITYAN/distribution)), 국내 발생 보고 문헌을 찾지 못했다. \"국내 미발생\"을 명시한 공식 문서는 미확인이며, 금지병해충 지정과 분포표 부재로 간접 판단할 뿐이다. 해외(EPPO): 방글라데시(widespread), 인도(아삼·서벵골), 말레이시아(서부), 미얀마, 필리핀, 태국, 베트남(restricted); 마다가스카르 \"pest no longer present\"; 이집트·수단·인도네시아·파키스탄 \"Absent, unreliable record\"([EPPO DITYAN distribution](https://gd.eppo.int/taxon/DITYAN/distribution)). USDA CAPS 2016은 인도네시아를 분포국에 넣고, CDFA 2026은 마다가스카르를 분포국에 넣어 EPPO와 다르다([USDA CAPS 2016](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf); [CDFA 2026](https://blogs.cdfa.ca.gov/Section3162/wp-content/uploads/2026/08/Ditylenchus-angustus.pdf)). 미국·캘리포니아는 미발생이다(CDFA 2026).",
+          "source_urls": [
+            "https://gd.eppo.int/taxon/DITYAN/distribution",
+            "https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf",
+            "https://blogs.cdfa.ca.gov/Section3162/wp-content/uploads/2026/08/Ditylenchus-angustus.pdf"
+          ],
+          "contains_미확인": true
+        },
+        "f8_quarantine": {
+          "label": "국가별 검역 지위",
+          "text": "한국: **금지병해충(검역병해충)** — 시행규칙 별표 1 제1호(금지식물·지역은 벼이삭미이라병과 동일); 고시 별표 2 선충 목록에는 *D. khani*만 있다([KR-규칙 별표 1](https://www.law.go.kr/LSW/flDownload.do?gubun=&flSeq=163692257&bylClsCd=110201)). EPPO: A1/A2 미등재, 국가 항목은 **대한민국 QP(2018)**, 미국 QP(1995), 중국 QP(2021), 멕시코 QP, 아르헨티나·브라질·이란·우루과이 A1, 이집트 A2, APPPC·COSAVE·IAPSC A2([EPPO DITYAN](https://gd.eppo.int/taxon/DITYAN/categorization)). EU: 미등재(확인)([EU-2072](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015)). 미국: EPPO 집계상 QP(1995), select agent 아님; CDFA는 A등급(점수 11)을 제안했다([CDFA 2026](https://blogs.cdfa.ca.gov/Section3162/wp-content/uploads/2026/08/Ditylenchus-angustus.pdf)). 중국: **检疫性有害生物** \"水稻茎线虫\"([CN](https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc)). 일본: **検疫有害動植物 + 輸入禁止 + 侵入調査**, \"イネクキセンチュウ\"([JP](https://laws.e-gov.go.jp/law/325M50010000073)). 호주: 미확인.",
+          "source_urls": [
+            "https://www.law.go.kr/LSW/flDownload.do?gubun=&flSeq=163692257&bylClsCd=110201",
+            "https://gd.eppo.int/taxon/DITYAN/categorization",
+            "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+            "https://blogs.cdfa.ca.gov/Section3162/wp-content/uploads/2026/08/Ditylenchus-angustus.pdf",
+            "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+            "https://laws.e-gov.go.jp/law/325M50010000073"
+          ],
+          "contains_미확인": true
+        },
+        "f9_images": {
+          "label": "사용 가능한 이미지와 이용허락",
+          "text": "**이미지 미확인.** Bugwood 주제 9263 \"rice stem nematode\"는 이미지 0장, EPPO DITYAN 사진 페이지는 404(datasheet에는 분포 지도만), Commons·IRRI Flickr에서도 찾지 못했다([EPPO DITYAN datasheet](https://gd.eppo.int/taxon/DITYAN/datasheet)). [USDA CAPS 2016](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf) Fig. 2·4·5는 Bridge & Starr(2007, Manson Publishing) 사진, Fig. 3·6은 APS Press \"Diseases of Cereal Grains CD\" 사진이어서 저작권 허락이 필요하다(⛔). [Nemaplex G042S5](https://nemaplex.ucdavis.edu/Taxadata/G042S5.aspx) 이미지 라이선스는 미확인이다.",
+          "source_urls": [
+            "https://gd.eppo.int/taxon/DITYAN/datasheet",
+            "https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf",
+            "https://nemaplex.ucdavis.edu/Taxadata/G042S5.aspx"
+          ],
+          "contains_미확인": true
+        }
+      },
+      "source_urls": [
+        "https://www.law.go.kr/LSW/flDownload.do?gubun=&flSeq=163692257&bylClsCd=110201",
+        "https://gd.eppo.int/taxon/DITYAN/datasheet",
+        "https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf",
+        "https://blogs.cdfa.ca.gov/Section3162/wp-content/uploads/2026/08/Ditylenchus-angustus.pdf",
+        "https://gd.eppo.int/taxon/DITYAN/distribution",
+        "https://gd.eppo.int/taxon/DITYAN/categorization",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
+        "https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc",
+        "https://laws.e-gov.go.jp/law/325M50010000073",
+        "https://nemaplex.ucdavis.edu/Taxadata/G042S5.aspx"
+      ]
+    }
+  ]
+}
