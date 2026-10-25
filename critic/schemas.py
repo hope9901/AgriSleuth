@@ -15,11 +15,25 @@ class InvestigationRequest(Schema):
     symptoms: str = Field(default="", max_length=5000)
 
 
+class InvestigationEvent(Schema):
+    id: str
+    timestamp: str
+    node: str
+    summary: str
+
+
 class InvestigationResponse(Schema):
+    id: str
+    photoId: str | None = None
     status: Literal["needs_input", "ready"]
     summary: str
     questions: list[str]
-    trace: list[str]
+    hypotheses: list[dict] = Field(default_factory=list)
+    evidence: list[dict] = Field(default_factory=list)
+    reviewIssues: list[dict] = Field(default_factory=list)
+    nextAction: str | None = None
+    limitations: list[str] = Field(default_factory=list)
+    events: list[InvestigationEvent] = Field(default_factory=list)
 
 
 class Evidence(Schema):

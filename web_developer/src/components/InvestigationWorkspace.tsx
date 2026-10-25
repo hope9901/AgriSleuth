@@ -17,6 +17,7 @@ export default function InvestigationWorkspace({
   onSubmit,
 }: InvestigationWorkspaceProps) {
   const [result, setResult] = useState<InvestigationResult | null>(null);
+  const [submittedRegion, setSubmittedRegion] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
 
@@ -27,11 +28,10 @@ export default function InvestigationWorkspace({
 
     try {
       const response = await onSubmit(input);
+      setSubmittedRegion(input.region);
       setResult(response);
-    } catch {
-      setError(
-        "The investigation could not be submitted. Please try again.",
-      );
+    } catch (error) {
+      setError(error instanceof Error ? error.message : "The investigation could not be submitted.");
     } finally {
       setBusy(false);
     }
@@ -47,7 +47,7 @@ export default function InvestigationWorkspace({
 
       <div className="workspace-grid">
         <ObservationForm busy={busy} onSubmit={handleSubmit} />
-        <InvestigationResults result={result} busy={busy} />
+        <InvestigationResults result={result} busy={busy} region={submittedRegion} />
       </div>
     </>
   );

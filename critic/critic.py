@@ -8,7 +8,7 @@ from schemas import CriticReview, ReviewRequest
 
 
 PROMPT_PATH = (
-    Path(__file__).resolve().parent / "prompts" / "critic.md"
+    Path(__file__).resolve().parent / "prompts" / "clitic.md"
 )
 
 

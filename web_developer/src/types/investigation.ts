@@ -11,6 +11,7 @@ export interface InvestigationInput {
 }
 
 export type InvestigationStatus =
+  | "ready"
   | "received"
   | "validating"
   | "researching"
@@ -50,6 +51,7 @@ export interface ExecutionEvent {
 
 export interface InvestigationResult {
   id: string;
+  photoId?: string | null;
   status: InvestigationStatus;
   summary: string;
   hypotheses: Hypothesis[];
