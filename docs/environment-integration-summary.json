@@ -1,0 +1,169 @@
+{
+  "sample_count": 1,
+  "attempt_count": 5,
+  "independent_ground_truth": false,
+  "accuracy": null,
+  "note": "One attributed photo with constructed symptoms/location/date. Retries are development attempts, not independent cases. No diagnostic accuracy estimate.",
+  "attempts": [
+    {
+      "case_id": "98180cd5-b9d3-446c-8d24-1d29ead4a8b7",
+      "elapsed_seconds": 45.5,
+      "status": "needs_more_evidence",
+      "expected_label_present": false,
+      "tool_trace": [
+        {
+          "tool": "get_weather",
+          "status": "completed",
+          "summary": "KMA returned 8 observations across 1 requested day results."
+        },
+        {
+          "tool": "finish_investigation",
+          "status": "completed",
+          "summary": "Weather overlap does not prove infection without confirmed disease candidates and missing environmental inputs like transplanting date or soil type."
+        }
+      ]
+    },
+    {
+      "case_id": "98180cd5-b9d3-446c-8d24-1d29ead4a8b7",
+      "elapsed_seconds": 60.6,
+      "status": "failed",
+      "expected_label_present": false,
+      "tool_trace": [
+        {
+          "tool": "get_weather",
+          "status": "completed",
+          "summary": "Existing weather snapshot reused; no external request made."
+        },
+        {
+          "tool": "search_diseases",
+          "status": "completed",
+          "summary": "Zetaris evidence: 6 excerpts, 6 new source IDs."
+        },
+        {
+          "tool": "verify_evidence",
+          "status": "failed",
+          "summary": "Tool provider failed; no successful evidence was fabricated."
+        },
+        {
+          "tool": "finish_investigation",
+          "status": "completed",
+          "summary": "Tool provider failed; no successful evidence was fabricated."
+        }
+      ]
+    },
+    {
+      "case_id": "98180cd5-b9d3-446c-8d24-1d29ead4a8b7",
+      "elapsed_seconds": 101.2,
+      "status": "failed",
+      "expected_label_present": false,
+      "tool_trace": [
+        {
+          "tool": "get_weather",
+          "status": "completed",
+          "summary": "Existing weather snapshot reused; no external request made."
+        },
+        {
+          "tool": "search_diseases",
+          "status": "completed",
+          "summary": "Zetaris evidence: 6 excerpts, 6 new source IDs."
+        },
+        {
+          "tool": "verify_evidence",
+          "status": "rejected",
+          "summary": "Model response did not finish normally."
+        },
+        {
+          "tool": "finish_investigation",
+          "status": "completed",
+          "summary": "Model response did not finish normally after verification was rejected."
+        }
+      ]
+    },
+    {
+      "case_id": "98180cd5-b9d3-446c-8d24-1d29ead4a8b7",
+      "elapsed_seconds": 101.0,
+      "status": "failed",
+      "expected_label_present": false,
+      "tool_trace": [
+        {
+          "tool": "get_weather",
+          "status": "completed",
+          "summary": "Existing weather snapshot reused; no external request made."
+        },
+        {
+          "tool": "search_diseases",
+          "status": "completed",
+          "summary": "Zetaris evidence: 6 excerpts, 6 new source IDs."
+        },
+        {
+          "tool": "verify_evidence",
+          "status": "rejected",
+          "summary": "Model response did not finish normally (length; output budget 500)."
+        },
+        {
+          "tool": "finish_investigation",
+          "status": "completed",
+          "summary": "verify_evidence rejected due to output budget exceeded; no Judge decision obtained."
+        }
+      ]
+    },
+    {
+      "case_id": "98180cd5-b9d3-446c-8d24-1d29ead4a8b7",
+      "elapsed_seconds": 106.2,
+      "status": "failed",
+      "expected_label_present": false,
+      "tool_trace": [
+        {
+          "tool": "get_weather",
+          "status": "completed",
+          "summary": "Existing weather snapshot reused; no external request made."
+        },
+        {
+          "tool": "search_diseases",
+          "status": "completed",
+          "summary": "Zetaris evidence: 6 excerpts, 6 new source IDs."
+        },
+        {
+          "tool": "verify_evidence",
+          "status": "rejected",
+          "summary": "Model response did not finish normally (length; output budget 500)."
+        },
+        {
+          "tool": "finish_investigation",
+          "status": "completed",
+          "summary": "verify_evidence rejected due to output budget exceeded; no Judge decision obtained."
+        }
+      ]
+    }
+  ],
+  "reference_profiles": 26,
+  "reference_windows": 67,
+  "country_service": {
+    "code": "1001",
+    "country": "Russia",
+    "received_stations": 79
+  },
+  "checks_passed": [
+    "environment reference DB/window/anchor/source gating",
+    "country station synthetic pagination and real API list",
+    "weather transport fixtures",
+    "autonomous A-G with mocked model/providers",
+    "local model JSON/schema constraints",
+    "Critic source attribution",
+    "fixed pipeline regression",
+    "11 API contracts",
+    "web build and lint"
+  ],
+  "remaining_blocker": "The former truncation failure did not recur in the two English runs. Critic questions remain conservative and may request context already supplied; biological relevance and accuracy are not validated.",
+  "latest_English_check": {
+    "case_id": "fd16b80e-f56f-4c82-9668-a2bbe4cdaeea",
+    "elapsed_seconds": 141.2,
+    "status": "needs_more_evidence",
+    "scenario_id": "WEATHER_WINDOW_GAP",
+    "scenario_match": "direct",
+    "all_tools_completed": true,
+    "weather_reused": true,
+    "first_fresh_weather_run_seconds": 156.6,
+    "diagnostic_accuracy": null
+  }
+}

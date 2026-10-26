@@ -199,7 +199,7 @@ export default function InvestigationResults({
         )}
       </section>
 
-      {result && <WeatherPanel key={result.id} investigationId={result.id} initialRegion={region} />}
+      {result && <WeatherPanel key={result.id} investigationId={result.id} initialRegion={region} status={result.status} />}
 
       <section id="review" className="panel" aria-labelledby="review-title">
         <header className="panel-heading">

@@ -1,0 +1,2241 @@
+{
+  "checked_at": "2026-10-26T13:05:41.285821+00:00",
+  "case_id": "fd16b80e-f56f-4c82-9668-a2bbe4cdaeea",
+  "elapsed_seconds": 141.2,
+  "input": {
+    "crop": "rice",
+    "region": "Seoul",
+    "observed_date": "2026-07-18",
+    "growth_stage": "vegetative",
+    "affected_part": "leaf",
+    "symptoms": "Spindle-shaped leaf lesions with gray-white centers and brown margins. Investigate a tentative hypothesis. Please check whether the observed-day humidity and temperature overlap the source environment references, and explain any missing infection-window measurements. The city and observation date are provided; do not treat weather overlap as proof of infection."
+  },
+  "sample": "web_developer/public/samples/rice-blast-usda-d542-1.jpg",
+  "expected_from_sample_label": "rice_001",
+  "ground_truth_independently_verified": false,
+  "measurement_scope": "One attributed sample with constructed symptom text and location/date. Not image-only evaluation or diagnostic accuracy.",
+  "expected_label_present": true,
+  "result": {
+    "id": "fd16b80e-f56f-4c82-9668-a2bbe4cdaeea",
+    "photoId": "830e21dd-ab0e-4582-a558-5f3d8272f31f",
+    "status": "needs_more_evidence",
+    "summary": "Observed spindle-shaped leaf lesions match rice blast morphology, but infection window data is incomplete for Seoul on 2026-07-18.",
+    "questions": [
+      "Please provide the rice heading date, transplanting date, region, and cultivar to enable infection-window assessment."
+    ],
+    "hypotheses": [
+      {
+        "id": "rice_001",
+        "name": "Rice blast",
+        "reasoning": "Spindle-shaped lesions with gray-white centers and brown margins align with rice blast descriptions.",
+        "evidenceIds": [
+          "rice_001_f6",
+          "rice_001_f7"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "rice_001_f6",
+        "url": "https://www.lsuagcenter.com/~/media/system/6/a/a/a/6aaa18a85d7690e7f469109273056d89/pub3153blastofricelowres.pdf",
+        "title": "LSU AgCenter Pub. 3153 \"Blast of Rice\" (Groth & Hollier, 6/10) (LSU-Blast)",
+        "excerpt": "Leaf spots start as small white, gray or bluish specks. Under humid conditions they enlarge quickly into elliptical or diamond-shaped spots or linear lesions pointed at both ends, with gray to white centers and narrow brown borders. In severe cases leaves and whole plants die",
+        "location": "Body paragraph 2 (Figure 2)"
+      },
+      {
+        "id": "rice_001_f7",
+        "url": "https://doa.gov.lk/rrdi_ricediseases_riceblast/",
+        "title": "Sri Lanka Department of Agriculture, Rice Research & Development Institute, Rice blast page (DOA-SriLanka)",
+        "excerpt": "Spindle-shaped leaf spots with brown or reddish-brown to yellowish-brown borders, ashy centers and pointed ends. Fully developed lesions are usually 1.0–1.5 cm long and 0.3–0.5 cm wide. Symptoms vary with growth stage, cultivar susceptibility and environment",
+        "location": "\"Symptoms\" sentences 1-2, last sentence"
+      },
+      {
+        "id": "rice_002_f3",
+        "url": "https://www.lsuagcenter.com/~/media/system/6/6/a/5/66a53754c9529a4f64afd5b9c57f9fed/pub3123shealthblightofricelowres.pdf",
+        "title": "LSU AgCenter Pub. 3123 \"Sheath Blight of Rice\" (2 pages) (LSU-SB)",
+        "excerpt": "Large oval spots form on the leaf sheath. Lesions about 0.5–1 cm wide and 1–3 cm long form slightly above the water line on infected stems. Lesion centers are grayish-white or light green, with brown to reddish-brown borders",
+        "location": "Page 1 body paragraphs 2-3 (Fig. 2)"
+      },
+      {
+        "id": "rice_002_f19",
+        "url": "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight",
+        "title": "IRRI RKB \"Sheath blight\" (IRRI-Sheath blight)",
+        "excerpt": "Resembles stem rot and stem-borer damage. Confirm by irregular sheath lesions (water-soaked to gray-green early, grayish-white with brown border later) and the presence of sclerotia",
+        "location": "\"How to identify\" last paragraph"
+      },
+      {
+        "id": "rice_003_f5",
+        "url": "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot",
+        "title": "IRRI RKB \"Brown spot\" (IRRI-Brown spot)",
+        "excerpt": "On some cultivars it can be mistaken for blast lesions. Confirm by round brown spots with gray centers surrounded by reddish-brown borders",
+        "location": "\"How to identify\" last paragraph"
+      },
+      {
+        "id": "rice_003_f10",
+        "url": "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y",
+        "title": "NCPMS paddy rice Brown spot (NCPMS-Brown spot)",
+        "excerpt": "Grains develop dark-brown spots that later become grayish-white collapsed areas. Often the whole grain surface browns. Unlike blast, it does not attack quickly from the panicle tip and does not cause whiteheads",
+        "location": "Symptom description sentences 4-6"
+      }
+    ],
+    "reviewIssues": [
+      {
+        "id": "issue_0",
+        "reason": "The candidate asserts symptom alignment but the weather summary shows insufficient data for infection assessment, with incomplete coverage and missing anchor.",
+        "severity": "blocking"
+      }
+    ],
+    "nextAction": "Critic identified a blocking weather context gap requiring heading date, transplanting date, region, and cultivar which are not available through any tool.",
+    "limitations": [
+      "Weather overlap does not confirm infection; heading date and cultivar are missing for environmental assessment.",
+      "Source conflicts exist regarding lesion border color and size across different regional descriptions.",
+      "Missing growth-stage anchors prevent confirming whether observed weather conditions overlap with the disease's infection window.",
+      "Tentative research hypotheses, not confirmed diagnoses.",
+      "No verified pesticide or regulatory recommendation is implemented.",
+      "Image interpretation was not used."
+    ],
+    "events": [
+      {
+        "id": "98287727-6984-46c1-a776-7f952f2c6e05",
+        "timestamp": "2026-10-26T12:54:58.685163+00:00",
+        "node": "validate_upload",
+        "summary": "Validated image type, contents and size."
+      },
+      {
+        "id": "0126a6d6-f74d-4306-a005-875ee488428c",
+        "timestamp": "2026-10-26T12:54:58.687521+00:00",
+        "node": "validate_input",
+        "summary": "Checked required observation fields."
+      },
+      {
+        "id": "9100c526-b6dc-4b5e-a10d-537087ea6edf",
+        "timestamp": "2026-10-26T12:54:58.688033+00:00",
+        "node": "prepare",
+        "summary": "Input validation completed; ready for explicit investigation start."
+      },
+      {
+        "id": "1483572c-9438-4203-9e4d-cbb49825a9e1",
+        "timestamp": "2026-10-26T12:55:00.153149+00:00",
+        "node": "agent_initialize",
+        "summary": "Agent Controller will choose tools from the allowed registry."
+      },
+      {
+        "id": "cbefe297-d210-4390-9a59-8a082d523347",
+        "timestamp": "2026-10-26T12:55:00.414467+00:00",
+        "node": "agent_reason",
+        "summary": "Action 1/5: selecting the next tool."
+      },
+      {
+        "id": "0e6aac99-e352-4aee-ab6c-18777d57fb96",
+        "timestamp": "2026-10-26T12:55:15.421677+00:00",
+        "node": "agent_tool",
+        "summary": "get_weather: Weather data is missing for the confirmed location and observation day, which is required to assess environmental conditions before verifying disease hypotheses"
+      },
+      {
+        "id": "b4ee661c-9cc0-4571-b256-e355e93501d4",
+        "timestamp": "2026-10-26T12:55:21.147039+00:00",
+        "node": "get_weather",
+        "summary": "KMA returned 8 observations across 1 requested day results."
+      },
+      {
+        "id": "9ce1b73d-1413-4fea-9987-d0fcdbc7abe2",
+        "timestamp": "2026-10-26T12:55:21.186780+00:00",
+        "node": "agent_reason",
+        "summary": "Action 2/5: selecting the next tool."
+      },
+      {
+        "id": "24228cae-4d94-4223-a81c-42ebc81b2212",
+        "timestamp": "2026-10-26T12:55:32.089534+00:00",
+        "node": "agent_tool",
+        "summary": "search_diseases: Weather data is available but disease sources are missing; search for diseases matching the observed symptoms before verification."
+      },
+      {
+        "id": "0c860400-f385-49a5-be83-5952e827ef2d",
+        "timestamp": "2026-10-26T12:55:34.085144+00:00",
+        "node": "search_diseases",
+        "summary": "Zetaris evidence: 6 excerpts, 6 new source IDs."
+      },
+      {
+        "id": "54516dcf-d966-44ac-957b-f927c1fefcb2",
+        "timestamp": "2026-10-26T12:55:34.107206+00:00",
+        "node": "agent_reason",
+        "summary": "Action 3/5: selecting the next tool."
+      },
+      {
+        "id": "e832873d-eeaa-4f32-907f-b9e60f5e5b41",
+        "timestamp": "2026-10-26T12:55:45.153375+00:00",
+        "node": "agent_tool",
+        "summary": "verify_evidence: Evaluate the disease candidates against the observed symptoms and available evidence using the Critic and Judge."
+      },
+      {
+        "id": "cc224443-2fe9-4217-8c76-30b296f7dcde",
+        "timestamp": "2026-10-26T12:55:45.208849+00:00",
+        "node": "diagnosis",
+        "summary": "Generating source-linked hypotheses from the current evidence."
+      },
+      {
+        "id": "cf78b648-4d23-4d5d-a3ea-a2b95e70c343",
+        "timestamp": "2026-10-26T12:56:26.453164+00:00",
+        "node": "critic",
+        "summary": "Critic is checking hypothesis claims, sources and unresolved observations."
+      },
+      {
+        "id": "dedb7f20-b29e-4b6e-b56e-d422f6c2f6b5",
+        "timestamp": "2026-10-26T12:57:07.541053+00:00",
+        "node": "judge",
+        "summary": "Deterministic Judge is evaluating the current Critic findings."
+      },
+      {
+        "id": "4f40cfbd-dd86-480c-92a8-e791d0be6636",
+        "timestamp": "2026-10-26T12:57:07.604573+00:00",
+        "node": "verify_evidence",
+        "summary": "The symptom description aligns with rice blast, but the hypothesis cannot be confirmed without growth-stage anchors and complete infection-window weather data."
+      },
+      {
+        "id": "da6abb29-eb05-4169-847c-361d40f39329",
+        "timestamp": "2026-10-26T12:57:07.646929+00:00",
+        "node": "agent_reason",
+        "summary": "Action 4/5: selecting the next tool."
+      },
+      {
+        "id": "d5834d77-251f-463b-8957-3aaa3425e37a",
+        "timestamp": "2026-10-26T12:57:32.386207+00:00",
+        "node": "agent_tool",
+        "summary": "finish_investigation: Critic identified a blocking weather context gap requiring specific dates/region/cultivar that cannot be supplied by available tools."
+      },
+      {
+        "id": "05ad8baa-421b-4c58-9a01-e5395b685e5f",
+        "timestamp": "2026-10-26T12:57:32.447122+00:00",
+        "node": "finish_investigation",
+        "summary": "Critic requires heading date, transplanting date, region, and cultivar to assess infection window coverage; these inputs are not available through any tool."
+      },
+      {
+        "id": "ae37c6d7-64e7-4617-ac77-a830ec75e17f",
+        "timestamp": "2026-10-26T12:57:32.500753+00:00",
+        "node": "report",
+        "summary": "Critic requires heading date, transplanting date, region, and cultivar to assess infection window coverage; these inputs are not available through any tool."
+      },
+      {
+        "id": "c2790603-3976-4fdf-ad5a-544c83429500",
+        "timestamp": "2026-10-26T13:03:20.126119+00:00",
+        "node": "agent_initialize",
+        "summary": "Agent Controller will choose tools from the allowed registry."
+      },
+      {
+        "id": "87c5dfb4-c4cf-4bf4-bdde-e25e37f31c80",
+        "timestamp": "2026-10-26T13:03:20.265453+00:00",
+        "node": "agent_reason",
+        "summary": "Action 1/5: selecting the next tool."
+      },
+      {
+        "id": "338e8257-dd54-4818-aecf-6a6f7554f609",
+        "timestamp": "2026-10-26T13:03:31.240249+00:00",
+        "node": "agent_tool",
+        "summary": "get_weather: The user explicitly requests checking humidity and temperature overlap with source references, but weather data is missing."
+      },
+      {
+        "id": "7e6f192f-684a-45cc-bc9d-29e21473d2cd",
+        "timestamp": "2026-10-26T13:03:31.330778+00:00",
+        "node": "get_weather",
+        "summary": "Existing weather snapshot reused; no external request made."
+      },
+      {
+        "id": "b970f065-435e-4c91-a5f4-3efa3d211888",
+        "timestamp": "2026-10-26T13:03:31.366481+00:00",
+        "node": "agent_reason",
+        "summary": "Action 2/5: selecting the next tool."
+      },
+      {
+        "id": "3629091f-ad33-44eb-b23c-93631077d212",
+        "timestamp": "2026-10-26T13:03:39.702472+00:00",
+        "node": "agent_tool",
+        "summary": "search_diseases: Search for disease evidence matching the described spindle-shaped leaf lesions before verification."
+      },
+      {
+        "id": "16aab96f-b271-4886-8a58-d4f982cdf598",
+        "timestamp": "2026-10-26T13:03:41.154087+00:00",
+        "node": "search_diseases",
+        "summary": "Zetaris evidence: 6 excerpts, 6 new source IDs."
+      },
+      {
+        "id": "f88ad4d1-098d-4be3-91a6-3c822320380a",
+        "timestamp": "2026-10-26T13:03:41.189589+00:00",
+        "node": "agent_reason",
+        "summary": "Action 3/5: selecting the next tool."
+      },
+      {
+        "id": "ba0dfd5d-9755-46e4-9751-5d64c8f375a3",
+        "timestamp": "2026-10-26T13:03:51.902872+00:00",
+        "node": "agent_tool",
+        "summary": "verify_evidence: Evaluate the symptom match against retrieved disease evidence to generate or revise hypotheses before finishing."
+      },
+      {
+        "id": "7fab5715-395c-4040-bc13-e8846db60721",
+        "timestamp": "2026-10-26T13:03:51.942716+00:00",
+        "node": "diagnosis",
+        "summary": "Generating source-linked hypotheses from the current evidence."
+      },
+      {
+        "id": "9a720848-d196-4047-8a70-faa1326332ca",
+        "timestamp": "2026-10-26T13:04:31.423105+00:00",
+        "node": "critic",
+        "summary": "Critic is checking hypothesis claims, sources and unresolved observations."
+      },
+      {
+        "id": "d8d1b588-fed7-4e6c-bed5-b32dbcef5f90",
+        "timestamp": "2026-10-26T13:05:15.034594+00:00",
+        "node": "judge",
+        "summary": "Deterministic Judge is evaluating the current Critic findings."
+      },
+      {
+        "id": "05ec560f-9651-411e-8492-c7dab4ddce67",
+        "timestamp": "2026-10-26T13:05:15.113622+00:00",
+        "node": "verify_evidence",
+        "summary": "The candidate hypothesis aligns with observed symptoms but lacks sufficient weather context to support an infection claim due to incomplete coverage and missing growth-stage anchor"
+      },
+      {
+        "id": "a3842811-55cb-4702-be9e-f3198fdae1ac",
+        "timestamp": "2026-10-26T13:05:15.148006+00:00",
+        "node": "agent_reason",
+        "summary": "Action 4/5: selecting the next tool."
+      },
+      {
+        "id": "25cb3f2c-e3e1-4014-a755-718f3ae5255b",
+        "timestamp": "2026-10-26T13:05:40.231369+00:00",
+        "node": "agent_tool",
+        "summary": "finish_investigation: Critic blocking issue requires missing inputs that cannot be supplied by available tools; abstain as needs_more_evidence."
+      },
+      {
+        "id": "5c6fabdf-7d2a-4549-9b45-720ed2581bdc",
+        "timestamp": "2026-10-26T13:05:40.313171+00:00",
+        "node": "finish_investigation",
+        "summary": "Critic identified a blocking weather context gap requiring heading date, transplanting date, region, and cultivar which are not available through any tool."
+      },
+      {
+        "id": "55745c1a-4b9b-46d1-b7e6-15b8556b107f",
+        "timestamp": "2026-10-26T13:05:40.358139+00:00",
+        "node": "report",
+        "summary": "Critic identified a blocking weather context gap requiring heading date, transplanting date, region, and cultivar which are not available through any tool."
+      }
+    ]
+  },
+  "agent": {
+    "crop": "rice",
+    "phase": "tool_complete",
+    "run_id": "4fc4ceee-942f-4b8d-a384-66c6f96c5986",
+    "status": "needs_more_evidence",
+    "location": {
+      "confirmed": true
+    },
+    "iteration": 4,
+    "questions": [
+      "Please provide the rice heading date, transplanting date, region, and cultivar to enable infection-window assessment."
+    ],
+    "last_review": {
+      "issues": [
+        {
+          "code": "WEATHER_CONTEXT_GAP",
+          "reason": "The candidate asserts symptom alignment but the weather summary shows insufficient data for infection assessment, with incomplete coverage and missing anchor.",
+          "severity": "blocking",
+          "candidate_id": "rice_001",
+          "evidence_ids": [
+            "rice_001_f6",
+            "rice_001_f7"
+          ],
+          "suggested_action": "retrieve_evidence",
+          "requested_information": "Provide heading date, transplanting date, region, and cultivar to enable infection-window assessment."
+        }
+      ],
+      "limitations": [
+        "Station coordinates use NOAA ISD metadata (record ends 2025-08-24); station activity on the requested date is not guaranteed.",
+        "Three-hourly samples are not daily extremes or climate normals."
+      ],
+      "scenario_id": "WEATHER_WINDOW_GAP",
+      "review_summary": "The candidate hypothesis aligns with observed symptoms but lacks sufficient weather context to support an infection claim due to incomplete coverage and missing growth-stage anchor",
+      "scenario_match": "direct",
+      "scenario_reason": "The candidate claims infection alignment but the weather summary explicitly states insufficient data for infection assessment, with incomplete coverage and missing anchor inputs like heading date."
+    },
+    "next_action": "finish_investigation",
+    "tool_history": [
+      {
+        "step": 1,
+        "tool": "get_weather",
+        "reason": "The user explicitly requests checking humidity and temperature overlap with source references, but weather data is missing.",
+        "result": {
+          "status": "cached",
+          "summary": "Existing weather snapshot reused; no external request made."
+        },
+        "status": "completed",
+        "summary": "Existing weather snapshot reused; no external request made.",
+        "arguments": {
+          "end_date": null,
+          "latitude": null,
+          "longitude": null,
+          "variables": [
+            "temperature_c",
+            "humidity_pct"
+          ],
+          "start_date": null
+        }
+      },
+      {
+        "step": 2,
+        "tool": "search_diseases",
+        "reason": "Search for disease evidence matching the described spindle-shaped leaf lesions before verification.",
+        "result": {
+          "source": "Zetaris",
+          "summary": "Zetaris evidence: 6 excerpts, 6 new source IDs.",
+          "source_ids": [
+            "rice_001_f6",
+            "rice_001_f7",
+            "rice_002_f3",
+            "rice_002_f19",
+            "rice_003_f5",
+            "rice_003_f10"
+          ],
+          "disease_ids": [
+            "rice_001",
+            "rice_002",
+            "rice_003"
+          ],
+          "disease_names": {
+            "rice_001": "Rice blast",
+            "rice_002": "Sheath blight",
+            "rice_003": "Brown spot"
+          },
+          "new_source_ids": [
+            "rice_001_f6",
+            "rice_001_f7",
+            "rice_002_f3",
+            "rice_002_f19",
+            "rice_003_f5",
+            "rice_003_f10"
+          ]
+        },
+        "status": "completed",
+        "summary": "Zetaris evidence: 6 excerpts, 6 new source IDs.",
+        "arguments": {
+          "query": "Spindle-shaped leaf lesions with gray-white centers and brown margins rice",
+          "compare_disease_ids": [],
+          "exclude_disease_ids": []
+        }
+      },
+      {
+        "step": 3,
+        "tool": "verify_evidence",
+        "reason": "Evaluate the symptom match against retrieved disease evidence to generate or revise hypotheses before finishing.",
+        "result": {
+          "action": "retrieve_evidence",
+          "reason": "Additional source evidence is required.",
+          "missing": [
+            "Provide heading date, transplanting date, region, and cultivar to enable infection-window assessment."
+          ],
+          "summary": "The candidate hypothesis aligns with observed symptoms but lacks sufficient weather context to support an infection claim due to incomplete coverage and missing growth-stage anchor",
+          "candidate_ids": [
+            "rice_001"
+          ]
+        },
+        "status": "completed",
+        "summary": "The candidate hypothesis aligns with observed symptoms but lacks sufficient weather context to support an infection claim due to incomplete coverage and missing growth-stage anchor",
+        "arguments": {}
+      },
+      {
+        "step": 4,
+        "tool": "finish_investigation",
+        "reason": "Critic blocking issue requires missing inputs that cannot be supplied by available tools; abstain as needs_more_evidence.",
+        "result": {
+          "status": "needs_more_evidence",
+          "summary": "Critic identified a blocking weather context gap requiring heading date, transplanting date, region, and cultivar which are not available through any tool."
+        },
+        "status": "completed",
+        "summary": "Critic identified a blocking weather context gap requiring heading date, transplanting date, region, and cultivar which are not available through any tool.",
+        "arguments": {
+          "reason": "Critic identified a blocking weather context gap requiring heading date, transplanting date, region, and cultivar which are not available through any tool.",
+          "status": "needs_more_evidence",
+          "questions": [
+            "Please provide the rice heading date, transplanting date, region, and cultivar to enable infection-window assessment."
+          ],
+          "uncertainties": [
+            "Missing growth-stage anchors prevent confirming whether observed weather conditions overlap with the disease's infection window."
+          ],
+          "final_candidate_ids": []
+        }
+      }
+    ],
+    "finish_reason": "Critic identified a blocking weather context gap requiring heading date, transplanting date, region, and cultivar which are not available through any tool.",
+    "uncertainties": [
+      "Missing growth-stage anchors prevent confirming whether observed weather conditions overlap with the disease's infection window."
+    ],
+    "budget_seconds": 480,
+    "max_iterations": 5,
+    "critic_findings": [
+      {
+        "code": "WEATHER_CONTEXT_GAP",
+        "reason": "The candidate asserts symptom alignment but the weather summary shows insufficient data for infection assessment, with incomplete coverage and missing anchor.",
+        "severity": "blocking",
+        "candidate_id": "rice_001",
+        "evidence_ids": [
+          "rice_001_f6",
+          "rice_001_f7"
+        ],
+        "suggested_action": "retrieve_evidence",
+        "requested_information": "Provide heading date, transplanting date, region, and cultivar to enable infection-window assessment."
+      }
+    ],
+    "elapsed_seconds": 140.25,
+    "image_reference": "830e21dd-ab0e-4582-a558-5f3d8272f31f",
+    "judge_decisions": [
+      {
+        "action": "retrieve_evidence",
+        "reason": "Additional source evidence is required."
+      }
+    ],
+    "investigation_id": "fd16b80e-f56f-4c82-9668-a2bbe4cdaeea",
+    "missing_evidence": [
+      "Provide heading date, transplanting date, region, and cultivar to enable infection-window assessment."
+    ],
+    "proposal_summary": "Observed spindle-shaped leaf lesions match rice blast morphology, but infection window data is incomplete for Seoul on 2026-07-18.",
+    "observed_symptoms": [
+      "Spindle-shaped leaf lesions with gray-white centers and brown margins. Investigate a tentative hypothesis. Please check whether the observed-day humidity and temperature overlap the source environment references, and explain any missing infection-window measurements. The city and observation date are provided; do not treat weather overlap as proof of infection."
+    ],
+    "disease_candidates": [
+      {
+        "id": "rice_001",
+        "name": "Rice blast",
+        "claim": "Spindle-shaped lesions with gray-white centers and brown margins align with rice blast descriptions.",
+        "evidence_ids": [
+          "rice_001_f6",
+          "rice_001_f7"
+        ]
+      }
+    ],
+    "hypothesis_history": [
+      {
+        "round": 1,
+        "action": "retrieve_evidence",
+        "reason": "Additional source evidence is required.",
+        "review": {
+          "issues": [
+            {
+              "code": "WEATHER_CONTEXT_GAP",
+              "reason": "The candidate asserts symptom alignment but the weather summary shows insufficient data for infection assessment, with incomplete coverage and missing anchor.",
+              "severity": "blocking",
+              "candidate_id": "rice_001",
+              "evidence_ids": [
+                "rice_001_f6",
+                "rice_001_f7"
+              ],
+              "suggested_action": "retrieve_evidence",
+              "requested_information": "Provide heading date, transplanting date, region, and cultivar to enable infection-window assessment."
+            }
+          ],
+          "limitations": [
+            "Station coordinates use NOAA ISD metadata (record ends 2025-08-24); station activity on the requested date is not guaranteed.",
+            "Three-hourly samples are not daily extremes or climate normals."
+          ],
+          "scenario_id": "WEATHER_WINDOW_GAP",
+          "review_summary": "The candidate hypothesis aligns with observed symptoms but lacks sufficient weather context to support an infection claim due to incomplete coverage and missing growth-stage anchor",
+          "scenario_match": "direct",
+          "scenario_reason": "The candidate claims infection alignment but the weather summary explicitly states insufficient data for infection assessment, with incomplete coverage and missing anchor inputs like heading date."
+        },
+        "proposal": {
+          "summary": "Observed spindle-shaped leaf lesions match rice blast morphology, but infection window data is incomplete for Seoul on 2026-07-18.",
+          "candidates": [
+            {
+              "id": "rice_001",
+              "name": "Rice blast",
+              "claim": "Spindle-shaped lesions with gray-white centers and brown margins align with rice blast descriptions.",
+              "evidence_ids": [
+                "rice_001_f6",
+                "rice_001_f7"
+              ]
+            }
+          ],
+          "limitations": [
+            "Weather overlap does not confirm infection; heading date and cultivar are missing for environmental assessment.",
+            "Source conflicts exist regarding lesion border color and size across different regional descriptions."
+          ]
+        },
+        "evidence_ids": [
+          "rice_001_f6",
+          "rice_001_f7",
+          "rice_002_f3",
+          "rice_002_f19",
+          "rice_003_f5",
+          "rice_003_f10"
+        ]
+      }
+    ],
+    "image_observations": null,
+    "search_no_progress": 0,
+    "supporting_evidence": [
+      {
+        "id": "rice_001_f6",
+        "urls": [
+          "https://www.lsuagcenter.com/~/media/system/6/a/a/a/6aaa18a85d7690e7f469109273056d89/pub3153blastofricelowres.pdf"
+        ],
+        "name_en": "Rice blast",
+        "name_ko": "Rice blast",
+        "category": "Symptoms - leaf",
+        "disease_id": "rice_001",
+        "feature_no": "6",
+        "plant_part": "Leaf",
+        "description": "Leaf spots start as small white, gray or bluish specks. Under humid conditions they enlarge quickly into elliptical or diamond-shaped spots or linear lesions pointed at both ends, with gray to white centers and narrow brown borders. In severe cases leaves and whole plants die",
+        "source_name": "LSU AgCenter Pub. 3153 \"Blast of Rice\" (Groth & Hollier, 6/10) (LSU-Blast)",
+        "source_urls": "[\"https://www.lsuagcenter.com/~/media/system/6/a/a/a/6aaa18a85d7690e7f469109273056d89/pub3153blastofricelowres.pdf\"]",
+        "growth_stage": "Seedling to late tillering (leaf blast phase)",
+        "retrieval_score": 6,
+        "scientific_name": "Pyricularia oryzae",
+        "source_location": "Body paragraph 2 (Figure 2)",
+        "source_conflicts": "[\"Leaf lesion border color differs between sources: NCPMS gives 'red' for the chronic type, IRRI 'red to brown or necrotic', LSU 'narrow brown', and the Sri Lanka Department of Agriculture 'brown, reddish-brown or yellowish-brown'. For early spots, IRRI describes white to gray-green with dark green borders, while LSU describes white, gray or bluish.\", \"Lesion size (1.0–1.5 × 0.3–0.5 cm) appears only in the Sri Lanka Department of Agriculture page, with no original source cited. NCPMS, IRRI and LSU give no size, so this figure must not be used as if it were a Korean standard.\", \"Node lesion color is dark brown in NCPMS, black to gray-brown (banded) in IRRI, and black rot in Sri Lanka; neck color is light brown in NCPMS and gray-brown in IRRI.\", \"Only NCPMS explicitly mentions gray mold (signs) on lesions.\", \"Conidial size 14–37 × 5–12 µm appears only in NCPMS and could not be cross-checked. Color also differs: NCPMS says 'colorless' while the Klaubauf 2014 genus description says 'colorless to pale brown', and the Klaubauf 2014 *P. oryzae* entry gives no size.\", \"The NCPMS leaf blast and panicle blast pages have character-for-character identical pathogen, environment and symptom text, so they cannot count as two independent sources.\", \"Scientific names differ (NCPMS *Magnaporthe grisea*, LSU *Pyricularia grisea*). Klaubauf 2014 separates *P. oryzae* and *P. grisea* as distinct species.\", \"Timing is given by the Korean calendar in NCPMS (paddy field from late June; around heading) and by US growth stages in LSU (leaf blast from seedling to late tillering; neck blast at heading).\"]"
+      },
+      {
+        "id": "rice_001_f7",
+        "urls": [
+          "https://doa.gov.lk/rrdi_ricediseases_riceblast/"
+        ],
+        "name_en": "Rice blast",
+        "name_ko": "Rice blast",
+        "category": "Symptoms - leaf",
+        "disease_id": "rice_001",
+        "feature_no": "7",
+        "plant_part": "Leaf",
+        "description": "Spindle-shaped leaf spots with brown or reddish-brown to yellowish-brown borders, ashy centers and pointed ends. Fully developed lesions are usually 1.0–1.5 cm long and 0.3–0.5 cm wide. Symptoms vary with growth stage, cultivar susceptibility and environment",
+        "source_name": "Sri Lanka Department of Agriculture, Rice Research & Development Institute, Rice blast page (DOA-SriLanka)",
+        "source_urls": "[\"https://doa.gov.lk/rrdi_ricediseases_riceblast/\"]",
+        "growth_stage": "Unconfirmed",
+        "retrieval_score": 5,
+        "scientific_name": "Pyricularia oryzae",
+        "source_location": "\"Symptoms\" sentences 1-2, last sentence",
+        "source_conflicts": "[\"Leaf lesion border color differs between sources: NCPMS gives 'red' for the chronic type, IRRI 'red to brown or necrotic', LSU 'narrow brown', and the Sri Lanka Department of Agriculture 'brown, reddish-brown or yellowish-brown'. For early spots, IRRI describes white to gray-green with dark green borders, while LSU describes white, gray or bluish.\", \"Lesion size (1.0–1.5 × 0.3–0.5 cm) appears only in the Sri Lanka Department of Agriculture page, with no original source cited. NCPMS, IRRI and LSU give no size, so this figure must not be used as if it were a Korean standard.\", \"Node lesion color is dark brown in NCPMS, black to gray-brown (banded) in IRRI, and black rot in Sri Lanka; neck color is light brown in NCPMS and gray-brown in IRRI.\", \"Only NCPMS explicitly mentions gray mold (signs) on lesions.\", \"Conidial size 14–37 × 5–12 µm appears only in NCPMS and could not be cross-checked. Color also differs: NCPMS says 'colorless' while the Klaubauf 2014 genus description says 'colorless to pale brown', and the Klaubauf 2014 *P. oryzae* entry gives no size.\", \"The NCPMS leaf blast and panicle blast pages have character-for-character identical pathogen, environment and symptom text, so they cannot count as two independent sources.\", \"Scientific names differ (NCPMS *Magnaporthe grisea*, LSU *Pyricularia grisea*). Klaubauf 2014 separates *P. oryzae* and *P. grisea* as distinct species.\", \"Timing is given by the Korean calendar in NCPMS (paddy field from late June; around heading) and by US growth stages in LSU (leaf blast from seedling to late tillering; neck blast at heading).\"]"
+      },
+      {
+        "id": "rice_002_f3",
+        "urls": [
+          "https://www.lsuagcenter.com/~/media/system/6/6/a/5/66a53754c9529a4f64afd5b9c57f9fed/pub3123shealthblightofricelowres.pdf"
+        ],
+        "name_en": "Sheath blight",
+        "name_ko": "Sheath blight",
+        "category": "Symptoms - sheath/stem",
+        "disease_id": "rice_002",
+        "feature_no": "3",
+        "plant_part": "Leaf sheath",
+        "description": "Large oval spots form on the leaf sheath. Lesions about 0.5–1 cm wide and 1–3 cm long form slightly above the water line on infected stems. Lesion centers are grayish-white or light green, with brown to reddish-brown borders",
+        "source_name": "LSU AgCenter Pub. 3123 \"Sheath Blight of Rice\" (2 pages) (LSU-SB)",
+        "source_urls": "[\"https://www.lsuagcenter.com/~/media/system/6/6/a/5/66a53754c9529a4f64afd5b9c57f9fed/pub3123shealthblightofricelowres.pdf\"]",
+        "growth_stage": "Infection begins from late tillering to internode elongation",
+        "retrieval_score": 5,
+        "scientific_name": "Rhizoctonia solani AG1-IA",
+        "source_location": "Page 1 body paragraphs 2-3 (Fig. 2)",
+        "source_conflicts": "[\"Sclerotium size is the biggest discrepancy. NCPMS says 'mostly brown and round, about 1–2 mm', while UAEX (USA) says 'can reach 6 mm or more in diameter, white turning brown to black'. IRRI and LSU give no size.\", \"Lesion size is 1–3 cm long in IRRI and 0.5–1 cm wide × 1–3 cm long in LSU; NCPMS gives no figure ('size not uniform').\", \"Lesion color: NCPMS dark green with surrounding light brown; IRRI grayish-white center with brown margin; LSU grayish-white or light green center with brown to reddish-brown border; UAEX tan to light-brown center with dark green or brown border.\", \"Timing: IRRI tillering to milk stage, UAEX tillering to booting, LSU infection starting late tillering to internode elongation; NCPMS gives calendar dates such as sclerotium formation in late July to early August.\", \"Humidity thresholds differ: NCPMS 96% or above, UAEX above 95%, IRRI 85–100%. Temperatures are effectively the same: NCPMS 22–35 °C (optimum 30–32 °C) and UAEX 73–95 °F.\", \"The AG1-IA designation appears only in UAEX. The Kim 1994 abstract only says AG-1 IA was isolated from 7 crops, so whether rice isolates were IA is Unconfirmed at the abstract level.\", \"On spores, IRRI and LSU say 'no airborne spores', while UAEX says sexual spores form but are rare in the field.\"]"
+      },
+      {
+        "id": "rice_002_f19",
+        "urls": [
+          "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight"
+        ],
+        "name_en": "Sheath blight",
+        "name_ko": "Sheath blight",
+        "category": "Symptoms - sheath/stem (differentiation)",
+        "disease_id": "rice_002",
+        "feature_no": "19",
+        "plant_part": "Leaf sheath",
+        "description": "Resembles stem rot and stem-borer damage. Confirm by irregular sheath lesions (water-soaked to gray-green early, grayish-white with brown border later) and the presence of sclerotia",
+        "source_name": "IRRI RKB \"Sheath blight\" (IRRI-Sheath blight)",
+        "source_urls": "[\"http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight\"]",
+        "growth_stage": "Unconfirmed",
+        "retrieval_score": 4,
+        "scientific_name": "Rhizoctonia solani AG1-IA",
+        "source_location": "\"How to identify\" last paragraph",
+        "source_conflicts": "[\"Sclerotium size is the biggest discrepancy. NCPMS says 'mostly brown and round, about 1–2 mm', while UAEX (USA) says 'can reach 6 mm or more in diameter, white turning brown to black'. IRRI and LSU give no size.\", \"Lesion size is 1–3 cm long in IRRI and 0.5–1 cm wide × 1–3 cm long in LSU; NCPMS gives no figure ('size not uniform').\", \"Lesion color: NCPMS dark green with surrounding light brown; IRRI grayish-white center with brown margin; LSU grayish-white or light green center with brown to reddish-brown border; UAEX tan to light-brown center with dark green or brown border.\", \"Timing: IRRI tillering to milk stage, UAEX tillering to booting, LSU infection starting late tillering to internode elongation; NCPMS gives calendar dates such as sclerotium formation in late July to early August.\", \"Humidity thresholds differ: NCPMS 96% or above, UAEX above 95%, IRRI 85–100%. Temperatures are effectively the same: NCPMS 22–35 °C (optimum 30–32 °C) and UAEX 73–95 °F.\", \"The AG1-IA designation appears only in UAEX. The Kim 1994 abstract only says AG-1 IA was isolated from 7 crops, so whether rice isolates were IA is Unconfirmed at the abstract level.\", \"On spores, IRRI and LSU say 'no airborne spores', while UAEX says sexual spores form but are rare in the field.\"]"
+      },
+      {
+        "id": "rice_003_f5",
+        "urls": [
+          "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot"
+        ],
+        "name_en": "Brown spot",
+        "name_ko": "Brown spot",
+        "category": "Symptoms - leaf (differentiation)",
+        "disease_id": "rice_003",
+        "feature_no": "5",
+        "plant_part": "Leaf",
+        "description": "On some cultivars it can be mistaken for blast lesions. Confirm by round brown spots with gray centers surrounded by reddish-brown borders",
+        "source_name": "IRRI RKB \"Brown spot\" (IRRI-Brown spot)",
+        "source_urls": "[\"http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot\"]",
+        "growth_stage": "Unconfirmed",
+        "retrieval_score": 4,
+        "scientific_name": "Bipolaris oryzae",
+        "source_location": "\"How to identify\" last paragraph",
+        "source_conflicts": "[\"Conidial size differs most. NCPMS gives 63–153 × 14–22 µm (6–14 septa), while Kim 2025 measured 27.4–96.3 × 6.0–19.8 µm (means 53–75 µm) for 6 Korean isolates on PDA. This may reflect spores from media versus lesions, but neither source explains it.\", \"Lesion size figures (5–14 mm on susceptible, pinhead-sized on resistant) appear only in IRRI. Concentric rings appear only in NCPMS.\", \"Halo descriptions differ. NCPMS describes a 'yellow toxic zone' on early lesions, while the IRRI brown spot page describes a 'reddish-brown border caused by toxin'. The yellow halo appears in the differentiation paragraph of the IRRI blast page.\", \"The NCPMS sexual-stage description mentions 'ascus' twice with different sizes. The first (360–780 µm diameter, globose) appears to be an error for perithecium (inference in the notes).\", \"The NCPMS disease-environment sentence 'lesions do not form conidia…' is ambiguous.\", \"Timing: NCPMS says sharp rise after panicle initiation and panicle infection up to 25 days after heading; IRRI says maximum tillering to grain filling; Kim 2025 says typically at harvest but with a recent shift in timing (isolates from July–August 2024).\", \"Seedling symptoms (girdling the coleoptile, 10–58% seedling death) appear only in IRRI.\"]"
+      },
+      {
+        "id": "rice_003_f10",
+        "urls": [
+          "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y"
+        ],
+        "name_en": "Brown spot",
+        "name_ko": "Brown spot",
+        "category": "Symptoms - panicle/ear/grain",
+        "disease_id": "rice_003",
+        "feature_no": "10",
+        "plant_part": "Rice grain, panicle",
+        "description": "Grains develop dark-brown spots that later become grayish-white collapsed areas. Often the whole grain surface browns. Unlike blast, it does not attack quickly from the panicle tip and does not cause whiteheads",
+        "source_name": "NCPMS paddy rice Brown spot (NCPMS-Brown spot)",
+        "source_urls": "[\"https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y\"]",
+        "growth_stage": "Grains are more prone to infection the closer to heading",
+        "retrieval_score": 3,
+        "scientific_name": "Bipolaris oryzae",
+        "source_location": "Symptom description sentences 4-6",
+        "source_conflicts": "[\"Conidial size differs most. NCPMS gives 63–153 × 14–22 µm (6–14 septa), while Kim 2025 measured 27.4–96.3 × 6.0–19.8 µm (means 53–75 µm) for 6 Korean isolates on PDA. This may reflect spores from media versus lesions, but neither source explains it.\", \"Lesion size figures (5–14 mm on susceptible, pinhead-sized on resistant) appear only in IRRI. Concentric rings appear only in NCPMS.\", \"Halo descriptions differ. NCPMS describes a 'yellow toxic zone' on early lesions, while the IRRI brown spot page describes a 'reddish-brown border caused by toxin'. The yellow halo appears in the differentiation paragraph of the IRRI blast page.\", \"The NCPMS sexual-stage description mentions 'ascus' twice with different sizes. The first (360–780 µm diameter, globose) appears to be an error for perithecium (inference in the notes).\", \"The NCPMS disease-environment sentence 'lesions do not form conidia…' is ambiguous.\", \"Timing: NCPMS says sharp rise after panicle initiation and panicle infection up to 25 days after heading; IRRI says maximum tillering to grain filling; Kim 2025 says typically at harvest but with a recent shift in timing (isolates from July–August 2024).\", \"Seedling symptoms (girdling the coleoptile, 10–58% seedling death) appear only in IRRI.\"]"
+      }
+    ],
+    "verified_candidates": "daf14f2b9019e2180528dd6e0b0ee37836288e8cbb1b942ef46e3deddbfed11e",
+    "proposal_limitations": [
+      "Weather overlap does not confirm infection; heading date and cultivar are missing for environmental assessment.",
+      "Source conflicts exist regarding lesion border color and size across different regional descriptions."
+    ],
+    "verification_blocked": false,
+    "verified_fingerprint": "2ea46cdbaff171abdae31dbcd21e17f566777d83e304effeaca03e2bc12fa731",
+    "contradicting_evidence": []
+  },
+  "weather": {
+    "status": "partial",
+    "sources": [
+      "https://apihub.kma.go.kr/api/typ01/url/gts_bufr_syn1.php",
+      "https://www.ncei.noaa.gov/pub/data/noaa/isd-history.csv",
+      "https://open-meteo.com/en/docs/geocoding-api"
+    ],
+    "station": {
+      "id": "47108",
+      "name": "SEOUL CITY",
+      "latitude": 37.567,
+      "longitude": 126.967,
+      "distance_km": 1.0,
+      "metadata_end": "2025-08-24",
+      "metadata_source": "https://www.ncei.noaa.gov/pub/data/noaa/isd-history.csv"
+    },
+    "summary": {
+      "sample_count": 8,
+      "requested_sample_count": 8,
+      "sampled_max_temperature_c": 27.6,
+      "sampled_mean_humidity_pct": 89.0,
+      "sampled_min_temperature_c": 20.3
+    },
+    "location": {
+      "id": 1835848,
+      "name": "Seoul",
+      "label": "Seoul, Seoul, South Korea",
+      "latitude": 37.566,
+      "timezone": "Asia/Seoul",
+      "longitude": 126.9784
+    },
+    "period_end": "2026-07-18T15:00:00+00:00",
+    "comparisons": [],
+    "limitations": [
+      "Station coordinates use NOAA ISD metadata (record ends 2025-08-24); station activity on the requested date is not guaranteed.",
+      "Three-hourly samples are not daily extremes or climate normals.",
+      "Station weather does not measure canopy humidity or leaf wetness. Rainfall windows are not summed.",
+      "Only the observation day is sampled; earlier infection periods are not assessed.",
+      "The nearest listed station may have no reports; no alternative station is silently substituted."
+    ],
+    "agent_period": [
+      "2026-07-18",
+      "2026-07-18"
+    ],
+    "observations": [
+      {
+        "raw": {
+          "CA": "8",
+          "CD": "8",
+          "CH": "0",
+          "CL": "-9",
+          "CM": "-9",
+          "CT": "-9",
+          "HM": "89.0",
+          "IR": "9",
+          "IW": "9",
+          "IX": "9",
+          "PA": "990.3",
+          "PR": "-0.5",
+          "PS": "999.9",
+          "PT": "8",
+          "RH": "0",
+          "RN": "-99.0",
+          "TA": "26.4",
+          "TD": "24.4",
+          "TM": "-99.0",
+          "Tm": "-99.0",
+          "VV": "6",
+          "WC": "60",
+          "WD": "45",
+          "WP": "66",
+          "WS": "2.2",
+          "S19": "-999",
+          "S33": "-999",
+          "S34": "-999",
+          "S35": "-999",
+          "S36": "-999",
+          "S37": "-999",
+          "S38": "-999",
+          "S39": "-999",
+          "STN": "47108",
+          "YYMMDDHHMI": "202607171500"
+        },
+        "time": "2026-07-17T15:00:00+00:00",
+        "humidity_pct": 89.0,
+        "temperature_c": 26.4,
+        "precipitation_mm": null,
+        "precipitation_period_hours": null
+      },
+      {
+        "raw": {
+          "CA": "8",
+          "CD": "8",
+          "CH": "0",
+          "CL": "-9",
+          "CM": "-9",
+          "CT": "-9",
+          "HM": "94.0",
+          "IR": "9",
+          "IW": "9",
+          "IX": "9",
+          "PA": "987.4",
+          "PR": "-2.8",
+          "PS": "997.1",
+          "PT": "7",
+          "RH": "0",
+          "RN": "-99.0",
+          "TA": "24.4",
+          "TD": "23.3",
+          "TM": "-99.0",
+          "Tm": "-99.0",
+          "VV": "8",
+          "WC": "61",
+          "WD": "81",
+          "WP": "66",
+          "WS": "3.0",
+          "S19": "-999",
+          "S33": "-999",
+          "S34": "-999",
+          "S35": "-999",
+          "S36": "-999",
+          "S37": "-999",
+          "S38": "-999",
+          "S39": "-999",
+          "STN": "47108",
+          "YYMMDDHHMI": "202607171800"
+        },
+        "time": "2026-07-17T18:00:00+00:00",
+        "humidity_pct": 94.0,
+        "temperature_c": 24.4,
+        "precipitation_mm": null,
+        "precipitation_period_hours": null
+      },
+      {
+        "raw": {
+          "CA": "8",
+          "CD": "9",
+          "CH": "0",
+          "CL": "-9",
+          "CM": "-9",
+          "CT": "-9",
+          "HM": "96.0",
+          "IR": "9",
+          "IW": "9",
+          "IX": "9",
+          "PA": "987.7",
+          "PR": "0.4",
+          "PS": "997.5",
+          "PT": "3",
+          "RH": "0",
+          "RN": "-99.0",
+          "TA": "20.3",
+          "TD": "19.6",
+          "TM": "-99.0",
+          "Tm": "-99.0",
+          "VV": "2",
+          "WC": "65",
+          "WD": "54",
+          "WP": "96",
+          "WS": "5.7",
+          "S19": "-999",
+          "S33": "-999",
+          "S34": "-999",
+          "S35": "-999",
+          "S36": "-999",
+          "S37": "-999",
+          "S38": "-999",
+          "S39": "-999",
+          "STN": "47108",
+          "YYMMDDHHMI": "202607172100"
+        },
+        "time": "2026-07-17T21:00:00+00:00",
+        "humidity_pct": 96.0,
+        "temperature_c": 20.3,
+        "precipitation_mm": null,
+        "precipitation_period_hours": null
+      },
+      {
+        "raw": {
+          "CA": "9",
+          "CD": "-9",
+          "CH": "4",
+          "CL": "-9",
+          "CM": "-9",
+          "CT": "-9",
+          "HM": "-99.0",
+          "IR": "9",
+          "IW": "9",
+          "IX": "9",
+          "PA": "988.4",
+          "PR": "0.7",
+          "PS": "998.2",
+          "PT": "3",
+          "RH": "0",
+          "RN": "-99.0",
+          "TA": "20.3",
+          "TD": "19.8",
+          "TM": "-99.0",
+          "Tm": "19.8",
+          "VV": "66",
+          "WC": "61",
+          "WD": "70",
+          "WP": "66",
+          "WS": "3.0",
+          "S19": "-999",
+          "S33": "-999",
+          "S34": "-999",
+          "S35": "-999",
+          "S36": "-999",
+          "S37": "-999",
+          "S38": "-999",
+          "S39": "-999",
+          "STN": "47108",
+          "YYMMDDHHMI": "202607180000"
+        },
+        "time": "2026-07-18T00:00:00+00:00",
+        "humidity_pct": null,
+        "temperature_c": 20.3,
+        "precipitation_mm": null,
+        "precipitation_period_hours": null
+      },
+      {
+        "raw": {
+          "CA": "6",
+          "CD": "8",
+          "CH": "0",
+          "CL": "-9",
+          "CM": "-9",
+          "CT": "-9",
+          "HM": "93.0",
+          "IR": "9",
+          "IW": "9",
+          "IX": "9",
+          "PA": "990.1",
+          "PR": "1.7",
+          "PS": "999.9",
+          "PT": "2",
+          "RH": "0",
+          "RN": "-99.0",
+          "TA": "21.8",
+          "TD": "20.6",
+          "TM": "-99.0",
+          "Tm": "-99.0",
+          "VV": "45",
+          "WC": "-9",
+          "WD": "55",
+          "WP": "65",
+          "WS": "2.8",
+          "S19": "-999",
+          "S33": "-999",
+          "S34": "-999",
+          "S35": "-999",
+          "S36": "-999",
+          "S37": "-999",
+          "S38": "-999",
+          "S39": "-999",
+          "STN": "47108",
+          "YYMMDDHHMI": "202607180300"
+        },
+        "time": "2026-07-18T03:00:00+00:00",
+        "humidity_pct": 93.0,
+        "temperature_c": 21.8,
+        "precipitation_mm": null,
+        "precipitation_period_hours": null
+      },
+      {
+        "raw": {
+          "CA": "6",
+          "CD": "-9",
+          "CH": "5",
+          "CL": "-9",
+          "CM": "-9",
+          "CT": "-9",
+          "HM": "-99.0",
+          "IR": "9",
+          "IW": "9",
+          "IX": "9",
+          "PA": "989.7",
+          "PR": "-0.6",
+          "PS": "999.3",
+          "PT": "6",
+          "RH": "0",
+          "RN": "-99.0",
+          "TA": "27.5",
+          "TD": "22.6",
+          "TM": "-99.0",
+          "Tm": "-99.0",
+          "VV": "81",
+          "WC": "-9",
+          "WD": "70",
+          "WP": "65",
+          "WS": "2.5",
+          "S19": "-999",
+          "S33": "-999",
+          "S34": "-999",
+          "S35": "-999",
+          "S36": "-999",
+          "S37": "-999",
+          "S38": "-999",
+          "S39": "-999",
+          "STN": "47108",
+          "YYMMDDHHMI": "202607180600"
+        },
+        "time": "2026-07-18T06:00:00+00:00",
+        "humidity_pct": null,
+        "temperature_c": 27.5,
+        "precipitation_mm": null,
+        "precipitation_period_hours": null
+      },
+      {
+        "raw": {
+          "CA": "6",
+          "CD": "7",
+          "CH": "0",
+          "CL": "-9",
+          "CM": "-9",
+          "CT": "-9",
+          "HM": "73.0",
+          "IR": "9",
+          "IW": "9",
+          "IX": "9",
+          "PA": "989.7",
+          "PR": "0.0",
+          "PS": "999.3",
+          "PT": "4",
+          "RH": "0",
+          "RN": "-99.0",
+          "TA": "27.6",
+          "TD": "22.3",
+          "TM": "-99.0",
+          "Tm": "-99.0",
+          "VV": "38",
+          "WC": "-9",
+          "WD": "52",
+          "WP": "-9",
+          "WS": "3.1",
+          "S19": "-999",
+          "S33": "-999",
+          "S34": "-999",
+          "S35": "-999",
+          "S36": "-999",
+          "S37": "-999",
+          "S38": "-999",
+          "S39": "-999",
+          "STN": "47108",
+          "YYMMDDHHMI": "202607180900"
+        },
+        "time": "2026-07-18T09:00:00+00:00",
+        "humidity_pct": 73.0,
+        "temperature_c": 27.6,
+        "precipitation_mm": null,
+        "precipitation_period_hours": null
+      },
+      {
+        "raw": {
+          "CA": "7",
+          "CD": "-9",
+          "CH": "4",
+          "CL": "-9",
+          "CM": "-9",
+          "CT": "-9",
+          "HM": "-99.0",
+          "IR": "9",
+          "IW": "9",
+          "IX": "9",
+          "PA": "991.4",
+          "PR": "1.8",
+          "PS": "1001.1",
+          "PT": "2",
+          "RH": "0",
+          "RN": "-99.0",
+          "TA": "25.2",
+          "TD": "21.9",
+          "TM": "28.1",
+          "Tm": "-99.0",
+          "VV": "82",
+          "WC": "-9",
+          "WD": "50",
+          "WP": "62",
+          "WS": "2.0",
+          "S19": "-999",
+          "S33": "-999",
+          "S34": "-999",
+          "S35": "-999",
+          "S36": "-999",
+          "S37": "-999",
+          "S38": "-999",
+          "S39": "-999",
+          "STN": "47108",
+          "YYMMDDHHMI": "202607181200"
+        },
+        "time": "2026-07-18T12:00:00+00:00",
+        "humidity_pct": null,
+        "temperature_c": 25.2,
+        "precipitation_mm": null,
+        "precipitation_period_hours": null
+      }
+    ],
+    "period_start": "2026-07-17T15:00:00+00:00",
+    "retrieved_at": "2026-10-26T12:55:21.056191+00:00",
+    "daily_reports": [],
+    "observed_date": "2026-07-18",
+    "region_entered": "Seoul",
+    "case_observed_date": "2026-07-18",
+    "environment_assessments": [
+      {
+        "name": "Rice blast",
+        "checks": [
+          {
+            "metric": "station_temperature_overlap_20_25_c",
+            "sources": [
+              {
+                "url": "https://rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000788240",
+                "label": "RDA 2023-06-15",
+                "origin": "Korea"
+              }
+            ],
+            "valid_samples": 8,
+            "interpretation": "Sample overlap only; not the required five-day mean, sustained wetness or infection assessment.",
+            "samples_matching": 4
+          },
+          {
+            "metric": "station_humidity_at_least_90_pct",
+            "sources": [
+              {
+                "url": "https://rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000788240",
+                "label": "RDA 2023-06-15",
+                "origin": "Korea"
+              }
+            ],
+            "valid_samples": 5,
+            "interpretation": "Sample overlap only; not the required five-day mean, sustained wetness or infection assessment.",
+            "samples_matching": 3
+          }
+        ],
+        "name_ko": "Rice blast: leaf and panicle",
+        "sources": [
+          {
+            "url": "https://www.pref.hiroshima.lg.jp/uploaded/attachment/535771.pdf",
+            "label": "Hiroshima BLASTAM Table 1",
+            "origin": "International"
+          },
+          {
+            "url": "https://rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000788240",
+            "label": "RDA 2023-06-15",
+            "origin": "Korea"
+          },
+          {
+            "url": "https://www.jppa.or.jp/archive/pdf/64_02_01.pdf",
+            "label": "Kobayashi et al. 2010",
+            "origin": "International"
+          }
+        ],
+        "windows": [
+          {
+            "core": true,
+            "note": "BLASTAM infection-day assessment: wetness duration by temperature during wetness",
+            "anchor": "D",
+            "coverage": "incomplete",
+            "end_date": "2026-07-14",
+            "window_id": "01-1",
+            "applies_to": "Leaf-blast infection assessment",
+            "resolution": "hourly",
+            "start_date": "2026-07-04",
+            "covered_days": 0,
+            "evidence_type": "source_based",
+            "required_days": 11
+          },
+          {
+            "core": false,
+            "note": "Required for the previous five-day mean temperature criterion of 20–25 C",
+            "anchor": "D",
+            "coverage": "incomplete",
+            "end_date": "2026-07-14",
+            "window_id": "01-2",
+            "applies_to": "Leaf-blast data acquisition range",
+            "resolution": "hourly",
+            "start_date": "2026-06-30",
+            "covered_days": 0,
+            "evidence_type": "source_based",
+            "required_days": 15
+          },
+          {
+            "core": false,
+            "note": "Accumulated low temperature over 20 preinfection days (Tohoku method)",
+            "anchor": "D",
+            "coverage": "incomplete",
+            "end_date": "2026-07-14",
+            "window_id": "01-3",
+            "applies_to": "Leaf-blast host susceptibility",
+            "resolution": "daily",
+            "start_date": "2026-06-14",
+            "covered_days": 0,
+            "evidence_type": "source_based",
+            "required_days": 31
+          },
+          {
+            "core": true,
+            "note": null,
+            "anchor": "heading",
+            "coverage": "anchor_input_required",
+            "window_id": "01-4",
+            "applies_to": "Panicle-blast infection window: days",
+            "resolution": "daily",
+            "evidence_type": "source_based"
+          },
+          {
+            "core": true,
+            "note": "Kobayashi et al. 2010: 0–300 degree-days after heading",
+            "anchor": "heading",
+            "coverage": "anchor_input_required",
+            "window_id": "01-5",
+            "applies_to": "Panicle-blast infection window: accumulated temperature",
+            "resolution": "daily",
+            "evidence_type": "source_based"
+          },
+          {
+            "core": false,
+            "note": "Alternative window when heading date is unknown",
+            "anchor": "D",
+            "coverage": "incomplete",
+            "end_date": "2026-07-11",
+            "window_id": "01-6",
+            "applies_to": "Panicle-blast conversion relative to observation date",
+            "resolution": "daily",
+            "start_date": "2026-06-28",
+            "covered_days": 0,
+            "evidence_type": "inferred",
+            "required_days": 14
+          }
+        ],
+        "assessment": "insufficient_for_infection_assessment",
+        "disease_id": "rice_001",
+        "limitations": [
+          "Collected reference claims have not all been independently verified.",
+          "Three-hourly station air observations do not establish canopy humidity, leaf wetness, continuous duration or infection.",
+          "Unresolved growth-stage anchors and incomplete observation windows remain unknown."
+        ],
+        "required_inputs": [
+          "Heading date",
+          "Transplanting date",
+          "Region",
+          "Cultivar"
+        ],
+        "thresholds_text": "Wetness requirements: 17 h at 15 C to 10 h at 22–25 C; previous five-day mean 20–25 C (Hiroshima BLASTAM). 20–25 C, at least three rainy days, RH at least 90%, and limited sunshine (RDA, Korea). Panicle infection: 0–300 degree-days after heading (Kobayashi et al., international). Sources: [Hiroshima BLASTAM Table 1](https://www.pref.hiroshima.lg.jp/uploaded/attachment/535771.pdf); [RDA 2023-06-15](https://rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000788240); [Kobayashi et al. 2010](https://www.jppa.or.jp/archive/pdf/64_02_01.pdf)",
+        "evidence_summary": "Leaf window source-based; panicle infection window source-based; D-relative conversion inferred",
+        "reference_sha256": "18fc952da87dda457c380288e428fbbe9d6cec50148db02ecb57ae287a6b8ba9",
+        "reference_language": "en",
+        "key_weather_variables": [
+          "Leaf-wetness duration and temperature during wetness",
+          "Previous five-day mean temperature",
+          "Number of rainy days",
+          "Minimum temperature",
+          "Sunshine",
+          "Accumulated temperature after heading"
+        ]
+      },
+      {
+        "name": "Sheath blight",
+        "checks": [],
+        "name_ko": "Rice sheath blight",
+        "sources": [
+          {
+            "url": "https://rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000788240",
+            "label": "RDA 2023-06-15",
+            "origin": "Korea"
+          },
+          {
+            "url": "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight",
+            "label": "IRRI",
+            "origin": "International"
+          }
+        ],
+        "windows": [
+          {
+            "core": true,
+            "note": null,
+            "anchor": "D",
+            "coverage": "incomplete",
+            "end_date": "2026-07-16",
+            "window_id": "02-1",
+            "applies_to": "New lesions",
+            "resolution": "hourly",
+            "start_date": "2026-07-11",
+            "covered_days": 0,
+            "evidence_type": "inferred",
+            "required_days": 6
+          },
+          {
+            "core": false,
+            "note": null,
+            "anchor": "D",
+            "coverage": "incomplete",
+            "end_date": "2026-07-17",
+            "window_id": "02-2",
+            "applies_to": "Disease progression assessment",
+            "resolution": "daily",
+            "start_date": "2026-06-27",
+            "covered_days": 0,
+            "evidence_type": "inferred",
+            "required_days": 21
+          }
+        ],
+        "assessment": "insufficient_for_infection_assessment",
+        "disease_id": "rice_002",
+        "limitations": [
+          "Collected reference claims have not all been independently verified.",
+          "Three-hourly station air observations do not establish canopy humidity, leaf wetness, continuous duration or infection.",
+          "Unresolved growth-stage anchors and incomplete observation windows remain unknown."
+        ],
+        "required_inputs": [
+          "Transplanting date",
+          "Nitrogen application and planting density"
+        ],
+        "thresholds_text": "30–32 C and RH at least 96% (Korean). 28–32 C and canopy RH 85–100% (international). Sources: [RDA 2023-06-15](https://rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000788240); [IRRI](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight)",
+        "evidence_summary": "inferred",
+        "reference_sha256": "b877f954edf08edbe8188f0d22fb2c469435a58b7980343704ee4af3b53d377e",
+        "reference_language": "en",
+        "key_weather_variables": [
+          "Temperature",
+          "Within-canopy RH",
+          "Number of hot humid days"
+        ]
+      },
+      {
+        "name": "Brown spot",
+        "checks": [],
+        "name_ko": "Rice brown spot",
+        "sources": [
+          {
+            "url": "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot",
+            "label": "IRRI",
+            "origin": "International"
+          },
+          {
+            "url": "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750",
+            "label": "NCPMS",
+            "origin": "Korea"
+          }
+        ],
+        "windows": [
+          {
+            "core": true,
+            "note": null,
+            "anchor": "D",
+            "coverage": "incomplete",
+            "end_date": "2026-07-15",
+            "window_id": "03-1",
+            "applies_to": "Leaf lesions",
+            "resolution": "hourly",
+            "start_date": "2026-07-08",
+            "covered_days": 0,
+            "evidence_type": "inferred",
+            "required_days": 8
+          },
+          {
+            "core": false,
+            "note": "One-month accumulated cloudiness and rainfall",
+            "anchor": "D",
+            "coverage": "incomplete",
+            "end_date": "2026-07-17",
+            "window_id": "03-2",
+            "applies_to": "Epidemic scenario",
+            "resolution": "daily",
+            "start_date": "2026-06-18",
+            "covered_days": 0,
+            "evidence_type": "inferred",
+            "required_days": 30
+          },
+          {
+            "core": false,
+            "note": "NCPMS describes 25 days after heading as the latest infection time affecting yield",
+            "anchor": "heading",
+            "coverage": "anchor_input_required",
+            "window_id": "03-3",
+            "applies_to": "Panicle infection",
+            "resolution": "daily",
+            "evidence_type": "inferred"
+          }
+        ],
+        "assessment": "insufficient_for_infection_assessment",
+        "disease_id": "rice_003",
+        "limitations": [
+          "Collected reference claims have not all been independently verified.",
+          "Three-hourly station air observations do not establish canopy humidity, leaf wetness, continuous duration or infection.",
+          "Unresolved growth-stage anchors and incomplete observation windows remain unknown."
+        ],
+        "required_inputs": [
+          "Heading date",
+          "Soil: sandy or degraded paddy"
+        ],
+        "thresholds_text": "8–24 h leaf wetness (IRRI). Optimal germination at 20–30 C; invasion humidity 70% at flowering and 90% at milk stage (NCPMS, Korea). Sources: [IRRI](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot); [NCPMS](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750)",
+        "evidence_summary": "inferred",
+        "reference_sha256": "7dff9dea51813c39e410f66980283b146f7f26c8a1c3cbde0d51010685b5c8c2",
+        "reference_language": "en",
+        "key_weather_variables": [
+          "Leaf wetness",
+          "Temperature",
+          "Air humidity",
+          "Weekly rainfall and cloudiness"
+        ]
+      },
+      {
+        "name": "Bacterial blight",
+        "checks": [],
+        "name_ko": "Rice bacterial blight",
+        "sources": [
+          {
+            "url": "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744",
+            "label": "NCPMS",
+            "origin": "Korea"
+          },
+          {
+            "url": "https://gd.eppo.int/taxon/XANTOR/datasheet",
+            "label": "EPPO",
+            "origin": "International"
+          }
+        ],
+        "windows": [
+          {
+            "core": true,
+            "note": "Report label: inferred, close to source-based",
+            "anchor": "D",
+            "coverage": "incomplete",
+            "end_date": "2026-07-11",
+            "window_id": "04-1",
+            "applies_to": "Flooding/typhoon event",
+            "resolution": "hourly",
+            "start_date": "2026-06-27",
+            "covered_days": 0,
+            "evidence_type": "inferred",
+            "required_days": 15
+          },
+          {
+            "core": true,
+            "note": "NCPMS: July mean temperature/rainfall and rainfall from late July to late August",
+            "anchor": "season",
+            "coverage": "anchor_input_required",
+            "window_id": "04-2",
+            "applies_to": "Seasonal weather: July temperature and rainfall",
+            "resolution": "daily",
+            "evidence_type": "source_based"
+          }
+        ],
+        "assessment": "insufficient_for_infection_assessment",
+        "disease_id": "rice_004",
+        "limitations": [
+          "Collected reference claims have not all been independently verified.",
+          "Three-hourly station air observations do not establish canopy humidity, leaf wetness, continuous duration or infection.",
+          "Unresolved growth-stage anchors and incomplete observation windows remain unknown."
+        ],
+        "required_inputs": [
+          "Flooding and typhoon dates",
+          "Flooding duration",
+          "Region"
+        ],
+        "thresholds_text": "July mean 22–24 C, July rainfall at least 200 mm, wind at least 15 m/s; flooding 12 h: 8.8%, 48 h: 72.7% (Korean). 25–34 C and RH above 70% (international). Sources: [NCPMS](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744); [EPPO](https://gd.eppo.int/taxon/XANTOR/datasheet)",
+        "evidence_summary": "Event window inferred (close to source-based); monthly criterion source-based",
+        "reference_sha256": "eb25d896b4ba3f7cdda02e46d71de434b526ca29f07e2aa9aefbf783409a930a",
+        "reference_language": "en",
+        "key_weather_variables": [
+          "July mean temperature and monthly rainfall",
+          "Number of rainy days",
+          "Wind speed and typhoons",
+          "Duration of flooding"
+        ]
+      },
+      {
+        "name": "Bacterial leaf streak (Xoc)",
+        "checks": [],
+        "name_ko": "Bacterial leaf streak of rice (Xoc)",
+        "sources": [
+          {
+            "url": "https://gd.eppo.int/taxon/XANTTO/datasheet",
+            "label": "EPPO XANTTO",
+            "origin": "International"
+          }
+        ],
+        "windows": [
+          {
+            "core": true,
+            "note": "Korean occurrence unconfirmed",
+            "anchor": "D",
+            "coverage": "incomplete",
+            "end_date": "2026-07-15",
+            "window_id": "05-1",
+            "applies_to": "Leaf lesions",
+            "resolution": "hourly",
+            "start_date": "2026-07-08",
+            "covered_days": 0,
+            "evidence_type": "inferred",
+            "required_days": 8
+          }
+        ],
+        "assessment": "insufficient_for_infection_assessment",
+        "disease_id": "rice_005",
+        "limitations": [
+          "Collected reference claims have not all been independently verified.",
+          "Three-hourly station air observations do not establish canopy humidity, leaf wetness, continuous duration or infection.",
+          "Unresolved growth-stage anchors and incomplete observation windows remain unknown."
+        ],
+        "required_inputs": [
+          "Heavy-rain and strong-wind dates",
+          "Seed origin"
+        ],
+        "thresholds_text": "Progression at 26–32 C, suppressed below 22 C (international source). Sources: [EPPO XANTTO](https://gd.eppo.int/taxon/XANTTO/datasheet)",
+        "evidence_summary": "inferred",
+        "reference_sha256": "2c54b67db7302577235df1e375c01cfc7db48f78a82861cf04f3f33c005f3472",
+        "reference_language": "en",
+        "key_weather_variables": [
+          "Temperature",
+          "Persistent rainfall",
+          "Heavy rain and strong wind"
+        ]
+      },
+      {
+        "name": "Bakanae",
+        "checks": [],
+        "name_ko": "Rice bakanae",
+        "sources": [
+          {
+            "url": "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752",
+            "label": "NCPMS",
+            "origin": "Korea"
+          }
+        ],
+        "windows": [
+          {
+            "core": true,
+            "note": "Nursery temperature: optimum 35 C, asymptomatic at 20 C",
+            "anchor": "sowing",
+            "coverage": "anchor_input_required",
+            "window_id": "06-1",
+            "applies_to": "Nursery symptoms",
+            "resolution": "daily",
+            "evidence_type": "source_based"
+          },
+          {
+            "core": false,
+            "note": "Seed-production heading-date anchor; conditions source-based, H+7 duration inferred",
+            "anchor": "prev_seed_crop",
+            "coverage": "anchor_input_required",
+            "window_id": "06-2",
+            "applies_to": "Seed risk in the following year",
+            "resolution": "daily",
+            "evidence_type": "inferred"
+          }
+        ],
+        "assessment": "insufficient_for_infection_assessment",
+        "disease_id": "rice_006",
+        "limitations": [
+          "Collected reference claims have not all been independently verified.",
+          "Three-hourly station air observations do not establish canopy humidity, leaf wetness, continuous duration or infection.",
+          "Unresolved growth-stage anchors and incomplete observation windows remain unknown."
+        ],
+        "required_inputs": [
+          "Sowing date",
+          "Nursery method",
+          "Seed disinfection",
+          "Seed origin"
+        ],
+        "thresholds_text": "Nursery optimum 35 C, asymptomatic at 20 C, sporulation at 24–32 C (NCPMS, Korea). Sources: [NCPMS](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752)",
+        "evidence_summary": "Nursery criterion source-based; H+7 duration inferred",
+        "reference_sha256": "37f603664d20a7757049a4a4d8e7669eff69dc8294bbe517399fe3b46db4ebec",
+        "reference_language": "en",
+        "key_weather_variables": [
+          "Nursery temperature",
+          "Flowering nights and light rain",
+          "Sporulation temperature"
+        ]
+      },
+      {
+        "name": "False smut",
+        "checks": [],
+        "name_ko": "Rice false smut",
+        "sources": [
+          {
+            "url": "https://www.rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000797460",
+            "label": "RDA 2024-08-01",
+            "origin": "Korea"
+          },
+          {
+            "url": "https://www.zennoh.or.jp/ib/contents/make/einou/2714.pdf",
+            "label": "JA Zen-Noh Ibaraki 2714",
+            "origin": "International"
+          }
+        ],
+        "windows": [
+          {
+            "core": false,
+            "note": null,
+            "anchor": "heading",
+            "coverage": "anchor_input_required",
+            "window_id": "07-1",
+            "applies_to": "Preheading rainfall: extended window",
+            "resolution": "daily",
+            "evidence_type": "inferred"
+          },
+          {
+            "core": true,
+            "note": "JA Zen-Noh Ibaraki: rainfall 14–10 days before heading",
+            "anchor": "heading",
+            "coverage": "anchor_input_required",
+            "window_id": "07-2",
+            "applies_to": "Preheading rainfall: core window",
+            "resolution": "daily",
+            "evidence_type": "source_based"
+          },
+          {
+            "core": false,
+            "note": null,
+            "anchor": "heading",
+            "coverage": "anchor_input_required",
+            "window_id": "07-3",
+            "applies_to": "After heading: Korean description",
+            "resolution": "daily",
+            "evidence_type": "inferred"
+          }
+        ],
+        "assessment": "insufficient_for_infection_assessment",
+        "disease_id": "rice_007",
+        "limitations": [
+          "Collected reference claims have not all been independently verified.",
+          "Three-hourly station air observations do not establish canopy humidity, leaf wetness, continuous duration or infection.",
+          "Unresolved growth-stage anchors and incomplete observation windows remain unknown."
+        ],
+        "required_inputs": [
+          "Heading date",
+          "Nitrogen application"
+        ],
+        "thresholds_text": "Frequent rain around heading, about 25 C and limited sunshine (RDA 2024-08-01, Korea). Rainfall 14–10 days before heading (JA Zen-Noh Ibaraki, international). Sources: [RDA 2024-08-01](https://www.rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000797460); [JA Zen-Noh Ibaraki 2714](https://www.zennoh.or.jp/ib/contents/make/einou/2714.pdf)",
+        "evidence_summary": "Core window source-based; extension inferred",
+        "reference_sha256": "d85d56b12cfab7028f4a60660bf8ffc401a9c7315e93ee69a720850f83f3f987",
+        "reference_language": "en",
+        "key_weather_variables": [
+          "Rainy days during booting",
+          "Sunshine",
+          "Temperature"
+        ]
+      },
+      {
+        "name": "Bacterial grain rot (bacterial panicle blight)",
+        "checks": [],
+        "name_ko": "Bacterial grain rot of rice",
+        "sources": [
+          {
+            "url": "https://www.pref.gifu.lg.jp/uploaded/attachment/302902.pdf",
+            "label": "Gifu Prefecture",
+            "origin": "International"
+          },
+          {
+            "url": "https://korea.kr/news/pressReleaseView.do?newsId=156066598",
+            "label": "RDA 2015-07-29",
+            "origin": "Korea"
+          }
+        ],
+        "windows": [
+          {
+            "core": false,
+            "note": "H-3 component inferred",
+            "anchor": "heading",
+            "coverage": "anchor_input_required",
+            "window_id": "08-1",
+            "applies_to": "Around heading",
+            "resolution": "daily",
+            "evidence_type": "inferred"
+          },
+          {
+            "core": true,
+            "note": "Gifu Prefecture: minimum temperature at least 24 C around heading",
+            "anchor": "heading",
+            "coverage": "anchor_input_required",
+            "window_id": "08-2",
+            "applies_to": "Around heading: core window",
+            "resolution": "daily",
+            "evidence_type": "source_based"
+          },
+          {
+            "core": false,
+            "note": "Alternative window when heading date is unknown",
+            "anchor": "D",
+            "coverage": "incomplete",
+            "end_date": "2026-07-11",
+            "window_id": "08-3",
+            "applies_to": "Conversion relative to observation date",
+            "resolution": "daily",
+            "start_date": "2026-06-28",
+            "covered_days": 0,
+            "evidence_type": "inferred",
+            "required_days": 14
+          }
+        ],
+        "assessment": "insufficient_for_infection_assessment",
+        "disease_id": "rice_008",
+        "limitations": [
+          "Collected reference claims have not all been independently verified.",
+          "Three-hourly station air observations do not establish canopy humidity, leaf wetness, continuous duration or infection.",
+          "Unresolved growth-stage anchors and incomplete observation windows remain unknown."
+        ],
+        "required_inputs": [
+          "Heading/flowering date"
+        ],
+        "thresholds_text": "Minimum at least 24 C around heading (Gifu, international). Sustained temperatures at least 30 C or frequent rainfall around 30 mm (RDA 2015-07-29, Korea). Sources: [Gifu Prefecture](https://www.pref.gifu.lg.jp/uploaded/attachment/302902.pdf); [RDA 2015-07-29](https://korea.kr/news/pressReleaseView.do?newsId=156066598)",
+        "evidence_summary": "Core window source-based; H-3 and D-relative conversion inferred",
+        "reference_sha256": "c20075c9345e88d59b1326c2b42e5fdad5183635e62df0f2278ce1c56880764b",
+        "reference_language": "en",
+        "key_weather_variables": [
+          "Minimum and maximum temperature around heading",
+          "Rainfall",
+          "Wetness duration"
+        ]
+      },
+      {
+        "name": "Rice stripe",
+        "checks": [],
+        "name_ko": "Rice stripe (RSV)",
+        "sources": [
+          {
+            "url": "https://koreascience.or.kr/article/JAKO197425720625117.pub",
+            "label": "Jung Bong-jo 1974",
+            "origin": "Korea"
+          },
+          {
+            "url": "https://koreascience.or.kr/article/JAKO201106239853568.pub?lang=ko",
+            "label": "Park 2011",
+            "origin": "Korea"
+          }
+        ],
+        "windows": [
+          {
+            "core": true,
+            "note": null,
+            "anchor": "D",
+            "coverage": "incomplete",
+            "end_date": "2026-07-11",
+            "window_id": "09-1",
+            "applies_to": "Short-term migration and transmission",
+            "resolution": "daily",
+            "start_date": "2026-06-18",
+            "covered_days": 0,
+            "evidence_type": "inferred",
+            "required_days": 24
+          },
+          {
+            "core": false,
+            "note": null,
+            "anchor": "D",
+            "coverage": "incomplete",
+            "end_date": "2026-07-11",
+            "window_id": "09-2",
+            "applies_to": "Short-term extension",
+            "resolution": "daily",
+            "start_date": "2026-06-03",
+            "covered_days": 0,
+            "evidence_type": "inferred",
+            "required_days": 39
+          },
+          {
+            "core": true,
+            "note": "Small brown planthopper developmental thresholds 10.2/10.7 C",
+            "anchor": "jan1",
+            "coverage": "anchor_input_required",
+            "window_id": "09-3",
+            "applies_to": "Vector accumulated temperature",
+            "resolution": "daily",
+            "evidence_type": "source_based"
+          },
+          {
+            "core": false,
+            "note": "Qualitative evidence: severe outbreaks after warm winters",
+            "anchor": "prev_winter",
+            "coverage": "anchor_input_required",
+            "window_id": "09-4",
+            "applies_to": "Overwintering",
+            "resolution": "monthly",
+            "evidence_type": "source_based"
+          },
+          {
+            "core": false,
+            "note": null,
+            "anchor": "prev_season",
+            "coverage": "anchor_input_required",
+            "window_id": "09-5",
+            "applies_to": "Previous autumn",
+            "resolution": "monthly",
+            "evidence_type": "inferred"
+          }
+        ],
+        "assessment": "insufficient_for_infection_assessment",
+        "disease_id": "rice_009",
+        "limitations": [
+          "Collected reference claims have not all been independently verified.",
+          "Three-hourly station air observations do not establish canopy humidity, leaf wetness, continuous duration or infection.",
+          "Unresolved growth-stage anchors and incomplete observation windows remain unknown."
+        ],
+        "required_inputs": [
+          "Transplanting date",
+          "Leaf age",
+          "Region: whether on the west coast"
+        ],
+        "thresholds_text": "Transmission at 25–30 C, rare at or below 15 C (Jung 1974, Korea). Vector developmental thresholds 10.2/10.7 C (Park 2011, Korea). Sources: [Jung Bong-jo 1974](https://koreascience.or.kr/article/JAKO197425720625117.pub); [Park 2011](https://koreascience.or.kr/article/JAKO201106239853568.pub?lang=ko)",
+        "evidence_summary": "Short-term inferred; January 1 accumulation and qualitative winter conditions source-based",
+        "reference_sha256": "0d3bdffba97951f970f15cf3a82482b9dd50a416f15dc170e699624170153dcc",
+        "reference_language": "en",
+        "key_weather_variables": [
+          "Winter temperature",
+          "Accumulated temperature from January 1",
+          "Southwesterly migration airflow",
+          "Transmission temperature"
+        ]
+      },
+      {
+        "name": "Rice dwarf",
+        "checks": [],
+        "name_ko": "Rice dwarf (RDV)",
+        "sources": [
+          {
+            "url": "https://www.agrinet.pref.tochigi.lg.jp/nousi/kenpou/kp_026/kp_026_05.pdf",
+            "label": "Tochigi Agricultural Research Report 26",
+            "origin": "International"
+          }
+        ],
+        "windows": [
+          {
+            "core": true,
+            "note": null,
+            "anchor": "D",
+            "coverage": "incomplete",
+            "end_date": "2026-07-08",
+            "window_id": "10-1",
+            "applies_to": "Short-term transmission",
+            "resolution": "daily",
+            "start_date": "2026-06-27",
+            "covered_days": 0,
+            "evidence_type": "inferred",
+            "required_days": 12
+          },
+          {
+            "core": false,
+            "note": null,
+            "anchor": "D",
+            "coverage": "incomplete",
+            "end_date": "2026-07-08",
+            "window_id": "10-2",
+            "applies_to": "Short-term extension",
+            "resolution": "daily",
+            "start_date": "2026-06-03",
+            "covered_days": 0,
+            "evidence_type": "inferred",
+            "required_days": 36
+          },
+          {
+            "core": true,
+            "note": "Development thresholds for green rice leafhopper: Tochigi, Japan",
+            "anchor": "jan1",
+            "coverage": "anchor_input_required",
+            "window_id": "10-3",
+            "applies_to": "Vector accumulated temperature",
+            "resolution": "daily",
+            "evidence_type": "source_based"
+          },
+          {
+            "core": false,
+            "note": null,
+            "anchor": "prev_winter",
+            "coverage": "anchor_input_required",
+            "window_id": "10-4",
+            "applies_to": "Overwintering",
+            "resolution": "monthly",
+            "evidence_type": "inferred"
+          },
+          {
+            "core": false,
+            "note": null,
+            "anchor": "prev_season",
+            "coverage": "anchor_input_required",
+            "window_id": "10-5",
+            "applies_to": "Previous autumn: ratoon rice",
+            "resolution": "monthly",
+            "evidence_type": "inferred"
+          }
+        ],
+        "assessment": "insufficient_for_infection_assessment",
+        "disease_id": "rice_010",
+        "limitations": [
+          "Collected reference claims have not all been independently verified.",
+          "Three-hourly station air observations do not establish canopy humidity, leaf wetness, continuous duration or infection.",
+          "Unresolved growth-stage anchors and incomplete observation windows remain unknown."
+        ],
+        "required_inputs": [
+          "Transplanting date",
+          "Presence of ratoon rice"
+        ],
+        "thresholds_text": "Vector development thresholds: eggs 14.3 C, nymphs 13.3 C; oviposition lower limit 16.9 C (Tochigi, Japan). Transmission temperature/humidity unconfirmed. Sources: [Tochigi Agricultural Research Report 26](https://www.agrinet.pref.tochigi.lg.jp/nousi/kenpou/kp_026/kp_026_05.pdf)",
+        "evidence_summary": "Short-term inferred; accumulation method source-based (Japan)",
+        "reference_sha256": "0951fb4b88c215849ab888e5c9571c6ff3fe93bcd710b0dc759e84770b98ef33",
+        "reference_language": "en",
+        "key_weather_variables": [
+          "Vector accumulated temperature",
+          "Winter temperature",
+          "Autumn ratoon rice"
+        ]
+      },
+      {
+        "name": "Udbatta",
+        "checks": [],
+        "name_ko": "Rice udbatta",
+        "sources": [
+          {
+            "url": "https://www.uasbangalore.edu.in/wp-content/uploads/2025/09/37.pdf",
+            "label": "Vineeth 2025",
+            "origin": "International"
+          }
+        ],
+        "windows": [
+          {
+            "core": true,
+            "note": "Use the sowing-date anchor if known. Korean occurrence unconfirmed",
+            "anchor": "D",
+            "coverage": "incomplete",
+            "end_date": "2026-06-18",
+            "window_id": "11-1",
+            "applies_to": "Sowing to panicle initiation",
+            "resolution": "daily",
+            "start_date": "2026-04-09",
+            "covered_days": 0,
+            "evidence_type": "inferred",
+            "required_days": 71
+          },
+          {
+            "core": false,
+            "note": "Unspecified interval",
+            "anchor": "prev_seed_crop",
+            "coverage": "anchor_input_required",
+            "window_id": "11-2",
+            "applies_to": "Seed-production season",
+            "resolution": "daily",
+            "evidence_type": "inferred"
+          }
+        ],
+        "assessment": "insufficient_for_infection_assessment",
+        "disease_id": "rice_011",
+        "limitations": [
+          "Collected reference claims have not all been independently verified.",
+          "Three-hourly station air observations do not establish canopy humidity, leaf wetness, continuous duration or infection.",
+          "Unresolved growth-stage anchors and incomplete observation windows remain unknown."
+        ],
+        "required_inputs": [
+          "Seed and plant introduction history",
+          "Sowing date"
+        ],
+        "thresholds_text": "Soil about 28 C and wet conditions (Vineeth 2025, international). Sources: [Vineeth 2025](https://www.uasbangalore.edu.in/wp-content/uploads/2025/09/37.pdf)",
+        "evidence_summary": "inferred",
+        "reference_sha256": "2a64d602453504e50f484901110c644ac26136c7e7f1e46e45e0272a9df3afc1",
+        "reference_language": "en",
+        "key_weather_variables": [
+          "Soil temperature and moisture"
+        ]
+      },
+      {
+        "name": "Ufra",
+        "checks": [],
+        "name_ko": "Rice ufra",
+        "sources": [
+          {
+            "url": "https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf",
+            "label": "USDA CAPS 2016",
+            "origin": "International"
+          }
+        ],
+        "windows": [
+          {
+            "core": true,
+            "note": "Korean occurrence unconfirmed; quarantine relevance",
+            "anchor": "D",
+            "coverage": "incomplete",
+            "end_date": "2026-07-11",
+            "window_id": "12-1",
+            "applies_to": "Short-term infection",
+            "resolution": "daily",
+            "start_date": "2026-06-27",
+            "covered_days": 0,
+            "evidence_type": "source_based",
+            "required_days": 15
+          },
+          {
+            "core": false,
+            "note": null,
+            "anchor": "D",
+            "coverage": "incomplete",
+            "end_date": "2026-07-18",
+            "window_id": "12-2",
+            "applies_to": "Flooding history",
+            "resolution": "daily",
+            "start_date": "2026-05-19",
+            "covered_days": 1,
+            "evidence_type": "inferred",
+            "required_days": 61
+          },
+          {
+            "core": false,
+            "note": "Survival in dry tissue for 7–15 months",
+            "anchor": "prev_harvest",
+            "coverage": "anchor_input_required",
+            "window_id": "12-3",
+            "applies_to": "Survival in the previous crop",
+            "resolution": "daily",
+            "evidence_type": "inferred"
+          }
+        ],
+        "assessment": "insufficient_for_infection_assessment",
+        "disease_id": "rice_012",
+        "limitations": [
+          "Collected reference claims have not all been independently verified.",
+          "Three-hourly station air observations do not establish canopy humidity, leaf wetness, continuous duration or infection.",
+          "Unresolved growth-stage anchors and incomplete observation windows remain unknown."
+        ],
+        "required_inputs": [
+          "Flooding onset date",
+          "Water depth",
+          "Seed introduction"
+        ],
+        "thresholds_text": "27–30 C and RH at least 75% (international source). Sources: [USDA CAPS 2016](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf)",
+        "evidence_summary": "Short-term source-based; medium/long-term inferred",
+        "reference_sha256": "71b46edaef09c29c539616e0ae4f1b29f7c4349bb0fc852bf385f4d4a75da005",
+        "reference_language": "en",
+        "key_weather_variables": [
+          "Floodwater level",
+          "RH",
+          "Temperature"
+        ]
+      }
+    ]
+  },
+  "history": {
+    "rounds": [
+      {
+        "round": 1,
+        "action": "retrieve_evidence",
+        "reason": "Additional source evidence is required.",
+        "review": {
+          "issues": [
+            {
+              "code": "WEATHER_CONTEXT_GAP",
+              "reason": "Weather samples do not cover the required infection window or growth-stage anchor needed to support the hypothesis.",
+              "severity": "blocking",
+              "candidate_id": "rice_001",
+              "evidence_ids": [
+                "rice_001_f6"
+              ],
+              "suggested_action": "retrieve_evidence",
+              "requested_information": "Provide heading date, transplanting date, region, and cultivar to assess infection window coverage."
+            }
+          ],
+          "limitations": [
+            "Station coordinates use NOAA ISD metadata with record ending 2025-08-24; activity on the requested date is not guaranteed.",
+            "Three-hourly samples are not daily extremes or climate normals."
+          ],
+          "scenario_id": "WEATHER_WINDOW_GAP",
+          "review_summary": "The symptom description aligns with rice blast, but the hypothesis cannot be confirmed without growth-stage anchors and complete infection-window weather data.",
+          "scenario_match": "direct",
+          "scenario_reason": "The weather summary explicitly flags insufficient environmental exposure for infection assessment due to missing growth-stage anchors (heading/transplanting dates) and incomplete window coverage, which is a material limitation for confirming the hypothesis."
+        },
+        "proposal": {
+          "summary": "Rice blast is the leading candidate due to matching lesion morphology, though weather data lacks infection-window confirmation.",
+          "candidates": [
+            {
+              "id": "rice_001",
+              "name": "Rice blast",
+              "claim": "Spindle-shaped lesions with gray-white centers and brown margins align with rice blast descriptions.",
+              "evidence_ids": [
+                "rice_001_f6",
+                "rice_001_f7"
+              ]
+            }
+          ],
+          "limitations": [
+            "Weather station metadata ends in 2025; activity on 2026-07-18 is unverified.",
+            "Infection windows require heading date and cultivar inputs not provided."
+          ]
+        },
+        "evidence_ids": [
+          "rice_001_f6",
+          "rice_001_f7",
+          "rice_002_f3",
+          "rice_002_f19",
+          "rice_003_f5",
+          "rice_003_f10"
+        ]
+      },
+      {
+        "round": 1,
+        "action": "retrieve_evidence",
+        "reason": "Additional source evidence is required.",
+        "review": {
+          "issues": [
+            {
+              "code": "WEATHER_CONTEXT_GAP",
+              "reason": "The candidate asserts symptom alignment but the weather summary shows insufficient data for infection assessment, with incomplete coverage and missing anchor.",
+              "severity": "blocking",
+              "candidate_id": "rice_001",
+              "evidence_ids": [
+                "rice_001_f6",
+                "rice_001_f7"
+              ],
+              "suggested_action": "retrieve_evidence",
+              "requested_information": "Provide heading date, transplanting date, region, and cultivar to enable infection-window assessment."
+            }
+          ],
+          "limitations": [
+            "Station coordinates use NOAA ISD metadata (record ends 2025-08-24); station activity on the requested date is not guaranteed.",
+            "Three-hourly samples are not daily extremes or climate normals."
+          ],
+          "scenario_id": "WEATHER_WINDOW_GAP",
+          "review_summary": "The candidate hypothesis aligns with observed symptoms but lacks sufficient weather context to support an infection claim due to incomplete coverage and missing growth-stage anchor",
+          "scenario_match": "direct",
+          "scenario_reason": "The candidate claims infection alignment but the weather summary explicitly states insufficient data for infection assessment, with incomplete coverage and missing anchor inputs like heading date."
+        },
+        "proposal": {
+          "summary": "Observed spindle-shaped leaf lesions match rice blast morphology, but infection window data is incomplete for Seoul on 2026-07-18.",
+          "candidates": [
+            {
+              "id": "rice_001",
+              "name": "Rice blast",
+              "claim": "Spindle-shaped lesions with gray-white centers and brown margins align with rice blast descriptions.",
+              "evidence_ids": [
+                "rice_001_f6",
+                "rice_001_f7"
+              ]
+            }
+          ],
+          "limitations": [
+            "Weather overlap does not confirm infection; heading date and cultivar are missing for environmental assessment.",
+            "Source conflicts exist regarding lesion border color and size across different regional descriptions."
+          ]
+        },
+        "evidence_ids": [
+          "rice_001_f6",
+          "rice_001_f7",
+          "rice_002_f3",
+          "rice_002_f19",
+          "rice_003_f5",
+          "rice_003_f10"
+        ]
+      }
+    ],
+    "engines": [
+      {
+        "id": "34585fee-5395-4110-8165-451ad6a2c0ad",
+        "mode": "RESEARCH",
+        "chunks": [
+          {
+            "id": 1,
+            "tokens": 74,
+            "content": "{\"tool\": \"get_weather\", \"reason\": \"Weather data is missing for the confirmed location and observation day, which is required to assess environmental conditions before verifying disease hypotheses\", \"status\": \"completed\", \"summary\": \"KMA returned 8 observations across 1 requested day results.\"}",
+            "carryover": ""
+          },
+          {
+            "id": 2,
+            "tokens": 64,
+            "content": "{\"tool\": \"search_diseases\", \"reason\": \"Weather data is available but disease sources are missing; search for diseases matching the observed symptoms before verification.\", \"status\": \"completed\", \"summary\": \"Zetaris evidence: 6 excerpts, 6 new source IDs.\"}",
+            "carryover": "COMPLETED: get_weather completed\nREMAINING: Choose next action or finish\nDECISIONS: investigating\nCONTEXT: KMA returned 8 observations across 1 requested day results."
+          },
+          {
+            "id": 3,
+            "tokens": 88,
+            "content": "{\"tool\": \"verify_evidence\", \"reason\": \"Evaluate the disease candidates against the observed symptoms and available evidence using the Critic and Judge.\", \"status\": \"completed\", \"summary\": \"The symptom description aligns with rice blast, but the hypothesis cannot be confirmed without growth-stage anchors and complete infection-window weather data.\"}",
+            "carryover": "COMPLETED: search_diseases completed\nREMAINING: Choose next action or finish\nDECISIONS: investigating\nCONTEXT: Zetaris evidence: 6 excerpts, 6 new source IDs."
+          },
+          {
+            "id": 4,
+            "tokens": 94,
+            "content": "{\"tool\": \"finish_investigation\", \"reason\": \"Critic identified a blocking weather context gap requiring specific dates/region/cultivar that cannot be supplied by available tools.\", \"status\": \"completed\", \"summary\": \"Critic requires heading date, transplanting date, region, and cultivar to assess infection window coverage; these inputs are not available through any tool.\"}",
+            "carryover": "COMPLETED: verify_evidence completed\nREMAINING: Provide heading date, transplanting date, region, and cultivar to assess infection window coverage.\nDECISIONS: investigating\nCONTEXT: The symptom description aligns with rice blast, but the hypothesis cannot be confirmed without growth-stage anchors and complete infection-window weather data."
+          }
+        ],
+        "output": "{\"tool\": \"get_weather\", \"reason\": \"Weather data is missing for the confirmed location and observation day, which is required to assess environmental conditions before verifying disease hypotheses\", \"status\": \"completed\", \"summary\": \"KMA returned 8 observations across 1 requested day results.\"}\n\n{\"tool\": \"search_diseases\", \"reason\": \"Weather data is available but disease sources are missing; search for diseases matching the observed symptoms before verification.\", \"status\": \"completed\", \"summary\": \"Zetaris evidence: 6 excerpts, 6 new source IDs.\"}\n\n{\"tool\": \"verify_evidence\", \"reason\": \"Evaluate the disease candidates against the observed symptoms and available evidence using the Critic and Judge.\", \"status\": \"completed\", \"summary\": \"The symptom description aligns with rice blast, but the hypothesis cannot be confirmed without growth-stage anchors and complete infection-window weather data.\"}\n\n{\"tool\": \"finish_investigation\", \"reason\": \"Critic identified a blocking weather context gap requiring specific dates/region/cultivar that cannot be supplied by available tools.\", \"status\": \"completed\", \"summary\": \"Critic requires heading date, transplanting date, region, and cultivar to assess infection window coverage; these inputs are not available through any tool.\"}",
+        "prompt": "Choose and execute evidence tools to resolve crop hypothesis uncertainty; finish only after verification or abstain.",
+        "status": "completed",
+        "timestamp": 1793019300413,
+        "durationMs": 152069,
+        "tokenLabel": "estimated",
+        "chunkConfig": {
+          "chunkSize": 4000,
+          "maxChunks": 5,
+          "overlapTokens": 0,
+          "carryoverTokens": 512
+        },
+        "totalTokensUsed": 320,
+        "totalTokensSaved": 0,
+        "efficiencyPercent": 0
+      },
+      {
+        "id": "8938d646-da14-46e5-88fe-60e79f8a2f69",
+        "mode": "RESEARCH",
+        "chunks": [
+          {
+            "id": 1,
+            "tokens": 65,
+            "content": "{\"tool\": \"get_weather\", \"reason\": \"The user explicitly requests checking humidity and temperature overlap with source references, but weather data is missing.\", \"status\": \"completed\", \"summary\": \"Existing weather snapshot reused; no external request made.\"}",
+            "carryover": ""
+          },
+          {
+            "id": 2,
+            "tokens": 57,
+            "content": "{\"tool\": \"search_diseases\", \"reason\": \"Search for disease evidence matching the described spindle-shaped leaf lesions before verification.\", \"status\": \"completed\", \"summary\": \"Zetaris evidence: 6 excerpts, 6 new source IDs.\"}",
+            "carryover": "COMPLETED: get_weather completed\nREMAINING: Choose next action or finish\nDECISIONS: investigating\nCONTEXT: Existing weather snapshot reused; no external request made."
+          },
+          {
+            "id": 3,
+            "tokens": 93,
+            "content": "{\"tool\": \"verify_evidence\", \"reason\": \"Evaluate the symptom match against retrieved disease evidence to generate or revise hypotheses before finishing.\", \"status\": \"completed\", \"summary\": \"The candidate hypothesis aligns with observed symptoms but lacks sufficient weather context to support an infection claim due to incomplete coverage and missing growth-stage anchor\"}",
+            "carryover": "COMPLETED: search_diseases completed\nREMAINING: Choose next action or finish\nDECISIONS: investigating\nCONTEXT: Zetaris evidence: 6 excerpts, 6 new source IDs."
+          },
+          {
+            "id": 4,
+            "tokens": 90,
+            "content": "{\"tool\": \"finish_investigation\", \"reason\": \"Critic blocking issue requires missing inputs that cannot be supplied by available tools; abstain as needs_more_evidence.\", \"status\": \"completed\", \"summary\": \"Critic identified a blocking weather context gap requiring heading date, transplanting date, region, and cultivar which are not available through any tool.\"}",
+            "carryover": "COMPLETED: verify_evidence completed\nREMAINING: Provide heading date, transplanting date, region, and cultivar to enable infection-window assessment.\nDECISIONS: investigating\nCONTEXT: The candidate hypothesis aligns with observed symptoms but lacks sufficient weather context to support an infection claim due to incomplete coverage and missing growth-stage anchor"
+          }
+        ],
+        "output": "{\"tool\": \"get_weather\", \"reason\": \"The user explicitly requests checking humidity and temperature overlap with source references, but weather data is missing.\", \"status\": \"completed\", \"summary\": \"Existing weather snapshot reused; no external request made.\"}\n\n{\"tool\": \"search_diseases\", \"reason\": \"Search for disease evidence matching the described spindle-shaped leaf lesions before verification.\", \"status\": \"completed\", \"summary\": \"Zetaris evidence: 6 excerpts, 6 new source IDs.\"}\n\n{\"tool\": \"verify_evidence\", \"reason\": \"Evaluate the symptom match against retrieved disease evidence to generate or revise hypotheses before finishing.\", \"status\": \"completed\", \"summary\": \"The candidate hypothesis aligns with observed symptoms but lacks sufficient weather context to support an infection claim due to incomplete coverage and missing growth-stage anchor\"}\n\n{\"tool\": \"finish_investigation\", \"reason\": \"Critic blocking issue requires missing inputs that cannot be supplied by available tools; abstain as needs_more_evidence.\", \"status\": \"completed\", \"summary\": \"Critic identified a blocking weather context gap requiring heading date, transplanting date, region, and cultivar which are not available through any tool.\"}",
+        "prompt": "Choose and execute evidence tools to resolve crop hypothesis uncertainty; finish only after verification or abstain.",
+        "status": "completed",
+        "timestamp": 1793019800264,
+        "durationMs": 140083,
+        "tokenLabel": "estimated",
+        "chunkConfig": {
+          "chunkSize": 4000,
+          "maxChunks": 5,
+          "overlapTokens": 0,
+          "carryoverTokens": 512
+        },
+        "totalTokensUsed": 305,
+        "totalTokensSaved": 0,
+        "efficiencyPercent": 0
+      }
+    ]
+  }
+}

@@ -104,14 +104,14 @@
         "id": "rice_001_f7",
         "url": "https://doa.gov.lk/rrdi_ricediseases_riceblast/",
         "title": "Sri Lanka Department of Agriculture, Rice Research & Development Institute, Rice blast page (DOA-SriLanka)",
-        "excerpt": "Spindle-shaped leaf spots with brown or reddish-brown to yellowish-brown borders, ashy centers and pointed ends. Fully developed lesions are usually 1.0\u20131.5 cm long and 0.3\u20130.5 cm wide. Symptoms vary with growth stage, cultivar susceptibility and environment",
+        "excerpt": "Spindle-shaped leaf spots with brown or reddish-brown to yellowish-brown borders, ashy centers and pointed ends. Fully developed lesions are usually 1.0–1.5 cm long and 0.3–0.5 cm wide. Symptoms vary with growth stage, cultivar susceptibility and environment",
         "location": "\"Symptoms\" sentences 1-2, last sentence"
       },
       {
         "id": "rice_002_f3",
         "url": "https://www.lsuagcenter.com/~/media/system/6/6/a/5/66a53754c9529a4f64afd5b9c57f9fed/pub3123shealthblightofricelowres.pdf",
         "title": "LSU AgCenter Pub. 3123 \"Sheath Blight of Rice\" (2 pages) (LSU-SB)",
-        "excerpt": "Large oval spots form on the leaf sheath. Lesions about 0.5\u20131 cm wide and 1\u20133 cm long form slightly above the water line on infected stems. Lesion centers are grayish-white or light green, with brown to reddish-brown borders",
+        "excerpt": "Large oval spots form on the leaf sheath. Lesions about 0.5–1 cm wide and 1–3 cm long form slightly above the water line on infected stems. Lesion centers are grayish-white or light green, with brown to reddish-brown borders",
         "location": "Page 1 body paragraphs 2-3 (Fig. 2)"
       },
       {
@@ -436,7 +436,7 @@
           "https://www.lsuagcenter.com/~/media/system/6/a/a/a/6aaa18a85d7690e7f469109273056d89/pub3153blastofricelowres.pdf"
         ],
         "name_en": "Rice blast",
-        "name_ko": "\ub3c4\uc5f4\ubcd1",
+        "name_ko": "Rice blast",
         "category": "Symptoms - leaf",
         "disease_id": "rice_001",
         "feature_no": "6",
@@ -448,7 +448,7 @@
         "retrieval_score": 6,
         "scientific_name": "Pyricularia oryzae",
         "source_location": "Body paragraph 2 (Figure 2)",
-        "source_conflicts": "[\"Leaf lesion border color differs between sources: NCPMS gives 'red' for the chronic type, IRRI 'red to brown or necrotic', LSU 'narrow brown', and the Sri Lanka Department of Agriculture 'brown, reddish-brown or yellowish-brown'. For early spots, IRRI describes white to gray-green with dark green borders, while LSU describes white, gray or bluish.\", \"Lesion size (1.0\u20131.5 \u00d7 0.3\u20130.5 cm) appears only in the Sri Lanka Department of Agriculture page, with no original source cited. NCPMS, IRRI and LSU give no size, so this figure must not be used as if it were a Korean standard.\", \"Node lesion color is dark brown in NCPMS, black to gray-brown (banded) in IRRI, and black rot in Sri Lanka; neck color is light brown in NCPMS and gray-brown in IRRI.\", \"Only NCPMS explicitly mentions gray mold (signs) on lesions.\", \"Conidial size 14\u201337 \u00d7 5\u201312 \u00b5m appears only in NCPMS and could not be cross-checked. Color also differs: NCPMS says 'colorless' while the Klaubauf 2014 genus description says 'colorless to pale brown', and the Klaubauf 2014 *P. oryzae* entry gives no size.\", \"The NCPMS leaf blast and panicle blast pages have character-for-character identical pathogen, environment and symptom text, so they cannot count as two independent sources.\", \"Scientific names differ (NCPMS *Magnaporthe grisea*, LSU *Pyricularia grisea*). Klaubauf 2014 separates *P. oryzae* and *P. grisea* as distinct species.\", \"Timing is given by the Korean calendar in NCPMS (paddy field from late June; around heading) and by US growth stages in LSU (leaf blast from seedling to late tillering; neck blast at heading).\"]"
+        "source_conflicts": "[\"Leaf lesion border color differs between sources: NCPMS gives 'red' for the chronic type, IRRI 'red to brown or necrotic', LSU 'narrow brown', and the Sri Lanka Department of Agriculture 'brown, reddish-brown or yellowish-brown'. For early spots, IRRI describes white to gray-green with dark green borders, while LSU describes white, gray or bluish.\", \"Lesion size (1.0–1.5 × 0.3–0.5 cm) appears only in the Sri Lanka Department of Agriculture page, with no original source cited. NCPMS, IRRI and LSU give no size, so this figure must not be used as if it were a Korean standard.\", \"Node lesion color is dark brown in NCPMS, black to gray-brown (banded) in IRRI, and black rot in Sri Lanka; neck color is light brown in NCPMS and gray-brown in IRRI.\", \"Only NCPMS explicitly mentions gray mold (signs) on lesions.\", \"Conidial size 14–37 × 5–12 µm appears only in NCPMS and could not be cross-checked. Color also differs: NCPMS says 'colorless' while the Klaubauf 2014 genus description says 'colorless to pale brown', and the Klaubauf 2014 *P. oryzae* entry gives no size.\", \"The NCPMS leaf blast and panicle blast pages have character-for-character identical pathogen, environment and symptom text, so they cannot count as two independent sources.\", \"Scientific names differ (NCPMS *Magnaporthe grisea*, LSU *Pyricularia grisea*). Klaubauf 2014 separates *P. oryzae* and *P. grisea* as distinct species.\", \"Timing is given by the Korean calendar in NCPMS (paddy field from late June; around heading) and by US growth stages in LSU (leaf blast from seedling to late tillering; neck blast at heading).\"]"
       },
       {
         "id": "rice_001_f7",
@@ -456,19 +456,19 @@
           "https://doa.gov.lk/rrdi_ricediseases_riceblast/"
         ],
         "name_en": "Rice blast",
-        "name_ko": "\ub3c4\uc5f4\ubcd1",
+        "name_ko": "Rice blast",
         "category": "Symptoms - leaf",
         "disease_id": "rice_001",
         "feature_no": "7",
         "plant_part": "Leaf",
-        "description": "Spindle-shaped leaf spots with brown or reddish-brown to yellowish-brown borders, ashy centers and pointed ends. Fully developed lesions are usually 1.0\u20131.5 cm long and 0.3\u20130.5 cm wide. Symptoms vary with growth stage, cultivar susceptibility and environment",
+        "description": "Spindle-shaped leaf spots with brown or reddish-brown to yellowish-brown borders, ashy centers and pointed ends. Fully developed lesions are usually 1.0–1.5 cm long and 0.3–0.5 cm wide. Symptoms vary with growth stage, cultivar susceptibility and environment",
         "source_name": "Sri Lanka Department of Agriculture, Rice Research & Development Institute, Rice blast page (DOA-SriLanka)",
         "source_urls": "[\"https://doa.gov.lk/rrdi_ricediseases_riceblast/\"]",
         "growth_stage": "Unconfirmed",
         "retrieval_score": 5,
         "scientific_name": "Pyricularia oryzae",
         "source_location": "\"Symptoms\" sentences 1-2, last sentence",
-        "source_conflicts": "[\"Leaf lesion border color differs between sources: NCPMS gives 'red' for the chronic type, IRRI 'red to brown or necrotic', LSU 'narrow brown', and the Sri Lanka Department of Agriculture 'brown, reddish-brown or yellowish-brown'. For early spots, IRRI describes white to gray-green with dark green borders, while LSU describes white, gray or bluish.\", \"Lesion size (1.0\u20131.5 \u00d7 0.3\u20130.5 cm) appears only in the Sri Lanka Department of Agriculture page, with no original source cited. NCPMS, IRRI and LSU give no size, so this figure must not be used as if it were a Korean standard.\", \"Node lesion color is dark brown in NCPMS, black to gray-brown (banded) in IRRI, and black rot in Sri Lanka; neck color is light brown in NCPMS and gray-brown in IRRI.\", \"Only NCPMS explicitly mentions gray mold (signs) on lesions.\", \"Conidial size 14\u201337 \u00d7 5\u201312 \u00b5m appears only in NCPMS and could not be cross-checked. Color also differs: NCPMS says 'colorless' while the Klaubauf 2014 genus description says 'colorless to pale brown', and the Klaubauf 2014 *P. oryzae* entry gives no size.\", \"The NCPMS leaf blast and panicle blast pages have character-for-character identical pathogen, environment and symptom text, so they cannot count as two independent sources.\", \"Scientific names differ (NCPMS *Magnaporthe grisea*, LSU *Pyricularia grisea*). Klaubauf 2014 separates *P. oryzae* and *P. grisea* as distinct species.\", \"Timing is given by the Korean calendar in NCPMS (paddy field from late June; around heading) and by US growth stages in LSU (leaf blast from seedling to late tillering; neck blast at heading).\"]"
+        "source_conflicts": "[\"Leaf lesion border color differs between sources: NCPMS gives 'red' for the chronic type, IRRI 'red to brown or necrotic', LSU 'narrow brown', and the Sri Lanka Department of Agriculture 'brown, reddish-brown or yellowish-brown'. For early spots, IRRI describes white to gray-green with dark green borders, while LSU describes white, gray or bluish.\", \"Lesion size (1.0–1.5 × 0.3–0.5 cm) appears only in the Sri Lanka Department of Agriculture page, with no original source cited. NCPMS, IRRI and LSU give no size, so this figure must not be used as if it were a Korean standard.\", \"Node lesion color is dark brown in NCPMS, black to gray-brown (banded) in IRRI, and black rot in Sri Lanka; neck color is light brown in NCPMS and gray-brown in IRRI.\", \"Only NCPMS explicitly mentions gray mold (signs) on lesions.\", \"Conidial size 14–37 × 5–12 µm appears only in NCPMS and could not be cross-checked. Color also differs: NCPMS says 'colorless' while the Klaubauf 2014 genus description says 'colorless to pale brown', and the Klaubauf 2014 *P. oryzae* entry gives no size.\", \"The NCPMS leaf blast and panicle blast pages have character-for-character identical pathogen, environment and symptom text, so they cannot count as two independent sources.\", \"Scientific names differ (NCPMS *Magnaporthe grisea*, LSU *Pyricularia grisea*). Klaubauf 2014 separates *P. oryzae* and *P. grisea* as distinct species.\", \"Timing is given by the Korean calendar in NCPMS (paddy field from late June; around heading) and by US growth stages in LSU (leaf blast from seedling to late tillering; neck blast at heading).\"]"
       },
       {
         "id": "rice_002_f3",
@@ -476,19 +476,19 @@
           "https://www.lsuagcenter.com/~/media/system/6/6/a/5/66a53754c9529a4f64afd5b9c57f9fed/pub3123shealthblightofricelowres.pdf"
         ],
         "name_en": "Sheath blight",
-        "name_ko": "\uc78e\uc9d1\ubb34\ub2ac\ub9c8\ub984\ubcd1",
+        "name_ko": "Sheath blight",
         "category": "Symptoms - sheath/stem",
         "disease_id": "rice_002",
         "feature_no": "3",
         "plant_part": "Leaf sheath",
-        "description": "Large oval spots form on the leaf sheath. Lesions about 0.5\u20131 cm wide and 1\u20133 cm long form slightly above the water line on infected stems. Lesion centers are grayish-white or light green, with brown to reddish-brown borders",
+        "description": "Large oval spots form on the leaf sheath. Lesions about 0.5–1 cm wide and 1–3 cm long form slightly above the water line on infected stems. Lesion centers are grayish-white or light green, with brown to reddish-brown borders",
         "source_name": "LSU AgCenter Pub. 3123 \"Sheath Blight of Rice\" (2 pages) (LSU-SB)",
         "source_urls": "[\"https://www.lsuagcenter.com/~/media/system/6/6/a/5/66a53754c9529a4f64afd5b9c57f9fed/pub3123shealthblightofricelowres.pdf\"]",
         "growth_stage": "Infection begins from late tillering to internode elongation",
         "retrieval_score": 5,
         "scientific_name": "Rhizoctonia solani AG1-IA",
         "source_location": "Page 1 body paragraphs 2-3 (Fig. 2)",
-        "source_conflicts": "[\"Sclerotium size is the biggest discrepancy. NCPMS says 'mostly brown and round, about 1\u20132 mm', while UAEX (USA) says 'can reach 6 mm or more in diameter, white turning brown to black'. IRRI and LSU give no size.\", \"Lesion size is 1\u20133 cm long in IRRI and 0.5\u20131 cm wide \u00d7 1\u20133 cm long in LSU; NCPMS gives no figure ('size not uniform').\", \"Lesion color: NCPMS dark green with surrounding light brown; IRRI grayish-white center with brown margin; LSU grayish-white or light green center with brown to reddish-brown border; UAEX tan to light-brown center with dark green or brown border.\", \"Timing: IRRI tillering to milk stage, UAEX tillering to booting, LSU infection starting late tillering to internode elongation; NCPMS gives calendar dates such as sclerotium formation in late July to early August.\", \"Humidity thresholds differ: NCPMS 96% or above, UAEX above 95%, IRRI 85\u2013100%. Temperatures are effectively the same: NCPMS 22\u201335 \u00b0C (optimum 30\u201332 \u00b0C) and UAEX 73\u201395 \u00b0F.\", \"The AG1-IA designation appears only in UAEX. The Kim 1994 abstract only says AG-1 IA was isolated from 7 crops, so whether rice isolates were IA is Unconfirmed at the abstract level.\", \"On spores, IRRI and LSU say 'no airborne spores', while UAEX says sexual spores form but are rare in the field.\"]"
+        "source_conflicts": "[\"Sclerotium size is the biggest discrepancy. NCPMS says 'mostly brown and round, about 1–2 mm', while UAEX (USA) says 'can reach 6 mm or more in diameter, white turning brown to black'. IRRI and LSU give no size.\", \"Lesion size is 1–3 cm long in IRRI and 0.5–1 cm wide × 1–3 cm long in LSU; NCPMS gives no figure ('size not uniform').\", \"Lesion color: NCPMS dark green with surrounding light brown; IRRI grayish-white center with brown margin; LSU grayish-white or light green center with brown to reddish-brown border; UAEX tan to light-brown center with dark green or brown border.\", \"Timing: IRRI tillering to milk stage, UAEX tillering to booting, LSU infection starting late tillering to internode elongation; NCPMS gives calendar dates such as sclerotium formation in late July to early August.\", \"Humidity thresholds differ: NCPMS 96% or above, UAEX above 95%, IRRI 85–100%. Temperatures are effectively the same: NCPMS 22–35 °C (optimum 30–32 °C) and UAEX 73–95 °F.\", \"The AG1-IA designation appears only in UAEX. The Kim 1994 abstract only says AG-1 IA was isolated from 7 crops, so whether rice isolates were IA is Unconfirmed at the abstract level.\", \"On spores, IRRI and LSU say 'no airborne spores', while UAEX says sexual spores form but are rare in the field.\"]"
       },
       {
         "id": "rice_002_f19",
@@ -496,7 +496,7 @@
           "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight"
         ],
         "name_en": "Sheath blight",
-        "name_ko": "\uc78e\uc9d1\ubb34\ub2ac\ub9c8\ub984\ubcd1",
+        "name_ko": "Sheath blight",
         "category": "Symptoms - sheath/stem (differentiation)",
         "disease_id": "rice_002",
         "feature_no": "19",
@@ -508,7 +508,7 @@
         "retrieval_score": 4,
         "scientific_name": "Rhizoctonia solani AG1-IA",
         "source_location": "\"How to identify\" last paragraph",
-        "source_conflicts": "[\"Sclerotium size is the biggest discrepancy. NCPMS says 'mostly brown and round, about 1\u20132 mm', while UAEX (USA) says 'can reach 6 mm or more in diameter, white turning brown to black'. IRRI and LSU give no size.\", \"Lesion size is 1\u20133 cm long in IRRI and 0.5\u20131 cm wide \u00d7 1\u20133 cm long in LSU; NCPMS gives no figure ('size not uniform').\", \"Lesion color: NCPMS dark green with surrounding light brown; IRRI grayish-white center with brown margin; LSU grayish-white or light green center with brown to reddish-brown border; UAEX tan to light-brown center with dark green or brown border.\", \"Timing: IRRI tillering to milk stage, UAEX tillering to booting, LSU infection starting late tillering to internode elongation; NCPMS gives calendar dates such as sclerotium formation in late July to early August.\", \"Humidity thresholds differ: NCPMS 96% or above, UAEX above 95%, IRRI 85\u2013100%. Temperatures are effectively the same: NCPMS 22\u201335 \u00b0C (optimum 30\u201332 \u00b0C) and UAEX 73\u201395 \u00b0F.\", \"The AG1-IA designation appears only in UAEX. The Kim 1994 abstract only says AG-1 IA was isolated from 7 crops, so whether rice isolates were IA is Unconfirmed at the abstract level.\", \"On spores, IRRI and LSU say 'no airborne spores', while UAEX says sexual spores form but are rare in the field.\"]"
+        "source_conflicts": "[\"Sclerotium size is the biggest discrepancy. NCPMS says 'mostly brown and round, about 1–2 mm', while UAEX (USA) says 'can reach 6 mm or more in diameter, white turning brown to black'. IRRI and LSU give no size.\", \"Lesion size is 1–3 cm long in IRRI and 0.5–1 cm wide × 1–3 cm long in LSU; NCPMS gives no figure ('size not uniform').\", \"Lesion color: NCPMS dark green with surrounding light brown; IRRI grayish-white center with brown margin; LSU grayish-white or light green center with brown to reddish-brown border; UAEX tan to light-brown center with dark green or brown border.\", \"Timing: IRRI tillering to milk stage, UAEX tillering to booting, LSU infection starting late tillering to internode elongation; NCPMS gives calendar dates such as sclerotium formation in late July to early August.\", \"Humidity thresholds differ: NCPMS 96% or above, UAEX above 95%, IRRI 85–100%. Temperatures are effectively the same: NCPMS 22–35 °C (optimum 30–32 °C) and UAEX 73–95 °F.\", \"The AG1-IA designation appears only in UAEX. The Kim 1994 abstract only says AG-1 IA was isolated from 7 crops, so whether rice isolates were IA is Unconfirmed at the abstract level.\", \"On spores, IRRI and LSU say 'no airborne spores', while UAEX says sexual spores form but are rare in the field.\"]"
       },
       {
         "id": "rice_003_f5",
@@ -516,7 +516,7 @@
           "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot"
         ],
         "name_en": "Brown spot",
-        "name_ko": "\uae68\uc528\ubb34\ub2ac\ubcd1",
+        "name_ko": "Brown spot",
         "category": "Symptoms - leaf (differentiation)",
         "disease_id": "rice_003",
         "feature_no": "5",
@@ -528,7 +528,7 @@
         "retrieval_score": 4,
         "scientific_name": "Bipolaris oryzae",
         "source_location": "\"How to identify\" last paragraph",
-        "source_conflicts": "[\"Conidial size differs most. NCPMS gives 63\u2013153 \u00d7 14\u201322 \u00b5m (6\u201314 septa), while Kim 2025 measured 27.4\u201396.3 \u00d7 6.0\u201319.8 \u00b5m (means 53\u201375 \u00b5m) for 6 Korean isolates on PDA. This may reflect spores from media versus lesions, but neither source explains it.\", \"Lesion size figures (5\u201314 mm on susceptible, pinhead-sized on resistant) appear only in IRRI. Concentric rings appear only in NCPMS.\", \"Halo descriptions differ. NCPMS describes a 'yellow toxic zone' on early lesions, while the IRRI brown spot page describes a 'reddish-brown border caused by toxin'. The yellow halo appears in the differentiation paragraph of the IRRI blast page.\", \"The NCPMS sexual-stage description mentions 'ascus' twice with different sizes. The first (360\u2013780 \u00b5m diameter, globose) appears to be an error for perithecium (inference in the notes).\", \"The NCPMS disease-environment sentence 'lesions do not form conidia\u2026' is ambiguous.\", \"Timing: NCPMS says sharp rise after panicle initiation and panicle infection up to 25 days after heading; IRRI says maximum tillering to grain filling; Kim 2025 says typically at harvest but with a recent shift in timing (isolates from July\u2013August 2024).\", \"Seedling symptoms (girdling the coleoptile, 10\u201358% seedling death) appear only in IRRI.\"]"
+        "source_conflicts": "[\"Conidial size differs most. NCPMS gives 63–153 × 14–22 µm (6–14 septa), while Kim 2025 measured 27.4–96.3 × 6.0–19.8 µm (means 53–75 µm) for 6 Korean isolates on PDA. This may reflect spores from media versus lesions, but neither source explains it.\", \"Lesion size figures (5–14 mm on susceptible, pinhead-sized on resistant) appear only in IRRI. Concentric rings appear only in NCPMS.\", \"Halo descriptions differ. NCPMS describes a 'yellow toxic zone' on early lesions, while the IRRI brown spot page describes a 'reddish-brown border caused by toxin'. The yellow halo appears in the differentiation paragraph of the IRRI blast page.\", \"The NCPMS sexual-stage description mentions 'ascus' twice with different sizes. The first (360–780 µm diameter, globose) appears to be an error for perithecium (inference in the notes).\", \"The NCPMS disease-environment sentence 'lesions do not form conidia…' is ambiguous.\", \"Timing: NCPMS says sharp rise after panicle initiation and panicle infection up to 25 days after heading; IRRI says maximum tillering to grain filling; Kim 2025 says typically at harvest but with a recent shift in timing (isolates from July–August 2024).\", \"Seedling symptoms (girdling the coleoptile, 10–58% seedling death) appear only in IRRI.\"]"
       },
       {
         "id": "rice_003_f10",
@@ -536,7 +536,7 @@
           "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y"
         ],
         "name_en": "Brown spot",
-        "name_ko": "\uae68\uc528\ubb34\ub2ac\ubcd1",
+        "name_ko": "Brown spot",
         "category": "Symptoms - panicle/ear/grain",
         "disease_id": "rice_003",
         "feature_no": "10",
@@ -548,7 +548,7 @@
         "retrieval_score": 3,
         "scientific_name": "Bipolaris oryzae",
         "source_location": "Symptom description sentences 4-6",
-        "source_conflicts": "[\"Conidial size differs most. NCPMS gives 63\u2013153 \u00d7 14\u201322 \u00b5m (6\u201314 septa), while Kim 2025 measured 27.4\u201396.3 \u00d7 6.0\u201319.8 \u00b5m (means 53\u201375 \u00b5m) for 6 Korean isolates on PDA. This may reflect spores from media versus lesions, but neither source explains it.\", \"Lesion size figures (5\u201314 mm on susceptible, pinhead-sized on resistant) appear only in IRRI. Concentric rings appear only in NCPMS.\", \"Halo descriptions differ. NCPMS describes a 'yellow toxic zone' on early lesions, while the IRRI brown spot page describes a 'reddish-brown border caused by toxin'. The yellow halo appears in the differentiation paragraph of the IRRI blast page.\", \"The NCPMS sexual-stage description mentions 'ascus' twice with different sizes. The first (360\u2013780 \u00b5m diameter, globose) appears to be an error for perithecium (inference in the notes).\", \"The NCPMS disease-environment sentence 'lesions do not form conidia\u2026' is ambiguous.\", \"Timing: NCPMS says sharp rise after panicle initiation and panicle infection up to 25 days after heading; IRRI says maximum tillering to grain filling; Kim 2025 says typically at harvest but with a recent shift in timing (isolates from July\u2013August 2024).\", \"Seedling symptoms (girdling the coleoptile, 10\u201358% seedling death) appear only in IRRI.\"]"
+        "source_conflicts": "[\"Conidial size differs most. NCPMS gives 63–153 × 14–22 µm (6–14 septa), while Kim 2025 measured 27.4–96.3 × 6.0–19.8 µm (means 53–75 µm) for 6 Korean isolates on PDA. This may reflect spores from media versus lesions, but neither source explains it.\", \"Lesion size figures (5–14 mm on susceptible, pinhead-sized on resistant) appear only in IRRI. Concentric rings appear only in NCPMS.\", \"Halo descriptions differ. NCPMS describes a 'yellow toxic zone' on early lesions, while the IRRI brown spot page describes a 'reddish-brown border caused by toxin'. The yellow halo appears in the differentiation paragraph of the IRRI blast page.\", \"The NCPMS sexual-stage description mentions 'ascus' twice with different sizes. The first (360–780 µm diameter, globose) appears to be an error for perithecium (inference in the notes).\", \"The NCPMS disease-environment sentence 'lesions do not form conidia…' is ambiguous.\", \"Timing: NCPMS says sharp rise after panicle initiation and panicle infection up to 25 days after heading; IRRI says maximum tillering to grain filling; Kim 2025 says typically at harvest but with a recent shift in timing (isolates from July–August 2024).\", \"Seedling symptoms (girdling the coleoptile, 10–58% seedling death) appear only in IRRI.\"]"
       }
     ],
     "verified_candidates": "daf14f2b9019e2180528dd6e0b0ee37836288e8cbb1b942ef46e3deddbfed11e",
@@ -643,5 +643,7 @@
         "efficiencyPercent": 0
       }
     ]
-  }
+  },
+  "translation_note": "English rendering of an actual historical export, not verbatim model text. The original is preserved separately.",
+  "original_sha256": "5c8289f39d4ccc21f5861278f40401073fa34e3418dc4ce292e044efd5c7a936"
 }

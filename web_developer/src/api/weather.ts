@@ -6,6 +6,7 @@ export interface WeatherReport {
   location?: WeatherLocation;
   station?: { id: string; distance_km: number };
   summary: { sample_count?: number; requested_sample_count?: number; sampled_min_temperature_c?: number | null; sampled_max_temperature_c?: number | null; sampled_mean_humidity_pct?: number | null };
+  environment_assessments?: { disease_id: string; name: string; name_ko: string; assessment: string; thresholds_text: string; required_inputs: string[]; sources: {label: string; url: string}[]; windows: {window_id: string; coverage: string; required_days?: number; covered_days?: number; evidence_type: string}[]; checks: {metric: string; samples_matching: number; valid_samples: number; interpretation: string}[] }[];
   comparisons: { disease_id: string; name: string; reason: string; temperature_check?: {range_c: number[]; samples_in_range: number; valid_samples: number; interpretation: string} | null; conditions: {description: string; source_name: string; url: string[] | string; location_in_source: string}[] }[];
   limitations: string[];
 }
@@ -24,4 +25,12 @@ export function collectWeather(id: string, locationId: number) {
   return request<WeatherReport>(`/api/investigations/${encodeURIComponent(id)}/weather`, {
     method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ location_id: locationId }),
   });
+}
+
+export function getCountryStations(countryCode: string) {
+ return request<{total_count: number; stations: {id: string; country_name: string; name: string}[]; limitations: string[]}>(`/api/weather/stations?country_code=${encodeURIComponent(countryCode)}&category=temp`);
+}
+
+export function getSavedWeather(id: string) {
+ return request<WeatherReport>(`/api/investigations/${encodeURIComponent(id)}/weather`);
 }

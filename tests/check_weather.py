@@ -52,7 +52,7 @@ assert weather.compare_conditions(diseases,{'observations':[{'temperature_c':20}
 print('PASS source-gated temperature comparison and conflict abstention')
 case=dict(crop='maize',region='Seoul',observed_date=date(2026,10,24))
 case_id=str(uuid4())
-with TestClient(app) as client:
+with patch('database.weather_references',AsyncMock(return_value=[])), TestClient(app) as client:
  with patch('main.weather_case',AsyncMock(return_value=(case,diseases))),patch('main.fetch_weather',AsyncMock(side_effect=weather.WeatherError('Test unavailable'))),patch('main.save_weather',AsyncMock()) as save:
   response=client.post(f'/api/investigations/{case_id}/weather',json={'location_id':1})
   assert response.status_code==200,response.text
@@ -71,16 +71,26 @@ import httpx
 async def fake_provider(request):
  if request.url.host=='geocoding-api.open-meteo.com':
   return httpx.Response(200,json=dict(id=1,name='Synthetic',latitude=37.57,longitude=126.97,timezone='Asia/Seoul'))
- if request.url.path.endswith('stn_gts1.php'):
-  return httpx.Response(200,text='# STN LON LAT\n47108 126.97 37.57\n')
- return httpx.Response(200,json={'response':{'header':{'resultCode':'00'},'body':{'totalCount':1,'items':{'item':[dict(stnId='47108',tm=request.url.params['tm'],ta=20,hm=80,rn=1,rnWrchHr=6)]}}}})
+ if request.url.host=='www.ncei.noaa.gov':
+  return httpx.Response(200,text='USAF,LAT,LON,BEGIN,END,STATION NAME\n471080,37.57,126.97,19000101,20250824,Synthetic\n')
+ assert request.url.path.endswith('gts_bufr_syn1.php')
+ assert request.url.params['dtm']=='0' and request.url.params['stn']=='47108'
+ return httpx.Response(200,text='#START7777\n# YYMMDDHHMI STN TA HM RN RH\n'+request.url.params['tm']+' 47108 -9 80 1 1\n#7777END\n')
 async def run():
  with patch.dict(os.environ,{'KMA_AUTH_KEY':'SYNTHETIC-TEST-KEY'}),patch('weather.httpx.AsyncClient',lambda **kw:OriginalClient(transport=httpx.MockTransport(fake_provider),**kw)):
   report=await weather.fetch_weather(1,date(2026,10,24))
   assert len(report['observations'])==8 and report['summary']['sample_count']==8
   assert report['station']['distance_km']==0
+  assert report['observations'][0]['temperature_c']==-9
+  assert report['observations'][0]['precipitation_period_hours']==6
   assert 'SYNTHETIC-TEST-KEY' not in str(report)
   assert 'precipitation_total' not in report['summary']
 asyncio.run(run())
 print('PASS mocked provider integration, eight local-day timestamps, key redaction and no rain summation')
-print('All weather checks passed. Live KMA authorization still requires verification.')
+print('All offline weather checks passed; live evidence is recorded separately.')
+
+for bad in ('<html>denied</html>', '# YYMMDDHHMI STN TA HM RN RH\n202610240000 47109 20 80 1 1\n#7777END', '# YYMMDDHHMI STN TA HM RN RH\n202610240300 47108 20 80 1 1\n#7777END'):
+ try: weather.parse_bufr_synop(bad,'47108',instant)
+ except weather.WeatherError: pass
+ else: raise AssertionError('Invalid BUFR station/time/response accepted')
+print('PASS BUFR wrong station/time, denied response, RH code mapping and new endpoint arguments')

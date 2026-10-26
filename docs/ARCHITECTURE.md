@@ -8,4 +8,4 @@ The unmodified Meterless Markovian reference runtime controls bounded action chu
 
 PostgreSQL stores inputs/photos, optional weather, round/engine history, agent_runs and confirmed locations. Web polling shows real backend events and tool traces; report export redacts precise location and raw weather/images. It does not generate simulated agent actions.
 
-See README and AUTONOMOUS_AGENT_IMPLEMENTATION.md for setup, new routes, exact test scope, actual failed trials, successful isolated checks and remaining limitations. Final complete revised live replay was not performed after execution approval was declined.
+See README and AUTONOMOUS_AGENT_IMPLEMENTATION.md for setup, new routes, exact test scope, actual failed trials, successful isolated checks and remaining limitations. Later Track 2 real runs are recorded in submission/live-validation.json. New KMA SYNOP transport verification is recorded separately in weather-live-2026-10-26.json; a weather-inclusive full autonomous replay is pending.

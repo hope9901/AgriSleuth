@@ -41,11 +41,11 @@ async def generate(case,evidence,carryover,feedback):
     model_name=os.getenv('LM_STUDIO_MODEL','').strip()
     if not model_name:raise RuntimeError('Configure and load LM_STUDIO_MODEL before running investigation.')
     from local_model import LocalStructuredModel
-    model=LocalStructuredModel(os.getenv('LM_STUDIO_BASE_URL','http://localhost:1234/v1'),model_name,os.getenv('LM_STUDIO_API_KEY','lm-studio'),Proposal,max_tokens=350)
+    model=LocalStructuredModel(os.getenv('LM_STUDIO_BASE_URL','http://localhost:1234/v1'),model_name,os.getenv('LM_STUDIO_API_KEY','lm-studio'),Proposal,max_tokens=1600)
     model.constrain_references([e['disease_id'] for e in evidence],[e['id'] for e in evidence])
     prompt=(ROOT/'critic/prompts/hypothesis.md').read_text()
     # Bounded evidence and carryover, never the entire prior conversation.
-    payload=dict(observations={k:str(case.get(k) or '') for k in ('crop','region','observed_date','growth_stage','affected_part','symptoms')},image_observations=case.get('image_observations'),weather_context=case.get('weather_context'),evidence=[{k:e.get(k) for k in ('id','disease_id','name_en','description','source_name','source_location','source_conflicts')} for e in evidence],carryover=carryover[:2048],previous_review=feedback)
+    payload=dict(observations={k:str(case.get(k) or '') for k in ('crop','region','observed_date','growth_stage','affected_part','symptoms')},image_observations=case.get('image_observations'),weather_context=case.get('weather_context'),evidence=[{k:(str(e.get(k) or '')[:500] if k=='description' else e.get(k)) for k in ('id','disease_id','name_en','description','source_name','source_location','source_conflicts')} for e in evidence],carryover=carryover[:2048],previous_review=feedback)
     proposal=await model.ainvoke([SystemMessage(content=prompt),HumanMessage(content=json.dumps(payload,ensure_ascii=False))])
     proposal=Proposal.model_validate(proposal);validate_proposal(proposal,evidence)
     return proposal

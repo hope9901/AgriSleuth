@@ -11,7 +11,7 @@
       "provider": "LM Studio",
       "id": "qwen/qwen3.5-9b",
       "quantization": "Q4_K_M",
-      "loaded_context_length": 4096
+      "loaded_context_length": 40912
     }
   ],
   "limitations": [
@@ -19,7 +19,8 @@
     "KMA live observations require authorized access",
     "No source-verification or licensing guarantee",
     "No public-hosting authentication",
-    "Image and diagnosis accuracy have not been evaluated on a labeled dataset"
+    "Image and diagnosis accuracy have not been evaluated on a labeled dataset",
+    "Critic may request supplied or stage-irrelevant context; scenario choice is not biological validation"
   ],
   "ai_assisted_development": true,
   "agent_policy": {
@@ -46,6 +47,17 @@
     "insufficient_case": "needs_more_evidence",
     "insufficient_seconds": 151.5,
     "diagnostic_accuracy_evaluated": false,
-    "weather_live_status": "HTTP 403; unavailable"
-  }
+    "weather_live_status": "KMA BUFR SYNOP: 8/8 timestamps on three tested Seoul dates; NOAA station metadata; full agent weather-inclusive replay pending",
+    "environment_reference_profiles": 26,
+    "environment_reference_windows": 67,
+    "environment_sample": "Latest: 141.2 s, cached weather, Zetaris search, Diagnosis/Critic/Judge, all tools completed, needs_more_evidence; WEATHER_WINDOW_GAP direct. Previous fresh-weather run 156.6 s. One sample, no accuracy estimate.",
+    "country_station_lookup": "cc=1001 Russia; all 79 stations received"
+  },
+  "critic_scenarios": {
+    "catalog": "critic/prompts/critic_scenarios.json",
+    "count": 8,
+    "selection": "direct match or nearest scenario with explicit rationale; validated known IDs",
+    "judge_unchanged": true
+  },
+  "working_language": "English"
 }

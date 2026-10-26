@@ -1,9 +1,19 @@
 {
-  "provider": "KMA world GTS",
-  "checked_at": "2026-10-26T08:13:30.269834+00:00",
-  "date": "2026-10-25",
-  "source": "https://apihub.kma.go.kr/apiList.do?seqApi=12",
-  "status": "unavailable",
-  "observation_count": 0,
-  "reason": "Weather provider rejected the request (HTTP 403). Check API authorization."
+  "previous_check": {
+    "provider": "KMA world GTS",
+    "checked_at": "2026-10-26T08:13:30.269834+00:00",
+    "date": "2026-10-25",
+    "source": "https://apihub.kma.go.kr/apiList.do?seqApi=12",
+    "status": "unavailable",
+    "observation_count": 0,
+    "reason": "Weather provider rejected the request (HTTP 403). Check API authorization."
+  },
+  "current_check": {
+    "checked_at": "2026-10-26T11:48:37.836002+00:00",
+    "status": "live observations received; 8/8 timestamps for three tested Seoul dates",
+    "endpoint": "https://apihub.kma.go.kr/api/typ01/url/gts_bufr_syn1.php",
+    "station_metadata": "NOAA NCEI ISD history; old KMA metadata API still 403",
+    "evidence": "docs/weather-live-2026-10-26.json",
+    "full_autonomous_weather_rerun": false
+  }
 }

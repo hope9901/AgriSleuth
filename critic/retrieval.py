@@ -34,10 +34,10 @@ async def retrieve(crop):
         raise RetrievalError('Zetaris evidence retrieval failed. Check platform and source registration.') from None
 
 STOP={'the','and','with','from','this','that','have','leaf','leaves','plant','plants','rice','maize','corn','symptoms','observed'}
-TRANSLATIONS={'반점':'spots','갈색':'brown','노란':'yellow','황색':'yellow','마름':'blight','회색':'gray','둥근':'circular','타원':'elliptical','시듦':'wilt','줄무늬':'streak','녹병':'rust','도열병':'blast'}
+TRANSLATIONS={'\ubc18\uc810':'spots','\uac08\uc0c9':'brown','\ub178\ub780':'yellow','\ud669\uc0c9':'yellow','\ub9c8\ub984':'blight','\ud68c\uc0c9':'gray','\ub465\uadfc':'circular','\ud0c0\uc6d0':'elliptical','\uc2dc\ub4e6':'wilt','\uc904\ubb34\ub2ac':'streak','\ub179\ubcd1':'rust','\ub3c4\uc5f4\ubcd1':'blast'}
 def rank_evidence(rows, query, excluded=()):
     for ko,en in TRANSLATIONS.items():query += ' '+en if ko in query else ''
-    terms={t for t in re.findall(r'[a-z0-9가-힣]+',query.lower()) if len(t)>2 and t not in STOP}
+    terms={t for t in re.findall(r'[a-z0-9\uac00-\ud7a3]+',query.lower()) if len(t)>2 and t not in STOP}
     scored=[]
     for row in rows:
         if row['id'] in excluded:continue

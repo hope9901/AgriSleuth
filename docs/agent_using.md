@@ -1,5 +1,8 @@
-1. chat gpt sol : 전반적인 프로젝트 반영
-2. gemini : 웹사이트 design
-3. claude : db 구성 요소
+# AI-assisted development disclosure
 
-cursor : api통신, 웹 서버 실행등으로 사용
+- ChatGPT / Codex: overall architecture, implementation, integration and verification.
+- Gemini: website design assistance.
+- Claude: research collection and database source preparation.
+- Cursor: code editing, API integration and local web-server development.
+
+Zetaris and the Meterless Markovian Engine are the implemented sponsor technologies. Nightshift is not used.

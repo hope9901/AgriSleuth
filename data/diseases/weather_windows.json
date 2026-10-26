@@ -1,74 +1,74 @@
 {
-  "source_report": "병해 기상 요인과 관측 기간.md",
+  "source_report": "Disease Weather Factors and Observation Windows.md",
   "as_of": "2026-10-25",
   "anchors": {
-    "D": "관찰일(사진 촬영일·증상 관찰일)",
-    "heading": "해당 포장의 출수일(H)",
-    "silking": "출사일(R1, 수염 출현일)",
-    "sowing": "파종일(또는 이앙일)",
-    "emergence": "출현일",
-    "harvest": "수확일",
-    "physiological_maturity": "생리적 성숙(R6)",
-    "jan1": "올해 1월 1일",
-    "prev_winter": "직전 겨울(12~2월)",
-    "prev_season": "전년 작기(달력 기준)",
-    "season": "올해 달력 기준",
-    "regional_first_report": "지역 첫 발생 보고일",
-    "prev_seed_crop": "종자를 생산한 채종포의 작기",
-    "prev_harvest": "직전 수확기"
+    "D": "Observation date: photograph or symptom observation date",
+    "heading": "Heading date of this field (H)",
+    "silking": "Silking date: R1, silk emergence",
+    "sowing": "Sowing or transplanting date",
+    "emergence": "Emergence date",
+    "harvest": "Harvest date",
+    "physiological_maturity": "Physiological maturity (R6)",
+    "jan1": "January 1 of the current year",
+    "prev_winter": "Previous winter: December–February",
+    "prev_season": "Previous cropping season: calendar basis",
+    "season": "Current calendar year",
+    "regional_first_report": "Date of the regional first occurrence report",
+    "prev_seed_crop": "Season of the seed-production field",
+    "prev_harvest": "Previous harvest"
   },
   "conventions": {
-    "start_end": "anchor 기준 오프셋. 음수=anchor 이전. unit=calendar이면 MM-DD, growth_stage이면 생육단계 코드",
-    "end_null": "end가 null이면 end_anchor까지(없으면 구간 미정)",
-    "core": "true면 해당 병의 핵심 창",
-    "evidence_type": "근거형=출처·운영 모델이 기간을 직접 제시, 추론형=잠복기 등에서 계산",
-    "leaf_wetness": "국내 공공 API에 엽면습윤 없음. RH ≥90% 지속시간 또는 이슬점차로 추정(정확도 약 77%)"
+    "start_end": "Offsets from anchor; negative values precede anchor. Calendar unit uses MM-DD; growth_stage uses stage codes",
+    "end_null": "Null end means until end_anchor, or an unspecified interval if no end_anchor exists",
+    "core": "True marks the core window for this disease",
+    "evidence_type": "Source-based: a source or operational model directly specifies the period. Inferred: calculated from incubation or related information",
+    "leaf_wetness": "Korean public APIs do not measure leaf wetness. RH duration or dewpoint spread is a proposed proxy; the collected approximately 77% accuracy claim is unverified here"
   },
   "diseases": [
     {
       "no": 1,
-      "crop": "벼",
-      "disease_ko": "벼 도열병 (잎·이삭)",
+      "crop": "Rice",
+      "disease_ko": "Rice blast: leaf and panicle",
       "disease_en": "Rice blast",
       "scientific_name": "Pyricularia oryzae",
       "korea_record_unconfirmed": false,
       "key_weather_variables": [
-        "엽면습윤시간과 습윤 중 기온",
-        "직전 5일 평균기온",
-        "강우일수",
-        "최저기온",
-        "일조",
-        "출수 후 적산기온"
+        "Leaf-wetness duration and temperature during wetness",
+        "Previous five-day mean temperature",
+        "Number of rainy days",
+        "Minimum temperature",
+        "Sunshine",
+        "Accumulated temperature after heading"
       ],
-      "thresholds_text": "습윤 15 ℃ 17 h~22–25 ℃ 10 h, 5일 평균 20–25 ℃ ([히로시마 BLASTAM 第1表](https://www.pref.hiroshima.lg.jp/uploaded/attachment/535771.pdf), 해외). 20–25 ℃, 3일 이상 강우, RH 90% 이상, 적은 일조 ([농진청 2023-06-15](https://rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000788240), 국내). 이삭 감염 출수 후 0–300 ℃·일 ([小林 등 2010](https://www.jppa.or.jp/archive/pdf/64_02_01.pdf), 해외)",
+      "thresholds_text": "Wetness requirements: 17 h at 15 C to 10 h at 22–25 C; previous five-day mean 20–25 C (Hiroshima BLASTAM). 20–25 C, at least three rainy days, RH at least 90%, and limited sunshine (RDA, Korea). Panicle infection: 0–300 degree-days after heading (Kobayashi et al., international). Sources: [Hiroshima BLASTAM Table 1](https://www.pref.hiroshima.lg.jp/uploaded/attachment/535771.pdf); [RDA 2023-06-15](https://rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000788240); [Kobayashi et al. 2010](https://www.jppa.or.jp/archive/pdf/64_02_01.pdf)",
       "threshold_sources": [
         {
-          "label": "히로시마 BLASTAM 第1表",
+          "label": "Hiroshima BLASTAM Table 1",
           "url": "https://www.pref.hiroshima.lg.jp/uploaded/attachment/535771.pdf",
-          "origin": "해외"
+          "origin": "International"
         },
         {
-          "label": "농진청 2023-06-15",
+          "label": "RDA 2023-06-15",
           "url": "https://rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000788240",
-          "origin": "국내"
+          "origin": "Korea"
         },
         {
-          "label": "小林 등 2010",
+          "label": "Kobayashi et al. 2010",
           "url": "https://www.jppa.or.jp/archive/pdf/64_02_01.pdf",
-          "origin": "해외"
+          "origin": "International"
         }
       ],
       "required_inputs": [
-        "출수일",
-        "이앙일",
-        "지역",
-        "품종"
+        "Heading date",
+        "Transplanting date",
+        "Region",
+        "Cultivar"
       ],
-      "evidence_summary": "잎 근거형. 이삭 감염창 근거형, D 환산 추론형",
+      "evidence_summary": "Leaf window source-based; panicle infection window source-based; D-relative conversion inferred",
       "windows": [
         {
           "window_id": "01-1",
-          "applies_to": "잎도열병 감염 판정",
+          "applies_to": "Leaf-blast infection assessment",
           "anchor": "D",
           "start": -14,
           "end": -4,
@@ -76,13 +76,13 @@
           "unit": "days",
           "resolution": "hourly",
           "core": true,
-          "evidence_type": "근거형",
-          "matrix_text": "잎: D-14~D-4",
-          "note": "BLASTAM 감염일 판정(습윤시간×습윤 중 기온)"
+          "evidence_type": "source_based",
+          "matrix_text": "Leaves: D-14 to D-4",
+          "note": "BLASTAM infection-day assessment: wetness duration by temperature during wetness"
         },
         {
           "window_id": "01-2",
-          "applies_to": "잎도열병 데이터 확보 범위",
+          "applies_to": "Leaf-blast data acquisition range",
           "anchor": "D",
           "start": -18,
           "end": -4,
@@ -90,13 +90,13 @@
           "unit": "days",
           "resolution": "hourly",
           "core": false,
-          "evidence_type": "근거형",
-          "matrix_text": "데이터는 D-18~D-4",
-          "note": "직전 5일 평균기온 20–25 ℃ 조건 계산에 필요"
+          "evidence_type": "source_based",
+          "matrix_text": "Data acquisition D-18 to D-4",
+          "note": "Required for the previous five-day mean temperature criterion of 20–25 C"
         },
         {
           "window_id": "01-3",
-          "applies_to": "잎도열병 기주 감수성",
+          "applies_to": "Leaf-blast host susceptibility",
           "anchor": "D",
           "start": -34,
           "end": -4,
@@ -104,13 +104,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "근거형",
-          "matrix_text": "기주 감수성까지 D-34",
-          "note": "감염 전 20일 저온 적산(도호쿠 방식)"
+          "evidence_type": "source_based",
+          "matrix_text": "Host susceptibility data through D-34",
+          "note": "Accumulated low temperature over 20 preinfection days (Tohoku method)"
         },
         {
           "window_id": "01-4",
-          "applies_to": "이삭도열병 감염창(일)",
+          "applies_to": "Panicle-blast infection window: days",
           "anchor": "heading",
           "start": -7,
           "end": 15,
@@ -118,13 +118,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "근거형",
-          "matrix_text": "이삭: H-7~H+15",
+          "evidence_type": "source_based",
+          "matrix_text": "Panicles: H-7 to H+15",
           "note": null
         },
         {
           "window_id": "01-5",
-          "applies_to": "이삭도열병 감염창(적산온도)",
+          "applies_to": "Panicle-blast infection window: accumulated temperature",
           "anchor": "heading",
           "start": 0,
           "end": 300,
@@ -132,13 +132,13 @@
           "unit": "degree_days",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "근거형",
-          "matrix_text": "출수 후 300 ℃·일까지",
-          "note": "Kobayashi 2010: 출수 후 0–300 ℃·일"
+          "evidence_type": "source_based",
+          "matrix_text": "Through 300 degree-days after heading",
+          "note": "Kobayashi et al. 2010: 0–300 degree-days after heading"
         },
         {
           "window_id": "01-6",
-          "applies_to": "이삭도열병 관찰일 환산",
+          "applies_to": "Panicle-blast conversion relative to observation date",
           "anchor": "D",
           "start": -20,
           "end": -7,
@@ -146,46 +146,46 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "D 기준 D-20~D-7",
-          "note": "출수일을 모를 때의 대체 창"
+          "evidence_type": "inferred",
+          "matrix_text": "Observation-date conversion: D-20 to D-7",
+          "note": "Alternative window when heading date is unknown"
         }
       ]
     },
     {
       "no": 2,
-      "crop": "벼",
-      "disease_ko": "벼 잎집무늬마름병",
+      "crop": "Rice",
+      "disease_ko": "Rice sheath blight",
       "disease_en": "Sheath blight",
       "scientific_name": "Rhizoctonia solani AG1-IA",
       "korea_record_unconfirmed": false,
       "key_weather_variables": [
-        "기온",
-        "포기 사이 RH",
-        "고온다습 일수"
+        "Temperature",
+        "Within-canopy RH",
+        "Number of hot humid days"
       ],
-      "thresholds_text": "30–32 ℃, RH 96% 이상 ([농진청 2023-06-15](https://rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000788240), 국내). 28–32 ℃, 캐노피 RH 85–100% ([IRRI](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight), 해외)",
+      "thresholds_text": "30–32 C and RH at least 96% (Korean). 28–32 C and canopy RH 85–100% (international). Sources: [RDA 2023-06-15](https://rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000788240); [IRRI](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight)",
       "threshold_sources": [
         {
-          "label": "농진청 2023-06-15",
+          "label": "RDA 2023-06-15",
           "url": "https://rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000788240",
-          "origin": "국내"
+          "origin": "Korea"
         },
         {
           "label": "IRRI",
           "url": "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight",
-          "origin": "해외"
+          "origin": "International"
         }
       ],
       "required_inputs": [
-        "이앙일",
-        "질소·밀식 여부"
+        "Transplanting date",
+        "Nitrogen application and planting density"
       ],
-      "evidence_summary": "추론형",
+      "evidence_summary": "inferred",
       "windows": [
         {
           "window_id": "02-1",
-          "applies_to": "새 병반",
+          "applies_to": "New lesions",
           "anchor": "D",
           "start": -7,
           "end": -2,
@@ -193,13 +193,13 @@
           "unit": "days",
           "resolution": "hourly",
           "core": true,
-          "evidence_type": "추론형",
-          "matrix_text": "새 병반 D-7~D-2",
+          "evidence_type": "inferred",
+          "matrix_text": "New lesions D-7 to D-2",
           "note": null
         },
         {
           "window_id": "02-2",
-          "applies_to": "진전 판단",
+          "applies_to": "Disease progression assessment",
           "anchor": "D",
           "start": -21,
           "end": -1,
@@ -207,47 +207,47 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "진전 판단 D-21~D-1",
+          "evidence_type": "inferred",
+          "matrix_text": "Progression assessment D-21 to D-1",
           "note": null
         }
       ]
     },
     {
       "no": 3,
-      "crop": "벼",
-      "disease_ko": "벼 깨씨무늬병",
+      "crop": "Rice",
+      "disease_ko": "Rice brown spot",
       "disease_en": "Brown spot",
       "scientific_name": "Bipolaris oryzae",
       "korea_record_unconfirmed": false,
       "key_weather_variables": [
-        "엽면습윤",
-        "기온",
-        "공기습도",
-        "주간 강우·흐림"
+        "Leaf wetness",
+        "Temperature",
+        "Air humidity",
+        "Weekly rainfall and cloudiness"
       ],
-      "thresholds_text": "잎 젖음 8–24 h ([IRRI](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot), 해외). 발아 최적 20–30 ℃, 침입 습도 개화기 70%·호숙기 90% ([NCPMS](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750), 국내)",
+      "thresholds_text": "8–24 h leaf wetness (IRRI). Optimal germination at 20–30 C; invasion humidity 70% at flowering and 90% at milk stage (NCPMS, Korea). Sources: [IRRI](http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot); [NCPMS](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750)",
       "threshold_sources": [
         {
           "label": "IRRI",
           "url": "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot",
-          "origin": "해외"
+          "origin": "International"
         },
         {
           "label": "NCPMS",
           "url": "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750",
-          "origin": "국내"
+          "origin": "Korea"
         }
       ],
       "required_inputs": [
-        "출수일",
-        "토양(사질·노후화답)"
+        "Heading date",
+        "Soil: sandy or degraded paddy"
       ],
-      "evidence_summary": "추론형",
+      "evidence_summary": "inferred",
       "windows": [
         {
           "window_id": "03-1",
-          "applies_to": "잎 병반",
+          "applies_to": "Leaf lesions",
           "anchor": "D",
           "start": -10,
           "end": -3,
@@ -255,13 +255,13 @@
           "unit": "days",
           "resolution": "hourly",
           "core": true,
-          "evidence_type": "추론형",
+          "evidence_type": "inferred",
           "matrix_text": "D-10~D-3",
           "note": null
         },
         {
           "window_id": "03-2",
-          "applies_to": "대발생형",
+          "applies_to": "Epidemic scenario",
           "anchor": "D",
           "start": -30,
           "end": -1,
@@ -269,13 +269,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "대발생형은 D-30~D-1",
-          "note": "한 달 흐림·강우 누적"
+          "evidence_type": "inferred",
+          "matrix_text": "Epidemic scenario D-30 to D-1",
+          "note": "One-month accumulated cloudiness and rainfall"
         },
         {
           "window_id": "03-3",
-          "applies_to": "이삭 감염",
+          "applies_to": "Panicle infection",
           "anchor": "heading",
           "start": 0,
           "end": 25,
@@ -283,48 +283,48 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "이삭은 출수 후 25일까지",
-          "note": "출수 후 25일은 NCPMS 서술(수량 영향 최종 감염 시기)"
+          "evidence_type": "inferred",
+          "matrix_text": "Panicles susceptible through 25 days after heading",
+          "note": "NCPMS describes 25 days after heading as the latest infection time affecting yield"
         }
       ]
     },
     {
       "no": 4,
-      "crop": "벼",
-      "disease_ko": "벼 흰잎마름병",
+      "crop": "Rice",
+      "disease_ko": "Rice bacterial blight",
       "disease_en": "Bacterial blight",
       "scientific_name": "Xanthomonas oryzae pv. oryzae",
       "korea_record_unconfirmed": false,
       "key_weather_variables": [
-        "7월 월평균기온·월강수",
-        "강우일수",
-        "풍속·태풍",
-        "침수시간"
+        "July mean temperature and monthly rainfall",
+        "Number of rainy days",
+        "Wind speed and typhoons",
+        "Duration of flooding"
       ],
-      "thresholds_text": "7월 평균 22–24 ℃, 7월 강수 200 mm 이상, 풍속 15 m/s 이상, 침수 12 h 8.8%·48 h 72.7% ([NCPMS](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744), 국내). 25–34 ℃, RH 70% 초과 ([EPPO](https://gd.eppo.int/taxon/XANTOR/datasheet), 해외)",
+      "thresholds_text": "July mean 22–24 C, July rainfall at least 200 mm, wind at least 15 m/s; flooding 12 h: 8.8%, 48 h: 72.7% (Korean). 25–34 C and RH above 70% (international). Sources: [NCPMS](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744); [EPPO](https://gd.eppo.int/taxon/XANTOR/datasheet)",
       "threshold_sources": [
         {
           "label": "NCPMS",
           "url": "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000744",
-          "origin": "국내"
+          "origin": "Korea"
         },
         {
           "label": "EPPO",
           "url": "https://gd.eppo.int/taxon/XANTOR/datasheet",
-          "origin": "해외"
+          "origin": "International"
         }
       ],
       "required_inputs": [
-        "침수·태풍 날짜",
-        "침수 시간",
-        "지역"
+        "Flooding and typhoon dates",
+        "Flooding duration",
+        "Region"
       ],
-      "evidence_summary": "사건 창 추론형(근거형에 가까움), 월 기준 근거형",
+      "evidence_summary": "Event window inferred (close to source-based); monthly criterion source-based",
       "windows": [
         {
           "window_id": "04-1",
-          "applies_to": "침수·태풍 사건",
+          "applies_to": "Flooding/typhoon event",
           "anchor": "D",
           "start": -21,
           "end": -7,
@@ -332,13 +332,13 @@
           "unit": "days",
           "resolution": "hourly",
           "core": true,
-          "evidence_type": "추론형",
-          "matrix_text": "사건 창 D-21~D-7",
-          "note": "보고서 표기: 추론형(근거형에 가까움)"
+          "evidence_type": "inferred",
+          "matrix_text": "Event window D-21 to D-7",
+          "note": "Report label: inferred, close to source-based"
         },
         {
           "window_id": "04-2",
-          "applies_to": "계절 기상(7월 기온·강수)",
+          "applies_to": "Seasonal weather: July temperature and rainfall",
           "anchor": "season",
           "start": "07-01",
           "end": "08-31",
@@ -346,41 +346,41 @@
           "unit": "calendar",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "근거형",
-          "matrix_text": "계절 창 7월 1일~8월 하순",
-          "note": "NCPMS: 7월 평균기온·7월 강수량, 7월 하순~8월 하순 강우"
+          "evidence_type": "source_based",
+          "matrix_text": "Seasonal window July 1 through late August",
+          "note": "NCPMS: July mean temperature/rainfall and rainfall from late July to late August"
         }
       ]
     },
     {
       "no": 5,
-      "crop": "벼",
-      "disease_ko": "벼 세균성 줄무늬병 (Xoc)",
+      "crop": "Rice",
+      "disease_ko": "Bacterial leaf streak of rice (Xoc)",
       "disease_en": "Bacterial leaf streak (Xoc)",
       "scientific_name": "Xanthomonas oryzae pv. oryzicola",
       "korea_record_unconfirmed": true,
       "key_weather_variables": [
-        "기온",
-        "지속 강우",
-        "폭우·강풍"
+        "Temperature",
+        "Persistent rainfall",
+        "Heavy rain and strong wind"
       ],
-      "thresholds_text": "26–32 ℃ 진전, 22 ℃ 미만 억제 ([EPPO XANTTO](https://gd.eppo.int/taxon/XANTTO/datasheet), 해외)",
+      "thresholds_text": "Progression at 26–32 C, suppressed below 22 C (international source). Sources: [EPPO XANTTO](https://gd.eppo.int/taxon/XANTTO/datasheet)",
       "threshold_sources": [
         {
           "label": "EPPO XANTTO",
           "url": "https://gd.eppo.int/taxon/XANTTO/datasheet",
-          "origin": "해외"
+          "origin": "International"
         }
       ],
       "required_inputs": [
-        "폭우·강풍 날짜",
-        "종자 출처"
+        "Heavy-rain and strong-wind dates",
+        "Seed origin"
       ],
-      "evidence_summary": "추론형",
+      "evidence_summary": "inferred",
       "windows": [
         {
           "window_id": "05-1",
-          "applies_to": "잎 병반",
+          "applies_to": "Leaf lesions",
           "anchor": "D",
           "start": -10,
           "end": -3,
@@ -388,43 +388,43 @@
           "unit": "days",
           "resolution": "hourly",
           "core": true,
-          "evidence_type": "추론형",
+          "evidence_type": "inferred",
           "matrix_text": "D-10~D-3",
-          "note": "국내 미기록"
+          "note": "Korean occurrence unconfirmed"
         }
       ]
     },
     {
       "no": 6,
-      "crop": "벼",
-      "disease_ko": "벼 키다리병",
+      "crop": "Rice",
+      "disease_ko": "Rice bakanae",
       "disease_en": "Bakanae",
       "scientific_name": "Fusarium fujikuroi species complex",
       "korea_record_unconfirmed": false,
       "key_weather_variables": [
-        "육묘상 온도",
-        "개화기 밤·약한 비",
-        "포자 형성 온도"
+        "Nursery temperature",
+        "Flowering nights and light rain",
+        "Sporulation temperature"
       ],
-      "thresholds_text": "육묘 35 ℃ 최적, 20 ℃ 무증상, 포자 형성 24–32 ℃ ([NCPMS](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752), 국내)",
+      "thresholds_text": "Nursery optimum 35 C, asymptomatic at 20 C, sporulation at 24–32 C (NCPMS, Korea). Sources: [NCPMS](https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752)",
       "threshold_sources": [
         {
           "label": "NCPMS",
           "url": "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000752",
-          "origin": "국내"
+          "origin": "Korea"
         }
       ],
       "required_inputs": [
-        "파종일",
-        "육묘 방식",
-        "종자 소독",
-        "종자 출처"
+        "Sowing date",
+        "Nursery method",
+        "Seed disinfection",
+        "Seed origin"
       ],
-      "evidence_summary": "육묘 근거형, H+7 길이 추론형",
+      "evidence_summary": "Nursery criterion source-based; H+7 duration inferred",
       "windows": [
         {
           "window_id": "06-1",
-          "applies_to": "육묘 증상",
+          "applies_to": "Nursery symptoms",
           "anchor": "sowing",
           "start": 0,
           "end": null,
@@ -432,13 +432,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "근거형",
-          "matrix_text": "육묘 증상: 파종일~D",
-          "note": "육묘상 온도(35 ℃ 최적, 20 ℃ 무증상)"
+          "evidence_type": "source_based",
+          "matrix_text": "Nursery symptoms: sowing date through D",
+          "note": "Nursery temperature: optimum 35 C, asymptomatic at 20 C"
         },
         {
           "window_id": "06-2",
-          "applies_to": "다음 해 종자 위험",
+          "applies_to": "Seed risk in the following year",
           "anchor": "prev_seed_crop",
           "start": 0,
           "end": 7,
@@ -446,46 +446,46 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "채종포 H~H+7",
-          "note": "채종포 출수일 기준. 조건 근거형, H+7 길이 추론형"
+          "evidence_type": "inferred",
+          "matrix_text": "Seed-production field H to H+7",
+          "note": "Seed-production heading-date anchor; conditions source-based, H+7 duration inferred"
         }
       ]
     },
     {
       "no": 7,
-      "crop": "벼",
-      "disease_ko": "벼 이삭누룩병",
+      "crop": "Rice",
+      "disease_ko": "Rice false smut",
       "disease_en": "False smut",
       "scientific_name": "Ustilaginoidea virens",
       "korea_record_unconfirmed": false,
       "key_weather_variables": [
-        "수잉기 강우일수",
-        "일조",
-        "기온"
+        "Rainy days during booting",
+        "Sunshine",
+        "Temperature"
       ],
-      "thresholds_text": "출수 전후 잦은 비, 25 ℃ 내외, 일조 부족 ([농진청 2024-08-01](https://www.rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000797460), 국내). 출수 14–10일 전 강우 ([JA全農いばらき 2714](https://www.zennoh.or.jp/ib/contents/make/einou/2714.pdf), 해외)",
+      "thresholds_text": "Frequent rain around heading, about 25 C and limited sunshine (RDA 2024-08-01, Korea). Rainfall 14–10 days before heading (JA Zen-Noh Ibaraki, international). Sources: [RDA 2024-08-01](https://www.rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000797460); [JA Zen-Noh Ibaraki 2714](https://www.zennoh.or.jp/ib/contents/make/einou/2714.pdf)",
       "threshold_sources": [
         {
-          "label": "농진청 2024-08-01",
+          "label": "RDA 2024-08-01",
           "url": "https://www.rda.go.kr/board/board.do?mode=view&prgId=day_farmprmninfoEntry&dataNo=100000797460",
-          "origin": "국내"
+          "origin": "Korea"
         },
         {
-          "label": "JA全農いばらき 2714",
+          "label": "JA Zen-Noh Ibaraki 2714",
           "url": "https://www.zennoh.or.jp/ib/contents/make/einou/2714.pdf",
-          "origin": "해외"
+          "origin": "International"
         }
       ],
       "required_inputs": [
-        "출수일",
-        "질소 시비"
+        "Heading date",
+        "Nitrogen application"
       ],
-      "evidence_summary": "핵심 근거형, 확장 추론형",
+      "evidence_summary": "Core window source-based; extension inferred",
       "windows": [
         {
           "window_id": "07-1",
-          "applies_to": "출수 전 강우(확장)",
+          "applies_to": "Preheading rainfall: extended window",
           "anchor": "heading",
           "start": -21,
           "end": 0,
@@ -493,13 +493,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
+          "evidence_type": "inferred",
           "matrix_text": "H-21~H",
           "note": null
         },
         {
           "window_id": "07-2",
-          "applies_to": "출수 전 강우(핵심)",
+          "applies_to": "Preheading rainfall: core window",
           "anchor": "heading",
           "start": -14,
           "end": -10,
@@ -507,13 +507,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "근거형",
-          "matrix_text": "핵심 H-14~H-10",
-          "note": "JA全農いばらき: 출수 14–10일 전 강우"
+          "evidence_type": "source_based",
+          "matrix_text": "Core window H-14 to H-10",
+          "note": "JA Zen-Noh Ibaraki: rainfall 14–10 days before heading"
         },
         {
           "window_id": "07-3",
-          "applies_to": "출수 후(국내 서술 반영)",
+          "applies_to": "After heading: Korean description",
           "anchor": "heading",
           "start": 0,
           "end": 7,
@@ -521,45 +521,45 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "국내 서술 반영 시 H+7까지",
+          "evidence_type": "inferred",
+          "matrix_text": "Extend through H+7 when applying the Korean description",
           "note": null
         }
       ]
     },
     {
       "no": 8,
-      "crop": "벼",
-      "disease_ko": "벼 세균벼알마름병",
+      "crop": "Rice",
+      "disease_ko": "Bacterial grain rot of rice",
       "disease_en": "Bacterial grain rot (bacterial panicle blight)",
       "scientific_name": "Burkholderia glumae, B. plantarii",
       "korea_record_unconfirmed": false,
       "key_weather_variables": [
-        "출수기 전후 최저·최고기온",
-        "강우",
-        "습윤 지속"
+        "Minimum and maximum temperature around heading",
+        "Rainfall",
+        "Wetness duration"
       ],
-      "thresholds_text": "출수기 전후 최저 24 ℃ 이상 ([기후현](https://www.pref.gifu.lg.jp/uploaded/attachment/302902.pdf), 해외). 30 ℃ 이상 지속 또는 30 mm 내외 잦은 비 ([농진청 2015-07-29](https://korea.kr/news/pressReleaseView.do?newsId=156066598), 국내)",
+      "thresholds_text": "Minimum at least 24 C around heading (Gifu, international). Sustained temperatures at least 30 C or frequent rainfall around 30 mm (RDA 2015-07-29, Korea). Sources: [Gifu Prefecture](https://www.pref.gifu.lg.jp/uploaded/attachment/302902.pdf); [RDA 2015-07-29](https://korea.kr/news/pressReleaseView.do?newsId=156066598)",
       "threshold_sources": [
         {
-          "label": "기후현",
+          "label": "Gifu Prefecture",
           "url": "https://www.pref.gifu.lg.jp/uploaded/attachment/302902.pdf",
-          "origin": "해외"
+          "origin": "International"
         },
         {
-          "label": "농진청 2015-07-29",
+          "label": "RDA 2015-07-29",
           "url": "https://korea.kr/news/pressReleaseView.do?newsId=156066598",
-          "origin": "국내"
+          "origin": "Korea"
         }
       ],
       "required_inputs": [
-        "출수일(개화일)"
+        "Heading/flowering date"
       ],
-      "evidence_summary": "핵심 근거형, H-3과 D 환산 추론형",
+      "evidence_summary": "Core window source-based; H-3 and D-relative conversion inferred",
       "windows": [
         {
           "window_id": "08-1",
-          "applies_to": "출수기 전후",
+          "applies_to": "Around heading",
           "anchor": "heading",
           "start": -3,
           "end": 10,
@@ -567,13 +567,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
+          "evidence_type": "inferred",
           "matrix_text": "H-3~H+10",
-          "note": "H-3 부분 추론형"
+          "note": "H-3 component inferred"
         },
         {
           "window_id": "08-2",
-          "applies_to": "출수기 전후(핵심)",
+          "applies_to": "Around heading: core window",
           "anchor": "heading",
           "start": 2,
           "end": 7,
@@ -581,13 +581,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "근거형",
-          "matrix_text": "핵심 H+2~H+7",
-          "note": "기후현: 출수기 전후 최저기온 24 ℃ 이상"
+          "evidence_type": "source_based",
+          "matrix_text": "Core window H+2 to H+7",
+          "note": "Gifu Prefecture: minimum temperature at least 24 C around heading"
         },
         {
           "window_id": "08-3",
-          "applies_to": "관찰일 환산",
+          "applies_to": "Conversion relative to observation date",
           "anchor": "D",
           "start": -20,
           "end": -7,
@@ -595,48 +595,48 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "D 기준 D-20~D-7",
-          "note": "출수일을 모를 때의 대체 창"
+          "evidence_type": "inferred",
+          "matrix_text": "Observation-date conversion: D-20 to D-7",
+          "note": "Alternative window when heading date is unknown"
         }
       ]
     },
     {
       "no": 9,
-      "crop": "벼",
-      "disease_ko": "벼 줄무늬잎마름병 (RSV)",
+      "crop": "Rice",
+      "disease_ko": "Rice stripe (RSV)",
       "disease_en": "Rice stripe",
       "scientific_name": "Rice stripe virus, vector Laodelphax striatellus",
       "korea_record_unconfirmed": false,
       "key_weather_variables": [
-        "겨울 기온",
-        "1월 1일부터 적산온도",
-        "남서풍 비래 기류",
-        "전염 기온"
+        "Winter temperature",
+        "Accumulated temperature from January 1",
+        "Southwesterly migration airflow",
+        "Transmission temperature"
       ],
-      "thresholds_text": "전염 25–30 ℃, 15 ℃ 이하 드묾 ([정봉조 1974](https://koreascience.or.kr/article/JAKO197425720625117.pub), 국내). 애멸구 발육영점 10.2/10.7 ℃ ([Park 2011](https://koreascience.or.kr/article/JAKO201106239853568.pub?lang=ko), 국내)",
+      "thresholds_text": "Transmission at 25–30 C, rare at or below 15 C (Jung 1974, Korea). Vector developmental thresholds 10.2/10.7 C (Park 2011, Korea). Sources: [Jung Bong-jo 1974](https://koreascience.or.kr/article/JAKO197425720625117.pub); [Park 2011](https://koreascience.or.kr/article/JAKO201106239853568.pub?lang=ko)",
       "threshold_sources": [
         {
-          "label": "정봉조 1974",
+          "label": "Jung Bong-jo 1974",
           "url": "https://koreascience.or.kr/article/JAKO197425720625117.pub",
-          "origin": "국내"
+          "origin": "Korea"
         },
         {
           "label": "Park 2011",
           "url": "https://koreascience.or.kr/article/JAKO201106239853568.pub?lang=ko",
-          "origin": "국내"
+          "origin": "Korea"
         }
       ],
       "required_inputs": [
-        "이앙일",
-        "엽령",
-        "지역(서해안 여부)"
+        "Transplanting date",
+        "Leaf age",
+        "Region: whether on the west coast"
       ],
-      "evidence_summary": "단기 추론형. 1월 1일 적산·겨울 정성 근거형",
+      "evidence_summary": "Short-term inferred; January 1 accumulation and qualitative winter conditions source-based",
       "windows": [
         {
           "window_id": "09-1",
-          "applies_to": "단기(비래·전염)",
+          "applies_to": "Short-term migration and transmission",
           "anchor": "D",
           "start": -30,
           "end": -7,
@@ -644,13 +644,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "추론형",
+          "evidence_type": "inferred",
           "matrix_text": "T-30~T-7",
           "note": null
         },
         {
           "window_id": "09-2",
-          "applies_to": "단기 확장",
+          "applies_to": "Short-term extension",
           "anchor": "D",
           "start": -45,
           "end": -7,
@@ -658,13 +658,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "최대 T-45",
+          "evidence_type": "inferred",
+          "matrix_text": "As far back as T-45",
           "note": null
         },
         {
           "window_id": "09-3",
-          "applies_to": "매개충 적산온도",
+          "applies_to": "Vector accumulated temperature",
           "anchor": "jan1",
           "start": 0,
           "end": null,
@@ -672,13 +672,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "근거형",
-          "matrix_text": "1월 1일~T 적산",
-          "note": "애멸구 발육영점 10.2/10.7 ℃"
+          "evidence_type": "source_based",
+          "matrix_text": "Accumulation from January 1 to T",
+          "note": "Small brown planthopper developmental thresholds 10.2/10.7 C"
         },
         {
           "window_id": "09-4",
-          "applies_to": "월동",
+          "applies_to": "Overwintering",
           "anchor": "prev_winter",
           "start": "12-01",
           "end": "02-28",
@@ -686,13 +686,13 @@
           "unit": "calendar",
           "resolution": "monthly",
           "core": false,
-          "evidence_type": "근거형",
-          "matrix_text": "직전 12~2월",
-          "note": "정성적 근거(따뜻한 겨울 뒤 대발생)"
+          "evidence_type": "source_based",
+          "matrix_text": "Previous December–February",
+          "note": "Qualitative evidence: severe outbreaks after warm winters"
         },
         {
           "window_id": "09-5",
-          "applies_to": "전년 가을",
+          "applies_to": "Previous autumn",
           "anchor": "prev_season",
           "start": "09-01",
           "end": "10-31",
@@ -700,41 +700,41 @@
           "unit": "calendar",
           "resolution": "monthly",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "전년 9~10월",
+          "evidence_type": "inferred",
+          "matrix_text": "September–October of the previous year",
           "note": null
         }
       ]
     },
     {
       "no": 10,
-      "crop": "벼",
-      "disease_ko": "벼 오갈병 (RDV)",
+      "crop": "Rice",
+      "disease_ko": "Rice dwarf (RDV)",
       "disease_en": "Rice dwarf",
       "scientific_name": "Rice dwarf virus, vectors Nephotettix cincticeps and others",
       "korea_record_unconfirmed": false,
       "key_weather_variables": [
-        "매개충 적산온도",
-        "겨울 기온",
-        "가을 재생벼"
+        "Vector accumulated temperature",
+        "Winter temperature",
+        "Autumn ratoon rice"
       ],
-      "thresholds_text": "끝동매미충 발육영점 알 14.3 ℃, 약충 13.3 ℃, 산란 하한 16.9 ℃ ([栃木農試研報 26](https://www.agrinet.pref.tochigi.lg.jp/nousi/kenpou/kp_026/kp_026_05.pdf), 해외). 전염 온습도 미확인",
+      "thresholds_text": "Vector development thresholds: eggs 14.3 C, nymphs 13.3 C; oviposition lower limit 16.9 C (Tochigi, Japan). Transmission temperature/humidity unconfirmed. Sources: [Tochigi Agricultural Research Report 26](https://www.agrinet.pref.tochigi.lg.jp/nousi/kenpou/kp_026/kp_026_05.pdf)",
       "threshold_sources": [
         {
-          "label": "栃木農試研報 26",
+          "label": "Tochigi Agricultural Research Report 26",
           "url": "https://www.agrinet.pref.tochigi.lg.jp/nousi/kenpou/kp_026/kp_026_05.pdf",
-          "origin": "해외"
+          "origin": "International"
         }
       ],
       "required_inputs": [
-        "이앙일",
-        "재생벼 발생 여부"
+        "Transplanting date",
+        "Presence of ratoon rice"
       ],
-      "evidence_summary": "단기 추론형, 적산 방법 근거형(일본)",
+      "evidence_summary": "Short-term inferred; accumulation method source-based (Japan)",
       "windows": [
         {
           "window_id": "10-1",
-          "applies_to": "단기(전염)",
+          "applies_to": "Short-term transmission",
           "anchor": "D",
           "start": -21,
           "end": -10,
@@ -742,13 +742,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "추론형",
+          "evidence_type": "inferred",
           "matrix_text": "T-21~T-10",
           "note": null
         },
         {
           "window_id": "10-2",
-          "applies_to": "단기 확장",
+          "applies_to": "Short-term extension",
           "anchor": "D",
           "start": -45,
           "end": -10,
@@ -756,13 +756,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "최대 T-45",
+          "evidence_type": "inferred",
+          "matrix_text": "As far back as T-45",
           "note": null
         },
         {
           "window_id": "10-3",
-          "applies_to": "매개충 적산온도",
+          "applies_to": "Vector accumulated temperature",
           "anchor": "jan1",
           "start": 0,
           "end": null,
@@ -770,13 +770,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "근거형",
-          "matrix_text": "1월 1일~T 적산",
-          "note": "끝동매미충 발육영점(일본 栃木 자료)"
+          "evidence_type": "source_based",
+          "matrix_text": "Accumulation from January 1 to T",
+          "note": "Development thresholds for green rice leafhopper: Tochigi, Japan"
         },
         {
           "window_id": "10-4",
-          "applies_to": "월동",
+          "applies_to": "Overwintering",
           "anchor": "prev_winter",
           "start": "12-01",
           "end": "02-28",
@@ -784,13 +784,13 @@
           "unit": "calendar",
           "resolution": "monthly",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "직전 12~2월",
+          "evidence_type": "inferred",
+          "matrix_text": "Previous December–February",
           "note": null
         },
         {
           "window_id": "10-5",
-          "applies_to": "전년 가을(재생벼)",
+          "applies_to": "Previous autumn: ratoon rice",
           "anchor": "prev_season",
           "start": "09-01",
           "end": "11-30",
@@ -798,39 +798,39 @@
           "unit": "calendar",
           "resolution": "monthly",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "전년 9~11월",
+          "evidence_type": "inferred",
+          "matrix_text": "September–November of the previous year",
           "note": null
         }
       ]
     },
     {
       "no": 11,
-      "crop": "벼",
-      "disease_ko": "벼 udbatta",
+      "crop": "Rice",
+      "disease_ko": "Rice udbatta",
       "disease_en": "Udbatta",
       "scientific_name": "Balansia oryzae-sativae, anamorph Ephelis oryzae",
       "korea_record_unconfirmed": true,
       "key_weather_variables": [
-        "토양 온도·습도"
+        "Soil temperature and moisture"
       ],
-      "thresholds_text": "토양 약 28 ℃, 습윤 ([Vineeth 2025](https://www.uasbangalore.edu.in/wp-content/uploads/2025/09/37.pdf), 해외)",
+      "thresholds_text": "Soil about 28 C and wet conditions (Vineeth 2025, international). Sources: [Vineeth 2025](https://www.uasbangalore.edu.in/wp-content/uploads/2025/09/37.pdf)",
       "threshold_sources": [
         {
           "label": "Vineeth 2025",
           "url": "https://www.uasbangalore.edu.in/wp-content/uploads/2025/09/37.pdf",
-          "origin": "해외"
+          "origin": "International"
         }
       ],
       "required_inputs": [
-        "종자·식물 반입 이력",
-        "파종일"
+        "Seed and plant introduction history",
+        "Sowing date"
       ],
-      "evidence_summary": "추론형",
+      "evidence_summary": "inferred",
       "windows": [
         {
           "window_id": "11-1",
-          "applies_to": "파종~유수형성기",
+          "applies_to": "Sowing to panicle initiation",
           "anchor": "D",
           "start": -100,
           "end": -30,
@@ -838,13 +838,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "추론형",
-          "matrix_text": "파종~유수형성기 (약 T-100~T-30)",
-          "note": "파종일을 알면 파종일 기준으로 대체. 국내 미기록"
+          "evidence_type": "inferred",
+          "matrix_text": "Sowing to panicle initiation: approximately T-100 to T-30",
+          "note": "Use the sowing-date anchor if known. Korean occurrence unconfirmed"
         },
         {
           "window_id": "11-2",
-          "applies_to": "종자 생산 작기",
+          "applies_to": "Seed-production season",
           "anchor": "prev_seed_crop",
           "start": null,
           "end": null,
@@ -852,42 +852,42 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "종자 생산 전년 작기",
-          "note": "구간 미정"
+          "evidence_type": "inferred",
+          "matrix_text": "Previous year's seed-production season",
+          "note": "Unspecified interval"
         }
       ]
     },
     {
       "no": 12,
-      "crop": "벼",
-      "disease_ko": "벼 ufra",
+      "crop": "Rice",
+      "disease_ko": "Rice ufra",
       "disease_en": "Ufra",
       "scientific_name": "Ditylenchus angustus",
       "korea_record_unconfirmed": true,
       "key_weather_variables": [
-        "침수 수위",
+        "Floodwater level",
         "RH",
-        "기온"
+        "Temperature"
       ],
-      "thresholds_text": "27–30 ℃, RH 75% 이상 ([USDA CAPS 2016](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf), 해외)",
+      "thresholds_text": "27–30 C and RH at least 75% (international source). Sources: [USDA CAPS 2016](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf)",
       "threshold_sources": [
         {
           "label": "USDA CAPS 2016",
           "url": "https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Ditylenchus-angustus-datasheet-2016.pdf",
-          "origin": "해외"
+          "origin": "International"
         }
       ],
       "required_inputs": [
-        "침수 개시일",
-        "수심",
-        "종자 반입"
+        "Flooding onset date",
+        "Water depth",
+        "Seed introduction"
       ],
-      "evidence_summary": "단기 근거형, 중장기 추론형",
+      "evidence_summary": "Short-term source-based; medium/long-term inferred",
       "windows": [
         {
           "window_id": "12-1",
-          "applies_to": "단기(감염)",
+          "applies_to": "Short-term infection",
           "anchor": "D",
           "start": -21,
           "end": -7,
@@ -895,13 +895,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "근거형",
+          "evidence_type": "source_based",
           "matrix_text": "T-21~T-7",
-          "note": "국내 미기록·검역"
+          "note": "Korean occurrence unconfirmed; quarantine relevance"
         },
         {
           "window_id": "12-2",
-          "applies_to": "침수 경과",
+          "applies_to": "Flooding history",
           "anchor": "D",
           "start": -60,
           "end": 0,
@@ -909,13 +909,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "T-60~T 침수 경과",
+          "evidence_type": "inferred",
+          "matrix_text": "Flooding history T-60 to T",
           "note": null
         },
         {
           "window_id": "12-3",
-          "applies_to": "생존(전작)",
+          "applies_to": "Survival in the previous crop",
           "anchor": "prev_harvest",
           "start": 0,
           "end": null,
@@ -923,46 +923,46 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "직전 수확기 이후",
-          "note": "건조 조직에서 7–15개월 생존"
+          "evidence_type": "inferred",
+          "matrix_text": "Since the previous harvest",
+          "note": "Survival in dry tissue for 7–15 months"
         }
       ]
     },
     {
       "no": 13,
-      "crop": "옥수수",
-      "disease_ko": "옥수수 북방 잎마름병",
+      "crop": "Maize",
+      "disease_ko": "Maize northern corn leaf blight",
       "disease_en": "Northern corn leaf blight",
       "scientific_name": "Exserohilum turcicum",
       "korea_record_unconfirmed": false,
       "key_weather_variables": [
-        "엽면습윤",
-        "이슬 밤",
-        "기온"
+        "Leaf wetness",
+        "Dewy nights",
+        "Temperature"
       ],
-      "thresholds_text": "18–27 ℃, 잎 젖음 6 h ([CPN](https://cropprotectionnetwork.org/publications/an-overview-of-northern-corn-leaf-blight), 해외). 포자 형성 이슬 14 h ([Levy & Cohen 1992](https://consensus.app/papers/details/8f2c95d6defa54869526ee51ca3be04b/), 해외)",
+      "thresholds_text": "18–27 C and 6 h leaf wetness; 14 h dew for sporulation (international sources). Sources: [CPN](https://cropprotectionnetwork.org/publications/an-overview-of-northern-corn-leaf-blight); [Levy & Cohen 1992](https://consensus.app/papers/details/8f2c95d6defa54869526ee51ca3be04b/)",
       "threshold_sources": [
         {
           "label": "CPN",
           "url": "https://cropprotectionnetwork.org/publications/an-overview-of-northern-corn-leaf-blight",
-          "origin": "해외"
+          "origin": "International"
         },
         {
           "label": "Levy & Cohen 1992",
           "url": "https://consensus.app/papers/details/8f2c95d6defa54869526ee51ca3be04b/",
-          "origin": "해외"
+          "origin": "International"
         }
       ],
       "required_inputs": [
-        "생육단계",
-        "연작·잔재"
+        "Growth stage",
+        "Continuous cropping and residue"
       ],
-      "evidence_summary": "추론형",
+      "evidence_summary": "inferred",
       "windows": [
         {
           "window_id": "13-1",
-          "applies_to": "감염",
+          "applies_to": "Infection",
           "anchor": "D",
           "start": -14,
           "end": -5,
@@ -970,13 +970,13 @@
           "unit": "days",
           "resolution": "hourly",
           "core": true,
-          "evidence_type": "추론형",
+          "evidence_type": "inferred",
           "matrix_text": "D-14~D-5",
           "note": null
         },
         {
           "window_id": "13-2",
-          "applies_to": "2차 전파",
+          "applies_to": "Secondary spread",
           "anchor": "D",
           "start": -3,
           "end": 0,
@@ -984,40 +984,40 @@
           "unit": "days",
           "resolution": "hourly",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "2차 전파 D-3~D0",
-          "note": "포자 형성 이슬 14 h"
+          "evidence_type": "inferred",
+          "matrix_text": "Secondary spread D-3 to D0",
+          "note": "14 h dew for sporulation"
         }
       ]
     },
     {
       "no": 14,
-      "crop": "옥수수",
-      "disease_ko": "옥수수 남방 잎마름병",
+      "crop": "Maize",
+      "disease_ko": "Maize southern corn leaf blight",
       "disease_en": "Southern corn leaf blight",
       "scientific_name": "Bipolaris maydis",
       "korea_record_unconfirmed": false,
       "key_weather_variables": [
-        "기온",
-        "습윤"
+        "Temperature",
+        "Wetness"
       ],
-      "thresholds_text": "20–30 ℃ 고온다습, 60–72 h 발병 ([농사로](https://www.nongsaro.go.kr/portal/ps/pss/pssa/sicknsSearchDtl.ps?pageIndex=1&pageSize=10&sicknsCode=D00001196&menuId=PS00202), 국내)",
+      "thresholds_text": "Warm humid conditions at 20–30 C; disease develops in 60–72 h (Korean source). Sources: [Nongsaro](https://www.nongsaro.go.kr/portal/ps/pss/pssa/sicknsSearchDtl.ps?pageIndex=1&pageSize=10&sicknsCode=D00001196&menuId=PS00202)",
       "threshold_sources": [
         {
-          "label": "농사로",
+          "label": "Nongsaro",
           "url": "https://www.nongsaro.go.kr/portal/ps/pss/pssa/sicknsSearchDtl.ps?pageIndex=1&pageSize=10&sicknsCode=D00001196&menuId=PS00202",
-          "origin": "국내"
+          "origin": "Korea"
         }
       ],
       "required_inputs": [
-        "파종일",
-        "잔재"
+        "Sowing date",
+        "Residue"
       ],
-      "evidence_summary": "추론형",
+      "evidence_summary": "inferred",
       "windows": [
         {
           "window_id": "14-1",
-          "applies_to": "감염",
+          "applies_to": "Infection",
           "anchor": "D",
           "start": -6,
           "end": -2,
@@ -1025,13 +1025,13 @@
           "unit": "days",
           "resolution": "hourly",
           "core": false,
-          "evidence_type": "추론형",
+          "evidence_type": "inferred",
           "matrix_text": "D-6~D-2",
           "note": null
         },
         {
           "window_id": "14-2",
-          "applies_to": "감염(핵심)",
+          "applies_to": "Infection: core window",
           "anchor": "D",
           "start": -4,
           "end": -2,
@@ -1039,48 +1039,48 @@
           "unit": "days",
           "resolution": "hourly",
           "core": true,
-          "evidence_type": "추론형",
-          "matrix_text": "특히 D-4~D-2",
-          "note": "농사로: 60–72시간 발병"
+          "evidence_type": "inferred",
+          "matrix_text": "Especially D-4 to D-2",
+          "note": "Nongsaro: disease develops in 60–72 hours"
         }
       ]
     },
     {
       "no": 15,
-      "crop": "옥수수",
-      "disease_ko": "옥수수 회색 잎반점병",
+      "crop": "Maize",
+      "disease_ko": "Maize gray leaf spot",
       "disease_en": "Gray leaf spot",
       "scientific_name": "Cercospora zeae-maydis, C. zeina",
       "korea_record_unconfirmed": true,
       "key_weather_variables": [
-        "RH ≥90% 시간",
-        "22–30 ℃ 시간",
-        "야간기온",
-        "잔재"
+        "Hours at RH at least 90%",
+        "Hours at 22–30 C",
+        "Night temperature",
+        "Residue"
       ],
-      "thresholds_text": "RH 90% 이상 12 h 넘게 ([CPN](https://cropprotectionnetwork.org/encyclopedia/gray-leaf-spot-of-corn), 해외). V4–V12 누적 ([Paul & Munkvold 2005](https://consensus.app/papers/details/dcb59be91bc05466ae1123e573e83cb1/), 해외)",
+      "thresholds_text": "RH at least 90% for over 12 h; cumulative V4–V12 exposure (international sources). Sources: [CPN](https://cropprotectionnetwork.org/encyclopedia/gray-leaf-spot-of-corn); [Paul & Munkvold 2005](https://consensus.app/papers/details/dcb59be91bc05466ae1123e573e83cb1/)",
       "threshold_sources": [
         {
           "label": "CPN",
           "url": "https://cropprotectionnetwork.org/encyclopedia/gray-leaf-spot-of-corn",
-          "origin": "해외"
+          "origin": "International"
         },
         {
           "label": "Paul & Munkvold 2005",
           "url": "https://consensus.app/papers/details/dcb59be91bc05466ae1123e573e83cb1/",
-          "origin": "해외"
+          "origin": "International"
         }
       ],
       "required_inputs": [
-        "파종일",
-        "생육단계",
-        "잔재 피복"
+        "Sowing date",
+        "Growth stage",
+        "Residue cover"
       ],
-      "evidence_summary": "시즌 창 근거형, D 창 추론형",
+      "evidence_summary": "Seasonal window source-based; D-relative window inferred",
       "windows": [
         {
           "window_id": "15-1",
-          "applies_to": "퇴록 병반",
+          "applies_to": "Chlorotic lesions",
           "anchor": "D",
           "start": -12,
           "end": -8,
@@ -1088,13 +1088,13 @@
           "unit": "days",
           "resolution": "hourly",
           "core": true,
-          "evidence_type": "추론형",
-          "matrix_text": "퇴록 D-12~D-8",
-          "note": "국내 미기록"
+          "evidence_type": "inferred",
+          "matrix_text": "Chlorosis D-12 to D-8",
+          "note": "Korean occurrence unconfirmed"
         },
         {
           "window_id": "15-2",
-          "applies_to": "성숙 병반",
+          "applies_to": "Mature lesions",
           "anchor": "D",
           "start": -28,
           "end": -14,
@@ -1102,13 +1102,13 @@
           "unit": "days",
           "resolution": "hourly",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "성숙 병반 D-28~D-14",
+          "evidence_type": "inferred",
+          "matrix_text": "Mature lesions D-28 to D-14",
           "note": null
         },
         {
           "window_id": "15-3",
-          "applies_to": "시즌 위험",
+          "applies_to": "Seasonal risk",
           "anchor": "season",
           "start": "V4",
           "end": "V12",
@@ -1116,41 +1116,41 @@
           "unit": "growth_stage",
           "resolution": "hourly",
           "core": true,
-          "evidence_type": "근거형",
-          "matrix_text": "시즌 위험 V4~V12 누적",
-          "note": "Paul & Munkvold 2005: 22–30 ℃ 시간, 야간 RH ≥90% 시간"
+          "evidence_type": "source_based",
+          "matrix_text": "Seasonal risk accumulated over V4–V12",
+          "note": "Paul and Munkvold 2005: hours at 22–30 C and nighttime hours at RH at least 90%"
         }
       ]
     },
     {
       "no": 16,
-      "crop": "옥수수",
-      "disease_ko": "옥수수 녹병",
+      "crop": "Maize",
+      "disease_ko": "Maize common rust",
       "disease_en": "Common rust",
       "scientific_name": "Puccinia sorghi",
       "korea_record_unconfirmed": false,
       "key_weather_variables": [
-        "잎 젖음",
-        "낮·밤 기온",
+        "Leaf wetness",
+        "Daytime and nighttime temperature",
         "RH",
-        "바람 유입"
+        "Windborne introduction"
       ],
-      "thresholds_text": "젖음 3 h 이상, 낮 16–25 ℃, 밤 18–21 ℃ ([Cornell](https://www.vegetables.cornell.edu/pest-management/disease-factsheets/common-rust-of-sweet-corn), 해외)",
+      "thresholds_text": "At least 3 h wetness; daytime 16–25 C, nighttime 18–21 C (Cornell, international). Sources: [Cornell](https://www.vegetables.cornell.edu/pest-management/disease-factsheets/common-rust-of-sweet-corn)",
       "threshold_sources": [
         {
           "label": "Cornell",
           "url": "https://www.vegetables.cornell.edu/pest-management/disease-factsheets/common-rust-of-sweet-corn",
-          "origin": "해외"
+          "origin": "International"
         }
       ],
       "required_inputs": [
-        "인근 발생 보고"
+        "Nearby occurrence reports"
       ],
-      "evidence_summary": "추론형",
+      "evidence_summary": "inferred",
       "windows": [
         {
           "window_id": "16-1",
-          "applies_to": "감염",
+          "applies_to": "Infection",
           "anchor": "D",
           "start": -14,
           "end": -7,
@@ -1158,13 +1158,13 @@
           "unit": "days",
           "resolution": "hourly",
           "core": true,
-          "evidence_type": "추론형",
+          "evidence_type": "inferred",
           "matrix_text": "D-14~D-7",
           "note": null
         },
         {
           "window_id": "16-2",
-          "applies_to": "포자 유입",
+          "applies_to": "Spore introduction",
           "anchor": "regional_first_report",
           "start": -21,
           "end": -14,
@@ -1172,46 +1172,46 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "유입은 지역 첫 보고 2~3주 전",
+          "evidence_type": "inferred",
+          "matrix_text": "Introduction two to three weeks before the regional first report",
           "note": null
         }
       ]
     },
     {
       "no": 17,
-      "crop": "옥수수",
-      "disease_ko": "옥수수 남방녹병",
+      "crop": "Maize",
+      "disease_ko": "Maize southern rust",
       "disease_en": "Southern rust",
       "scientific_name": "Puccinia polysora",
       "korea_record_unconfirmed": false,
       "key_weather_variables": [
-        "이슬 지속시간",
-        "야간기온",
-        "기온"
+        "Dew duration",
+        "Night temperature",
+        "Temperature"
       ],
-      "thresholds_text": "26 ℃ 이슬 16 h 최적, 하한 16–18 ℃ ([Hollier & King 1985](https://consensus.app/papers/details/44f387775075552bb3ee61c7006bea08/), 해외). 국내 분리균 발아 25 ℃ 최적, 32 ℃ 초과 급감 ([Lee 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12337728/), 국내)",
+      "thresholds_text": "Optimum 26 C and 16 h dew; lower limit 16–18 C (international). Korean isolates germinate best at 25 C, declining sharply above 32 C. Sources: [Hollier & King 1985](https://consensus.app/papers/details/44f387775075552bb3ee61c7006bea08/); [Lee 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12337728/)",
       "threshold_sources": [
         {
           "label": "Hollier & King 1985",
           "url": "https://consensus.app/papers/details/44f387775075552bb3ee61c7006bea08/",
-          "origin": "해외"
+          "origin": "International"
         },
         {
           "label": "Lee 2025",
           "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12337728/",
-          "origin": "국내"
+          "origin": "Korea"
         }
       ],
       "required_inputs": [
-        "생육단계(VT 이후)",
-        "인근 발생"
+        "Growth stage: after VT",
+        "Nearby occurrence"
       ],
-      "evidence_summary": "D 창 추론형, 주 단위 지수 근거형(중국)",
+      "evidence_summary": "D-relative window inferred; weekly index source-based (China)",
       "windows": [
         {
           "window_id": "17-1",
-          "applies_to": "감염",
+          "applies_to": "Infection",
           "anchor": "D",
           "start": -10,
           "end": -3,
@@ -1219,13 +1219,13 @@
           "unit": "days",
           "resolution": "hourly",
           "core": true,
-          "evidence_type": "추론형",
+          "evidence_type": "inferred",
           "matrix_text": "D-10~D-3",
           "note": null
         },
         {
           "window_id": "17-2",
-          "applies_to": "국내 감염기",
+          "applies_to": "Infection period reported in Korea",
           "anchor": "season",
           "start": "08-21",
           "end": "09-30",
@@ -1233,46 +1233,46 @@
           "unit": "calendar",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "국내 감염기 8월 하순~9월",
-          "note": "Lee 2025 채집 시기(9~10월)에서 역산"
+          "evidence_type": "inferred",
+          "matrix_text": "Korean infection period: late August–September",
+          "note": "Back-calculated from September–October collection dates in Lee 2025"
         }
       ]
     },
     {
       "no": 18,
-      "crop": "옥수수",
-      "disease_ko": "옥수수 깜부기병",
+      "crop": "Maize",
+      "disease_ko": "Maize common smut",
       "disease_en": "Common smut",
       "scientific_name": "Ustilago maydis",
       "korea_record_unconfirmed": false,
       "key_weather_variables": [
-        "기온",
-        "가뭄 후 강우",
-        "우박·강풍 상처"
+        "Temperature",
+        "Rainfall following drought",
+        "Hail and strong-wind wounds"
       ],
-      "thresholds_text": "생육 초기 26–34 ℃, 적은 강우 ([Illinois RPD 203](http://ipm.illinois.edu/diseases/series200/rpd203/index.html), 해외). 잠복 7–21일 ([농사로](https://www.nongsaro.go.kr/portal/ps/pss/pssa/sicknsSearchDtl.ps?menuId=PS00202&sKidofcomdtyTabCode=FC&sKidofcomdtyCode=FC040401&sicknsCode=D00001177), 국내)",
+      "thresholds_text": "Early growth at 26–34 C with little rainfall (international). Incubation 7–21 days (Korean source). Sources: [Illinois RPD 203](http://ipm.illinois.edu/diseases/series200/rpd203/index.html); [Nongsaro](https://www.nongsaro.go.kr/portal/ps/pss/pssa/sicknsSearchDtl.ps?menuId=PS00202&sKidofcomdtyTabCode=FC&sKidofcomdtyCode=FC040401&sicknsCode=D00001177)",
       "threshold_sources": [
         {
           "label": "Illinois RPD 203",
           "url": "http://ipm.illinois.edu/diseases/series200/rpd203/index.html",
-          "origin": "해외"
+          "origin": "International"
         },
         {
-          "label": "농사로",
+          "label": "Nongsaro",
           "url": "https://www.nongsaro.go.kr/portal/ps/pss/pssa/sicknsSearchDtl.ps?menuId=PS00202&sKidofcomdtyTabCode=FC&sKidofcomdtyCode=FC040401&sicknsCode=D00001177",
-          "origin": "국내"
+          "origin": "Korea"
         }
       ],
       "required_inputs": [
-        "출사일",
-        "우박·강풍 날짜"
+        "Silking date",
+        "Hail and strong-wind dates"
       ],
-      "evidence_summary": "감수성 창 근거형, 출사 전 7일 추론형",
+      "evidence_summary": "Susceptibility window source-based; seven days before silking inferred",
       "windows": [
         {
           "window_id": "18-1",
-          "applies_to": "이삭 혹(감수성)",
+          "applies_to": "Ear galls: susceptibility",
           "anchor": "silking",
           "start": 0,
           "end": 14,
@@ -1280,13 +1280,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "근거형",
-          "matrix_text": "이삭 혹: R1-7~R1+14",
-          "note": "du Toit & Pataky 1999: 출사~8–14일"
+          "evidence_type": "source_based",
+          "matrix_text": "Ear galls: R1-7 to R1+14",
+          "note": "du Toit and Pataky 1999: silking through 8–14 days afterward"
         },
         {
           "window_id": "18-2",
-          "applies_to": "이삭 혹(출사 전)",
+          "applies_to": "Ear galls: before silking",
           "anchor": "silking",
           "start": -7,
           "end": -1,
@@ -1294,13 +1294,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "출사 전 7일 추론형",
+          "evidence_type": "inferred",
+          "matrix_text": "Seven days before silking inferred",
           "note": null
         },
         {
           "window_id": "18-3",
-          "applies_to": "잎·줄기 혹(상처 사건)",
+          "applies_to": "Leaf/stem galls: wounding event",
           "anchor": "D",
           "start": -21,
           "end": -7,
@@ -1308,45 +1308,45 @@
           "unit": "days",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "추론형",
-          "matrix_text": "잎·줄기 혹: D-21~D-7 상처 사건",
-          "note": "우박·강풍 날짜. Rutgers 10일/3주에서 역산"
+          "evidence_type": "inferred",
+          "matrix_text": "Leaf/stem galls: wounding event D-21 to D-7",
+          "note": "Hail/strong-wind dates; back-calculated from Rutgers 10-day/three-week descriptions"
         }
       ]
     },
     {
       "no": 19,
-      "crop": "옥수수",
-      "disease_ko": "옥수수 head smut",
+      "crop": "Maize",
+      "disease_ko": "Maize head smut",
       "disease_en": "Head smut",
       "scientific_name": "Sporisorium reilianum f. sp. zeae",
       "korea_record_unconfirmed": true,
       "key_weather_variables": [
-        "토양온도",
-        "토양수분"
+        "Soil temperature",
+        "Soil moisture"
       ],
-      "thresholds_text": "토양 15 ℃에서도 감염, 20–30 ℃ 쉽게 감염 ([PNW](https://pnwhandbooks.org/node/2548), 해외). 토양수분 15–25% ([Illinois RPD 203](http://ipm.illinois.edu/diseases/series200/rpd203/index.html), 해외)",
+      "thresholds_text": "Infection possible in soil at 15 C, readily at 20–30 C (PNW). Soil moisture 15–25% (Illinois, international). Sources: [PNW](https://pnwhandbooks.org/node/2548); [Illinois RPD 203](http://ipm.illinois.edu/diseases/series200/rpd203/index.html)",
       "threshold_sources": [
         {
           "label": "PNW",
           "url": "https://pnwhandbooks.org/node/2548",
-          "origin": "해외"
+          "origin": "International"
         },
         {
           "label": "Illinois RPD 203",
           "url": "http://ipm.illinois.edu/diseases/series200/rpd203/index.html",
-          "origin": "해외"
+          "origin": "International"
         }
       ],
       "required_inputs": [
-        "파종일",
-        "포장 발생 이력 3~7년"
+        "Sowing date",
+        "Field occurrence history over three to seven years"
       ],
-      "evidence_summary": "추론형",
+      "evidence_summary": "inferred",
       "windows": [
         {
           "window_id": "19-1",
-          "applies_to": "유묘 감염",
+          "applies_to": "Seedling infection",
           "anchor": "sowing",
           "start": 0,
           "end": 42,
@@ -1354,49 +1354,49 @@
           "unit": "days",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "추론형",
-          "matrix_text": "파종일~파종 후 약 6주",
-          "note": "토양온도·토양수분. 국내 미기록"
+          "evidence_type": "inferred",
+          "matrix_text": "Sowing to approximately six weeks afterward",
+          "note": "Soil temperature/moisture. Korean occurrence unconfirmed"
         }
       ]
     },
     {
       "no": 20,
-      "crop": "옥수수",
-      "disease_ko": "옥수수 푸사리움 이삭썩음병",
+      "crop": "Maize",
+      "disease_ko": "Maize Fusarium ear rot",
       "disease_en": "Fusarium ear rot",
       "scientific_name": "Fusarium verticillioides and other FFSC species",
       "korea_record_unconfirmed": false,
       "key_weather_variables": [
-        "출사기 고온·가뭄",
-        "수확 전 습윤",
-        "곡립 수분",
-        "곤충 상처"
+        "Hot, dry conditions at silking",
+        "Preharvest wetness",
+        "Grain moisture",
+        "Insect wounds"
       ],
-      "thresholds_text": "25 ℃ 초과와 수확 전 습윤, fumonisin 최적 약 24 ℃ ([UT Crops](https://guide.utcrops.com/corn/corn-ear-rots/fusarium-ear-rot/), 해외). 따뜻하고 약간 건조 ([농사로](https://www.nongsaro.go.kr/portal/ps/pss/pssa/sicknsSearchDtl.ps?menuId=PS00202&sicknsCode=D00001173), 국내)",
+      "thresholds_text": "Above 25 C and preharvest wetness; fumonisin optimum about 24 C (international). Warm, slightly dry conditions (Korean source). Sources: [UT Crops](https://guide.utcrops.com/corn/corn-ear-rots/fusarium-ear-rot/); [Nongsaro](https://www.nongsaro.go.kr/portal/ps/pss/pssa/sicknsSearchDtl.ps?menuId=PS00202&sicknsCode=D00001173)",
       "threshold_sources": [
         {
           "label": "UT Crops",
           "url": "https://guide.utcrops.com/corn/corn-ear-rots/fusarium-ear-rot/",
-          "origin": "해외"
+          "origin": "International"
         },
         {
-          "label": "농사로",
+          "label": "Nongsaro",
           "url": "https://www.nongsaro.go.kr/portal/ps/pss/pssa/sicknsSearchDtl.ps?menuId=PS00202&sicknsCode=D00001173",
-          "origin": "국내"
+          "origin": "Korea"
         }
       ],
       "required_inputs": [
-        "출사일",
-        "수확일",
-        "해충 피해",
-        "품종·Bt"
+        "Silking date",
+        "Harvest date",
+        "Pest damage",
+        "Cultivar and Bt status"
       ],
-      "evidence_summary": "앵커 근거형, 출사 전 14일 추론형",
+      "evidence_summary": "Anchor source-based; 14 days before silking inferred",
       "windows": [
         {
           "window_id": "20-1",
-          "applies_to": "출사~수확",
+          "applies_to": "Silking to harvest",
           "anchor": "silking",
           "start": 0,
           "end": null,
@@ -1404,13 +1404,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "근거형",
-          "matrix_text": "R1-14~수확일",
-          "note": "앵커 근거형"
+          "evidence_type": "source_based",
+          "matrix_text": "R1-14 to harvest",
+          "note": "Anchor source-based"
         },
         {
           "window_id": "20-2",
-          "applies_to": "출사 전",
+          "applies_to": "Before silking",
           "anchor": "silking",
           "start": -14,
           "end": -1,
@@ -1418,47 +1418,47 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "출사 전 14일 추론형",
+          "evidence_type": "inferred",
+          "matrix_text": "14 days before silking inferred",
           "note": null
         }
       ]
     },
     {
       "no": 21,
-      "crop": "옥수수",
-      "disease_ko": "옥수수 지베렐라 이삭썩음병",
+      "crop": "Maize",
+      "disease_ko": "Maize Gibberella ear rot",
       "disease_en": "Gibberella ear rot",
       "scientific_name": "Fusarium graminearum species complex",
       "korea_record_unconfirmed": false,
       "key_weather_variables": [
-        "출사기 서늘·습윤",
-        "강우",
-        "수확기 가을비"
+        "Cool, wet conditions at silking",
+        "Rainfall",
+        "Autumn rain at harvest"
       ],
-      "thresholds_text": "수염 감수성 출현 후 2–6일 ([CPN](https://cropprotectionnetwork.org/encyclopedia/gibberella-ear-rot-of-corn), 해외). 암술 형성기 잦은 비 ([농사로 문서](http://www.nongsaro.go.kr/portal/ps/psb/psbk/kidoContentsFileDownload.ps?kidofcomdtyNo=29198), 국내)",
+      "thresholds_text": "Silk susceptibility 2–6 days after emergence (CPN). Frequent rain during pistil formation (Korean source). Sources: [CPN](https://cropprotectionnetwork.org/encyclopedia/gibberella-ear-rot-of-corn); [Nongsaro document](http://www.nongsaro.go.kr/portal/ps/psb/psbk/kidoContentsFileDownload.ps?kidofcomdtyNo=29198)",
       "threshold_sources": [
         {
           "label": "CPN",
           "url": "https://cropprotectionnetwork.org/encyclopedia/gibberella-ear-rot-of-corn",
-          "origin": "해외"
+          "origin": "International"
         },
         {
-          "label": "농사로 문서",
+          "label": "Nongsaro document",
           "url": "http://www.nongsaro.go.kr/portal/ps/psb/psbk/kidoContentsFileDownload.ps?kidofcomdtyNo=29198",
-          "origin": "국내"
+          "origin": "Korea"
         }
       ],
       "required_inputs": [
-        "출사일",
-        "수확일",
-        "품종"
+        "Silking date",
+        "Harvest date",
+        "Cultivar"
       ],
-      "evidence_summary": "근거형",
+      "evidence_summary": "source_based",
       "windows": [
         {
           "window_id": "21-1",
-          "applies_to": "출사 전후",
+          "applies_to": "Around silking",
           "anchor": "silking",
           "start": -3,
           "end": 21,
@@ -1466,13 +1466,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "근거형",
+          "evidence_type": "source_based",
           "matrix_text": "R1-3~R1+21",
           "note": null
         },
         {
           "window_id": "21-2",
-          "applies_to": "출사 전후(핵심)",
+          "applies_to": "Around silking: core window",
           "anchor": "silking",
           "start": 2,
           "end": 10,
@@ -1480,13 +1480,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "근거형",
-          "matrix_text": "핵심 +2~+10",
-          "note": "수염 감수성 출현 후 2–10일"
+          "evidence_type": "source_based",
+          "matrix_text": "Core window +2 to +10",
+          "note": "Silk susceptibility 2–10 days after emergence"
         },
         {
           "window_id": "21-3",
-          "applies_to": "성숙~수확 강우",
+          "applies_to": "Rainfall from maturity to harvest",
           "anchor": "physiological_maturity",
           "start": 0,
           "end": null,
@@ -1494,43 +1494,43 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "근거형",
-          "matrix_text": "생리적 성숙~수확 강우",
+          "evidence_type": "source_based",
+          "matrix_text": "Rainfall from physiological maturity to harvest",
           "note": null
         }
       ]
     },
     {
       "no": 22,
-      "crop": "옥수수",
-      "disease_ko": "옥수수 스튜어트 시들음병",
+      "crop": "Maize",
+      "disease_ko": "Stewart's wilt of maize",
       "disease_en": "Stewart's wilt",
       "scientific_name": "Pantoea stewartii subsp. stewartii",
       "korea_record_unconfirmed": true,
       "key_weather_variables": [
-        "12·1·2월 월평균기온"
+        "Mean monthly temperature in December, January and February"
       ],
-      "thresholds_text": "세 달 합(°F) 80 미만 무시·80–85 낮음·85–90 중간·90 초과 심함 ([Iowa State 2009](https://crops.extension.iastate.edu/cropnews/2009/04/2009-prediction-stewarts-disease-corn), 해외). 12–2월 일평균 −3 ℃ 미만이면 가능성 낮음 ([EPPO](https://gd.eppo.int/taxon/ERWIST/datasheet), 해외)",
+      "thresholds_text": "Sum of three monthly means in F: below 80 negligible, 80–85 low, 85–90 moderate, above 90 severe (Iowa State). Low likelihood when December–February daily mean is below -3 C (EPPO). Sources: [Iowa State 2009](https://crops.extension.iastate.edu/cropnews/2009/04/2009-prediction-stewarts-disease-corn); [EPPO](https://gd.eppo.int/taxon/ERWIST/datasheet)",
       "threshold_sources": [
         {
           "label": "Iowa State 2009",
           "url": "https://crops.extension.iastate.edu/cropnews/2009/04/2009-prediction-stewarts-disease-corn",
-          "origin": "해외"
+          "origin": "International"
         },
         {
           "label": "EPPO",
           "url": "https://gd.eppo.int/taxon/ERWIST/datasheet",
-          "origin": "해외"
+          "origin": "International"
         }
       ],
       "required_inputs": [
-        "지역"
+        "Region"
       ],
-      "evidence_summary": "겨울 창 근거형, 유묘 창 추론형",
+      "evidence_summary": "Winter window source-based; seedling window inferred",
       "windows": [
         {
           "window_id": "22-1",
-          "applies_to": "월동 지수",
+          "applies_to": "Overwintering index",
           "anchor": "prev_winter",
           "start": "12-01",
           "end": "02-28",
@@ -1538,13 +1538,13 @@
           "unit": "calendar",
           "resolution": "monthly",
           "core": true,
-          "evidence_type": "근거형",
-          "matrix_text": "직전 12/1~2/28(29)",
-          "note": "Stevens-Boewe 지수(°F 합), EPPO −3 ℃. 국내 미기록"
+          "evidence_type": "source_based",
+          "matrix_text": "Previous December 1 to February 28/29",
+          "note": "Stevens–Boewe index (sum in F), EPPO -3 C criterion. Korean occurrence unconfirmed"
         },
         {
           "window_id": "22-2",
-          "applies_to": "유묘",
+          "applies_to": "Seedling",
           "anchor": "emergence",
           "start": "VE",
           "end": "V5",
@@ -1552,41 +1552,41 @@
           "unit": "growth_stage",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "출현~V5",
+          "evidence_type": "inferred",
+          "matrix_text": "Emergence through V5",
           "note": null
         }
       ]
     },
     {
       "no": 23,
-      "crop": "옥수수",
-      "disease_ko": "옥수수 고스 시들음병",
+      "crop": "Maize",
+      "disease_ko": "Goss's wilt of maize",
       "disease_en": "Goss's bacterial wilt and leaf blight",
       "scientific_name": "Clavibacter nebraskensis",
       "korea_record_unconfirmed": true,
       "key_weather_variables": [
-        "우박·강풍·모래바람",
-        "기온"
+        "Hail, strong wind and blowing sand",
+        "Temperature"
       ],
-      "thresholds_text": "약 27 ℃, 21 ℃ 미만·35 ℃ 초과 억제 가능 ([CPN](https://cropprotectionnetwork.org/publications/an-overview-of-gosss-bacterial-wilt-and-blight), 해외)",
+      "thresholds_text": "About 27 C; possible suppression below 21 C or above 35 C (CPN, international). Sources: [CPN](https://cropprotectionnetwork.org/publications/an-overview-of-gosss-bacterial-wilt-and-blight)",
       "threshold_sources": [
         {
           "label": "CPN",
           "url": "https://cropprotectionnetwork.org/publications/an-overview-of-gosss-bacterial-wilt-and-blight",
-          "origin": "해외"
+          "origin": "International"
         }
       ],
       "required_inputs": [
-        "우박·강풍 날짜",
-        "파종일",
-        "생육단계"
+        "Hail and strong-wind dates",
+        "Sowing date",
+        "Growth stage"
       ],
-      "evidence_summary": "잎마름 추론형, 전신 근거형",
+      "evidence_summary": "Leaf-blight window inferred; systemic window source-based",
       "windows": [
         {
           "window_id": "23-1",
-          "applies_to": "잎마름형(우박·강풍 사건)",
+          "applies_to": "Leaf-blight form: hail/strong-wind event",
           "anchor": "D",
           "start": -28,
           "end": -3,
@@ -1594,13 +1594,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "추론형",
-          "matrix_text": "잎마름형 D-28~D-3",
-          "note": "국내 미기록"
+          "evidence_type": "inferred",
+          "matrix_text": "Leaf-blight form D-28 to D-3",
+          "note": "Korean occurrence unconfirmed"
         },
         {
           "window_id": "23-2",
-          "applies_to": "전신형",
+          "applies_to": "Systemic form",
           "anchor": "emergence",
           "start": "VE",
           "end": "V6",
@@ -1608,42 +1608,42 @@
           "unit": "growth_stage",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "근거형",
-          "matrix_text": "전신형 출현~V6",
+          "evidence_type": "source_based",
+          "matrix_text": "Systemic form: emergence through V6",
           "note": null
         }
       ]
     },
     {
       "no": 24,
-      "crop": "옥수수",
-      "disease_ko": "옥수수 필리핀 노균병",
+      "crop": "Maize",
+      "disease_ko": "Maize Philippine downy mildew",
       "disease_en": "Philippine downy mildew",
       "scientific_name": "Peronosclerospora philippinensis",
       "korea_record_unconfirmed": true,
       "key_weather_variables": [
-        "야간 기온",
-        "어둠 속 수막 시간",
+        "Nighttime temperature",
+        "Water-film duration in darkness",
         "RH"
       ],
-      "thresholds_text": "야간 21–26 ℃, 분생자 형성 18–23 ℃, 어둠 속 수막 4–5 h 이상 ([USDA CAPS](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Peronosclerospora-philippinensis-corn-manual-datasheet.pdf) p.2, 해외)",
+      "thresholds_text": "Nighttime 21–26 C, sporulation at 18–23 C, and a water film in darkness for at least 4–5 h (USDA CAPS, p.2; international). Sources: [USDA CAPS](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Peronosclerospora-philippinensis-corn-manual-datasheet.pdf)",
       "threshold_sources": [
         {
           "label": "USDA CAPS",
           "url": "https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Peronosclerospora-philippinensis-corn-manual-datasheet.pdf",
-          "origin": "해외"
+          "origin": "International"
         }
       ],
       "required_inputs": [
-        "파종일",
-        "인접 사탕수수·수수",
-        "종자 출처"
+        "Sowing date",
+        "Adjacent sugarcane and sorghum",
+        "Seed origin"
       ],
-      "evidence_summary": "추론형",
+      "evidence_summary": "inferred",
       "windows": [
         {
           "window_id": "24-1",
-          "applies_to": "감염(야간 조건)",
+          "applies_to": "Infection: nighttime conditions",
           "anchor": "D",
           "start": -21,
           "end": -7,
@@ -1651,13 +1651,13 @@
           "unit": "days",
           "resolution": "hourly",
           "core": true,
-          "evidence_type": "추론형",
+          "evidence_type": "inferred",
           "matrix_text": "D-21~D-7",
-          "note": "시간별 야간 자료 필요. 국내 미기록"
+          "note": "Hourly nighttime data required. Korean occurrence unconfirmed"
         },
         {
           "window_id": "24-2",
-          "applies_to": "전신감염",
+          "applies_to": "Systemic infection",
           "anchor": "sowing",
           "start": 0,
           "end": 28,
@@ -1665,41 +1665,41 @@
           "unit": "days",
           "resolution": "hourly",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "전신감염이면 파종일~파종 후 4주",
+          "evidence_type": "inferred",
+          "matrix_text": "For systemic infection: sowing through four weeks after sowing",
           "note": null
         }
       ]
     },
     {
       "no": 25,
-      "crop": "옥수수",
-      "disease_ko": "옥수수 갈색줄무늬 노균병",
+      "crop": "Maize",
+      "disease_ko": "Maize brown stripe downy mildew",
       "disease_en": "Brown stripe downy mildew",
       "scientific_name": "Sclerophthora rayssiae var. zeae",
       "korea_record_unconfirmed": true,
       "key_weather_variables": [
-        "엽면습윤",
-        "기온",
-        "토양온도",
-        "강수 누적"
+        "Leaf wetness",
+        "Temperature",
+        "Soil temperature",
+        "Accumulated rainfall"
       ],
-      "thresholds_text": "유주자낭 22–25 ℃, 엽면습윤 12 h, 토양 28–32 ℃, 연강수 100–200 cm 높음 ([USDA CAPS](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Sclerophthora-rayssiae-var-zeae-corn-manual-datasheet.pdf) p.1–2, 해외)",
+      "thresholds_text": "Sporangia at 22–25 C, 12 h leaf wetness, soil at 28–32 C; high annual rainfall of 100–200 cm (USDA CAPS, pp.1–2; international). Sources: [USDA CAPS](https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Sclerophthora-rayssiae-var-zeae-corn-manual-datasheet.pdf)",
       "threshold_sources": [
         {
           "label": "USDA CAPS",
           "url": "https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Sclerophthora-rayssiae-var-zeae-corn-manual-datasheet.pdf",
-          "origin": "해외"
+          "origin": "International"
         }
       ],
       "required_inputs": [
-        "파종일"
+        "Sowing date"
       ],
-      "evidence_summary": "추론형",
+      "evidence_summary": "inferred",
       "windows": [
         {
           "window_id": "25-1",
-          "applies_to": "감염",
+          "applies_to": "Infection",
           "anchor": "D",
           "start": -21,
           "end": 0,
@@ -1707,13 +1707,13 @@
           "unit": "days",
           "resolution": "hourly",
           "core": true,
-          "evidence_type": "추론형",
+          "evidence_type": "inferred",
           "matrix_text": "D-21~D0",
-          "note": "국내 미기록"
+          "note": "Korean occurrence unconfirmed"
         },
         {
           "window_id": "25-2",
-          "applies_to": "작기 누적",
+          "applies_to": "Cropping-season accumulation",
           "anchor": "sowing",
           "start": 0,
           "end": null,
@@ -1721,40 +1721,40 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "파종~현재 토양온도·강수",
+          "evidence_type": "inferred",
+          "matrix_text": "Sowing to present: soil temperature and rainfall",
           "note": null
         }
       ]
     },
     {
       "no": 26,
-      "crop": "옥수수",
-      "disease_ko": "옥수수 치명적 괴사병 (MLN)",
+      "crop": "Maize",
+      "disease_ko": "Maize lethal necrosis (MLN)",
       "disease_en": "Maize lethal necrosis",
       "scientific_name": "MCMV + potyvirus (SCMV and others)",
       "korea_record_unconfirmed": true,
       "key_weather_variables": [
-        "가뭄·건조 연속일수",
-        "기온(매개충 대리)"
+        "Consecutive drought/dry days",
+        "Temperature as a vector-development proxy"
       ],
-      "thresholds_text": "온습도 임계값 미확인. 가뭄이 악화 ([Awata 2019](https://pmc.ncbi.nlm.nih.gov/articles/PMC7753892/), 해외)",
+      "thresholds_text": "Temperature/humidity thresholds unconfirmed; drought exacerbates symptoms (Awata 2019, international). Sources: [Awata 2019](https://pmc.ncbi.nlm.nih.gov/articles/PMC7753892/)",
       "threshold_sources": [
         {
           "label": "Awata 2019",
           "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7753892/",
-          "origin": "해외"
+          "origin": "International"
         }
       ],
       "required_inputs": [
-        "파종일",
-        "연작·인근 옥수수 재배"
+        "Sowing date",
+        "Continuous cropping and nearby maize"
       ],
-      "evidence_summary": "추론형",
+      "evidence_summary": "inferred",
       "windows": [
         {
           "window_id": "26-1",
-          "applies_to": "작기",
+          "applies_to": "Cropping season",
           "anchor": "sowing",
           "start": 0,
           "end": null,
@@ -1762,13 +1762,13 @@
           "unit": "days",
           "resolution": "daily",
           "core": true,
-          "evidence_type": "추론형",
-          "matrix_text": "파종일~현재",
-          "note": "온습도 임계값 미확인. 국내 미기록"
+          "evidence_type": "inferred",
+          "matrix_text": "Sowing to present",
+          "note": "Temperature/humidity thresholds unconfirmed. Korean occurrence unconfirmed"
         },
         {
           "window_id": "26-2",
-          "applies_to": "재배 이력",
+          "applies_to": "Cropping history",
           "anchor": "sowing",
           "start": -60,
           "end": 0,
@@ -1776,9 +1776,9 @@
           "unit": "days",
           "resolution": "daily",
           "core": false,
-          "evidence_type": "추론형",
-          "matrix_text": "파종 전 60일 재배 이력",
-          "note": "기상보다 옥수수 무재배 기간 확인용"
+          "evidence_type": "inferred",
+          "matrix_text": "Cropping history over 60 days before sowing",
+          "note": "Used to check maize-free intervals rather than weather"
         }
       ]
     }

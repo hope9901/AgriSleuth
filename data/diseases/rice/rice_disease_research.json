@@ -1031,10 +1031,10 @@
         },
         "f8_quarantine": {
           "label": "Quarantine status by country",
-          "text": "Korea: ***B. glumae* is not listed(confirmed)**. The list of bacteria in Annex Table 2 of the Notice includes *B. caryophylli* and ***B. plantarii*** ([KR-Notice Annex 2](https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059)). *B. plantarii* are registered in the LPDK as a domestic outbreak in 2016, but remain as regulated quarantine pests. According to the definition of the law, quarantine pests include \"distributed in some areas of the country, but outbreak prevention, etc. It is not necessarily contradictory as it also includes “pests for which measures are being taken” ([Plant Quarantine Act](https://www.law.go.kr/법령/식물방역법), Article 2, Paragraph 5). EPPO: A1/A2 not listed, country entry is Egypt A1, Argentina A1, Brazil A1, Mexico QP, China QP(2021)([EPPO PSDMGM](https://gd.eppo.int/taxon/PSDMGM/categorization)). EU: not listed(check)([EU-2072](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015)). United States: not select agent([US-331](https://www.ecfr.gov/current/title-7/section-331.3)). China: **检疫性有害生物** \"水疫细菌性谷枯病菌\"([CN](https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc)). Japan: not listed(verified)([JP](https://laws.e-gov.go.jp/law/325M50010000073)). Australia: unverified.",
+          "text": "Korea: ***B. glumae* is not listed(confirmed)**. The list of bacteria in Annex Table 2 of the Notice includes *B. caryophylli* and ***B. plantarii*** ([KR-Notice Annex 2](https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059)). *B. plantarii* are registered in the LPDK as a domestic outbreak in 2016, but remain as regulated quarantine pests. According to the definition of the law, quarantine pests include \"distributed in some areas of the country, but outbreak prevention, etc. It is not necessarily contradictory as it also includes “pests for which measures are being taken” ([Plant Quarantine Act](https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%8B%9D%EB%AC%BC%EB%B0%A9%EC%97%AD%EB%B2%95), Article 2, Paragraph 5). EPPO: A1/A2 not listed, country entry is Egypt A1, Argentina A1, Brazil A1, Mexico QP, China QP(2021)([EPPO PSDMGM](https://gd.eppo.int/taxon/PSDMGM/categorization)). EU: not listed(check)([EU-2072](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015)). United States: not select agent([US-331](https://www.ecfr.gov/current/title-7/section-331.3)). China: **检疫性有害生物** \"水疫细菌性谷枯病菌\"([CN](https://assets.ippc.int/static/media/files/reportingobligation/2025/01/07/CATALOGUE_OF_QUARANTINE_PESTS_FOR_IMPORT_PLANTS_TO_THE_PEOPLES_REPUBLIC_OF_CHINA_updated_20241128.doc)). Japan: not listed(verified)([JP](https://laws.e-gov.go.jp/law/325M50010000073)). Australia: unverified.",
           "source_urls": [
             "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059",
-            "https://www.law.go.kr/법령/식물방역법",
+            "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%8B%9D%EB%AC%BC%EB%B0%A9%EC%97%AD%EB%B2%95",
             "https://gd.eppo.int/taxon/PSDMGM/categorization",
             "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
             "https://www.ecfr.gov/current/title-7/section-331.3",
@@ -1066,7 +1066,7 @@
         "https://koreascience.or.kr/article/JAKO200111921139724.page?lang=ko",
         "https://sipav.org/en/16/Archive/3767",
         "https://www.law.go.kr/LSW/flDownload.do?flSeq=169519059",
-        "https://www.law.go.kr/법령/식물방역법",
+        "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%8B%9D%EB%AC%BC%EB%B0%A9%EC%97%AD%EB%B2%95",
         "https://gd.eppo.int/taxon/PSDMGM/categorization",
         "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R2072-20261015",
         "https://www.ecfr.gov/current/title-7/section-331.3",

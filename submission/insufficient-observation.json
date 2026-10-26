@@ -329,7 +329,7 @@
           "https://cropprotectionnetwork.org/publications/an-overview-of-gosss-bacterial-wilt-and-blight"
         ],
         "name_en": "Goss's bacterial wilt and leaf blight",
-        "name_ko": "\uace0\uc2a4 \uc2dc\ub4e4\uc74c\ubcd1",
+        "name_ko": "Goss's wilt",
         "category": "Symptoms - stalk (wilt phase)",
         "disease_id": "maize_023",
         "feature_no": "11",
@@ -341,7 +341,7 @@
         "retrieval_score": 1,
         "scientific_name": "Clavibacter nebraskensis",
         "source_location": "Symptoms(systemic wilt); Figure 6",
-        "source_conflicts": "[\"Freckle location: CPN 'scattered within lesions', UNL 'near the margins of expanding lesions', Purdue 'mainly at margins but also throughout the lesion'.\", \"Freckle color: CPN 'dark green to black', Purdue 'black spots'.\", \"Only Purdue states the color of vascular discoloration ('orange to brown'); CPN and UNL say only 'discoloration'.\", \"Exudate color: CPN 'orange droplets' under humid conditions, while Purdue and UNL mention only 'glossy' with no color.\", \"Seed transmission: Purdue 'about 2%', UNL 'low'.\", \"Survival in residue: CPN 'at least 10\u201315 months', Purdue '10 months on the surface under dry conditions'.\", \"Colony color is left Unconfirmed because, at search-summary level, 'apricot to orange (NBY)' and 'yellow on most media' do not agree (source PMC4658045 blocked; EPPO Alert list 404).\"]"
+        "source_conflicts": "[\"Freckle location: CPN 'scattered within lesions', UNL 'near the margins of expanding lesions', Purdue 'mainly at margins but also throughout the lesion'.\", \"Freckle color: CPN 'dark green to black', Purdue 'black spots'.\", \"Only Purdue states the color of vascular discoloration ('orange to brown'); CPN and UNL say only 'discoloration'.\", \"Exudate color: CPN 'orange droplets' under humid conditions, while Purdue and UNL mention only 'glossy' with no color.\", \"Seed transmission: Purdue 'about 2%', UNL 'low'.\", \"Survival in residue: CPN 'at least 10–15 months', Purdue '10 months on the surface under dry conditions'.\", \"Colony color is left Unconfirmed because, at search-summary level, 'apricot to orange (NBY)' and 'yellow on most media' do not agree (source PMC4658045 blocked; EPPO Alert list 404).\"]"
       }
     ],
     "verification_blocked": false,
@@ -396,5 +396,7 @@
         "efficiencyPercent": 0
       }
     ]
-  }
+  },
+  "translation_note": "English rendering of an actual historical export, not verbatim model text. The original is preserved separately.",
+  "original_sha256": "16e0d2fe3364410f676b27833bc340810f389dc13d4be1f6608c5b9ee64b07a9"
 }

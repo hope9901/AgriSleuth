@@ -1,4 +1,5 @@
 import asyncio
+import json
 import os
 from pathlib import Path
 
@@ -31,7 +32,7 @@ def create_critic_reviewer(
     api_key: str,
 ):
     from local_model import LocalStructuredModel
-    return LocalStructuredModel(base_url,model_name,api_key,CriticReview,max_tokens=500)
+    return LocalStructuredModel(base_url,model_name,api_key,CriticReview,max_tokens=1200)
 
 
 async def call_critic_agent(
@@ -39,7 +40,9 @@ async def call_critic_agent(
     request: ReviewRequest,
 ) -> CriticReview:
     # Read on every call so prompt edits take effect immediately.
-    system_prompt = load_prompt()
+    catalog=json.loads((PROMPT_PATH.parent/'critic_scenarios.json').read_text())
+    system_prompt = load_prompt()+"\nScenario catalog (application instructions):\n"+json.dumps(catalog)
+
 
     messages = [
         SystemMessage(content=system_prompt),

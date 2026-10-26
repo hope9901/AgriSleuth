@@ -104,6 +104,9 @@ class CriticIssue(Schema):
 
 
 class CriticReview(Schema):
+    scenario_id: Literal["SOURCE_GAP", "OBSERVATION_GAP", "DIFFERENTIAL_GAP", "WEATHER_WINDOW_GAP", "SOURCE_CONFLICT", "SCOPE_OR_PROVENANCE_GAP", "CERTAINTY_GAP", "SUPPORTED_WITH_LIMITATIONS"] = "SOURCE_GAP"
+    scenario_match: Literal["direct", "nearest"] = "nearest"
+    scenario_reason: str = Field(default="Legacy review: no scenario selection was recorded.", max_length=300)
     issues: list[CriticIssue]
     limitations: list[str]
     review_summary: str

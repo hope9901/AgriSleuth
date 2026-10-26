@@ -1,0 +1,50 @@
+[
+  {
+    "id": "SOURCE_GAP",
+    "title": "Missing or untraceable source evidence",
+    "when": "Candidate has no supporting excerpts or citations do not support the claim.",
+    "procedure": "Request retrievable evidence; never invent a source or treat absence as contradiction."
+  },
+  {
+    "id": "OBSERVATION_GAP",
+    "title": "Missing observable symptom details",
+    "when": "Lesion shape, location, distribution or progression is not described or visible.",
+    "procedure": "Ask one discriminating observation or request an image of the relevant part."
+  },
+  {
+    "id": "DIFFERENTIAL_GAP",
+    "title": "Insufficient distinction between supported alternatives",
+    "when": "Several source-supported diseases fit and the distinguishing feature is missing.",
+    "procedure": "Identify the specific distinguishing feature, using only supplied sources."
+  },
+  {
+    "id": "WEATHER_WINDOW_GAP",
+    "title": "Missing environmental exposure or temporal coverage",
+    "when": "Station samples do not cover the cited infection window, duration or growth-stage anchor.",
+    "procedure": "Separate station overlap from sustained wetness; ask for relevant anchors only. Optional missing weather need not block a tentative symptom hypothesis. Do not request already supplied context or irrelevant growth-stage anchors. Missing proof of infection does not automatically block a tentative symptom hypothesis."
+  },
+  {
+    "id": "SOURCE_CONFLICT",
+    "title": "Material conflicting evidence",
+    "when": "Supplied source claims disagree, or a candidate claim contradicts evidence for that same candidate.",
+    "procedure": "Cite both sides, describe the actual disagreement and request a resolving observation/source. Do not confuse an alternative disease with a contradiction."
+  },
+  {
+    "id": "SCOPE_OR_PROVENANCE_GAP",
+    "title": "Mismatched scope or provenance",
+    "when": "Evidence concerns another crop, organism, location or measurement type.",
+    "procedure": "Identify the mismatched scope. Do not transfer foreign occurrence or canopy conditions to this case."
+  },
+  {
+    "id": "CERTAINTY_GAP",
+    "title": "Conclusion exceeds available evidence",
+    "when": "The claim asserts confirmed infection, a probability or treatment/regulatory status unsupported by the supplied facts.",
+    "procedure": "Revise the wording to a tentative hypothesis or withhold the unsupported claim."
+  },
+  {
+    "id": "SUPPORTED_WITH_LIMITATIONS",
+    "title": "Adequately supported tentative hypothesis",
+    "when": "Observations and sources support the stated tentative claim and remaining unknowns are limitations.",
+    "procedure": "Return no manufactured blocking issue; retain specific limitations and allow the Judge to decide."
+  }
+]

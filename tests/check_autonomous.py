@@ -49,7 +49,7 @@ with psycopg.connect(**options,autocommit=True) as admin:
    return case_id,state,retrieve.call_count,choose
   async def main():
    # A: missing weather -> policy chooses actual weather tool, not fixed orchestration.
-   weather=dict(status='partial',location=dict(id=1,label='Fixture',latitude=37.,longitude=127.,timezone='Asia/Seoul'),observed_date='2026-10-24',observations=[dict(temperature_c=20)],summary={'sample_count':1},limitations=[])
+   weather=dict(status='partial',location=dict(id=1,label='Fixture',latitude=37.,longitude=127.,timezone='Asia/Seoul'),observed_date='2026-10-24',observations=[dict(time='2026-10-24T00:00:00+00:00',temperature_c=20)],summary={'sample_count':1},limitations=[])
    with patch('agent_tools.search_locations',AsyncMock(return_value=[weather['location']])),patch('agent_tools.fetch_weather',AsyncMock(return_value=weather)) as fetch:
     _,state,_,_=await run([decision('get_weather',variables=['temperature_c']),finish()])
     assert fetch.await_count==1 and state['tool_history'][0]['status']=='completed'

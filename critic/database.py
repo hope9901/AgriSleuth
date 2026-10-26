@@ -163,3 +163,9 @@ async def save_agent_location(case_id,location):
     async with await psycopg.AsyncConnection.connect(**connection_options()) as conn:
         await conn.execute("""INSERT INTO investigation_locations (investigation_id,payload) VALUES (%s,%s)
           ON CONFLICT (investigation_id) DO UPDATE SET payload=excluded.payload,updated_at=now()""",(case_id,Jsonb(location)))
+
+
+async def weather_references(crop):
+    async with await psycopg.AsyncConnection.connect(**connection_options(),row_factory=dict_row) as conn:
+        cur=await conn.execute('SELECT disease_id,profile,source_as_of,content_sha256 FROM disease_weather_reference WHERE crop=%s ORDER BY source_record_no',(crop,))
+        return await cur.fetchall()

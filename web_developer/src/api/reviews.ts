@@ -22,7 +22,7 @@ export interface CriticIssue {
 }
 
 export interface ReviewResponse {
-  review: { issues: CriticIssue[]; limitations: string[]; review_summary: string } | null;
+  review: { issues: CriticIssue[]; limitations: string[]; review_summary: string; scenario_id?: string; scenario_match?: string; scenario_reason?: string } | null;
   action: "finalize" | "finalize_with_limitations" | "request_user_input"
     | "retrieve_evidence" | "revise_conclusion" | "abstain";
   reason: string;

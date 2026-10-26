@@ -1,0 +1,410 @@
+{
+  "country_code": "1001",
+  "category": "temp",
+  "total_count": 79,
+  "stations": [
+    {
+      "id": "20046",
+      "country_name": "Russia",
+      "name": "POLARGMO IM. E.T. KRENKELJA"
+    },
+    {
+      "id": "20292",
+      "country_name": "Russia",
+      "name": "GMO IM.E.K. FEDOROVA"
+    },
+    {
+      "id": "20674",
+      "country_name": "Russia",
+      "name": "OSTROV DIKSON"
+    },
+    {
+      "id": "20744",
+      "country_name": "Russia",
+      "name": "MALYE KARMAKULY"
+    },
+    {
+      "id": "20891",
+      "country_name": "Russia",
+      "name": "HATANGA"
+    },
+    {
+      "id": "21432",
+      "country_name": "Russia",
+      "name": "OSTROV KOTEL'NYJ"
+    },
+    {
+      "id": "21824",
+      "country_name": "Russia",
+      "name": "TIKSI"
+    },
+    {
+      "id": "21946",
+      "country_name": "Russia",
+      "name": "CHOKURDAH"
+    },
+    {
+      "id": "23078",
+      "country_name": "Russia",
+      "name": "NORIL SK"
+    },
+    {
+      "id": "23205",
+      "country_name": "Russia",
+      "name": "NAR'JAN-MAR"
+    },
+    {
+      "id": "23330",
+      "country_name": "Russia",
+      "name": "SALEHARD"
+    },
+    {
+      "id": "23418",
+      "country_name": "Russia",
+      "name": "PECHORA"
+    },
+    {
+      "id": "23472",
+      "country_name": "Russia",
+      "name": "TURUHANSK"
+    },
+    {
+      "id": "23804",
+      "country_name": "Russia",
+      "name": "SYKTYVKAR"
+    },
+    {
+      "id": "23884",
+      "country_name": "Russia",
+      "name": "BOR"
+    },
+    {
+      "id": "23921",
+      "country_name": "Russia",
+      "name": "IVDEL'"
+    },
+    {
+      "id": "23933",
+      "country_name": "Russia",
+      "name": "HANTY-MANSIJSK"
+    },
+    {
+      "id": "23955",
+      "country_name": "Russia",
+      "name": "ALEKSANDROVSKOE"
+    },
+    {
+      "id": "24125",
+      "country_name": "Russia",
+      "name": "OLENEK"
+    },
+    {
+      "id": "24266",
+      "country_name": "Russia",
+      "name": "VERHOJANSK"
+    },
+    {
+      "id": "24343",
+      "country_name": "Russia",
+      "name": "ZHIGANSK"
+    },
+    {
+      "id": "24507",
+      "country_name": "Russia",
+      "name": "TURA"
+    },
+    {
+      "id": "24641",
+      "country_name": "Russia",
+      "name": "VILJUJSK"
+    },
+    {
+      "id": "24688",
+      "country_name": "Russia",
+      "name": "OJMJAKON"
+    },
+    {
+      "id": "24726",
+      "country_name": "Russia",
+      "name": "MIRNVY"
+    },
+    {
+      "id": "24908",
+      "country_name": "Russia",
+      "name": "VANAVARA"
+    },
+    {
+      "id": "24944",
+      "country_name": "Russia",
+      "name": "OLEKMINSK"
+    },
+    {
+      "id": "24959",
+      "country_name": "Russia",
+      "name": "JAKUTSK"
+    },
+    {
+      "id": "25123",
+      "country_name": "Russia",
+      "name": "CHERSKIJ"
+    },
+    {
+      "id": "25400",
+      "country_name": "Russia",
+      "name": "ZYRJANKA"
+    },
+    {
+      "id": "25428",
+      "country_name": "Russia",
+      "name": "OMOLON"
+    },
+    {
+      "id": "25703",
+      "country_name": "Russia",
+      "name": "SEJMCHAN"
+    },
+    {
+      "id": "25913",
+      "country_name": "Russia",
+      "name": "MAGADAN"
+    },
+    {
+      "id": "28225",
+      "country_name": "Russia",
+      "name": "PERM'"
+    },
+    {
+      "id": "28275",
+      "country_name": "Russia",
+      "name": "TOBOL'SK"
+    },
+    {
+      "id": "28445",
+      "country_name": "Russia",
+      "name": "VERHNEE DUBROVO"
+    },
+    {
+      "id": "28661",
+      "country_name": "Russia",
+      "name": "KURGAN"
+    },
+    {
+      "id": "28698",
+      "country_name": "Russia",
+      "name": "OMSK TSENTRALNY"
+    },
+    {
+      "id": "28722",
+      "country_name": "Russia",
+      "name": "UFA"
+    },
+    {
+      "id": "29231",
+      "country_name": "Russia",
+      "name": "KOLPASEVO"
+    },
+    {
+      "id": "29263",
+      "country_name": "Russia",
+      "name": "ENISEJSK"
+    },
+    {
+      "id": "29282",
+      "country_name": "Russia",
+      "name": "BOGUCANY"
+    },
+    {
+      "id": "29572",
+      "country_name": "Russia",
+      "name": "EMEL'JANOVO"
+    },
+    {
+      "id": "29612",
+      "country_name": "Russia",
+      "name": "BARABINSK"
+    },
+    {
+      "id": "29634",
+      "country_name": "Russia",
+      "name": "TOLMACHEVO"
+    },
+    {
+      "id": "29698",
+      "country_name": "Russia",
+      "name": "NIZNE-UDINSK"
+    },
+    {
+      "id": "29839",
+      "country_name": "Russia",
+      "name": "BARNAUL"
+    },
+    {
+      "id": "29862",
+      "country_name": "Russia",
+      "name": "HAKASSKAJA"
+    },
+    {
+      "id": "30054",
+      "country_name": "Russia",
+      "name": "VITIM"
+    },
+    {
+      "id": "30230",
+      "country_name": "Russia",
+      "name": "KIRENSK"
+    },
+    {
+      "id": "30309",
+      "country_name": "Russia",
+      "name": "BRATSK"
+    },
+    {
+      "id": "30372",
+      "country_name": "Russia",
+      "name": "CHARA"
+    },
+    {
+      "id": "30554",
+      "country_name": "Russia",
+      "name": "BAGDARIN"
+    },
+    {
+      "id": "30635",
+      "country_name": "Russia",
+      "name": "UST'-BARGUZIN"
+    },
+    {
+      "id": "30673",
+      "country_name": "Russia",
+      "name": "MOGOCHA"
+    },
+    {
+      "id": "30715",
+      "country_name": "Russia",
+      "name": "ANGARSK"
+    },
+    {
+      "id": "30758",
+      "country_name": "Russia",
+      "name": "KADALA"
+    },
+    {
+      "id": "30935",
+      "country_name": "Russia",
+      "name": "KRASNYJ CHIKOJ"
+    },
+    {
+      "id": "30965",
+      "country_name": "Russia",
+      "name": "BORZJA"
+    },
+    {
+      "id": "31004",
+      "country_name": "Russia",
+      "name": "ALDAN"
+    },
+    {
+      "id": "31088",
+      "country_name": "Russia",
+      "name": "OHOTSK"
+    },
+    {
+      "id": "31168",
+      "country_name": "Russia",
+      "name": "AJAN"
+    },
+    {
+      "id": "31300",
+      "country_name": "Russia",
+      "name": "ZEJA"
+    },
+    {
+      "id": "31369",
+      "country_name": "Russia",
+      "name": "NIKOLAEVSK-NA-AMURE"
+    },
+    {
+      "id": "31510",
+      "country_name": "Russia",
+      "name": "BLAGOVESCENSK"
+    },
+    {
+      "id": "31538",
+      "country_name": "Russia",
+      "name": "SUTUR"
+    },
+    {
+      "id": "31736",
+      "country_name": "Russia",
+      "name": "HABAROVSK"
+    },
+    {
+      "id": "31770",
+      "country_name": "Russia",
+      "name": "SOVETSKAYA GAVAN'"
+    },
+    {
+      "id": "31873",
+      "country_name": "Russia",
+      "name": "DAL'NERECHENSK"
+    },
+    {
+      "id": "31977",
+      "country_name": "Russia",
+      "name": "VLADIVOSTOK (SAD GOROD)"
+    },
+    {
+      "id": "32053",
+      "country_name": "Russia",
+      "name": "NOGLIKI"
+    },
+    {
+      "id": "32061",
+      "country_name": "Russia",
+      "name": "ALEKSANDROVSK-SAHALINSKIJ"
+    },
+    {
+      "id": "32098",
+      "country_name": "Russia",
+      "name": "PORONAJSK"
+    },
+    {
+      "id": "32150",
+      "country_name": "Russia",
+      "name": "KHOMUTOVO"
+    },
+    {
+      "id": "32215",
+      "country_name": "Russia",
+      "name": "SEVERO-KURIL'SK"
+    },
+    {
+      "id": "32389",
+      "country_name": "Russia",
+      "name": "KLJUCHI"
+    },
+    {
+      "id": "32540",
+      "country_name": "Russia",
+      "name": "YELIZOVO"
+    },
+    {
+      "id": "35121",
+      "country_name": "Russia",
+      "name": "ORENBURG"
+    },
+    {
+      "id": "36096",
+      "country_name": "Russia",
+      "name": "KYZYL"
+    }
+  ],
+  "source": "https://apihub.kma.go.kr/api/typ02/openApi/GtsInfoService/getGtsStn",
+  "metadata_sources": [
+    "https://www.ncei.noaa.gov/pub/data/noaa/isd-history.csv"
+  ],
+  "limitations": [
+    "KMA country codes must be provided explicitly; 1001 is Russia, not Korea.",
+    "This service supplies station IDs/names, not coordinates or weather measurements. Korean station names use NOAA English aliases when available; otherwise Station ID is displayed."
+  ]
+}

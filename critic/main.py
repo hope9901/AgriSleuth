@@ -381,6 +381,8 @@ async def collect_case_weather(investigation_id: UUID, request: WeatherRequest):
             report = dict(status='unavailable',observations=[],summary={},comparisons=[],
                 observed_date=case['observed_date'].isoformat(),
                 limitations=[str(exc) if isinstance(exc,WeatherError) else 'Weather request timed out.'])
+        from environment import attach_environment
+        await attach_environment(report,case['crop'])
         report['region_entered'] = case['region']
         report['comparisons'] = compare_conditions(diseases,report) if report['observations'] else []
         await save_weather(investigation_id,request.location_id,report)
@@ -469,3 +471,11 @@ async def confirm_agent_location(investigation_id: UUID, request: WeatherRequest
         raise HTTPException(502,str(exc)) from None
     except (psycopg.Error,RuntimeError):
         raise HTTPException(503,'Location storage is unavailable.') from None
+
+
+@app.get('/api/weather/stations')
+async def country_station_list(country_code: str=Query(pattern=r'^\d{1,8}$'),category: str=Query(default='temp',pattern='^(temp|rain)$')):
+    from weather import country_stations
+    try:return await asyncio.wait_for(country_stations(country_code,category),timeout=45)
+    except WeatherError as exc:raise HTTPException(502,str(exc)) from None
+    except asyncio.TimeoutError:raise HTTPException(504,'Country-station request timed out.') from None

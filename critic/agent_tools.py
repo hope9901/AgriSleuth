@@ -88,7 +88,12 @@ class Tools:
             raise ValueError('Weather coordinates must match the confirmed growing location.')
         cache=self.state.get('weather')
         period=[start.isoformat(),end.isoformat()]
-        if cache and cache.get('observations') and (cache.get('agent_period')==period or (start==end and cache.get('observed_date')==end.isoformat())):return dict(status='cached',summary='Existing weather snapshot reused; no external request made.')
+        if cache and cache.get('observations') and (cache.get('agent_period')==period or (start==end and cache.get('observed_date')==end.isoformat())):
+            from environment import attach_environment
+            cache['case_observed_date']=self.case['observed_date'].isoformat()
+            await attach_environment(cache,self.case['crop'])
+            await database.save_weather(UUID(self.state['investigation_id']),place['id'],cache)
+            return dict(status='cached',summary='Existing weather snapshot reused; no external request made.')
         days=[];day=start
         while day<=end:
             report=await asyncio.wait_for(fetch_weather(place['id'],day),timeout=45)
@@ -97,8 +102,11 @@ class Tools:
             day+=timedelta(days=1)
         report=days[-1]
         report['agent_period']=period;report['daily_reports']=days[:-1]
+        report['case_observed_date']=self.case['observed_date'].isoformat()
         report['region_entered']=self.case['region']
         # Preserve the existing weather UI shape; multi-day detail is retained separately.
+        from environment import attach_environment
+        await attach_environment(report,self.case['crop'])
         report.setdefault('comparisons',[])
         self.state['weather']=report
         await database.save_weather(UUID(self.state['investigation_id']),place['id'],report)
@@ -123,7 +131,11 @@ class Tools:
         self.state.pop('verified_fingerprint',None)
         self.state.pop('verified_candidates',None)
         feedback=self.state.get('last_review')
-        self.case['weather_context']={k:(self.state.get('weather') or {}).get(k) for k in ('status','observed_date','summary','limitations')}
+        self.case['weather_context']={k:(self.state.get('weather') or {}).get(k) for k in ('status','observed_date','summary','limitations','environment_assessments')}
+        weather_context=self.case['weather_context']
+        weather_context['environment_assessments']=[dict(disease_id=a['disease_id'],assessment=a['assessment'],required_inputs=a['required_inputs'],checks=[{k:c[k] for k in ('metric','samples_matching','valid_samples')} for c in a['checks']],windows=[{k:w.get(k) for k in ('window_id','coverage','covered_days','required_days')} for w in a['windows'] if w['core']][:2]) for a in weather_context.get('environment_assessments') or [] if a['disease_id'] in {e['disease_id'] for e in evidence}][:2]
+        weather_context['environment_assessments']=weather_context['environment_assessments'][:1]
+        weather_context['limitations']=[text[:130] for text in (weather_context.get('limitations') or [])[:2]]
         await self.notify('diagnosis','Generating source-linked hypotheses from the current evidence.')
         proposal=await generate(self.case,evidence,self.state.get('carryover',''),feedback)
         validate_proposal(proposal,evidence)
@@ -133,9 +145,9 @@ class Tools:
             self.state['judge_decisions'].append(dict(action='abstain',reason='No source-supported candidate was generated.'))
             return dict(summary='Diagnosis generated no supported candidate.',action='abstain')
         reviewer=create_critic_reviewer(base_url=os.getenv('LM_STUDIO_BASE_URL','http://localhost:1234/v1'),model_name=os.getenv('LM_STUDIO_MODEL',''),api_key=os.getenv('LM_STUDIO_API_KEY','lm-studio'))
-        observations=self.case['symptoms']
+        observations='Already supplied case context: '+json.dumps({k:str(self.case.get(k) or 'unknown') for k in ('crop','region','observed_date','growth_stage','affected_part')})+'\nObserved symptoms: '+self.case['symptoms']
         if self.state.get('image_observations'):observations+='\nUnconfirmed AI image observations: '+json.dumps(self.state['image_observations'])[:1500]
-        request=ReviewRequest(crop=self.case['crop'],observations=observations[:5000],candidates=proposal.candidates,evidence=[dict(id=e['id'],disease_id=e['disease_id'],disease_name=e['name_en'],text=e['description'][:4000],source=e['source_name'],location=e.get('source_location') or 'Unspecified') for e in evidence],weather_summary=json.dumps({k:(self.state.get('weather') or {}).get(k) for k in ('status','observed_date','station','summary','limitations')},default=str)[:2000],review_round=min(len(self.state['judge_decisions'])+1,3))
+        request=ReviewRequest(crop=self.case['crop'],observations=observations[:5000],candidates=proposal.candidates,evidence=[dict(id=e['id'],disease_id=e['disease_id'],disease_name=e['name_en'],text=e['description'][:4000],source=e['source_name'],location=e.get('source_location') or 'Unspecified') for e in evidence],weather_summary=json.dumps(self.case['weather_context'],default=str)[:2000],review_round=min(len(self.state['judge_decisions'])+1,3))
         await self.notify('critic','Critic is checking hypothesis claims, sources and unresolved observations.')
         review=await call_critic_agent(reviewer,request)
         await self.notify('judge','Deterministic Judge is evaluating the current Critic findings.')

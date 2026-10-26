@@ -1,5 +1,7 @@
 """World GTS observations from KMA; geocoding is separate from weather evidence."""
 import asyncio
+import csv
+import io
 import math
 import os
 from datetime import date, datetime, time, timedelta, timezone
@@ -7,6 +9,8 @@ from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 import httpx
 
 KMA = "https://apihub.kma.go.kr/api/"
+STATION_CATALOG = "https://www.ncei.noaa.gov/pub/data/noaa/isd-history.csv"
+SYNOP_URL = KMA + "typ01/url/gts_bufr_syn1.php"
 GEO = "https://geocoding-api.open-meteo.com/v1/"
 
 class WeatherError(Exception):
@@ -127,16 +131,73 @@ def parse_synop(payload, station_id, instant):
     except (KeyError,TypeError,ValueError):
         raise WeatherError("KMA observation response could not be decoded.") from None
 
+def parse_station_catalog(text, day):
+    """NOAA ISD metadata only; six-digit USAF WMO entries ending in zero."""
+    reader = csv.DictReader(io.StringIO(text))
+    if not {'USAF', 'LAT', 'LON', 'BEGIN', 'END'} <= set(reader.fieldnames or []):
+        raise WeatherError("NOAA station catalog header could not be decoded.")
+    stations = {}
+    for row in reader:
+        code = row['USAF']
+        if len(code) != 6 or not code.isdigit() or not code.endswith('0'):
+            continue
+        try:
+            lat, lon = float(row['LAT']), float(row['LON'])
+            begin = datetime.strptime(row['BEGIN'], '%Y%m%d').date()
+            end = datetime.strptime(row['END'], '%Y%m%d').date()
+        except (ValueError, TypeError):
+            continue
+        if begin > day or not (-90 <= lat <= 90 and -180 <= lon <= 180) or (lat == 0 and lon == 0):
+            continue
+        stn = code[:5]
+        candidate = dict(id=stn, latitude=lat, longitude=lon,
+                         name=row.get('STATION NAME', ''), metadata_end=end.isoformat(),
+                         metadata_source=STATION_CATALOG)
+        if stn not in stations or candidate['metadata_end'] > stations[stn]['metadata_end']:
+            stations[stn] = candidate
+    if not stations:
+        raise WeatherError("No usable stations in NOAA catalog.")
+    return list(stations.values())
+
+
+def parse_bufr_synop(text, station_id, instant):
+    """Parse the actual KMA help=1 text header. RH is a code, not hours."""
+    header = None
+    rows = []
+    for line in text.splitlines():
+        parts = line.lstrip('# ').split()
+        if line.startswith('#'):
+            if parts and parts[0] == 'YYMMDDHHMI' and {'STN','TA','HM','RN','RH'} <= set(parts):
+                header = parts
+            continue
+        if not line.strip():
+            continue
+        if header is None or len(parts) != len(header):
+            raise WeatherError("KMA SYNOP text has an unexpected header or row length.")
+        raw = dict(zip(header, parts))
+        try:
+            tm = datetime.strptime(raw['YYMMDDHHMI'], '%Y%m%d%H%M').replace(tzinfo=timezone.utc)
+        except ValueError:
+            raise WeatherError("KMA SYNOP timestamp is invalid.") from None
+        if raw['STN'].zfill(5) != station_id or tm != instant:
+            raise WeatherError("KMA returned a different station or observation time.")
+        rows.append(dict(time=tm.isoformat(), temperature_c=number(raw['TA'],-90,60),
+                         humidity_pct=number(raw['HM'],0,100), precipitation_mm=number(raw['RN'],0,3000),
+                         precipitation_period_hours={'1':6,'2':12,'3':18,'4':24,'5':1,'6':2,'7':3,'8':9,'9':15}.get(raw['RH']), raw=raw))
+    if header is None or '#7777END' not in text:
+        raise WeatherError("KMA SYNOP response is missing its header or completion marker.")
+    return rows
+
+
 async def fetch_weather(location_id, day):
     key=os.getenv('KMA_AUTH_KEY','').strip()
     if not key: raise WeatherError("Set KMA_AUTH_KEY in critic/.env and authorize the KMA world GTS services.")
-    async with httpx.AsyncClient(timeout=12) as client:
+    async with httpx.AsyncClient(timeout=35) as client:
         place=await resolve_location(client,location_id)
         start,end,times=observation_times(day,place['timezone'])
         if not times: raise WeatherError("No completed synoptic observation time is available for this local day yet.")
-        response=await get_response(client,KMA+'typ01/url/stn_gts1.php',
-            dict(tm=times[-1].strftime('%Y%m%d%H%M'),upp=0,mode=1,help=1,authKey=key))
-        stations=parse_stations(response.text)
+        response=await get_response(client,STATION_CATALOG,{})
+        stations=parse_station_catalog(response.text,day)
         station=min(stations,key=lambda s:distance_km(place,s))
         station['distance_km']=round(distance_km(place,station),1)
         if station['distance_km'] > 100:
@@ -145,11 +206,9 @@ async def fetch_weather(location_id, day):
         async def fetch(instant):
             async with semaphore:
                 try:
-                    r=await get_response(client,KMA+'typ02/openApi/GtsInfoService/getSynop',
-                        dict(tm=instant.strftime('%Y%m%d%H%M'),stnId=station['id'],numOfRows=100,pageNo=1,dataType='JSON',authKey=key))
-                    try: payload=r.json()
-                    except ValueError: raise WeatherError("KMA returned a non-JSON response. Check service authorization.") from None
-                    return parse_synop(payload,station['id'],instant),None
+                    r=await get_response(client,SYNOP_URL,
+                        dict(tm=instant.strftime('%Y%m%d%H%M'),dtm=0,stn=station['id'],help=1,authKey=key))
+                    return parse_bufr_synop(r.text,station['id'],instant),None
                 except WeatherError as exc: return [],str(exc)
         responses=await asyncio.gather(*(fetch(t) for t in times))
         observations={row['time']:row for rows,_ in responses for row in rows}
@@ -164,8 +223,8 @@ async def fetch_weather(location_id, day):
                 sampled_min_temperature_c=min(values) if values else None,
                 sampled_max_temperature_c=max(values) if values else None,
                 sampled_mean_humidity_pct=round(sum(humidities)/len(humidities),1) if humidities else None),
-            sources=['https://apihub.kma.go.kr/apiList.do?seqApi=12', 'https://open-meteo.com/en/docs/geocoding-api'],
-            limitations=errors+['Three-hourly samples are not daily extremes or climate normals.',
+            sources=[SYNOP_URL, STATION_CATALOG, 'https://open-meteo.com/en/docs/geocoding-api'],
+            limitations=errors+[f"Station coordinates use NOAA ISD metadata (record ends {station['metadata_end']}); station activity on the requested date is not guaranteed.", 'Three-hourly samples are not daily extremes or climate normals.',
                 'Station weather does not measure canopy humidity or leaf wetness. Rainfall windows are not summed.',
                 'Only the observation day is sampled; earlier infection periods are not assessed.',
                 'The nearest listed station may have no reports; no alternative station is silently substituted.'])
@@ -201,3 +260,56 @@ def compare_conditions(diseases, weather):
                 reason='Compare cited conditions with sampled station measurements; growth stage, canopy humidity and leaf wetness may be unknown.',
                 source_conflicts=disease['source_conflicts']))
     return result
+
+
+COUNTRY_STATIONS_URL=KMA+'typ02/openApi/GtsInfoService/getGtsStn'
+
+def parse_country_stations(text):
+    import xml.etree.ElementTree as ET
+    try:
+        root=ET.fromstring(text)
+        code=root.findtext('./header/resultCode')
+        if code=='03':return [],0
+        if code!='00':raise WeatherError('KMA country-station API rejected the country/category request.')
+        total=int(root.findtext('./body/totalCount','0'));items=[]
+        for item in root.findall('./body/items/item'):
+            stn=item.findtext('stnId','').strip()
+            if not stn.isdigit() or len(stn)>5:raise ValueError('Invalid station ID')
+            items.append(dict(id=stn.zfill(5),country_name='Russia' if item.findtext('countryName','')=='\ub7ec\uc2dc\uc544' else item.findtext('countryName',''),name=item.findtext('stnNm','')))
+        if total<0 or total>10000:raise ValueError('Unexpected station count')
+        return items,total
+    except (ET.ParseError,ValueError):raise WeatherError('KMA country-station XML could not be decoded.') from None
+
+async def country_stations(country_code,category='temp'):
+    if not country_code.isdigit() or not 1<=len(country_code)<=8 or category not in ('temp','rain'):
+        raise WeatherError('Use an explicit numeric KMA country code and temp/rain category.')
+    key=os.getenv('KMA_AUTH_KEY','').strip()
+    if not key:raise WeatherError('KMA_AUTH_KEY is not configured.')
+    async with httpx.AsyncClient(timeout=20) as client:
+        all_items=[];page=1;expected=None
+        while True:
+            response=await get_response(client,COUNTRY_STATIONS_URL,dict(numOfRows=100,pageNo=page,dataType='XML',cc=country_code,category=category,authKey=key))
+            items,total=parse_country_stations(response.text)
+            if expected is not None and total!=expected:raise WeatherError('KMA station count changed during pagination.')
+            expected=total;all_items.extend(items)
+            if len(all_items)>=total:break
+            if not items or page>=100:raise WeatherError('KMA station list is incomplete.')
+            page+=1
+        unique={item['id']:item for item in all_items}
+        if len(unique)!=expected:raise WeatherError('KMA country station pagination contains duplicate or missing entries.')
+        metadata_sources=[]
+        has_hangul=lambda value:any('\uac00'<=ch<='\ud7a3' for ch in value)
+        if any(has_hangul(item['name']) for item in unique.values()):
+            names={}
+            try:
+                catalog=await get_response(client,STATION_CATALOG,{})
+                names={item['id']:item['name'] for item in parse_station_catalog(catalog.text,date.today())}
+                metadata_sources.append(STATION_CATALOG)
+            except WeatherError:
+                pass
+            for item in unique.values():
+                if has_hangul(item['name']):item['name']=names.get(item['id'],f"Station {item['id']}")
+        for item in unique.values():
+            if has_hangul(item['country_name']):item['country_name']=f"KMA country {country_code}"
+        return dict(country_code=country_code,category=category,total_count=expected,stations=list(unique.values()),source=COUNTRY_STATIONS_URL,metadata_sources=metadata_sources,
+                    limitations=['KMA country codes must be provided explicitly; 1001 is Russia, not Korea.','This service supplies station IDs/names, not coordinates or weather measurements. Korean station names use NOAA English aliases when available; otherwise Station ID is displayed.'])

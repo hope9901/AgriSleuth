@@ -5,7 +5,7 @@ interface AgentState {
   finish_reason?: string; missing_evidence: string[]; questions?: string[]; uncertainties?: string[];
   tool_history: {step:number; tool:string; reason:string; arguments:Record<string,unknown>; status:string; summary:string; result?:{new_source_ids?:string[];[key:string]:unknown}}[];
   judge_decisions: {action:string;reason:string}[];
-  hypothesis_history: {round:number;proposal:{summary:string;candidates:{id:string;name:string}[]};review:{review_summary:string};action:string}[];
+  hypothesis_history: {round:number;proposal:{summary:string;candidates:{id:string;name:string}[]};review:{review_summary:string;scenario_id?:string;scenario_match?:string;scenario_reason?:string};action:string}[];
 }
 export default function AgentTrace({id, revision}:{id:string;revision:number}) {
   const [state,setState]=useState<AgentState|null>(null);
@@ -35,7 +35,7 @@ export default function AgentTrace({id, revision}:{id:string;revision:number}) {
       {step.result&&<details><summary>Tool result summary</summary><pre style={{whiteSpace:"pre-wrap",overflowWrap:"anywhere"}}>{JSON.stringify(step.result,null,2)}</pre></details>}
       <details><summary>Validated tool inputs</summary><pre style={{whiteSpace:"pre-wrap",overflowWrap:"anywhere"}}>{JSON.stringify(step.arguments,null,2)}</pre></details>
     </li>)}</ol>
-    {state.hypothesis_history.map((round,i)=><details key={i}><summary>Hypothesis revision {round.round} · {round.action}</summary><p>{round.proposal.summary}</p><p>Candidates: {round.proposal.candidates.map(c=>c.name).join(", ")}</p><p>Critic: {round.review.review_summary}</p></details>)}
+    {state.hypothesis_history.map((round,i)=><details key={i}><summary>Hypothesis revision {round.round} · {round.action}</summary><p>{round.proposal.summary}</p><p>Candidates: {round.proposal.candidates.map(c=>c.name).join(", ")}</p><p>Critic: {round.review.review_summary}</p>{round.review.scenario_id && <p>Scenario: {round.review.scenario_id} · {round.review.scenario_match}. {round.review.scenario_reason}</p>}</details>)}
     {state.judge_decisions.map((decision,i)=><p key={i}>Judge: {decision.action} — {decision.reason}</p>)}
     {!!unresolved.length&&<><h3>Unresolved evidence</h3><ul>{unresolved.map((text,i)=><li key={i}>{text}</li>)}</ul></>}
     {state.finish_reason&&<p><strong>Stopped because:</strong> {state.finish_reason}</p>}

@@ -45,3 +45,7 @@ generator=LocalStructuredModel('http://fixture/v1','test','fixture',Proposal)
 generator.constrain_references(['maize_013'],['maize_013_f1'])
 assert generator.output_schema()['$defs']['Candidate']['properties']['id']['enum']==['maize_013']
 print('PASS request-specific candidate/source enum constraints and null alternative references')
+
+assert generator.output_schema()['properties']['candidates']['maxItems']==1
+assert generator.output_schema()['$defs']['Candidate']['properties']['evidence_ids']['maxItems']==2
+print('PASS bounded local generation candidate/citation output budgets')

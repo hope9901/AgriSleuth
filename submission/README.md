@@ -25,7 +25,7 @@ See SPONSOR_TECH.md. Zetaris performs actual read-only JDBC evidence queries. Th
 The approximately 98-second MP4 is a captioned edited replay of actual saved results and UI screenshots, not an unedited live recording. Waiting times are omitted; actual wall-clock times are displayed. No fictional action has been inserted. DEMO_SCRIPT.md provides the spoken presentation outline; the video contains no generated narration.
 
 ## Current limitations
-- KMA recheck still returned HTTP 403. No world weather values are fabricated; weather is shown as unavailable. See weather-status.json.
+- The recorded video predates the weather transport fix and accurately shows its historical HTTP 403. The new KMA SYNOP transport now receives live observations (8/8 timestamps on three tested Seoul dates), with explicit NOAA station metadata. See weather-status.json and ../docs/weather-live-2026-10-26.json. A fresh autonomous weather-inclusive demonstration and updated video remain outstanding.
 - Biological accuracy, source claim completeness and treatment/regulatory advice are not established.
 - Local model behavior is variable. One positive and one insufficient-information demonstration do not establish reliability across all crops/images.
 - No authentication/public hosting; run only on localhost.
@@ -38,3 +38,16 @@ The approximately 98-second MP4 is a captioned edited replay of actual saved res
 - [x] Sponsor explanation and attribution
 - [x] Captioned edited demo video and presentation outline
 - [ ] Upload the chosen video/link on the event submission form and complete the final event submission yourself; no event account submission has been made by this agent.
+
+
+## Later environment integration check
+The existing Korean environment report is imported as 26 profiles / 67 windows. The country-station API and web directory received all 79 Russian entries for cc=1001. A one-sample check selected real weather and Zetaris tools but did not complete Diagnosis/Critic/Judge because structured model output was truncated. See ../docs/environment-integration-summary.json. This new check does not replace the two prior demonstrations or establish diagnostic accuracy. The existing video still shows the historical weather access failure.
+
+
+## Latest English and Critic-scenario verification
+The working project and reference data are English. Historical export translations are labeled and originals preserved separately. The Critic now selects one of eight scenarios, records direct/nearest fit and rationale, and keeps the deterministic Judge and citation checks.
+
+A later weather-inclusive run completed all tool executions in 156.6 seconds with real KMA, Zetaris, Qwen and Meterless, ending needs_more_evidence with Rice blast as a tentative candidate. It did not fail at model output generation and does not establish diagnostic accuracy. See ../docs/environment-sample-latest.json. Prior failed development attempts remain historical; the existing MP4 still predates the weather/scenario update.
+
+
+Latest same-sample recheck after adding supplied case context: 141.2 s, all tool executions completed; WEATHER_WINDOW_GAP selected as a direct match; final status needs_more_evidence with Rice blast retained. This rerun reused the KMA snapshot collected in the preceding 156.6-second run. Records: docs/environment-sample-latest.json and docs/environment-English-first-live.json (relative to repository root). It is one attributed sample with constructed metadata, not independent ground truth. Critic remains conservative: the recorded question still asks for region/heading information despite supplied region and vegetative leaf context. Scenario selection is a review aid, not a guarantee of biological relevance. The old MP4 predates these changes.

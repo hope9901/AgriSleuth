@@ -1,13 +1,13 @@
 {
   "crop": "Rice",
-  "source_report": "English edition of '벼 옥수수 병해 특징 서술 출처' (Korean)",
+  "source_report": "English edition of Rice and Maize Disease Features and Sources (originally Korean)",
   "note": "One feature row = one feature from one source. Descriptions are English renderings of Korean paraphrases; quotes are 15 words or fewer. 'Unconfirmed' marks unverified items.",
   "diseases": [
     {
       "no": 1,
       "crop": "Rice",
       "name_en": "Rice blast",
-      "name_ko": "도열병",
+      "name_ko": "Rice blast",
       "scientific_name": "Pyricularia oryzae",
       "intro": "The Korean official descriptions are two NCPMS pages (leaf blast and panicle blast, with identical text); lesion-size figures appear only in an overseas source (Sri Lanka Department of Agriculture).",
       "features": [
@@ -589,7 +589,7 @@
       "no": 2,
       "crop": "Rice",
       "name_en": "Sheath blight",
-      "name_ko": "잎집무늬마름병",
+      "name_ko": "Sheath blight",
       "scientific_name": "Rhizoctonia solani AG1-IA",
       "intro": "There is a Korean official description (NCPMS) and an original paper on anastomosis groups of Korean isolates (Kim 1994), but lesion and sclerotium sizes differ greatly between sources.",
       "features": [
@@ -1074,7 +1074,7 @@
       "no": 3,
       "crop": "Rice",
       "name_en": "Brown spot",
-      "name_ko": "깨씨무늬병",
+      "name_ko": "Brown spot",
       "scientific_name": "Bipolaris oryzae",
       "intro": "There is a Korean official source (NCPMS) and an original paper on 50 Korean isolates (Kim 2025); the conidial sizes in the two sources differ greatly.",
       "features": [
@@ -1463,7 +1463,7 @@
       "no": 4,
       "crop": "Rice",
       "name_en": "Bacterial blight",
-      "name_ko": "흰잎마름병",
+      "name_ko": "Bacterial blight",
       "scientific_name": "Xanthomonas oryzae pv. oryzae",
       "intro": "Descriptions from three sources (NCPMS in Korea, IRRI, EPPO) largely agree; comparison rows for bacterial blight taken from the bacterial leaf streak notes are also included in this table.",
       "features": [
@@ -1932,7 +1932,7 @@
       "no": 5,
       "crop": "Rice",
       "name_en": "Bacterial leaf streak (Xoc)",
-      "name_ko": "세균성 줄무늬병(Xoc)",
+      "name_ko": "Bacterial leaf streak (Xoc)",
       "scientific_name": "Xanthomonas oryzae pv. oryzicola",
       "intro": "No Korean source confirmed. NCPMS and Nongsaro have no entry for *X. oryzae* pv. *oryzicola*, and the Korean list name 'byeo segyun-julmunui-byeong' (rice bacterial stripe) belongs to *Acidovorax avenae* subsp. *avenae*, so it is not used here (per the notes). Everything below is an overseas description.",
       "features": [
@@ -2400,7 +2400,7 @@
       "no": 6,
       "crop": "Rice",
       "name_en": "Bakanae",
-      "name_ko": "키다리병",
+      "name_ko": "Bakanae",
       "scientific_name": "Fusarium fujikuroi species complex",
       "intro": "The Korean official source (NCPMS) is the most detailed, and there are two Korean original papers (Kim C.K. 1981, and Niehaus 2017 on Korean isolates) plus a related news report.",
       "features": [
@@ -2756,7 +2756,7 @@
       "no": 7,
       "crop": "Rice",
       "name_en": "False smut",
-      "name_ko": "이삭누룩병",
+      "name_ko": "False smut",
       "scientific_name": "Ustilaginoidea virens",
       "intro": "There are three Korean official sources (NCPMS, RDA press releases 2015 and 2024), a Korean original paper (In 1985), and an ultrastructure paper by Korean researchers (Kim & Park 2007). Chlamydospore size figures appear only in the overseas TNAU source.",
       "features": [
@@ -3047,7 +3047,7 @@
       "no": 8,
       "crop": "Rice",
       "name_en": "Bacterial grain rot (bacterial panicle blight)",
-      "name_ko": "세균벼알마름병",
+      "name_ko": "Bacterial grain rot",
       "scientific_name": "Burkholderia glumae, B. plantarii",
       "intro": "There are Korean official sources (NCPMS, two RDA press releases) and the first Korean report of *B. plantarii* (Ra 2016). Overseas descriptions (US FSA7580, Ham 2011, LSU) and the Japan-related *B. plantarii* seedling blight descriptions are not Korean data.",
       "features": [
@@ -3469,7 +3469,7 @@
       "no": 9,
       "crop": "Rice",
       "name_en": "Rice stripe",
-      "name_ko": "줄무늬잎마름병",
+      "name_ko": "Rice stripe",
       "scientific_name": "Rice stripe virus, vector Laodelphax striatellus",
       "intro": "There are Korean official sources (Nongsaro rice stripe and small brown planthopper pages) and three Korean original papers (Chung 1974, Lee 2004, Lee 2012). The NCPMS detail page did not open this time.",
       "features": [
@@ -3907,7 +3907,7 @@
       "no": 10,
       "crop": "Rice",
       "name_en": "Rice dwarf",
-      "name_ko": "오갈병",
+      "name_ko": "Rice dwarf",
       "scientific_name": "Rice dwarf virus, vectors Nephotettix cincticeps and others",
       "intro": "There are Korean official sources (Nongsaro rice dwarf and green rice leafhopper pages), and an international organization (ICTV) and a Nepal original paper (JIRCAS) give particle morphology. Korean occurrence is currently described as local occurrence in parts of the south.",
       "features": [
@@ -4232,7 +4232,7 @@
       "no": 11,
       "crop": "Rice",
       "name_en": "Udbatta",
-      "name_ko": "벼이삭미이라병(udbatta)",
+      "name_ko": "Rice udbatta disease",
       "scientific_name": "Balansia oryzae-sativae, anamorph Ephelis oryzae",
       "intro": "No Korean source confirmed. No Korean record of udbatta on rice, nor an official list entry for the Korean name 'byeo-isak-mira-byeong', was found; everything below is from Indian and Japanese sources (the Japanese JARQ paper concerns forage-grass isolates).",
       "features": [
@@ -4524,7 +4524,7 @@
       "no": 12,
       "crop": "Rice",
       "name_en": "Ufra",
-      "name_ko": "벼줄기선충 피해(ufra)",
+      "name_ko": "Rice stem nematode damage: ufra",
       "scientific_name": "Ditylenchus angustus",
       "intro": "No Korean source confirmed. There is no Korean occurrence record, and it is recorded as a quarantine pest per EPPO (per the notes). Everything below comes from deepwater rice areas of South and Southeast Asia and US agency material.",
       "features": [

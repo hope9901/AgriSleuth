@@ -30,6 +30,8 @@ async def select_action(state,carryover):
     context['photo_available']=bool(state['image_reference']);context['image_reference']=state['image_reference']
     image=state.get('image_observations') or {}
     context['image_observations']={k:[v[:100] for v in image.get(k,[])[:3]] for k in ('visible_findings','limitations')}
+    context['observation_date']=state.get('observation_date')
+    context['environment_assessments']=[{k:a.get(k) for k in ('disease_id','assessment','required_inputs')} for a in (state.get('weather') or {}).get('environment_assessments',[]) if a['disease_id'] in {e['disease_id'] for e in state['supporting_evidence']}][:2]
     context['weather_status']=(state.get('weather') or {}).get('status','missing')
     context['location_confirmed']=bool(state.get('location'))
     context['recent_tools']=[dict(tool=t['tool'],status=t['status'],summary=t.get('summary','')[:180],error_code=t.get('error_code')) for t in state['tool_history'][-3:]]

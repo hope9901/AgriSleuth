@@ -15,6 +15,22 @@ class LocalStructuredModel:
         self.reference_constraints=(sorted(set(candidate_ids)),sorted(set(evidence_ids)))
     def output_schema(self):
         schema=self.schema.model_json_schema()
+        if self.schema.__name__=='Proposal':
+            schema['properties']['candidates']['maxItems']=1
+            schema['properties']['summary']['maxLength']=180
+            schema['properties']['limitations'].update(maxItems=2,items={'type':'string','maxLength':140})
+            properties=schema['$defs']['Candidate']['properties']
+            properties['claim']['maxLength']=180
+            properties['evidence_ids']['maxItems']=2
+        if self.schema.__name__=='CriticReview':
+            schema['required']=list(dict.fromkeys(schema.get('required',[])+['scenario_id','scenario_match','scenario_reason']))
+            schema['properties']['issues']['maxItems']=2
+            schema['properties']['limitations'].update(maxItems=2,items={'type':'string','maxLength':140})
+            schema['properties']['review_summary']['maxLength']=180
+            properties=schema['$defs']['CriticIssue']['properties']
+            properties['reason']['maxLength']=160
+            properties['requested_information']['maxLength']=160
+            properties['evidence_ids']['maxItems']=2
         if self.reference_constraints:
             candidates,evidence=self.reference_constraints
             for name,definition in schema.get('$defs',{}).items():
@@ -40,7 +56,7 @@ class LocalStructuredModel:
             response=await client.post(self.base_url+'/chat/completions',headers={'Authorization':'Bearer '+self.api_key},json=payload)
             response.raise_for_status();body=response.json()
         choice=body['choices'][0]
-        if choice.get('finish_reason')!='stop':raise ValueError('Model response did not finish normally.')
+        if choice.get('finish_reason')!='stop':raise ValueError(f"Model response did not finish normally ({choice.get('finish_reason')}; output budget {self.max_tokens}).")
         message=choice['message'];text=message.get('content') or ''
         # Some LM Studio Qwen templates put the complete JSON answer in reasoning_content.
         # Accept ONLY an entire schema-valid JSON object there, never prose or extracted thoughts.

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { API_BASE_URL } from "../api/investigations";
 interface History {
-  rounds: {round: number; action: string; reason: string; proposal: {summary: string}; review: {review_summary: string} | null; evidence_ids: string[]}[];
+  rounds: {round: number; action: string; reason: string; proposal: {summary: string}; review: {review_summary: string; scenario_id?: string; scenario_match?: string; scenario_reason?: string} | null; evidence_ids: string[]}[];
   engines: {status: string; tokenLabel: string; totalTokensUsed: number; durationMs: number; chunkConfig: {maxChunks: number; carryoverTokens: number}; chunks: {id: number; carryover: string; content: string}[]}[];
 }
 export default function ReviewHistory({ id, status }: { id: string; status: string }) {
@@ -20,6 +20,7 @@ export default function ReviewHistory({ id, status }: { id: string; status: stri
   return <section className="panel"><h2>Critic &amp; Meterless run history</h2>
     {history.rounds.map((round,i) => <details key={i}><summary>Round {round.round}: {round.action}</summary>
       <p>{round.proposal.summary}</p><p>Critic: {round.review?.review_summary ?? "No supported candidates to review."}</p>
+      {round.review?.scenario_id && <p>Critic scenario: {round.review.scenario_id} · {round.review.scenario_match}. {round.review.scenario_reason}</p>}
       <p>Judge: {round.reason}</p><small>Evidence: {round.evidence_ids.join(", ")}</small>
     </details>)}
     {history.engines.map((engine,i) => <details key={i}><summary>Meterless Markovian: {engine.status} · {engine.chunks.length} chunks</summary>

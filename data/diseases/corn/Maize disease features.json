@@ -1,13 +1,13 @@
 {
   "crop": "Maize",
-  "source_report": "English edition of '벼 옥수수 병해 특징 서술 출처' (Korean)",
+  "source_report": "English edition of Rice and Maize Disease Features and Sources (originally Korean)",
   "note": "One feature row = one feature from one source. Descriptions are English renderings of Korean paraphrases; quotes are 15 words or fewer. 'Unconfirmed' marks unverified items.",
   "diseases": [
     {
       "no": 13,
       "crop": "Maize",
       "name_en": "Northern corn leaf blight",
-      "name_ko": "북방 잎마름병",
+      "name_ko": "Northern corn leaf blight",
       "scientific_name": "Exserohilum turcicum",
       "intro": "No Korean source confirmed. No Nongsaro page for northern leaf blight (geuleummunui-byeong or ipmareum-byeong) was found and the dynamic NCPMS page did not open. Below are US extension sources and a paper on Indian isolates.",
       "features": [
@@ -346,7 +346,7 @@
       "no": 14,
       "crop": "Maize",
       "name_en": "Southern corn leaf blight",
-      "name_ko": "남방 잎마름병",
+      "name_ko": "Southern corn leaf blight",
       "scientific_name": "Bipolaris maydis",
       "intro": "There are Korean official descriptions (Nongsaro, RDA press release 2025), but they come from the same agency group, give the same size figures and cite no original literature. In Korea it is called 'kkaessimunui-byeong' (the same name as rice brown spot). Pathogen morphology figures appear only in an overseas taxonomic monograph.",
       "features": [
@@ -733,7 +733,7 @@
       "no": 15,
       "crop": "Maize",
       "name_en": "Gray leaf spot",
-      "name_ko": "회색 잎반점병",
+      "name_ko": "Gray leaf spot",
       "scientific_name": "Cercospora zeae-maydis, C. zeina",
       "intro": "A Korean official GLS description is Unconfirmed. The 'jeommunui-byeong' (leaf spot) description in the RDA 2025 press release gives no scientific name, so it is not confirmed to be the same disease (marked 'match to disease name unconfirmed' in the table).",
       "features": [
@@ -1154,7 +1154,7 @@
       "no": 16,
       "crop": "Maize",
       "name_en": "Common rust",
-      "name_ko": "녹병",
+      "name_ko": "Common rust",
       "scientific_name": "Puccinia sorghi",
       "intro": "There is a Korean official source (Nongsaro 'rust') and an original paper on Korean specimens (Lee 2025), but the Nongsaro description conflicts with both the English sources and the Korean original paper.",
       "features": [
@@ -1445,7 +1445,7 @@
       "no": 17,
       "crop": "Maize",
       "name_en": "Southern rust",
-      "name_ko": "남방녹병",
+      "name_ko": "Southern rust",
       "scientific_name": "Puccinia polysora",
       "intro": "A Korean official agency page and an official Korean name are Unconfirmed; the Korean evidence is an original paper on 33 Korean specimens (Lee 2025). This Korean paper conflicts with the US rule 'upper surface = southern rust'.",
       "features": [
@@ -1801,7 +1801,7 @@
       "no": 18,
       "crop": "Maize",
       "name_en": "Common smut",
-      "name_ko": "깜부기병",
+      "name_ko": "Common smut",
       "scientific_name": "Ustilago maydis",
       "intro": "There is a Korean official source (Nongsaro D00001177) and a Korean paper citing the List of Plant Diseases in Korea (2004). Chlamydospore size was confirmed in only one overseas source (Illinois).",
       "features": [
@@ -2386,7 +2386,7 @@
       "no": 20,
       "crop": "Maize",
       "name_en": "Fusarium ear rot",
-      "name_ko": "푸사리움 이삭썩음병",
+      "name_ko": "Fusarium ear rot",
       "scientific_name": "Fusarium verticillioides and other FFSC species",
       "intro": "There is a Korean official source (Nongsaro 'isak-sseogeum-byeong' (ear rot), with the pathogen given as *Gibberella fujikuroi*) and two Korean original papers (Choi 2018 on FFSC in Korean grain, Han 2015). The rest of the symptom descriptions are from US extension sources.",
       "features": [
@@ -2710,7 +2710,7 @@
       "no": 21,
       "crop": "Maize",
       "name_en": "Gibberella ear rot",
-      "name_ko": "지베렐라 이삭썩음병",
+      "name_ko": "Gibberella ear rot",
       "scientific_name": "Fusarium graminearum species complex",
       "intro": "There is a Korean official source (Nongsaro maize 'red mold disease' document) and a Korean FGSC original paper (Lee 2012). Sources differ on whether the Korean name 'bulgeun-gompangi-byeong' (red mold disease) refers to ear rot or stalk rot.",
       "features": [
@@ -3018,7 +3018,7 @@
       "no": 22,
       "crop": "Maize",
       "name_en": "Stewart's wilt",
-      "name_ko": "스튜어트 시들음병",
+      "name_ko": "Stewart's wilt",
       "scientific_name": "Pantoea stewartii subsp. stewartii",
       "intro": "No Korean source confirmed. EPPO lists Korea as 'Present, few occurrences', but the basis is a single 2010 detection on *Dracaena sanderiana* in a greenhouse in Gyeonggi, not a maize record. Everything below is an overseas description.",
       "features": [
@@ -3485,7 +3485,7 @@
       "no": 23,
       "crop": "Maize",
       "name_en": "Goss's bacterial wilt and leaf blight",
-      "name_ko": "고스 시들음병",
+      "name_ko": "Goss's wilt",
       "scientific_name": "Clavibacter nebraskensis",
       "intro": "No Korean source confirmed. The EPPO distribution table has no entry for Korea or Asia (this does not confirm absence). Bacterial cell size and colony color could not be confirmed from primary sources.",
       "features": [
@@ -3906,7 +3906,7 @@
       "no": 24,
       "crop": "Maize",
       "name_en": "Philippine downy mildew",
-      "name_ko": "필리핀 노균병",
+      "name_ko": "Philippine downy mildew",
       "scientific_name": "Peronosclerospora philippinensis",
       "intro": "No Korean source confirmed. Korea is not in the Asia section of the EPPO distribution table. Below are descriptions from the US government (three CAPS editions) and original papers (Singh, Groben 2026).",
       "features": [
@@ -4343,7 +4343,7 @@
       "no": 25,
       "crop": "Maize",
       "name_en": "Brown stripe downy mildew",
-      "name_ko": "갈색줄무늬 노균병",
+      "name_ko": "Brown stripe downy mildew",
       "scientific_name": "Sclerophthora rayssiae var. zeae",
       "intro": "No Korean source confirmed. Korea is not in the EPPO distribution (India, Myanmar, Nepal, Pakistan, Thailand). Everything below is an overseas description.",
       "features": [
@@ -4651,7 +4651,7 @@
       "no": 26,
       "crop": "Maize",
       "name_en": "Maize lethal necrosis",
-      "name_ko": "옥수수 치명적 괴사병",
+      "name_ko": "Maize lethal necrosis",
       "scientific_name": "MCMV + potyvirus (SCMV and others)",
       "intro": "No Korean source confirmed. No Korean occurrence data were found for MCMV, SCMV or MLN. Below are descriptions from an international organization (CIMMYT), a US state government (CDFA), reviews and original papers.",
       "features": [
