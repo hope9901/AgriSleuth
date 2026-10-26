@@ -17,6 +17,7 @@ export type InvestigationStatus =
   | "researching"
   | "reviewing"
   | "needs_input"
+  | "needs_more_evidence"
   | "completed"
   | "abstained"
   | "failed";

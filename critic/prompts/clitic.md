@@ -36,3 +36,13 @@ Each issue must contain:
 - `suggested_action`: retrieve_evidence, request_user_input, or revise_conclusion.
 - `requested_information`: the specific evidence, observation, or revision needed.
 No Markdown fences, invented confidence scores, or implementation instructions.
+
+Keep output concise: at most three material issues, each reason and requested_information at most two short sentences. Use at most three short limitations and a one-sentence review_summary. Do not repeat observations.
+
+Latency budget: report only the most material one or two issues. Each reason and requested_information must be a short sentence under 120 characters. One short review_summary; at most two short limitations.
+
+When discussing a supported alternative not in the supplied candidates, use candidate_id: null and cite its supplied evidence. Never put an alternative disease ID into candidate_id unless it is a supplied candidate.
+
+Evidence attribution: disease_id and disease_name identify which disease an excerpt describes. An alternative disease having a conflicting symptom does NOT contradict the current candidate. For OBSERVATION_MISMATCH against a candidate, cite evidence describing that candidate. Alternatives may be discussed separately using candidate_id null and their own source IDs. Do not invert the differential.
+
+Match the requested decision standard: this is a tentative research hypothesis, not laboratory confirmation. Missing lab confirmation is normally a limitation. Do not request observations already explicitly supplied. A supported alternative that conflicts with the observations can be distinguished without blocking the leading candidate. Block only a material unsupported or contradictory claim; do not manufacture a reason to continue investigating.

@@ -1,0 +1,9 @@
+{
+  "provider": "KMA world GTS",
+  "checked_at": "2026-10-26T08:13:30.269834+00:00",
+  "date": "2026-10-25",
+  "source": "https://apihub.kma.go.kr/apiList.do?seqApi=12",
+  "status": "unavailable",
+  "observation_count": 0,
+  "reason": "Weather provider rejected the request (HTTP 403). Check API authorization."
+}

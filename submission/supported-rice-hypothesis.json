@@ -1,0 +1,647 @@
+{
+  "input": {
+    "name": "supported-rice-hypothesis",
+    "id": "2721acac-22d4-4e06-a4b0-fff3bef21f4c",
+    "started_at": "2026-10-26T08:12:28.133301+00:00",
+    "input": {
+      "crop": "rice",
+      "region": "Gimje-si, Jeonbuk",
+      "observed_date": "2026-07-18",
+      "growth_stage": "vegetative",
+      "affected_part": "leaf",
+      "symptoms": "Several leaf lesions are spindle or eye shaped, with gray-white centers and brown margins. Lesions extend along the leaf blade; no circular evenly brown spots or vein-limited rectangular lesions were observed. Please investigate a tentative source-supported hypothesis, not a confirmed diagnosis."
+    },
+    "input_type": "constructed demonstration, not ground truth",
+    "status": "completed",
+    "viewer_url": "http://127.0.0.1:5173/?investigation=2721acac-22d4-4e06-a4b0-fff3bef21f4c&demo=1",
+    "elapsed_seconds": 146.7,
+    "read_retries": 0,
+    "hypotheses": [
+      {
+        "id": "rice_001",
+        "name": "Rice blast",
+        "reasoning": "Spindle-shaped lesions with gray-white centers and brown margins align with rice blast descriptions.",
+        "evidenceIds": [
+          "rice_001_f6",
+          "rice_001_f7"
+        ]
+      }
+    ],
+    "questions": [],
+    "finish_reason": "Judge approved finalization with limitations; no further evidence required.",
+    "tools": [
+      {
+        "tool": "search_diseases",
+        "reason": "Initial search needed to retrieve source excerpts for the described rice leaf lesions before verification.",
+        "status": "completed",
+        "summary": "Zetaris evidence: 6 excerpts, 6 new source IDs.",
+        "error_code": null
+      },
+      {
+        "tool": "verify_evidence",
+        "reason": "Search completed with new sources; now verify evidence to generate hypotheses and run Critic/Judge.",
+        "status": "completed",
+        "summary": "The leading candidate rice blast is supported by the spindle-shaped lesions with gray-white centers and brown margins described in observations, which align with evidence from LSU AgCenter and Sri Lanka Department of Agriculture. No material unsupported claims or contradictions were identified among supplied candidates.",
+        "error_code": null
+      },
+      {
+        "tool": "finish_investigation",
+        "reason": "The Judge decision 'finalize_with_limitations' indicates the investigation is complete with a supported hypothesis.",
+        "status": "completed",
+        "summary": "Judge approved finalization with limitations; no further evidence required.",
+        "error_code": null
+      }
+    ],
+    "judge_decisions": [
+      {
+        "action": "finalize_with_limitations",
+        "reason": "No blocking issues; retain the reported limitations."
+      }
+    ],
+    "source_ids": [
+      "rice_001_f6",
+      "rice_001_f7",
+      "rice_002_f3",
+      "rice_002_f19",
+      "rice_003_f5",
+      "rice_003_f10"
+    ],
+    "engine_runs": 1,
+    "checks": {
+      "terminal": true,
+      "real_zetaris_search": true,
+      "verified": true,
+      "no_false_completion": true,
+      "questions_or_abstention": false
+    }
+  },
+  "result": {
+    "id": "2721acac-22d4-4e06-a4b0-fff3bef21f4c",
+    "photoId": "1d8c6f4c-961f-45d3-b263-fd527a1e38b1",
+    "status": "completed",
+    "summary": "Lesion morphology matches rice blast, but absence of circular spots or vein-limited lesions requires further verification.",
+    "questions": [],
+    "hypotheses": [
+      {
+        "id": "rice_001",
+        "name": "Rice blast",
+        "reasoning": "Spindle-shaped lesions with gray-white centers and brown margins align with rice blast descriptions.",
+        "evidenceIds": [
+          "rice_001_f6",
+          "rice_001_f7"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "rice_001_f6",
+        "url": "https://www.lsuagcenter.com/~/media/system/6/a/a/a/6aaa18a85d7690e7f469109273056d89/pub3153blastofricelowres.pdf",
+        "title": "LSU AgCenter Pub. 3153 \"Blast of Rice\" (Groth & Hollier, 6/10) (LSU-Blast)",
+        "excerpt": "Leaf spots start as small white, gray or bluish specks. Under humid conditions they enlarge quickly into elliptical or diamond-shaped spots or linear lesions pointed at both ends, with gray to white centers and narrow brown borders. In severe cases leaves and whole plants die",
+        "location": "Body paragraph 2 (Figure 2)"
+      },
+      {
+        "id": "rice_001_f7",
+        "url": "https://doa.gov.lk/rrdi_ricediseases_riceblast/",
+        "title": "Sri Lanka Department of Agriculture, Rice Research & Development Institute, Rice blast page (DOA-SriLanka)",
+        "excerpt": "Spindle-shaped leaf spots with brown or reddish-brown to yellowish-brown borders, ashy centers and pointed ends. Fully developed lesions are usually 1.0\u20131.5 cm long and 0.3\u20130.5 cm wide. Symptoms vary with growth stage, cultivar susceptibility and environment",
+        "location": "\"Symptoms\" sentences 1-2, last sentence"
+      },
+      {
+        "id": "rice_002_f3",
+        "url": "https://www.lsuagcenter.com/~/media/system/6/6/a/5/66a53754c9529a4f64afd5b9c57f9fed/pub3123shealthblightofricelowres.pdf",
+        "title": "LSU AgCenter Pub. 3123 \"Sheath Blight of Rice\" (2 pages) (LSU-SB)",
+        "excerpt": "Large oval spots form on the leaf sheath. Lesions about 0.5\u20131 cm wide and 1\u20133 cm long form slightly above the water line on infected stems. Lesion centers are grayish-white or light green, with brown to reddish-brown borders",
+        "location": "Page 1 body paragraphs 2-3 (Fig. 2)"
+      },
+      {
+        "id": "rice_002_f19",
+        "url": "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight",
+        "title": "IRRI RKB \"Sheath blight\" (IRRI-Sheath blight)",
+        "excerpt": "Resembles stem rot and stem-borer damage. Confirm by irregular sheath lesions (water-soaked to gray-green early, grayish-white with brown border later) and the presence of sclerotia",
+        "location": "\"How to identify\" last paragraph"
+      },
+      {
+        "id": "rice_003_f5",
+        "url": "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot",
+        "title": "IRRI RKB \"Brown spot\" (IRRI-Brown spot)",
+        "excerpt": "On some cultivars it can be mistaken for blast lesions. Confirm by round brown spots with gray centers surrounded by reddish-brown borders",
+        "location": "\"How to identify\" last paragraph"
+      },
+      {
+        "id": "rice_003_f10",
+        "url": "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y",
+        "title": "NCPMS paddy rice Brown spot (NCPMS-Brown spot)",
+        "excerpt": "Grains develop dark-brown spots that later become grayish-white collapsed areas. Often the whole grain surface browns. Unlike blast, it does not attack quickly from the panicle tip and does not cause whiteheads",
+        "location": "Symptom description sentences 4-6"
+      }
+    ],
+    "reviewIssues": [],
+    "nextAction": "Judge approved finalization with limitations; no further evidence required.",
+    "limitations": [
+      "No weather data available to assess humidity-dependent infection risk.",
+      "Lesion size measurements are missing from the observation.",
+      "Location and weather data are missing but not critical for the primary diagnosis based on lesion morphology.",
+      "Tentative research hypotheses, not confirmed diagnoses.",
+      "No verified pesticide or regulatory recommendation is implemented.",
+      "KMA observations were unavailable or not requested.",
+      "Image interpretation was not used."
+    ],
+    "events": [
+      {
+        "id": "fdb94c56-9bbf-4a7a-a88f-4681dfe5c0db",
+        "timestamp": "2026-10-26T08:12:28.031026+00:00",
+        "node": "validate_upload",
+        "summary": "Validated image type, contents and size."
+      },
+      {
+        "id": "79252a4c-84b5-4c8e-9d50-1b25633b1bf1",
+        "timestamp": "2026-10-26T08:12:28.038970+00:00",
+        "node": "validate_input",
+        "summary": "Checked required observation fields."
+      },
+      {
+        "id": "cd478545-6b66-48d5-8823-04867ad20acf",
+        "timestamp": "2026-10-26T08:12:28.039553+00:00",
+        "node": "prepare",
+        "summary": "Input validation completed; ready for explicit investigation start."
+      },
+      {
+        "id": "02b6e8c0-b9f8-44cb-b702-bacbc549baa5",
+        "timestamp": "2026-10-26T08:12:28.213763+00:00",
+        "node": "agent_initialize",
+        "summary": "Agent Controller will choose tools from the allowed registry."
+      },
+      {
+        "id": "a7a75aa0-b64e-4ca6-bf4b-08930c84fd77",
+        "timestamp": "2026-10-26T08:12:28.565706+00:00",
+        "node": "agent_reason",
+        "summary": "Action 1/5: selecting the next tool."
+      },
+      {
+        "id": "0be9f7a4-4877-495e-a635-103ed743cd82",
+        "timestamp": "2026-10-26T08:12:43.065517+00:00",
+        "node": "agent_tool",
+        "summary": "search_diseases: Initial search needed to retrieve source excerpts for the described rice leaf lesions before verification."
+      },
+      {
+        "id": "65161100-ac89-43bd-82d8-14637e15d056",
+        "timestamp": "2026-10-26T08:12:45.629646+00:00",
+        "node": "search_diseases",
+        "summary": "Zetaris evidence: 6 excerpts, 6 new source IDs."
+      },
+      {
+        "id": "e88f33c5-fa29-4d14-9148-fa7ebe15d710",
+        "timestamp": "2026-10-26T08:12:45.681317+00:00",
+        "node": "agent_reason",
+        "summary": "Action 2/5: selecting the next tool."
+      },
+      {
+        "id": "2abc4922-1cbb-4ebb-b93a-9d9afae6411c",
+        "timestamp": "2026-10-26T08:12:59.785670+00:00",
+        "node": "agent_tool",
+        "summary": "verify_evidence: Search completed with new sources; now verify evidence to generate hypotheses and run Critic/Judge."
+      },
+      {
+        "id": "751efca3-e1bf-4c02-8dda-67b633571419",
+        "timestamp": "2026-10-26T08:12:59.845396+00:00",
+        "node": "diagnosis",
+        "summary": "Generating source-linked hypotheses from the current evidence."
+      },
+      {
+        "id": "5824d461-672b-4e55-ae68-50a1d89a7006",
+        "timestamp": "2026-10-26T08:13:49.136313+00:00",
+        "node": "critic",
+        "summary": "Critic is checking hypothesis claims, sources and unresolved observations."
+      },
+      {
+        "id": "e2b783f1-4f6c-455f-b595-f792be5f8954",
+        "timestamp": "2026-10-26T08:14:16.508526+00:00",
+        "node": "judge",
+        "summary": "Deterministic Judge is evaluating the current Critic findings."
+      },
+      {
+        "id": "2862c66f-88af-4a3b-981c-d2969dac1df9",
+        "timestamp": "2026-10-26T08:14:16.599465+00:00",
+        "node": "verify_evidence",
+        "summary": "The leading candidate rice blast is supported by the spindle-shaped lesions with gray-white centers and brown margins described in observations, which align with evidence from LSU AgCenter and Sri Lanka Department of Agriculture. No material unsupported claims or contradictions were identified among supplied candidates."
+      },
+      {
+        "id": "af679483-76d8-41eb-bfc0-72f37da89143",
+        "timestamp": "2026-10-26T08:14:16.660150+00:00",
+        "node": "agent_reason",
+        "summary": "Action 3/5: selecting the next tool."
+      },
+      {
+        "id": "f6af4b60-a063-4ca4-bba0-72b1ea5302f0",
+        "timestamp": "2026-10-26T08:14:53.712155+00:00",
+        "node": "agent_tool",
+        "summary": "finish_investigation: The Judge decision 'finalize_with_limitations' indicates the investigation is complete with a supported hypothesis."
+      },
+      {
+        "id": "e194b1a5-3889-4964-871f-edd484608f59",
+        "timestamp": "2026-10-26T08:14:53.787646+00:00",
+        "node": "finish_investigation",
+        "summary": "Judge approved finalization with limitations; no further evidence required."
+      },
+      {
+        "id": "055f7e1d-f99d-40f6-a459-f41dc1d43fdb",
+        "timestamp": "2026-10-26T08:14:53.948293+00:00",
+        "node": "report",
+        "summary": "Judge approved finalization with limitations; no further evidence required."
+      }
+    ]
+  },
+  "agent": {
+    "crop": "rice",
+    "phase": "tool_complete",
+    "run_id": "861f5a86-dc5b-437e-823b-7b5c311809ff",
+    "status": "completed",
+    "location": {
+      "confirmed": false
+    },
+    "iteration": 3,
+    "questions": [],
+    "last_review": {
+      "issues": [],
+      "limitations": [
+        "Missing weather data prevents assessing infection risk or ruling out humidity-dependent diseases.",
+        "No observed date limits temporal correlation between symptoms and disease progression."
+      ],
+      "review_summary": "The leading candidate rice blast is supported by the spindle-shaped lesions with gray-white centers and brown margins described in observations, which align with evidence from LSU AgCenter and Sri Lanka Department of Agriculture. No material unsupported claims or contradictions were identified among supplied candidates."
+    },
+    "next_action": "finish_investigation",
+    "tool_history": [
+      {
+        "step": 1,
+        "tool": "search_diseases",
+        "reason": "Initial search needed to retrieve source excerpts for the described rice leaf lesions before verification.",
+        "result": {
+          "source": "Zetaris",
+          "summary": "Zetaris evidence: 6 excerpts, 6 new source IDs.",
+          "source_ids": [
+            "rice_001_f6",
+            "rice_001_f7",
+            "rice_002_f3",
+            "rice_002_f19",
+            "rice_003_f5",
+            "rice_003_f10"
+          ],
+          "disease_ids": [
+            "rice_001",
+            "rice_002",
+            "rice_003"
+          ],
+          "disease_names": {
+            "rice_001": "Rice blast",
+            "rice_002": "Sheath blight",
+            "rice_003": "Brown spot"
+          },
+          "new_source_ids": [
+            "rice_001_f6",
+            "rice_001_f7",
+            "rice_002_f3",
+            "rice_002_f19",
+            "rice_003_f5",
+            "rice_003_f10"
+          ]
+        },
+        "status": "completed",
+        "summary": "Zetaris evidence: 6 excerpts, 6 new source IDs.",
+        "arguments": {
+          "query": "rice leaf lesions spindle eye shaped gray-white centers brown margins",
+          "compare_disease_ids": [],
+          "exclude_disease_ids": []
+        }
+      },
+      {
+        "step": 2,
+        "tool": "verify_evidence",
+        "reason": "Search completed with new sources; now verify evidence to generate hypotheses and run Critic/Judge.",
+        "result": {
+          "action": "finalize_with_limitations",
+          "reason": "No blocking issues; retain the reported limitations.",
+          "missing": [],
+          "summary": "The leading candidate rice blast is supported by the spindle-shaped lesions with gray-white centers and brown margins described in observations, which align with evidence from LSU AgCenter and Sri Lanka Department of Agriculture. No material unsupported claims or contradictions were identified among supplied candidates.",
+          "candidate_ids": [
+            "rice_001"
+          ]
+        },
+        "status": "completed",
+        "summary": "The leading candidate rice blast is supported by the spindle-shaped lesions with gray-white centers and brown margins described in observations, which align with evidence from LSU AgCenter and Sri Lanka Department of Agriculture. No material unsupported claims or contradictions were identified among supplied candidates.",
+        "arguments": {}
+      },
+      {
+        "step": 3,
+        "tool": "finish_investigation",
+        "reason": "The Judge decision 'finalize_with_limitations' indicates the investigation is complete with a supported hypothesis.",
+        "result": {
+          "status": "completed",
+          "summary": "Judge approved finalization with limitations; no further evidence required."
+        },
+        "status": "completed",
+        "summary": "Judge approved finalization with limitations; no further evidence required.",
+        "arguments": {
+          "reason": "Judge approved finalization with limitations; no further evidence required.",
+          "status": "completed",
+          "questions": [],
+          "uncertainties": [
+            "Location and weather data are missing but not critical for the primary diagnosis based on lesion morphology."
+          ],
+          "final_candidate_ids": [
+            "rice_001"
+          ]
+        }
+      }
+    ],
+    "finish_reason": "Judge approved finalization with limitations; no further evidence required.",
+    "uncertainties": [
+      "Location and weather data are missing but not critical for the primary diagnosis based on lesion morphology."
+    ],
+    "budget_seconds": 480,
+    "max_iterations": 5,
+    "critic_findings": [],
+    "elapsed_seconds": 145.77,
+    "image_reference": "1d8c6f4c-961f-45d3-b263-fd527a1e38b1",
+    "judge_decisions": [
+      {
+        "action": "finalize_with_limitations",
+        "reason": "No blocking issues; retain the reported limitations."
+      }
+    ],
+    "investigation_id": "2721acac-22d4-4e06-a4b0-fff3bef21f4c",
+    "missing_evidence": [],
+    "proposal_summary": "Lesion morphology matches rice blast, but absence of circular spots or vein-limited lesions requires further verification.",
+    "observed_symptoms": [
+      "Several leaf lesions are spindle or eye shaped, with gray-white centers and brown margins. Lesions extend along the leaf blade; no circular evenly brown spots or vein-limited rectangular lesions were observed. Please investigate a tentative source-supported hypothesis, not a confirmed diagnosis."
+    ],
+    "disease_candidates": [
+      {
+        "id": "rice_001",
+        "name": "Rice blast",
+        "claim": "Spindle-shaped lesions with gray-white centers and brown margins align with rice blast descriptions.",
+        "evidence_ids": [
+          "rice_001_f6",
+          "rice_001_f7"
+        ]
+      }
+    ],
+    "hypothesis_history": [
+      {
+        "round": 1,
+        "action": "finalize_with_limitations",
+        "reason": "No blocking issues; retain the reported limitations.",
+        "review": {
+          "issues": [],
+          "limitations": [
+            "Missing weather data prevents assessing infection risk or ruling out humidity-dependent diseases.",
+            "No observed date limits temporal correlation between symptoms and disease progression."
+          ],
+          "review_summary": "The leading candidate rice blast is supported by the spindle-shaped lesions with gray-white centers and brown margins described in observations, which align with evidence from LSU AgCenter and Sri Lanka Department of Agriculture. No material unsupported claims or contradictions were identified among supplied candidates."
+        },
+        "proposal": {
+          "summary": "Lesion morphology matches rice blast, but absence of circular spots or vein-limited lesions requires further verification.",
+          "candidates": [
+            {
+              "id": "rice_001",
+              "name": "Rice blast",
+              "claim": "Spindle-shaped lesions with gray-white centers and brown margins align with rice blast descriptions.",
+              "evidence_ids": [
+                "rice_001_f6",
+                "rice_001_f7"
+              ]
+            }
+          ],
+          "limitations": [
+            "No weather data available to assess humidity-dependent infection risk.",
+            "Lesion size measurements are missing from the observation."
+          ]
+        },
+        "evidence_ids": [
+          "rice_001_f6",
+          "rice_001_f7",
+          "rice_002_f3",
+          "rice_002_f19",
+          "rice_003_f5",
+          "rice_003_f10"
+        ]
+      }
+    ],
+    "image_observations": null,
+    "search_no_progress": 0,
+    "supporting_evidence": [
+      {
+        "id": "rice_001_f6",
+        "urls": [
+          "https://www.lsuagcenter.com/~/media/system/6/a/a/a/6aaa18a85d7690e7f469109273056d89/pub3153blastofricelowres.pdf"
+        ],
+        "name_en": "Rice blast",
+        "name_ko": "\ub3c4\uc5f4\ubcd1",
+        "category": "Symptoms - leaf",
+        "disease_id": "rice_001",
+        "feature_no": "6",
+        "plant_part": "Leaf",
+        "description": "Leaf spots start as small white, gray or bluish specks. Under humid conditions they enlarge quickly into elliptical or diamond-shaped spots or linear lesions pointed at both ends, with gray to white centers and narrow brown borders. In severe cases leaves and whole plants die",
+        "source_name": "LSU AgCenter Pub. 3153 \"Blast of Rice\" (Groth & Hollier, 6/10) (LSU-Blast)",
+        "source_urls": "[\"https://www.lsuagcenter.com/~/media/system/6/a/a/a/6aaa18a85d7690e7f469109273056d89/pub3153blastofricelowres.pdf\"]",
+        "growth_stage": "Seedling to late tillering (leaf blast phase)",
+        "retrieval_score": 6,
+        "scientific_name": "Pyricularia oryzae",
+        "source_location": "Body paragraph 2 (Figure 2)",
+        "source_conflicts": "[\"Leaf lesion border color differs between sources: NCPMS gives 'red' for the chronic type, IRRI 'red to brown or necrotic', LSU 'narrow brown', and the Sri Lanka Department of Agriculture 'brown, reddish-brown or yellowish-brown'. For early spots, IRRI describes white to gray-green with dark green borders, while LSU describes white, gray or bluish.\", \"Lesion size (1.0\u20131.5 \u00d7 0.3\u20130.5 cm) appears only in the Sri Lanka Department of Agriculture page, with no original source cited. NCPMS, IRRI and LSU give no size, so this figure must not be used as if it were a Korean standard.\", \"Node lesion color is dark brown in NCPMS, black to gray-brown (banded) in IRRI, and black rot in Sri Lanka; neck color is light brown in NCPMS and gray-brown in IRRI.\", \"Only NCPMS explicitly mentions gray mold (signs) on lesions.\", \"Conidial size 14\u201337 \u00d7 5\u201312 \u00b5m appears only in NCPMS and could not be cross-checked. Color also differs: NCPMS says 'colorless' while the Klaubauf 2014 genus description says 'colorless to pale brown', and the Klaubauf 2014 *P. oryzae* entry gives no size.\", \"The NCPMS leaf blast and panicle blast pages have character-for-character identical pathogen, environment and symptom text, so they cannot count as two independent sources.\", \"Scientific names differ (NCPMS *Magnaporthe grisea*, LSU *Pyricularia grisea*). Klaubauf 2014 separates *P. oryzae* and *P. grisea* as distinct species.\", \"Timing is given by the Korean calendar in NCPMS (paddy field from late June; around heading) and by US growth stages in LSU (leaf blast from seedling to late tillering; neck blast at heading).\"]"
+      },
+      {
+        "id": "rice_001_f7",
+        "urls": [
+          "https://doa.gov.lk/rrdi_ricediseases_riceblast/"
+        ],
+        "name_en": "Rice blast",
+        "name_ko": "\ub3c4\uc5f4\ubcd1",
+        "category": "Symptoms - leaf",
+        "disease_id": "rice_001",
+        "feature_no": "7",
+        "plant_part": "Leaf",
+        "description": "Spindle-shaped leaf spots with brown or reddish-brown to yellowish-brown borders, ashy centers and pointed ends. Fully developed lesions are usually 1.0\u20131.5 cm long and 0.3\u20130.5 cm wide. Symptoms vary with growth stage, cultivar susceptibility and environment",
+        "source_name": "Sri Lanka Department of Agriculture, Rice Research & Development Institute, Rice blast page (DOA-SriLanka)",
+        "source_urls": "[\"https://doa.gov.lk/rrdi_ricediseases_riceblast/\"]",
+        "growth_stage": "Unconfirmed",
+        "retrieval_score": 5,
+        "scientific_name": "Pyricularia oryzae",
+        "source_location": "\"Symptoms\" sentences 1-2, last sentence",
+        "source_conflicts": "[\"Leaf lesion border color differs between sources: NCPMS gives 'red' for the chronic type, IRRI 'red to brown or necrotic', LSU 'narrow brown', and the Sri Lanka Department of Agriculture 'brown, reddish-brown or yellowish-brown'. For early spots, IRRI describes white to gray-green with dark green borders, while LSU describes white, gray or bluish.\", \"Lesion size (1.0\u20131.5 \u00d7 0.3\u20130.5 cm) appears only in the Sri Lanka Department of Agriculture page, with no original source cited. NCPMS, IRRI and LSU give no size, so this figure must not be used as if it were a Korean standard.\", \"Node lesion color is dark brown in NCPMS, black to gray-brown (banded) in IRRI, and black rot in Sri Lanka; neck color is light brown in NCPMS and gray-brown in IRRI.\", \"Only NCPMS explicitly mentions gray mold (signs) on lesions.\", \"Conidial size 14\u201337 \u00d7 5\u201312 \u00b5m appears only in NCPMS and could not be cross-checked. Color also differs: NCPMS says 'colorless' while the Klaubauf 2014 genus description says 'colorless to pale brown', and the Klaubauf 2014 *P. oryzae* entry gives no size.\", \"The NCPMS leaf blast and panicle blast pages have character-for-character identical pathogen, environment and symptom text, so they cannot count as two independent sources.\", \"Scientific names differ (NCPMS *Magnaporthe grisea*, LSU *Pyricularia grisea*). Klaubauf 2014 separates *P. oryzae* and *P. grisea* as distinct species.\", \"Timing is given by the Korean calendar in NCPMS (paddy field from late June; around heading) and by US growth stages in LSU (leaf blast from seedling to late tillering; neck blast at heading).\"]"
+      },
+      {
+        "id": "rice_002_f3",
+        "urls": [
+          "https://www.lsuagcenter.com/~/media/system/6/6/a/5/66a53754c9529a4f64afd5b9c57f9fed/pub3123shealthblightofricelowres.pdf"
+        ],
+        "name_en": "Sheath blight",
+        "name_ko": "\uc78e\uc9d1\ubb34\ub2ac\ub9c8\ub984\ubcd1",
+        "category": "Symptoms - sheath/stem",
+        "disease_id": "rice_002",
+        "feature_no": "3",
+        "plant_part": "Leaf sheath",
+        "description": "Large oval spots form on the leaf sheath. Lesions about 0.5\u20131 cm wide and 1\u20133 cm long form slightly above the water line on infected stems. Lesion centers are grayish-white or light green, with brown to reddish-brown borders",
+        "source_name": "LSU AgCenter Pub. 3123 \"Sheath Blight of Rice\" (2 pages) (LSU-SB)",
+        "source_urls": "[\"https://www.lsuagcenter.com/~/media/system/6/6/a/5/66a53754c9529a4f64afd5b9c57f9fed/pub3123shealthblightofricelowres.pdf\"]",
+        "growth_stage": "Infection begins from late tillering to internode elongation",
+        "retrieval_score": 5,
+        "scientific_name": "Rhizoctonia solani AG1-IA",
+        "source_location": "Page 1 body paragraphs 2-3 (Fig. 2)",
+        "source_conflicts": "[\"Sclerotium size is the biggest discrepancy. NCPMS says 'mostly brown and round, about 1\u20132 mm', while UAEX (USA) says 'can reach 6 mm or more in diameter, white turning brown to black'. IRRI and LSU give no size.\", \"Lesion size is 1\u20133 cm long in IRRI and 0.5\u20131 cm wide \u00d7 1\u20133 cm long in LSU; NCPMS gives no figure ('size not uniform').\", \"Lesion color: NCPMS dark green with surrounding light brown; IRRI grayish-white center with brown margin; LSU grayish-white or light green center with brown to reddish-brown border; UAEX tan to light-brown center with dark green or brown border.\", \"Timing: IRRI tillering to milk stage, UAEX tillering to booting, LSU infection starting late tillering to internode elongation; NCPMS gives calendar dates such as sclerotium formation in late July to early August.\", \"Humidity thresholds differ: NCPMS 96% or above, UAEX above 95%, IRRI 85\u2013100%. Temperatures are effectively the same: NCPMS 22\u201335 \u00b0C (optimum 30\u201332 \u00b0C) and UAEX 73\u201395 \u00b0F.\", \"The AG1-IA designation appears only in UAEX. The Kim 1994 abstract only says AG-1 IA was isolated from 7 crops, so whether rice isolates were IA is Unconfirmed at the abstract level.\", \"On spores, IRRI and LSU say 'no airborne spores', while UAEX says sexual spores form but are rare in the field.\"]"
+      },
+      {
+        "id": "rice_002_f19",
+        "urls": [
+          "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight"
+        ],
+        "name_en": "Sheath blight",
+        "name_ko": "\uc78e\uc9d1\ubb34\ub2ac\ub9c8\ub984\ubcd1",
+        "category": "Symptoms - sheath/stem (differentiation)",
+        "disease_id": "rice_002",
+        "feature_no": "19",
+        "plant_part": "Leaf sheath",
+        "description": "Resembles stem rot and stem-borer damage. Confirm by irregular sheath lesions (water-soaked to gray-green early, grayish-white with brown border later) and the presence of sclerotia",
+        "source_name": "IRRI RKB \"Sheath blight\" (IRRI-Sheath blight)",
+        "source_urls": "[\"http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight\"]",
+        "growth_stage": "Unconfirmed",
+        "retrieval_score": 4,
+        "scientific_name": "Rhizoctonia solani AG1-IA",
+        "source_location": "\"How to identify\" last paragraph",
+        "source_conflicts": "[\"Sclerotium size is the biggest discrepancy. NCPMS says 'mostly brown and round, about 1\u20132 mm', while UAEX (USA) says 'can reach 6 mm or more in diameter, white turning brown to black'. IRRI and LSU give no size.\", \"Lesion size is 1\u20133 cm long in IRRI and 0.5\u20131 cm wide \u00d7 1\u20133 cm long in LSU; NCPMS gives no figure ('size not uniform').\", \"Lesion color: NCPMS dark green with surrounding light brown; IRRI grayish-white center with brown margin; LSU grayish-white or light green center with brown to reddish-brown border; UAEX tan to light-brown center with dark green or brown border.\", \"Timing: IRRI tillering to milk stage, UAEX tillering to booting, LSU infection starting late tillering to internode elongation; NCPMS gives calendar dates such as sclerotium formation in late July to early August.\", \"Humidity thresholds differ: NCPMS 96% or above, UAEX above 95%, IRRI 85\u2013100%. Temperatures are effectively the same: NCPMS 22\u201335 \u00b0C (optimum 30\u201332 \u00b0C) and UAEX 73\u201395 \u00b0F.\", \"The AG1-IA designation appears only in UAEX. The Kim 1994 abstract only says AG-1 IA was isolated from 7 crops, so whether rice isolates were IA is Unconfirmed at the abstract level.\", \"On spores, IRRI and LSU say 'no airborne spores', while UAEX says sexual spores form but are rare in the field.\"]"
+      },
+      {
+        "id": "rice_003_f5",
+        "urls": [
+          "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot"
+        ],
+        "name_en": "Brown spot",
+        "name_ko": "\uae68\uc528\ubb34\ub2ac\ubcd1",
+        "category": "Symptoms - leaf (differentiation)",
+        "disease_id": "rice_003",
+        "feature_no": "5",
+        "plant_part": "Leaf",
+        "description": "On some cultivars it can be mistaken for blast lesions. Confirm by round brown spots with gray centers surrounded by reddish-brown borders",
+        "source_name": "IRRI RKB \"Brown spot\" (IRRI-Brown spot)",
+        "source_urls": "[\"http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot\"]",
+        "growth_stage": "Unconfirmed",
+        "retrieval_score": 4,
+        "scientific_name": "Bipolaris oryzae",
+        "source_location": "\"How to identify\" last paragraph",
+        "source_conflicts": "[\"Conidial size differs most. NCPMS gives 63\u2013153 \u00d7 14\u201322 \u00b5m (6\u201314 septa), while Kim 2025 measured 27.4\u201396.3 \u00d7 6.0\u201319.8 \u00b5m (means 53\u201375 \u00b5m) for 6 Korean isolates on PDA. This may reflect spores from media versus lesions, but neither source explains it.\", \"Lesion size figures (5\u201314 mm on susceptible, pinhead-sized on resistant) appear only in IRRI. Concentric rings appear only in NCPMS.\", \"Halo descriptions differ. NCPMS describes a 'yellow toxic zone' on early lesions, while the IRRI brown spot page describes a 'reddish-brown border caused by toxin'. The yellow halo appears in the differentiation paragraph of the IRRI blast page.\", \"The NCPMS sexual-stage description mentions 'ascus' twice with different sizes. The first (360\u2013780 \u00b5m diameter, globose) appears to be an error for perithecium (inference in the notes).\", \"The NCPMS disease-environment sentence 'lesions do not form conidia\u2026' is ambiguous.\", \"Timing: NCPMS says sharp rise after panicle initiation and panicle infection up to 25 days after heading; IRRI says maximum tillering to grain filling; Kim 2025 says typically at harvest but with a recent shift in timing (isolates from July\u2013August 2024).\", \"Seedling symptoms (girdling the coleoptile, 10\u201358% seedling death) appear only in IRRI.\"]"
+      },
+      {
+        "id": "rice_003_f10",
+        "urls": [
+          "https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y"
+        ],
+        "name_en": "Brown spot",
+        "name_ko": "\uae68\uc528\ubb34\ub2ac\ubcd1",
+        "category": "Symptoms - panicle/ear/grain",
+        "disease_id": "rice_003",
+        "feature_no": "10",
+        "plant_part": "Rice grain, panicle",
+        "description": "Grains develop dark-brown spots that later become grayish-white collapsed areas. Often the whole grain surface browns. Unlike blast, it does not attack quickly from the panicle tip and does not cause whiteheads",
+        "source_name": "NCPMS paddy rice Brown spot (NCPMS-Brown spot)",
+        "source_urls": "[\"https://ncpms.rda.go.kr/npms/SicknsInfoDtlR.np?sicknsListNo=D00000750&totalSearchYn=Y\"]",
+        "growth_stage": "Grains are more prone to infection the closer to heading",
+        "retrieval_score": 3,
+        "scientific_name": "Bipolaris oryzae",
+        "source_location": "Symptom description sentences 4-6",
+        "source_conflicts": "[\"Conidial size differs most. NCPMS gives 63\u2013153 \u00d7 14\u201322 \u00b5m (6\u201314 septa), while Kim 2025 measured 27.4\u201396.3 \u00d7 6.0\u201319.8 \u00b5m (means 53\u201375 \u00b5m) for 6 Korean isolates on PDA. This may reflect spores from media versus lesions, but neither source explains it.\", \"Lesion size figures (5\u201314 mm on susceptible, pinhead-sized on resistant) appear only in IRRI. Concentric rings appear only in NCPMS.\", \"Halo descriptions differ. NCPMS describes a 'yellow toxic zone' on early lesions, while the IRRI brown spot page describes a 'reddish-brown border caused by toxin'. The yellow halo appears in the differentiation paragraph of the IRRI blast page.\", \"The NCPMS sexual-stage description mentions 'ascus' twice with different sizes. The first (360\u2013780 \u00b5m diameter, globose) appears to be an error for perithecium (inference in the notes).\", \"The NCPMS disease-environment sentence 'lesions do not form conidia\u2026' is ambiguous.\", \"Timing: NCPMS says sharp rise after panicle initiation and panicle infection up to 25 days after heading; IRRI says maximum tillering to grain filling; Kim 2025 says typically at harvest but with a recent shift in timing (isolates from July\u2013August 2024).\", \"Seedling symptoms (girdling the coleoptile, 10\u201358% seedling death) appear only in IRRI.\"]"
+      }
+    ],
+    "verified_candidates": "daf14f2b9019e2180528dd6e0b0ee37836288e8cbb1b942ef46e3deddbfed11e",
+    "proposal_limitations": [
+      "No weather data available to assess humidity-dependent infection risk.",
+      "Lesion size measurements are missing from the observation."
+    ],
+    "verification_blocked": false,
+    "verified_fingerprint": "ba58ed4461e854478ff9a2fc2c80eaaed57706b6ade8e287bd7223c19bfdb2ba",
+    "contradicting_evidence": []
+  },
+  "history": {
+    "rounds": [
+      {
+        "round": 1,
+        "action": "finalize_with_limitations",
+        "reason": "No blocking issues; retain the reported limitations.",
+        "review": {
+          "issues": [],
+          "limitations": [
+            "Missing weather data prevents assessing infection risk or ruling out humidity-dependent diseases.",
+            "No observed date limits temporal correlation between symptoms and disease progression."
+          ],
+          "review_summary": "The leading candidate rice blast is supported by the spindle-shaped lesions with gray-white centers and brown margins described in observations, which align with evidence from LSU AgCenter and Sri Lanka Department of Agriculture. No material unsupported claims or contradictions were identified among supplied candidates."
+        },
+        "proposal": {
+          "summary": "Lesion morphology matches rice blast, but absence of circular spots or vein-limited lesions requires further verification.",
+          "candidates": [
+            {
+              "id": "rice_001",
+              "name": "Rice blast",
+              "claim": "Spindle-shaped lesions with gray-white centers and brown margins align with rice blast descriptions.",
+              "evidence_ids": [
+                "rice_001_f6",
+                "rice_001_f7"
+              ]
+            }
+          ],
+          "limitations": [
+            "No weather data available to assess humidity-dependent infection risk.",
+            "Lesion size measurements are missing from the observation."
+          ]
+        },
+        "evidence_ids": [
+          "rice_001_f6",
+          "rice_001_f7",
+          "rice_002_f3",
+          "rice_002_f19",
+          "rice_003_f5",
+          "rice_003_f10"
+        ]
+      }
+    ],
+    "engines": [
+      {
+        "id": "6fc0f951-37f2-47f9-8eed-bad73d4c7235",
+        "mode": "RESEARCH",
+        "chunks": [
+          {
+            "id": 1,
+            "tokens": 58,
+            "content": "{\"tool\": \"search_diseases\", \"reason\": \"Initial search needed to retrieve source excerpts for the described rice leaf lesions before verification.\", \"status\": \"completed\", \"summary\": \"Zetaris evidence: 6 excerpts, 6 new source IDs.\"}",
+            "carryover": ""
+          },
+          {
+            "id": 2,
+            "tokens": 125,
+            "content": "{\"tool\": \"verify_evidence\", \"reason\": \"Search completed with new sources; now verify evidence to generate hypotheses and run Critic/Judge.\", \"status\": \"completed\", \"summary\": \"The leading candidate rice blast is supported by the spindle-shaped lesions with gray-white centers and brown margins described in observations, which align with evidence from LSU AgCenter and Sri Lanka Department of Agriculture. No material unsupported claims or contradictions were identified among supplied candidates.\"}",
+            "carryover": "COMPLETED: search_diseases completed\nREMAINING: Choose next action or finish\nDECISIONS: investigating\nCONTEXT: Zetaris evidence: 6 excerpts, 6 new source IDs."
+          },
+          {
+            "id": 3,
+            "tokens": 69,
+            "content": "{\"tool\": \"finish_investigation\", \"reason\": \"The Judge decision 'finalize_with_limitations' indicates the investigation is complete with a supported hypothesis.\", \"status\": \"completed\", \"summary\": \"Judge approved finalization with limitations; no further evidence required.\"}",
+            "carryover": "COMPLETED: verify_evidence completed\nREMAINING: Choose next action or finish\nDECISIONS: investigating\nCONTEXT: The leading candidate rice blast is supported by the spindle-shaped lesions with gray-white centers and brown margins described in observations, which align with evidence from LSU AgCenter and Sri Lanka Department of Agriculture. No material unsupported claims or contradictions were identified among supplied candidates."
+          }
+        ],
+        "output": "{\"tool\": \"search_diseases\", \"reason\": \"Initial search needed to retrieve source excerpts for the described rice leaf lesions before verification.\", \"status\": \"completed\", \"summary\": \"Zetaris evidence: 6 excerpts, 6 new source IDs.\"}\n\n{\"tool\": \"verify_evidence\", \"reason\": \"Search completed with new sources; now verify evidence to generate hypotheses and run Critic/Judge.\", \"status\": \"completed\", \"summary\": \"The leading candidate rice blast is supported by the spindle-shaped lesions with gray-white centers and brown margins described in observations, which align with evidence from LSU AgCenter and Sri Lanka Department of Agriculture. No material unsupported claims or contradictions were identified among supplied candidates.\"}\n\n{\"tool\": \"finish_investigation\", \"reason\": \"The Judge decision 'finalize_with_limitations' indicates the investigation is complete with a supported hypothesis.\", \"status\": \"completed\", \"summary\": \"Judge approved finalization with limitations; no further evidence required.\"}",
+        "prompt": "Choose and execute evidence tools to resolve crop hypothesis uncertainty; finish only after verification or abstain.",
+        "status": "completed",
+        "timestamp": 1793002348564,
+        "durationMs": 145334,
+        "tokenLabel": "estimated",
+        "chunkConfig": {
+          "chunkSize": 4000,
+          "maxChunks": 5,
+          "overlapTokens": 0,
+          "carryoverTokens": 512
+        },
+        "totalTokensUsed": 252,
+        "totalTokensSaved": 0,
+        "efficiencyPercent": 0
+      }
+    ]
+  }
+}

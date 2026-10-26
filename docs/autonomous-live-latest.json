@@ -1,0 +1,60 @@
+{
+  "transient_storage_retries": 1,
+  "agent_tools": [
+    {
+      "tool": "search_diseases",
+      "reason": "No disease candidates exist yet, so I must search for diseases matching the observed symptoms of cigar-shaped gray to tan lesions on maize leaves.",
+      "status": "completed",
+      "summary": "Zetaris evidence: 6 excerpts, 6 new source IDs.",
+      "arguments": {
+        "query": "maize long cigar-shaped gray to tan lesions crossing veins leaves",
+        "compare_disease_ids": [],
+        "exclude_disease_ids": []
+      }
+    },
+    {
+      "tool": "verify_evidence",
+      "reason": "The search has returned 6 new source IDs covering Northern corn leaf blight, Southern corn leaf blight, and Gray leaf spot. The next step is to verify these asd",
+      "status": "failed",
+      "summary": "Tool provider failed; no successful evidence was fabricated.",
+      "arguments": {}
+    },
+    {
+      "tool": "finish_investigation",
+      "reason": "The verification step failed due to a tool provider error, preventing the generation of a Judge decision. Since no new evidence can be retrieved and the current",
+      "status": "completed",
+      "summary": "Verification failed due to tool provider error; cannot proceed with diagnosis without successful Critic/Judge evaluation.",
+      "arguments": {
+        "reason": "Verification failed due to tool provider error; cannot proceed with diagnosis without successful Critic/Judge evaluation.",
+        "status": "needs_more_evidence",
+        "questions": [
+          "Can you confirm if there are any visible signs of fungal sporulation or specific lesion patterns on the maize leaves?"
+        ],
+        "uncertainties": [
+          "Unable to verify Northern corn leaf blight due to tool failure; need visual confirmation of lesion characteristics."
+        ],
+        "final_candidate_ids": []
+      }
+    }
+  ],
+  "finish_reason": "Verification failed due to tool provider error; cannot proceed with diagnosis without successful Critic/Judge evaluation.",
+  "test": "synthetic symptoms, real services; no diagnostic-accuracy evaluation",
+  "status": "needs_more_evidence",
+  "elapsed_seconds": 306.3,
+  "hypotheses": 1,
+  "source_count": 6,
+  "questions": [
+    "Can you confirm if there are any visible signs of fungal sporulation or specific lesion patterns on the maize leaves?"
+  ],
+  "next_action": "Verification failed due to tool provider error; cannot proceed with diagnosis without successful Critic/Judge evaluation.",
+  "rounds": [],
+  "engines": [
+    {
+      "status": "completed",
+      "chunks": 3,
+      "token_label": "estimated"
+    }
+  ],
+  "verification_note": "Actual Controller/search/Diagnosis executed; Critic result was rejected before the final reference-attribution fixes. Not a successful verified report.",
+  "final_revised_end_to_end_rerun": "Not performed: execution approval declined."
+}

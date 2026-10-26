@@ -5,7 +5,7 @@ export interface ReviewRequest {
   crop: Crop;
   observations: string;
   candidates: { id: string; name: string; claim: string; evidence_ids: string[] }[];
-  evidence: { id: string; text: string; source: string; location: string }[];
+  evidence: { disease_id?: string | null; disease_name?: string | null; id: string; text: string; source: string; location: string }[];
   weather_summary?: string;
   review_round?: number;
 }
@@ -36,7 +36,7 @@ export async function submitReview(input: ReviewRequest): Promise<ReviewResponse
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(input),
-    signal: AbortSignal.timeout(105_000),
+    signal: AbortSignal.timeout(190_000),
   });
   if (!response.ok) {
     let message = `Critic review failed: HTTP ${response.status}`;

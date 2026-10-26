@@ -1,3 +1,5 @@
+import AgentTrace from "./AgentTrace";
+import ReviewHistory from "./ReviewHistory";
 import WeatherPanel from "./WeatherPanel";
 import type { InvestigationResult } from "../types/investigation";
 
@@ -8,12 +10,13 @@ interface InvestigationResultsProps {
 }
 
 const statusLabels: Record<InvestigationResult["status"], string> = {
-  ready: "Inputs validated — analysis not connected",
+  ready: "Inputs saved — ready to investigate",
   received: "Received",
   validating: "Validating observations",
   researching: "Researching evidence",
   reviewing: "Reviewing hypotheses",
   needs_input: "Additional information needed",
+  needs_more_evidence: "More evidence required",
   completed: "Investigation completed",
   abstained: "Judgment withheld",
   failed: "Investigation failed",
@@ -268,6 +271,10 @@ export default function InvestigationResults({
           )}
         </details>
       </section>
+
+      {result && <AgentTrace id={result.id} revision={result.events.length} />}
+
+      {result && <ReviewHistory id={result.id} status={result.status} />}
 
       <aside className="boundary-note">
         <strong>Evidence-based support</strong>

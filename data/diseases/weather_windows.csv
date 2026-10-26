@@ -1,0 +1,68 @@
+﻿window_id,no,crop,disease_ko,disease_en,applies_to,anchor,start,end,end_anchor,unit,resolution,core,evidence_type,matrix_text,note
+01-1,1,벼,벼 도열병 (잎·이삭),Rice blast,잎도열병 감염 판정,D,-14,-4,,days,hourly,True,근거형,잎: D-14~D-4,BLASTAM 감염일 판정(습윤시간×습윤 중 기온)
+01-2,1,벼,벼 도열병 (잎·이삭),Rice blast,잎도열병 데이터 확보 범위,D,-18,-4,,days,hourly,False,근거형,데이터는 D-18~D-4,직전 5일 평균기온 20–25 ℃ 조건 계산에 필요
+01-3,1,벼,벼 도열병 (잎·이삭),Rice blast,잎도열병 기주 감수성,D,-34,-4,,days,daily,False,근거형,기주 감수성까지 D-34,감염 전 20일 저온 적산(도호쿠 방식)
+01-4,1,벼,벼 도열병 (잎·이삭),Rice blast,이삭도열병 감염창(일),heading,-7,15,,days,daily,True,근거형,이삭: H-7~H+15,
+01-5,1,벼,벼 도열병 (잎·이삭),Rice blast,이삭도열병 감염창(적산온도),heading,0,300,,degree_days,daily,True,근거형,출수 후 300 ℃·일까지,Kobayashi 2010: 출수 후 0–300 ℃·일
+01-6,1,벼,벼 도열병 (잎·이삭),Rice blast,이삭도열병 관찰일 환산,D,-20,-7,,days,daily,False,추론형,D 기준 D-20~D-7,출수일을 모를 때의 대체 창
+02-1,2,벼,벼 잎집무늬마름병,Sheath blight,새 병반,D,-7,-2,,days,hourly,True,추론형,새 병반 D-7~D-2,
+02-2,2,벼,벼 잎집무늬마름병,Sheath blight,진전 판단,D,-21,-1,,days,daily,False,추론형,진전 판단 D-21~D-1,
+03-1,3,벼,벼 깨씨무늬병,Brown spot,잎 병반,D,-10,-3,,days,hourly,True,추론형,D-10~D-3,
+03-2,3,벼,벼 깨씨무늬병,Brown spot,대발생형,D,-30,-1,,days,daily,False,추론형,대발생형은 D-30~D-1,한 달 흐림·강우 누적
+03-3,3,벼,벼 깨씨무늬병,Brown spot,이삭 감염,heading,0,25,,days,daily,False,추론형,이삭은 출수 후 25일까지,출수 후 25일은 NCPMS 서술(수량 영향 최종 감염 시기)
+04-1,4,벼,벼 흰잎마름병,Bacterial blight,침수·태풍 사건,D,-21,-7,,days,hourly,True,추론형,사건 창 D-21~D-7,보고서 표기: 추론형(근거형에 가까움)
+04-2,4,벼,벼 흰잎마름병,Bacterial blight,계절 기상(7월 기온·강수),season,07-01,08-31,,calendar,daily,True,근거형,계절 창 7월 1일~8월 하순,"NCPMS: 7월 평균기온·7월 강수량, 7월 하순~8월 하순 강우"
+05-1,5,벼,벼 세균성 줄무늬병 (Xoc),Bacterial leaf streak (Xoc),잎 병반,D,-10,-3,,days,hourly,True,추론형,D-10~D-3,국내 미기록
+06-1,6,벼,벼 키다리병,Bakanae,육묘 증상,sowing,0,,D,days,daily,True,근거형,육묘 증상: 파종일~D,"육묘상 온도(35 ℃ 최적, 20 ℃ 무증상)"
+06-2,6,벼,벼 키다리병,Bakanae,다음 해 종자 위험,prev_seed_crop,0,7,,days,daily,False,추론형,채종포 H~H+7,"채종포 출수일 기준. 조건 근거형, H+7 길이 추론형"
+07-1,7,벼,벼 이삭누룩병,False smut,출수 전 강우(확장),heading,-21,0,,days,daily,False,추론형,H-21~H,
+07-2,7,벼,벼 이삭누룩병,False smut,출수 전 강우(핵심),heading,-14,-10,,days,daily,True,근거형,핵심 H-14~H-10,JA全農いばらき: 출수 14–10일 전 강우
+07-3,7,벼,벼 이삭누룩병,False smut,출수 후(국내 서술 반영),heading,0,7,,days,daily,False,추론형,국내 서술 반영 시 H+7까지,
+08-1,8,벼,벼 세균벼알마름병,Bacterial grain rot (bacterial panicle blight),출수기 전후,heading,-3,10,,days,daily,False,추론형,H-3~H+10,H-3 부분 추론형
+08-2,8,벼,벼 세균벼알마름병,Bacterial grain rot (bacterial panicle blight),출수기 전후(핵심),heading,2,7,,days,daily,True,근거형,핵심 H+2~H+7,기후현: 출수기 전후 최저기온 24 ℃ 이상
+08-3,8,벼,벼 세균벼알마름병,Bacterial grain rot (bacterial panicle blight),관찰일 환산,D,-20,-7,,days,daily,False,추론형,D 기준 D-20~D-7,출수일을 모를 때의 대체 창
+09-1,9,벼,벼 줄무늬잎마름병 (RSV),Rice stripe,단기(비래·전염),D,-30,-7,,days,daily,True,추론형,T-30~T-7,
+09-2,9,벼,벼 줄무늬잎마름병 (RSV),Rice stripe,단기 확장,D,-45,-7,,days,daily,False,추론형,최대 T-45,
+09-3,9,벼,벼 줄무늬잎마름병 (RSV),Rice stripe,매개충 적산온도,jan1,0,,D,days,daily,True,근거형,1월 1일~T 적산,애멸구 발육영점 10.2/10.7 ℃
+09-4,9,벼,벼 줄무늬잎마름병 (RSV),Rice stripe,월동,prev_winter,12-01,02-28,,calendar,monthly,False,근거형,직전 12~2월,정성적 근거(따뜻한 겨울 뒤 대발생)
+09-5,9,벼,벼 줄무늬잎마름병 (RSV),Rice stripe,전년 가을,prev_season,09-01,10-31,,calendar,monthly,False,추론형,전년 9~10월,
+10-1,10,벼,벼 오갈병 (RDV),Rice dwarf,단기(전염),D,-21,-10,,days,daily,True,추론형,T-21~T-10,
+10-2,10,벼,벼 오갈병 (RDV),Rice dwarf,단기 확장,D,-45,-10,,days,daily,False,추론형,최대 T-45,
+10-3,10,벼,벼 오갈병 (RDV),Rice dwarf,매개충 적산온도,jan1,0,,D,days,daily,True,근거형,1월 1일~T 적산,끝동매미충 발육영점(일본 栃木 자료)
+10-4,10,벼,벼 오갈병 (RDV),Rice dwarf,월동,prev_winter,12-01,02-28,,calendar,monthly,False,추론형,직전 12~2월,
+10-5,10,벼,벼 오갈병 (RDV),Rice dwarf,전년 가을(재생벼),prev_season,09-01,11-30,,calendar,monthly,False,추론형,전년 9~11월,
+11-1,11,벼,벼 udbatta,Udbatta,파종~유수형성기,D,-100,-30,,days,daily,True,추론형,파종~유수형성기 (약 T-100~T-30),파종일을 알면 파종일 기준으로 대체. 국내 미기록
+11-2,11,벼,벼 udbatta,Udbatta,종자 생산 작기,prev_seed_crop,,,,days,daily,False,추론형,종자 생산 전년 작기,구간 미정
+12-1,12,벼,벼 ufra,Ufra,단기(감염),D,-21,-7,,days,daily,True,근거형,T-21~T-7,국내 미기록·검역
+12-2,12,벼,벼 ufra,Ufra,침수 경과,D,-60,0,,days,daily,False,추론형,T-60~T 침수 경과,
+12-3,12,벼,벼 ufra,Ufra,생존(전작),prev_harvest,0,,D,days,daily,False,추론형,직전 수확기 이후,건조 조직에서 7–15개월 생존
+13-1,13,옥수수,옥수수 북방 잎마름병,Northern corn leaf blight,감염,D,-14,-5,,days,hourly,True,추론형,D-14~D-5,
+13-2,13,옥수수,옥수수 북방 잎마름병,Northern corn leaf blight,2차 전파,D,-3,0,,days,hourly,False,추론형,2차 전파 D-3~D0,포자 형성 이슬 14 h
+14-1,14,옥수수,옥수수 남방 잎마름병,Southern corn leaf blight,감염,D,-6,-2,,days,hourly,False,추론형,D-6~D-2,
+14-2,14,옥수수,옥수수 남방 잎마름병,Southern corn leaf blight,감염(핵심),D,-4,-2,,days,hourly,True,추론형,특히 D-4~D-2,농사로: 60–72시간 발병
+15-1,15,옥수수,옥수수 회색 잎반점병,Gray leaf spot,퇴록 병반,D,-12,-8,,days,hourly,True,추론형,퇴록 D-12~D-8,국내 미기록
+15-2,15,옥수수,옥수수 회색 잎반점병,Gray leaf spot,성숙 병반,D,-28,-14,,days,hourly,False,추론형,성숙 병반 D-28~D-14,
+15-3,15,옥수수,옥수수 회색 잎반점병,Gray leaf spot,시즌 위험,season,V4,V12,,growth_stage,hourly,True,근거형,시즌 위험 V4~V12 누적,"Paul & Munkvold 2005: 22–30 ℃ 시간, 야간 RH ≥90% 시간"
+16-1,16,옥수수,옥수수 녹병,Common rust,감염,D,-14,-7,,days,hourly,True,추론형,D-14~D-7,
+16-2,16,옥수수,옥수수 녹병,Common rust,포자 유입,regional_first_report,-21,-14,,days,daily,False,추론형,유입은 지역 첫 보고 2~3주 전,
+17-1,17,옥수수,옥수수 남방녹병,Southern rust,감염,D,-10,-3,,days,hourly,True,추론형,D-10~D-3,
+17-2,17,옥수수,옥수수 남방녹병,Southern rust,국내 감염기,season,08-21,09-30,,calendar,daily,False,추론형,국내 감염기 8월 하순~9월,Lee 2025 채집 시기(9~10월)에서 역산
+18-1,18,옥수수,옥수수 깜부기병,Common smut,이삭 혹(감수성),silking,0,14,,days,daily,True,근거형,이삭 혹: R1-7~R1+14,du Toit & Pataky 1999: 출사~8–14일
+18-2,18,옥수수,옥수수 깜부기병,Common smut,이삭 혹(출사 전),silking,-7,-1,,days,daily,False,추론형,출사 전 7일 추론형,
+18-3,18,옥수수,옥수수 깜부기병,Common smut,잎·줄기 혹(상처 사건),D,-21,-7,,days,daily,True,추론형,잎·줄기 혹: D-21~D-7 상처 사건,우박·강풍 날짜. Rutgers 10일/3주에서 역산
+19-1,19,옥수수,옥수수 head smut,Head smut,유묘 감염,sowing,0,42,,days,daily,True,추론형,파종일~파종 후 약 6주,토양온도·토양수분. 국내 미기록
+20-1,20,옥수수,옥수수 푸사리움 이삭썩음병,Fusarium ear rot,출사~수확,silking,0,,harvest,days,daily,True,근거형,R1-14~수확일,앵커 근거형
+20-2,20,옥수수,옥수수 푸사리움 이삭썩음병,Fusarium ear rot,출사 전,silking,-14,-1,,days,daily,False,추론형,출사 전 14일 추론형,
+21-1,21,옥수수,옥수수 지베렐라 이삭썩음병,Gibberella ear rot,출사 전후,silking,-3,21,,days,daily,False,근거형,R1-3~R1+21,
+21-2,21,옥수수,옥수수 지베렐라 이삭썩음병,Gibberella ear rot,출사 전후(핵심),silking,2,10,,days,daily,True,근거형,핵심 +2~+10,수염 감수성 출현 후 2–10일
+21-3,21,옥수수,옥수수 지베렐라 이삭썩음병,Gibberella ear rot,성숙~수확 강우,physiological_maturity,0,,harvest,days,daily,False,근거형,생리적 성숙~수확 강우,
+22-1,22,옥수수,옥수수 스튜어트 시들음병,Stewart's wilt,월동 지수,prev_winter,12-01,02-28,,calendar,monthly,True,근거형,직전 12/1~2/28(29),"Stevens-Boewe 지수(°F 합), EPPO −3 ℃. 국내 미기록"
+22-2,22,옥수수,옥수수 스튜어트 시들음병,Stewart's wilt,유묘,emergence,VE,V5,,growth_stage,daily,False,추론형,출현~V5,
+23-1,23,옥수수,옥수수 고스 시들음병,Goss's bacterial wilt and leaf blight,잎마름형(우박·강풍 사건),D,-28,-3,,days,daily,True,추론형,잎마름형 D-28~D-3,국내 미기록
+23-2,23,옥수수,옥수수 고스 시들음병,Goss's bacterial wilt and leaf blight,전신형,emergence,VE,V6,,growth_stage,daily,False,근거형,전신형 출현~V6,
+24-1,24,옥수수,옥수수 필리핀 노균병,Philippine downy mildew,감염(야간 조건),D,-21,-7,,days,hourly,True,추론형,D-21~D-7,시간별 야간 자료 필요. 국내 미기록
+24-2,24,옥수수,옥수수 필리핀 노균병,Philippine downy mildew,전신감염,sowing,0,28,,days,hourly,False,추론형,전신감염이면 파종일~파종 후 4주,
+25-1,25,옥수수,옥수수 갈색줄무늬 노균병,Brown stripe downy mildew,감염,D,-21,0,,days,hourly,True,추론형,D-21~D0,국내 미기록
+25-2,25,옥수수,옥수수 갈색줄무늬 노균병,Brown stripe downy mildew,작기 누적,sowing,0,,D,days,daily,False,추론형,파종~현재 토양온도·강수,
+26-1,26,옥수수,옥수수 치명적 괴사병 (MLN),Maize lethal necrosis,작기,sowing,0,,D,days,daily,True,추론형,파종일~현재,온습도 임계값 미확인. 국내 미기록
+26-2,26,옥수수,옥수수 치명적 괴사병 (MLN),Maize lethal necrosis,재배 이력,sowing,-60,0,,days,daily,False,추론형,파종 전 60일 재배 이력,기상보다 옥수수 무재배 기간 확인용

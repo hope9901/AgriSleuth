@@ -75,3 +75,22 @@ CREATE TABLE IF NOT EXISTS investigation_weather (
     payload jsonb NOT NULL,
     updated_at timestamptz NOT NULL DEFAULT now()
 );
+
+CREATE TABLE IF NOT EXISTS investigation_rounds (
+ id bigserial PRIMARY KEY, investigation_id uuid NOT NULL REFERENCES investigations(id) ON DELETE CASCADE,
+ payload jsonb NOT NULL, created_at timestamptz NOT NULL DEFAULT now()
+);
+CREATE TABLE IF NOT EXISTS engine_runs (
+ id uuid PRIMARY KEY, investigation_id uuid NOT NULL REFERENCES investigations(id) ON DELETE CASCADE,
+ payload jsonb NOT NULL, created_at timestamptz NOT NULL DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS agent_runs (
+ id uuid PRIMARY KEY, investigation_id uuid NOT NULL REFERENCES investigations(id) ON DELETE CASCADE,
+ payload jsonb NOT NULL, created_at timestamptz NOT NULL DEFAULT now(), updated_at timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS agent_runs_case_idx ON agent_runs(investigation_id,created_at DESC);
+CREATE TABLE IF NOT EXISTS investigation_locations (
+ investigation_id uuid PRIMARY KEY REFERENCES investigations(id) ON DELETE CASCADE,
+ payload jsonb NOT NULL, updated_at timestamptz NOT NULL DEFAULT now()
+);

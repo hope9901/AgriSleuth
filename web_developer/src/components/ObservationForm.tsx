@@ -17,7 +17,10 @@ interface SamplePreset {
   growthStage: string;
   affectedPart: string;
   symptoms: string;
+  imagePath: string;
   fileName: string;
+  sourceLabel: string;
+  sourceUrl: string;
 }
 
 const SAMPLE_PRESETS: SamplePreset[] = [
@@ -31,8 +34,12 @@ const SAMPLE_PRESETS: SamplePreset[] = [
     growthStage: "vegetative",
     affectedPart: "leaf",
     symptoms:
-      "Diamond-shaped spindle lesions with gray-white centers and reddish-brown necrotic borders on middle and upper leaves after 4 days of high humidity and morning fog. Neighboring paddy rows along the windward bund show similar coalescing lesions.",
-    fileName: "rice-leaf-blast-cc0-sample.png",
+      "Eye-shaped spindle lesion with a gray-white sporulating center, dark brown necrotic margin, and yellow chlorotic halo along the leaf blade after several days of high humidity.",
+    imagePath: "/samples/rice-blast-usda-d542-1.jpg",
+    fileName: "rice-blast-usda-d542-1.jpg",
+    sourceLabel: "USDA ARS Public Domain (Photo by Yulin Jia, D542-1)",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Rice_blast_Magnaporthe_grisea.jpg",
   },
   {
     id: "maize_blight",
@@ -44,8 +51,11 @@ const SAMPLE_PRESETS: SamplePreset[] = [
     growthStage: "flowering",
     affectedPart: "leaf",
     symptoms:
-      "Elongated cigar-shaped grayish-green to tan necrotic lesions (3 to 12 cm) starting on lower leaves and progressing upward toward the ear leaf after frequent summer showers. Lesions run parallel to leaf veins without distinct yellow halos.",
-    fileName: "maize-leaf-blight-cc0-sample.png",
+      "Extensive coalescing tan-to-brown necrotic blight lesions and chlorotic flecking spreading along the leaf blade parallel to the midrib after warm summer rains.",
+    imagePath: "/samples/maize-blight-usda-k7753-4.jpg",
+    fileName: "maize-blight-usda-k7753-4.jpg",
+    sourceLabel: "USDA ARS Public Domain (Photo by Keith Weller, K7753-4)",
+    sourceUrl: "https://www.ars.usda.gov/is/graphics/photos/sep97/k7753-4.htm",
   },
 ];
 
@@ -56,189 +66,17 @@ function formatFileSize(bytes: number): string {
   return `${(kb / 1024).toFixed(2)} MB`;
 }
 
-/**
- * Generates an original, copyright-free (CC0) synthetic botanical symptom PNG
- * directly in the browser so hackathon judges can test the full pipeline with
- * zero third-party image licensing or attribution issues.
- */
-async function createSyntheticSymptomFile(
+async function loadPublicDomainSampleFile(
   preset: SamplePreset,
 ): Promise<File> {
-  const canvas = document.createElement("canvas");
-  canvas.width = 960;
-  canvas.height = 600;
-  const ctx = canvas.getContext("2d");
-
-  if (!ctx) {
-    throw new Error("Canvas context unavailable");
+  const response = await fetch(preset.imagePath);
+  if (!response.ok) {
+    throw new Error(`Failed to load sample image (${response.status})`);
   }
-
-  // Soft field background gradient
-  const bg = ctx.createLinearGradient(0, 0, 960, 600);
-  bg.addColorStop(0, "#e5efe0");
-  bg.addColorStop(1, "#cfdrc8".replace("r", "d"));
-  ctx.fillStyle = bg;
-  ctx.fillRect(0, 0, 960, 600);
-
-  // Subtle out-of-focus background foliage
-  ctx.save();
-  ctx.globalAlpha = 0.22;
-  ctx.fillStyle = "#4d7c42";
-  ctx.beginPath();
-  ctx.ellipse(220, 120, 340, 70, -0.35, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.beginPath();
-  ctx.ellipse(760, 500, 380, 85, -0.28, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.restore();
-
-  if (preset.crop === "rice") {
-    // Draw Rice Leaf Blade (slender arched blade)
-    ctx.save();
-    ctx.beginPath();
-    ctx.moveTo(40, 490);
-    ctx.quadraticCurveTo(460, 170, 920, 110);
-    ctx.quadraticCurveTo(510, 340, 95, 560);
-    ctx.closePath();
-
-    const leafGrad = ctx.createLinearGradient(40, 520, 920, 110);
-    leafGrad.addColorStop(0, "#3b7a38");
-    leafGrad.addColorStop(0.55, "#4f9446");
-    leafGrad.addColorStop(1, "#3f7d3a");
-    ctx.fillStyle = leafGrad;
-    ctx.fill();
-
-    // Midrib and parallel veins
-    ctx.strokeStyle = "rgba(218, 240, 195, 0.65)";
-    ctx.lineWidth = 3;
-    ctx.beginPath();
-    ctx.moveTo(68, 525);
-    ctx.quadraticCurveTo(485, 255, 920, 110);
-    ctx.stroke();
-
-    // Characteristic diamond/spindle-shaped rice blast lesions
-    const lesions = [
-      { x: 340, y: 350, w: 46, h: 16, angle: -0.46 },
-      { x: 470, y: 278, w: 62, h: 20, angle: -0.43 },
-      { x: 590, y: 222, w: 50, h: 17, angle: -0.4 },
-      { x: 695, y: 178, w: 38, h: 13, angle: -0.37 },
-    ];
-
-    for (const l of lesions) {
-      ctx.save();
-      ctx.translate(l.x, l.y);
-      ctx.rotate(l.angle);
-
-      // Chlorotic yellow halo
-      ctx.fillStyle = "rgba(232, 204, 94, 0.72)";
-      ctx.beginPath();
-      ctx.moveTo(-l.w * 1.25, 0);
-      ctx.quadraticCurveTo(0, -l.h * 1.35, l.w * 1.25, 0);
-      ctx.quadraticCurveTo(0, l.h * 1.35, -l.w * 1.25, 0);
-      ctx.fill();
-
-      // Reddish-brown necrotic border
-      ctx.fillStyle = "#6e3423";
-      ctx.beginPath();
-      ctx.moveTo(-l.w, 0);
-      ctx.quadraticCurveTo(0, -l.h, l.w, 0);
-      ctx.quadraticCurveTo(0, l.h, -l.w, 0);
-      ctx.fill();
-
-      // Gray-white sporulating center
-      ctx.fillStyle = "#d9ddd4";
-      ctx.beginPath();
-      ctx.moveTo(-l.w * 0.58, 0);
-      ctx.quadraticCurveTo(0, -l.h * 0.55, l.w * 0.58, 0);
-      ctx.quadraticCurveTo(0, l.h * 0.55, -l.w * 0.58, 0);
-      ctx.fill();
-
-      ctx.restore();
-    }
-    ctx.restore();
-  } else {
-    // Draw Maize Leaf Blade (broad arched blade)
-    ctx.save();
-    ctx.beginPath();
-    ctx.moveTo(20, 470);
-    ctx.quadraticCurveTo(450, 120, 940, 130);
-    ctx.lineTo(940, 310);
-    ctx.quadraticCurveTo(490, 360, 60, 580);
-    ctx.closePath();
-
-    const maizeGrad = ctx.createLinearGradient(20, 520, 940, 180);
-    maizeGrad.addColorStop(0, "#2f6b34");
-    maizeGrad.addColorStop(0.5, "#3f8242");
-    maizeGrad.addColorStop(1, "#2d6631");
-    ctx.fillStyle = maizeGrad;
-    ctx.fill();
-
-    // Prominent central midrib
-    ctx.strokeStyle = "rgba(227, 242, 210, 0.78)";
-    ctx.lineWidth = 6;
-    ctx.beginPath();
-    ctx.moveTo(40, 525);
-    ctx.quadraticCurveTo(470, 240, 940, 215);
-    ctx.stroke();
-
-    // Elongated cigar-shaped Northern Corn Leaf Blight lesions
-    const lesions = [
-      { x: 330, y: 345, w: 115, h: 22, angle: -0.36 },
-      { x: 545, y: 285, w: 135, h: 25, angle: -0.25 },
-      { x: 690, y: 205, w: 98, h: 19, angle: -0.15 },
-    ];
-
-    for (const l of lesions) {
-      ctx.save();
-      ctx.translate(l.x, l.y);
-      ctx.rotate(l.angle);
-
-      // Tan-brown margin
-      ctx.fillStyle = "#7a5b34";
-      ctx.beginPath();
-      ctx.ellipse(0, 0, l.w, l.h, 0, 0, Math.PI * 2);
-      ctx.fill();
-
-      // Grayish-tan necrotic interior
-      ctx.fillStyle = "#b8ab8e";
-      ctx.beginPath();
-      ctx.ellipse(0, 0, l.w * 0.82, l.h * 0.72, 0, 0, Math.PI * 2);
-      ctx.fill();
-
-      // Subtle dark fungal stippling
-      ctx.fillStyle = "rgba(68, 56, 40, 0.45)";
-      ctx.beginPath();
-      ctx.ellipse(0, 0, l.w * 0.45, l.h * 0.3, 0, 0, Math.PI * 2);
-      ctx.fill();
-
-      ctx.restore();
-    }
-    ctx.restore();
-  }
-
-  // Metadata overlay bar (CC0 attribution-free notice)
-  ctx.fillStyle = "rgba(24, 42, 31, 0.78)";
-  ctx.fillRect(24, 528, 912, 48);
-  ctx.fillStyle = "#edf5e8";
-  ctx.font = "600 15px system-ui, -apple-system, sans-serif";
-  ctx.fillText(
-    `AgriSleuth Synthetic Reference Specimen · ${preset.label} (${preset.badge})`,
-    42,
-    557,
-  );
-  ctx.fillStyle = "#b8d4a7";
-  ctx.font = "500 13px system-ui, -apple-system, sans-serif";
-  ctx.textAlign = "right";
-  ctx.fillText("CC0 Public Domain · Generated in-browser", 918, 557);
-
-  const blob = await new Promise<Blob>((resolve, reject) => {
-    canvas.toBlob((b) => {
-      if (b) resolve(b);
-      else reject(new Error("Failed to encode sample image"));
-    }, "image/png");
+  const blob = await response.blob();
+  return new File([blob], preset.fileName, {
+    type: blob.type || "image/jpeg",
   });
-
-  return new File([blob], preset.fileName, { type: "image/png" });
 }
 
 export default function ObservationForm({
@@ -257,40 +95,40 @@ export default function ObservationForm({
   const [fileError, setFileError] = useState("");
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
-  useEffect(() => {
-    if (!photo) {
-      setPreviewUrl(null);
-      return;
-    }
+  const activePreset = SAMPLE_PRESETS.find((p) => p.id === activePresetId);
 
-    const objectUrl = URL.createObjectURL(photo);
-    setPreviewUrl(objectUrl);
-
-    return () => {
-      URL.revokeObjectURL(objectUrl);
-    };
-  }, [photo]);
+  const previewRef = useRef<string | null>(null);
+  function selectPhoto(file: File | null) {
+    if (previewRef.current) URL.revokeObjectURL(previewRef.current);
+    const url = file ? URL.createObjectURL(file) : null;
+    previewRef.current = url;
+    setPhoto(file);
+    setPreviewUrl(url);
+  }
+  useEffect(() => () => {
+    if (previewRef.current) URL.revokeObjectURL(previewRef.current);
+  }, []);
 
   async function handleSelectPreset(preset: SamplePreset) {
     if (busy) return;
 
     try {
       setFileError("");
-      const sampleFile = await createSyntheticSymptomFile(preset);
+      const sampleFile = await loadPublicDomainSampleFile(preset);
       setCrop(preset.crop);
       setRegion(preset.region);
       setObservedDate(preset.observedDate);
       setGrowthStage(preset.growthStage);
       setAffectedPart(preset.affectedPart);
       setSymptoms(preset.symptoms);
-      setPhoto(sampleFile);
+      selectPhoto(sampleFile);
       setActivePresetId(preset.id);
 
       if (fileInputRef.current) {
         fileInputRef.current.value = "";
       }
     } catch {
-      setFileError("Could not generate sample photograph.");
+      setFileError("Could not load the sample photograph.");
     }
   }
 
@@ -335,7 +173,7 @@ export default function ObservationForm({
             Quick demo presets for judges
           </span>
           <span className="sample-preset-note">
-            CC0 synthetic imagery · No copyright restrictions
+            USDA ARS attributed reference photos
           </span>
         </div>
         <div className="sample-preset-buttons">
@@ -424,7 +262,7 @@ export default function ObservationForm({
                   const file = event.target.files?.[0] ?? null;
                   setFileError("");
                   setActivePresetId(null);
-                  setPhoto(null);
+                  selectPhoto(null);
 
                   if (!file) return;
 
@@ -442,7 +280,7 @@ export default function ObservationForm({
                     return;
                   }
 
-                  setPhoto(file);
+                  selectPhoto(file);
                 }}
               />
 
@@ -462,7 +300,17 @@ export default function ObservationForm({
                       {photo.name}
                     </span>
                     <span className="photo-preview-size">
-                      {activePresetId ? "CC0 Synthetic · " : ""}
+                      {activePreset ? (
+                        <a
+                          href={activePreset.sourceUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ textDecoration: "underline" }}
+                        >
+                          {activePreset.sourceLabel} ↗
+                        </a>
+                      ) : null}
+                      {activePreset ? " · " : ""}
                       {formatFileSize(photo.size)}
                     </span>
                   </figcaption>
@@ -564,13 +412,13 @@ export default function ObservationForm({
           </div>
 
           <button className="primary-button" type="submit" disabled={busy}>
-            <span>{busy ? "Submitting…" : "Start investigation"}</span>
+            <span>{busy ? "Submitting…" : "Save observations"}</span>
             <span aria-hidden="true">→</span>
           </button>
 
           <p className="helper-text">
-            AgriSleuth cross-checks your visual and field observations against
-            peer-reviewed extension guides before proposing hypotheses.
+            Save observations first, then start the agent to investigate cited
+            disease evidence and unresolved observations.
           </p>
         </fieldset>
       </form>

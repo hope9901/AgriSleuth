@@ -1,0 +1,400 @@
+{
+  "input": {
+    "name": "insufficient-observation",
+    "id": "df655389-45b2-4112-94f4-fe5bbd7bdd36",
+    "started_at": "2026-10-26T08:14:54.894466+00:00",
+    "input": {
+      "crop": "maize",
+      "region": "Hongcheon-gun, Gangwon",
+      "observed_date": "2026-08-09",
+      "growth_stage": "unknown",
+      "affected_part": "leaf",
+      "symptoms": "Leaves look discolored. Lesion shape, size, distribution and progression cannot be determined. No distinguishing symptom has been confirmed. Please ask for the observations needed before proposing a disease."
+    },
+    "input_type": "constructed demonstration, not ground truth",
+    "status": "needs_more_evidence",
+    "viewer_url": "http://127.0.0.1:5173/?investigation=df655389-45b2-4112-94f4-fe5bbd7bdd36&demo=1",
+    "elapsed_seconds": 151.5,
+    "read_retries": 0,
+    "hypotheses": [],
+    "questions": [
+      "What specific leaf discoloration or lesion characteristics can be observed on the maize crop?"
+    ],
+    "finish_reason": "Image is blank placeholder and lacks visible plant features for diagnosis.",
+    "tools": [
+      {
+        "tool": "reanalyze_image",
+        "reason": "Image is available but observations are empty; need to ask for visible features before proposing disease candidates.",
+        "status": "completed",
+        "summary": "Tentative image observations updated; invisible features remain unknown.",
+        "error_code": null
+      },
+      {
+        "tool": "finish_investigation",
+        "reason": "Image is blank with no plant features; cannot diagnose without visible symptoms or location.",
+        "status": "rejected",
+        "summary": "Invalid argument fields: reason",
+        "error_code": null
+      },
+      {
+        "tool": "search_diseases",
+        "reason": "Search for maize diseases with discoloration symptoms to generate initial disease candidates.",
+        "status": "completed",
+        "summary": "Zetaris evidence: 1 excerpts, 1 new source IDs.",
+        "error_code": null
+      },
+      {
+        "tool": "finish_investigation",
+        "reason": "Search completed with new source; need to finalize investigation status.",
+        "status": "completed",
+        "summary": "Image is blank placeholder and lacks visible plant features for diagnosis.",
+        "error_code": null
+      }
+    ],
+    "judge_decisions": [],
+    "source_ids": [
+      "maize_023_f11"
+    ],
+    "engine_runs": 1,
+    "checks": {
+      "terminal": true,
+      "real_zetaris_search": true,
+      "verified": false,
+      "no_false_completion": true,
+      "questions_or_abstention": true
+    }
+  },
+  "result": {
+    "id": "df655389-45b2-4112-94f4-fe5bbd7bdd36",
+    "photoId": "70179475-622a-46ae-a48f-ef5f5630626a",
+    "status": "needs_more_evidence",
+    "summary": "Image is blank placeholder and lacks visible plant features for diagnosis.",
+    "questions": [
+      "What specific leaf discoloration or lesion characteristics can be observed on the maize crop?"
+    ],
+    "hypotheses": [],
+    "evidence": [
+      {
+        "id": "maize_023_f11",
+        "url": "https://cropprotectionnetwork.org/publications/an-overview-of-gosss-bacterial-wilt-and-blight",
+        "title": "Crop Protection Network, An Overview of Goss's Bacterial Wilt and Blight (CPN-Goss)",
+        "excerpt": "Xylem discoloration or slimy stalk rot develops, leading through wilting to death. Figure 6 shows 'discolored stalk pith'. The discoloration color is not described.",
+        "location": "Symptoms(systemic wilt); Figure 6"
+      }
+    ],
+    "reviewIssues": [],
+    "nextAction": "Image is blank placeholder and lacks visible plant features for diagnosis.",
+    "limitations": [
+      "Cannot determine disease without visible plant symptoms due to missing image content.",
+      "Tentative research hypotheses, not confirmed diagnoses.",
+      "No verified pesticide or regulatory recommendation is implemented.",
+      "KMA observations were unavailable or not requested.",
+      "Image findings are unconfirmed model observations."
+    ],
+    "events": [
+      {
+        "id": "84b2cca6-1f62-4d65-bf23-44d8c68a70a5",
+        "timestamp": "2026-10-26T08:14:54.877504+00:00",
+        "node": "validate_upload",
+        "summary": "Validated image type, contents and size."
+      },
+      {
+        "id": "be6bc3c0-e0b5-4ed0-8ba8-5a579e49cbdc",
+        "timestamp": "2026-10-26T08:14:54.882208+00:00",
+        "node": "validate_input",
+        "summary": "Checked required observation fields."
+      },
+      {
+        "id": "8f6a3917-bc4d-451c-a098-1036b5a21ae0",
+        "timestamp": "2026-10-26T08:14:54.882840+00:00",
+        "node": "prepare",
+        "summary": "Input validation completed; ready for explicit investigation start."
+      },
+      {
+        "id": "6e47a1f8-5436-4f50-b3ba-ef8f8549e3a8",
+        "timestamp": "2026-10-26T08:14:54.936914+00:00",
+        "node": "agent_initialize",
+        "summary": "Agent Controller will choose tools from the allowed registry."
+      },
+      {
+        "id": "bb62ba94-deb1-45bc-b159-3d3b4d00abef",
+        "timestamp": "2026-10-26T08:14:55.308801+00:00",
+        "node": "agent_reason",
+        "summary": "Action 1/5: selecting the next tool."
+      },
+      {
+        "id": "128ca5a2-aee1-40e6-bc57-709bbf8acda2",
+        "timestamp": "2026-10-26T08:15:25.241478+00:00",
+        "node": "agent_tool",
+        "summary": "reanalyze_image: Image is available but observations are empty; need to ask for visible features before proposing disease candidates."
+      },
+      {
+        "id": "d47e57d2-1301-471b-a6c5-e82104ad2f2d",
+        "timestamp": "2026-10-26T08:15:54.104376+00:00",
+        "node": "reanalyze_image",
+        "summary": "Tentative image observations updated; invisible features remain unknown."
+      },
+      {
+        "id": "8637a21b-a2e2-4f40-9a38-4abef97220d3",
+        "timestamp": "2026-10-26T08:15:54.228944+00:00",
+        "node": "agent_reason",
+        "summary": "Action 2/5: selecting the next tool."
+      },
+      {
+        "id": "2940b280-e988-4b10-b2f1-32c81e0c6023",
+        "timestamp": "2026-10-26T08:16:27.965948+00:00",
+        "node": "agent_reason",
+        "summary": "Action 3/5: selecting the next tool."
+      },
+      {
+        "id": "b63c126c-52fd-4f75-aae3-f02e0a5ea7cd",
+        "timestamp": "2026-10-26T08:16:45.289243+00:00",
+        "node": "agent_tool",
+        "summary": "search_diseases: Search for maize diseases with discoloration symptoms to generate initial disease candidates."
+      },
+      {
+        "id": "a8dbce95-c8ea-4241-a11e-7c6d839a6c1a",
+        "timestamp": "2026-10-26T08:16:48.961347+00:00",
+        "node": "search_diseases",
+        "summary": "Zetaris evidence: 1 excerpts, 1 new source IDs."
+      },
+      {
+        "id": "b0d7f3ed-3bcc-46db-acf6-f4e40a971a30",
+        "timestamp": "2026-10-26T08:16:48.996607+00:00",
+        "node": "agent_reason",
+        "summary": "Action 4/5: selecting the next tool."
+      },
+      {
+        "id": "40567552-c42f-4bb2-82d2-f2fbe75546c2",
+        "timestamp": "2026-10-26T08:17:25.499012+00:00",
+        "node": "agent_tool",
+        "summary": "finish_investigation: Search completed with new source; need to finalize investigation status."
+      },
+      {
+        "id": "0d112001-542a-4285-8d6a-88957373e747",
+        "timestamp": "2026-10-26T08:17:25.578496+00:00",
+        "node": "finish_investigation",
+        "summary": "Image is blank placeholder and lacks visible plant features for diagnosis."
+      },
+      {
+        "id": "466140d6-c429-40eb-9e7d-dc1013b7f4bb",
+        "timestamp": "2026-10-26T08:17:25.644291+00:00",
+        "node": "report",
+        "summary": "Image is blank placeholder and lacks visible plant features for diagnosis."
+      }
+    ]
+  },
+  "agent": {
+    "crop": "maize",
+    "phase": "tool_complete",
+    "run_id": "7c19fed4-6aef-4c93-aa2c-8b46c689c1da",
+    "status": "needs_more_evidence",
+    "location": {
+      "confirmed": false
+    },
+    "iteration": 4,
+    "questions": [
+      "What specific leaf discoloration or lesion characteristics can be observed on the maize crop?"
+    ],
+    "next_action": "finish_investigation",
+    "tool_history": [
+      {
+        "step": 1,
+        "tool": "reanalyze_image",
+        "reason": "Image is available but observations are empty; need to ask for visible features before proposing disease candidates.",
+        "result": {
+          "summary": "Tentative image observations updated; invisible features remain unknown.",
+          "observations": {
+            "limitations": [
+              "The image does not contain any visible plant material.",
+              "The image appears to be a blank or placeholder graphic rather than a photograph of a plant."
+            ],
+            "image_quality": "unknown",
+            "visible_findings": [
+              "The image is a solid gray color with no visible plant features.",
+              "No affected part can be identified.",
+              "No lesion color can be identified.",
+              "No shape or arrangement of lesions can be identified."
+            ],
+            "unobservable_features": [],
+            "additional_photo_required": null
+          }
+        },
+        "status": "completed",
+        "summary": "Tentative image observations updated; invisible features remain unknown.",
+        "arguments": {
+          "features": [],
+          "image_reference": "70179475-622a-46ae-a48f-ef5f5630626a",
+          "differential_criteria": []
+        }
+      },
+      {
+        "step": 2,
+        "tool": "finish_investigation",
+        "reason": "Image is blank with no plant features; cannot diagnose without visible symptoms or location.",
+        "status": "rejected",
+        "summary": "Invalid argument fields: reason",
+        "arguments": {}
+      },
+      {
+        "step": 3,
+        "tool": "search_diseases",
+        "reason": "Search for maize diseases with discoloration symptoms to generate initial disease candidates.",
+        "result": {
+          "source": "Zetaris",
+          "summary": "Zetaris evidence: 1 excerpts, 1 new source IDs.",
+          "source_ids": [
+            "maize_023_f11"
+          ],
+          "disease_ids": [
+            "maize_023"
+          ],
+          "disease_names": {
+            "maize_023": "Goss's bacterial wilt and leaf blight"
+          },
+          "new_source_ids": [
+            "maize_023_f11"
+          ]
+        },
+        "status": "completed",
+        "summary": "Zetaris evidence: 1 excerpts, 1 new source IDs.",
+        "arguments": {
+          "query": "maize leaf discoloration",
+          "compare_disease_ids": [],
+          "exclude_disease_ids": []
+        }
+      },
+      {
+        "step": 4,
+        "tool": "finish_investigation",
+        "reason": "Search completed with new source; need to finalize investigation status.",
+        "result": {
+          "status": "needs_more_evidence",
+          "summary": "Image is blank placeholder and lacks visible plant features for diagnosis."
+        },
+        "status": "completed",
+        "summary": "Image is blank placeholder and lacks visible plant features for diagnosis.",
+        "arguments": {
+          "reason": "Image is blank placeholder and lacks visible plant features for diagnosis.",
+          "status": "needs_more_evidence",
+          "questions": [
+            "What specific leaf discoloration or lesion characteristics can be observed on the maize crop?"
+          ],
+          "uncertainties": [
+            "Cannot determine disease without visible plant symptoms due to missing image content."
+          ],
+          "final_candidate_ids": []
+        }
+      }
+    ],
+    "finish_reason": "Image is blank placeholder and lacks visible plant features for diagnosis.",
+    "uncertainties": [
+      "Cannot determine disease without visible plant symptoms due to missing image content."
+    ],
+    "budget_seconds": 480,
+    "max_iterations": 5,
+    "critic_findings": [],
+    "elapsed_seconds": 150.73,
+    "image_reference": "70179475-622a-46ae-a48f-ef5f5630626a",
+    "judge_decisions": [],
+    "investigation_id": "df655389-45b2-4112-94f4-fe5bbd7bdd36",
+    "missing_evidence": [
+      "Invalid argument fields: reason"
+    ],
+    "observed_symptoms": [
+      "Leaves look discolored. Lesion shape, size, distribution and progression cannot be determined. No distinguishing symptom has been confirmed. Please ask for the observations needed before proposing a disease."
+    ],
+    "disease_candidates": [],
+    "hypothesis_history": [],
+    "image_observations": {
+      "limitations": [
+        "The image does not contain any visible plant material.",
+        "The image appears to be a blank or placeholder graphic rather than a photograph of a plant."
+      ],
+      "image_quality": "unknown",
+      "visible_findings": [
+        "The image is a solid gray color with no visible plant features.",
+        "No affected part can be identified.",
+        "No lesion color can be identified.",
+        "No shape or arrangement of lesions can be identified."
+      ],
+      "unobservable_features": [],
+      "additional_photo_required": null
+    },
+    "search_no_progress": 0,
+    "supporting_evidence": [
+      {
+        "id": "maize_023_f11",
+        "urls": [
+          "https://cropprotectionnetwork.org/publications/an-overview-of-gosss-bacterial-wilt-and-blight"
+        ],
+        "name_en": "Goss's bacterial wilt and leaf blight",
+        "name_ko": "\uace0\uc2a4 \uc2dc\ub4e4\uc74c\ubcd1",
+        "category": "Symptoms - stalk (wilt phase)",
+        "disease_id": "maize_023",
+        "feature_no": "11",
+        "plant_part": "Stalk vascular bundles, pith",
+        "description": "Xylem discoloration or slimy stalk rot develops, leading through wilting to death. Figure 6 shows 'discolored stalk pith'. The discoloration color is not described.",
+        "source_name": "Crop Protection Network, An Overview of Goss's Bacterial Wilt and Blight (CPN-Goss)",
+        "source_urls": "[\"https://cropprotectionnetwork.org/publications/an-overview-of-gosss-bacterial-wilt-and-blight\"]",
+        "growth_stage": "Mainly V2-V6",
+        "retrieval_score": 1,
+        "scientific_name": "Clavibacter nebraskensis",
+        "source_location": "Symptoms(systemic wilt); Figure 6",
+        "source_conflicts": "[\"Freckle location: CPN 'scattered within lesions', UNL 'near the margins of expanding lesions', Purdue 'mainly at margins but also throughout the lesion'.\", \"Freckle color: CPN 'dark green to black', Purdue 'black spots'.\", \"Only Purdue states the color of vascular discoloration ('orange to brown'); CPN and UNL say only 'discoloration'.\", \"Exudate color: CPN 'orange droplets' under humid conditions, while Purdue and UNL mention only 'glossy' with no color.\", \"Seed transmission: Purdue 'about 2%', UNL 'low'.\", \"Survival in residue: CPN 'at least 10\u201315 months', Purdue '10 months on the surface under dry conditions'.\", \"Colony color is left Unconfirmed because, at search-summary level, 'apricot to orange (NBY)' and 'yellow on most media' do not agree (source PMC4658045 blocked; EPPO Alert list 404).\"]"
+      }
+    ],
+    "verification_blocked": false,
+    "contradicting_evidence": []
+  },
+  "history": {
+    "rounds": [],
+    "engines": [
+      {
+        "id": "202a2be1-a479-431a-9cb0-5811143addc1",
+        "mode": "RESEARCH",
+        "chunks": [
+          {
+            "id": 1,
+            "tokens": 67,
+            "content": "{\"tool\": \"reanalyze_image\", \"reason\": \"Image is available but observations are empty; need to ask for visible features before proposing disease candidates.\", \"status\": \"completed\", \"summary\": \"Tentative image observations updated; invisible features remain unknown.\"}",
+            "carryover": ""
+          },
+          {
+            "id": 2,
+            "tokens": 52,
+            "content": "{\"tool\": \"finish_investigation\", \"reason\": \"Image is blank with no plant features; cannot diagnose without visible symptoms or location.\", \"status\": \"rejected\", \"summary\": \"Invalid argument fields: reason\"}",
+            "carryover": "COMPLETED: reanalyze_image completed\nREMAINING: Choose next action or finish\nDECISIONS: investigating\nCONTEXT: Tentative image observations updated; invisible features remain unknown."
+          },
+          {
+            "id": 3,
+            "tokens": 55,
+            "content": "{\"tool\": \"search_diseases\", \"reason\": \"Search for maize diseases with discoloration symptoms to generate initial disease candidates.\", \"status\": \"completed\", \"summary\": \"Zetaris evidence: 1 excerpts, 1 new source IDs.\"}",
+            "carryover": "COMPLETED: finish_investigation rejected\nREMAINING: Invalid argument fields: reason\nDECISIONS: investigating\nCONTEXT: Invalid argument fields: reason"
+          },
+          {
+            "id": 4,
+            "tokens": 58,
+            "content": "{\"tool\": \"finish_investigation\", \"reason\": \"Search completed with new source; need to finalize investigation status.\", \"status\": \"completed\", \"summary\": \"Image is blank placeholder and lacks visible plant features for diagnosis.\"}",
+            "carryover": "COMPLETED: search_diseases completed\nREMAINING: Invalid argument fields: reason\nDECISIONS: investigating\nCONTEXT: Zetaris evidence: 1 excerpts, 1 new source IDs."
+          }
+        ],
+        "output": "{\"tool\": \"reanalyze_image\", \"reason\": \"Image is available but observations are empty; need to ask for visible features before proposing disease candidates.\", \"status\": \"completed\", \"summary\": \"Tentative image observations updated; invisible features remain unknown.\"}\n\n{\"tool\": \"finish_investigation\", \"reason\": \"Image is blank with no plant features; cannot diagnose without visible symptoms or location.\", \"status\": \"rejected\", \"summary\": \"Invalid argument fields: reason\"}\n\n{\"tool\": \"search_diseases\", \"reason\": \"Search for maize diseases with discoloration symptoms to generate initial disease candidates.\", \"status\": \"completed\", \"summary\": \"Zetaris evidence: 1 excerpts, 1 new source IDs.\"}\n\n{\"tool\": \"finish_investigation\", \"reason\": \"Search completed with new source; need to finalize investigation status.\", \"status\": \"completed\", \"summary\": \"Image is blank placeholder and lacks visible plant features for diagnosis.\"}",
+        "prompt": "Choose and execute evidence tools to resolve crop hypothesis uncertainty; finish only after verification or abstain.",
+        "status": "completed",
+        "timestamp": 1793002495301,
+        "durationMs": 150331,
+        "tokenLabel": "estimated",
+        "chunkConfig": {
+          "chunkSize": 4000,
+          "maxChunks": 5,
+          "overlapTokens": 0,
+          "carryoverTokens": 512
+        },
+        "totalTokensUsed": 232,
+        "totalTokensSaved": 0,
+        "efficiencyPercent": 0
+      }
+    ]
+  }
+}

@@ -42,7 +42,7 @@ export async function submitInvestigation(
 
 export async function getInvestigation(id: string): Promise<InvestigationResult> {
   const response = await fetch(`${API_BASE_URL}/api/investigations/${encodeURIComponent(id)}`, {
-    signal: AbortSignal.timeout(10_000),
+    signal: AbortSignal.timeout(20_000),
   });
   if (!response.ok) throw new Error(`Investigation lookup failed: HTTP ${response.status}`);
   return response.json();
@@ -50,4 +50,26 @@ export async function getInvestigation(id: string): Promise<InvestigationResult>
 
 export function getPhotoUrl(photoId: string): string {
   return `${API_BASE_URL}/api/photos/${encodeURIComponent(photoId)}`;
+}
+
+
+export async function startInvestigation(id: string): Promise<void> {
+  const response = await fetch(`${API_BASE_URL}/api/investigations/${encodeURIComponent(id)}/run`, {
+    method: "POST", signal: AbortSignal.timeout(20_000),
+  });
+  if (!response.ok) {
+    const body = await response.json().catch(() => ({}));
+    throw new Error(typeof body.detail === "string" ? body.detail : `Unable to start: HTTP ${response.status}`);
+  }
+}
+
+export async function addObservations(id: string, symptoms: string): Promise<InvestigationResult> {
+  const response = await fetch(`${API_BASE_URL}/api/investigations/${encodeURIComponent(id)}/observations`, {
+    method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ symptoms }), signal: AbortSignal.timeout(20_000),
+  });
+  if (!response.ok) {
+    const body = await response.json().catch(() => ({}));
+    throw new Error(typeof body.detail === "string" ? body.detail : `Update failed: HTTP ${response.status}`);
+  }
+  return response.json();
 }

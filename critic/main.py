@@ -93,12 +93,12 @@ def prepare(state: IntakeState) -> dict:
     return {
         "status": "ready",
         "summary": (
-            "Observations validated. Disease retrieval and candidate "
-            "generation are not connected yet."
+            "Observations validated. Optionally retrieve weather evidence, "
+            "then start the source-linked investigation."
         ),
         "questions": [],
         "trace": state["trace"] + ["prepare"],
-        "events": state["events"] + [execution_event("prepare", "Input validation completed; analysis is not connected.")],
+        "events": state["events"] + [execution_event("prepare", "Input validation completed; ready for explicit investigation start.")],
     }
 
 
@@ -179,7 +179,12 @@ async def lifespan(app: FastAPI):
             api_key=os.getenv("LM_STUDIO_API_KEY", "lm-studio"),
         )
         app.state.review_graph = build_review_graph(reviewer)
-    yield
+    try:
+        yield
+    finally:
+        tasks=list(analysis_tasks.values())
+        for task in tasks: task.cancel()
+        if tasks: await asyncio.gather(*tasks,return_exceptions=True)
 
 
 app = FastAPI(
@@ -256,10 +261,10 @@ async def investigate(
         summary=result["summary"],
         questions=result["questions"],
         nextAction=("Provide the missing observations." if result["status"] == "needs_input"
-                    else "Evidence retrieval and candidate generation must be connected before review."),
+                    else "Optionally retrieve weather evidence, then start the investigation."),
         limitations=[
             "This endpoint validates inputs only; no image analysis or disease review has run.",
-            "Growth stage and affected part are stored but not used for analysis yet.",
+            "Growth stage and affected part are stored for the investigation.",
         ],
         events=result["events"],
     )
@@ -382,3 +387,85 @@ async def collect_case_weather(investigation_id: UUID, request: WeatherRequest):
         return report
     except (psycopg.Error,RuntimeError):
         raise HTTPException(503,'Weather storage is unavailable; evidence was not saved.') from None
+
+
+# Background tasks retain references; durable state and round records live in PostgreSQL.
+from pipeline import execute
+from database import analysis_case,claim_analysis,analysis_history
+analysis_tasks: dict = {}
+
+@app.post('/api/investigations/{investigation_id}/run', status_code=202)
+async def run_investigation(investigation_id: UUID):
+    try:
+        case=await analysis_case(investigation_id)
+        if case is None: raise HTTPException(404,'Investigation not found.')
+        if not all((case['region'],case['observed_date'],case['symptoms'])):
+            raise HTTPException(422,'Complete location, observation date and symptoms before running.')
+        if analysis_tasks:
+            raise HTTPException(409,'Another investigation is running on this local model. Wait for it to finish.')
+        if not await claim_analysis(investigation_id):
+            raise HTTPException(409,'This investigation is already running.')
+        task=asyncio.create_task(execute(investigation_id))
+        analysis_tasks[investigation_id]=task
+        task.add_done_callback(lambda done: analysis_tasks.pop(investigation_id,None))
+        return {'id':str(investigation_id),'status':'researching'}
+    except (psycopg.Error,RuntimeError):
+        raise HTTPException(503,'Investigation storage is unavailable.') from None
+
+@app.get('/api/investigations/{investigation_id}/history')
+async def case_history(investigation_id: UUID):
+    try:
+        if await analysis_case(investigation_id) is None:raise HTTPException(404,'Investigation not found.')
+        return await analysis_history(investigation_id)
+    except (psycopg.Error,RuntimeError):
+        raise HTTPException(503,'Investigation history storage is unavailable.') from None
+
+
+class AdditionalObservations(BaseModel):
+    symptoms: str = Field(min_length=1,max_length=3000)
+
+@app.post('/api/investigations/{investigation_id}/observations',response_model=InvestigationResponse)
+async def supplement_observations(investigation_id: UUID, request: AdditionalObservations):
+    try:
+        result=await database_supplement(investigation_id,request.symptoms.strip())
+        if result is None:raise HTTPException(404,'Investigation not found.')
+        return result
+    except ValueError as exc:
+        raise HTTPException(409,str(exc)) from None
+    except (psycopg.Error,RuntimeError):
+        raise HTTPException(503,'Investigation storage is unavailable.') from None
+
+from database import supplement as database_supplement
+
+
+@app.get('/api/investigations/{investigation_id}/agent')
+async def read_agent_trace(investigation_id: UUID):
+    try:
+        from database import read_agent_state
+        state=await read_agent_state(investigation_id)
+        if state is None:raise HTTPException(404,'No agent run exists yet.')
+        # Precise coordinates live in one server-side context, not repeated in trace exports.
+        state['location']={'confirmed':bool(state.get('location'))}
+        state.pop('weather',None)
+        state.pop('carryover',None)
+        return state
+    except (psycopg.Error,RuntimeError):
+        raise HTTPException(503,'Agent trace storage is unavailable.') from None
+
+@app.post('/api/investigations/{investigation_id}/location')
+async def confirm_agent_location(investigation_id: UUID, request: WeatherRequest):
+    try:
+        case=await analysis_case(investigation_id)
+        if case is None:raise HTTPException(404,'Investigation not found.')
+        if case['status'] in ('researching','reviewing'):raise HTTPException(409,'Confirm location before starting the agent.')
+        import httpx
+        from weather import resolve_location
+        from database import save_agent_location
+        async with httpx.AsyncClient(timeout=12) as client:
+            place=await resolve_location(client,request.location_id)
+        await save_agent_location(investigation_id,place)
+        return {'confirmed':True,'label':place['label']}
+    except WeatherError as exc:
+        raise HTTPException(502,str(exc)) from None
+    except (psycopg.Error,RuntimeError):
+        raise HTTPException(503,'Location storage is unavailable.') from None

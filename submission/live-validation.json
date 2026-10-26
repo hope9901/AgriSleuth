@@ -1,0 +1,147 @@
+{
+  "track": "Track 2 - The Agent That Can Explain Why",
+  "input_type": "Constructed software demonstrations with an attributed rice sample / synthetic low-information image; not labeled diagnostic evaluation",
+  "cases": [
+    {
+      "name": "supported-rice-hypothesis",
+      "id": "2721acac-22d4-4e06-a4b0-fff3bef21f4c",
+      "started_at": "2026-10-26T08:12:28.133301+00:00",
+      "input": {
+        "crop": "rice",
+        "region": "Gimje-si, Jeonbuk",
+        "observed_date": "2026-07-18",
+        "growth_stage": "vegetative",
+        "affected_part": "leaf",
+        "symptoms": "Several leaf lesions are spindle or eye shaped, with gray-white centers and brown margins. Lesions extend along the leaf blade; no circular evenly brown spots or vein-limited rectangular lesions were observed. Please investigate a tentative source-supported hypothesis, not a confirmed diagnosis."
+      },
+      "input_type": "constructed demonstration, not ground truth",
+      "status": "completed",
+      "viewer_url": "http://127.0.0.1:5173/?investigation=2721acac-22d4-4e06-a4b0-fff3bef21f4c&demo=1",
+      "elapsed_seconds": 146.7,
+      "read_retries": 0,
+      "hypotheses": [
+        {
+          "id": "rice_001",
+          "name": "Rice blast",
+          "reasoning": "Spindle-shaped lesions with gray-white centers and brown margins align with rice blast descriptions.",
+          "evidenceIds": [
+            "rice_001_f6",
+            "rice_001_f7"
+          ]
+        }
+      ],
+      "questions": [],
+      "finish_reason": "Judge approved finalization with limitations; no further evidence required.",
+      "tools": [
+        {
+          "tool": "search_diseases",
+          "reason": "Initial search needed to retrieve source excerpts for the described rice leaf lesions before verification.",
+          "status": "completed",
+          "summary": "Zetaris evidence: 6 excerpts, 6 new source IDs.",
+          "error_code": null
+        },
+        {
+          "tool": "verify_evidence",
+          "reason": "Search completed with new sources; now verify evidence to generate hypotheses and run Critic/Judge.",
+          "status": "completed",
+          "summary": "The leading candidate rice blast is supported by the spindle-shaped lesions with gray-white centers and brown margins described in observations, which align with evidence from LSU AgCenter and Sri Lanka Department of Agriculture. No material unsupported claims or contradictions were identified among supplied candidates.",
+          "error_code": null
+        },
+        {
+          "tool": "finish_investigation",
+          "reason": "The Judge decision 'finalize_with_limitations' indicates the investigation is complete with a supported hypothesis.",
+          "status": "completed",
+          "summary": "Judge approved finalization with limitations; no further evidence required.",
+          "error_code": null
+        }
+      ],
+      "judge_decisions": [
+        {
+          "action": "finalize_with_limitations",
+          "reason": "No blocking issues; retain the reported limitations."
+        }
+      ],
+      "source_ids": [
+        "rice_001_f6",
+        "rice_001_f7",
+        "rice_002_f3",
+        "rice_002_f19",
+        "rice_003_f5",
+        "rice_003_f10"
+      ],
+      "engine_runs": 1,
+      "checks": {
+        "terminal": true,
+        "real_zetaris_search": true,
+        "verified": true,
+        "no_false_completion": true,
+        "questions_or_abstention": false
+      }
+    },
+    {
+      "name": "insufficient-observation",
+      "id": "df655389-45b2-4112-94f4-fe5bbd7bdd36",
+      "started_at": "2026-10-26T08:14:54.894466+00:00",
+      "input": {
+        "crop": "maize",
+        "region": "Hongcheon-gun, Gangwon",
+        "observed_date": "2026-08-09",
+        "growth_stage": "unknown",
+        "affected_part": "leaf",
+        "symptoms": "Leaves look discolored. Lesion shape, size, distribution and progression cannot be determined. No distinguishing symptom has been confirmed. Please ask for the observations needed before proposing a disease."
+      },
+      "input_type": "constructed demonstration, not ground truth",
+      "status": "needs_more_evidence",
+      "viewer_url": "http://127.0.0.1:5173/?investigation=df655389-45b2-4112-94f4-fe5bbd7bdd36&demo=1",
+      "elapsed_seconds": 151.5,
+      "read_retries": 0,
+      "hypotheses": [],
+      "questions": [
+        "What specific leaf discoloration or lesion characteristics can be observed on the maize crop?"
+      ],
+      "finish_reason": "Image is blank placeholder and lacks visible plant features for diagnosis.",
+      "tools": [
+        {
+          "tool": "reanalyze_image",
+          "reason": "Image is available but observations are empty; need to ask for visible features before proposing disease candidates.",
+          "status": "completed",
+          "summary": "Tentative image observations updated; invisible features remain unknown.",
+          "error_code": null
+        },
+        {
+          "tool": "finish_investigation",
+          "reason": "Image is blank with no plant features; cannot diagnose without visible symptoms or location.",
+          "status": "rejected",
+          "summary": "Invalid argument fields: reason",
+          "error_code": null
+        },
+        {
+          "tool": "search_diseases",
+          "reason": "Search for maize diseases with discoloration symptoms to generate initial disease candidates.",
+          "status": "completed",
+          "summary": "Zetaris evidence: 1 excerpts, 1 new source IDs.",
+          "error_code": null
+        },
+        {
+          "tool": "finish_investigation",
+          "reason": "Search completed with new source; need to finalize investigation status.",
+          "status": "completed",
+          "summary": "Image is blank placeholder and lacks visible plant features for diagnosis.",
+          "error_code": null
+        }
+      ],
+      "judge_decisions": [],
+      "source_ids": [
+        "maize_023_f11"
+      ],
+      "engine_runs": 1,
+      "checks": {
+        "terminal": true,
+        "real_zetaris_search": true,
+        "verified": false,
+        "no_false_completion": true,
+        "questions_or_abstention": true
+      }
+    }
+  ]
+}

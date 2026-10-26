@@ -25,7 +25,7 @@ class InvestigationEvent(Schema):
 class InvestigationResponse(Schema):
     id: str
     photoId: str | None = None
-    status: Literal["needs_input", "ready"]
+    status: Literal["needs_input", "ready", "researching", "reviewing", "completed", "needs_more_evidence", "abstained", "failed"]
     summary: str
     questions: list[str]
     hypotheses: list[dict] = Field(default_factory=list)
@@ -37,6 +37,8 @@ class InvestigationResponse(Schema):
 
 
 class Evidence(Schema):
+    disease_id: str | None = None
+    disease_name: str | None = None
     id: str
     text: str = Field(min_length=1, max_length=4000)
     source: str

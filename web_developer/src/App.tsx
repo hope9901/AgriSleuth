@@ -6,7 +6,7 @@ import "./styles.css";
 const PROJECT_METADATA = {
   projectName: "AgriSleuth",
   hackathonName: "Open Agent Hackathon 2026",
-  scopeLabel: "South Korea · Rice & Maize",
+  scopeLabel: "Track 2 · Explain Why · Rice & Maize",
   contactEmail: "hope9901@gmail.com",
   githubUrl: "https://github.com/hope9901/AgriSleuth",
   githubDisplay: "github.com/hope9901/AgriSleuth",

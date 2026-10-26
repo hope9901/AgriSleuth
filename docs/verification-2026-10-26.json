@@ -1,0 +1,34 @@
+{
+  "test": "synthetic symptoms, real services; no diagnostic-accuracy evaluation",
+  "status": "needs_input",
+  "elapsed_seconds": 248.5,
+  "hypotheses": 1,
+  "source_count": 6,
+  "questions": [
+    "Real-world field observations or confirmation that the synthetic description is intended for testing purposes only."
+  ],
+  "next_action": "Additional observations are required.",
+  "rounds": [
+    {
+      "round": 1,
+      "action": "revise_conclusion"
+    },
+    {
+      "round": 2,
+      "action": "request_user_input"
+    }
+  ],
+  "engines": [
+    {
+      "status": "completed",
+      "chunks": 2,
+      "token_label": "estimated"
+    }
+  ],
+  "separate_vision_smoke_test": {
+    "input": "synthetic green illustration, not field photography",
+    "elapsed_seconds": 16.8,
+    "result": "schema-valid visible findings; identified synthetic illustration and no visible disease symptoms",
+    "accuracy_claim": false
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "elapsed_seconds": 26.0,
+  "review": {
+    "issues": [
+      {
+        "code": "MISSING_DIFFERENTIAL",
+        "severity": "blocking",
+        "candidate_id": null,
+        "reason": "Gray leaf spot lesions are vein-limited rectangles, whereas observations show lesions crossing veins.",
+        "evidence_ids": [
+          "maize_015_f2"
+        ],
+        "suggested_action": "retrieve_evidence",
+        "requested_information": "Confirm whether observed lesions are strictly vein-limited or cross veins."
+      }
+    ],
+    "limitations": [
+      "Weather evidence is unavailable, preventing assessment of humidity-driven infection risk.",
+      "No field history provided to distinguish between recurring and new infections."
+    ],
+    "review_summary": "Northern corn leaf blight remains a plausible candidate based on cigar-shaped lesions crossing veins, but Gray leaf spot must be ruled out by confirming vein limitation status."
+  },
+  "judge": {
+    "action": "retrieve_evidence",
+    "reason": "Additional source evidence is required."
+  },
+  "test": "Software test input with real Zetaris and Qwen; no accuracy claim"
+}

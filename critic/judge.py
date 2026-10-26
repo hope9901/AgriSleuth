@@ -4,6 +4,7 @@ from schemas import CriticReview, JudgeAction
 def judge_review(
     review: CriticReview,
     review_round: int,
+    max_rounds: int = 3,
 ) -> tuple[JudgeAction, str]:
     blockers = [
         issue
@@ -24,7 +25,7 @@ def judge_review(
         )
 
     # A round limit prevents further automated review.
-    if review_round >= 3:
+    if review_round >= max_rounds:
         return (
             "abstain",
             "Blocking issues remain after the review limit.",

@@ -1,29 +1,11 @@
-# AgriSleuth Architecture (MVP skeleton)
+# AgriSleuth implemented architecture
 
-## Repository layout
+React/TypeScript/Vite -> FastAPI intake and persisted observations -> explicit start -> local LLM Controller -> one validated tool -> durable Agent State -> evaluate/replan -> finish, ask for more evidence, abstain or fail.
 
-| Path | Role |
-|------|------|
-| `apps/web` | Next.js UI — intake, map/GPS, evidence panel, report |
-| `services/api` | FastAPI — uploads, session API, OpenAPI |
-| `services/agent` | Diagnosis–Critic–Judge orchestration and tools |
-| `data/diseases` | Curated disease knowledge (source URLs required) |
-| `tests/fixtures` | Demo cases (images, weather stubs, labels) |
-| `scripts` | Seeding, evaluation, demo runners |
+The Controller chooses among search_diseases, get_weather, reanalyze_image, verify_evidence and finish_investigation. Their existing implementations are reused: Zetaris read-only JDBC evidence, KMA world observations, LM Studio VLM, source-linked Diagnosis, Critic and deterministic Judge. No hard-coded tool sequence drives the live run. State-conditioned eligibility, normalized duplicate detection, provenance and freshness guards remain deterministic.
 
-## Agent loop (v2)
+The unmodified Meterless Markovian reference runtime controls bounded action chunks and checkpoints. Default limits: five actions, 480 seconds overall. The Python host persists state before/after tools; reference reflection is disabled because validation is performed by host Critic/Judge. LangGraph remains in intake and the separate review endpoint. The previous fixed executor is retained explicitly as execute_fixed for regression, not the live run route.
 
-```
-INTAKE → OBSERVE (VLM) → RETRIEVE (DB) → CHECK_ENV (weather)
-  → HYPOTHESIZE (Diagnosis) → CHALLENGE (Critic) → VERIFY (Judge)
-  → ACT (re-query / more photos) → REPORT
-```
+PostgreSQL stores inputs/photos, optional weather, round/engine history, agent_runs and confirmed locations. Web polling shows real backend events and tool traces; report export redacts precise location and raw weather/images. It does not generate simulated agent actions.
 
-Deterministic checks (D4+): disease IDs must exist in DB; sources must resolve; no unregistered pesticide names in output.
-
-## D1 focus
-
-1. HackOS / sponsor API smoke tests (Nemotron, Zetaris).
-2. Add reviewed disease JSON under `data/diseases/rice/` and `data/diseases/corn/` (5–8 per crop or per schedule).
-3. Replace stub `VisionTool` with real VLM JSON schema validation.
-4. Optional: PostgreSQL + pgvector via `docker compose up db`.
+See README and AUTONOMOUS_AGENT_IMPLEMENTATION.md for setup, new routes, exact test scope, actual failed trials, successful isolated checks and remaining limitations. Final complete revised live replay was not performed after execution approval was declined.

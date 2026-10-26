@@ -1,8 +1,8 @@
 import asyncio
+import os
 from pathlib import Path
 
 from langchain_core.messages import HumanMessage, SystemMessage
-from langchain_openai import ChatOpenAI
 
 from schemas import CriticReview, ReviewRequest
 
@@ -30,20 +30,8 @@ def create_critic_reviewer(
     model_name: str,
     api_key: str,
 ):
-    model = ChatOpenAI(
-        base_url=base_url,
-        model=model_name,
-        api_key=api_key,
-        temperature=0.1,
-        max_tokens=1200,
-        timeout=90,
-        max_retries=0,
-    )
-
-    return model.with_structured_output(
-        CriticReview,
-        method="json_schema",
-    )
+    from local_model import LocalStructuredModel
+    return LocalStructuredModel(base_url,model_name,api_key,CriticReview,max_tokens=500)
 
 
 async def call_critic_agent(
@@ -58,8 +46,11 @@ async def call_critic_agent(
         HumanMessage(content=request.model_dump_json()),
     ]
 
+    if hasattr(reviewer,'constrain_references'):
+        reviewer.constrain_references([c.id for c in request.candidates],[e.id for e in request.evidence])
+
     try:
-        async with asyncio.timeout(95):
+        async with asyncio.timeout(int(os.getenv('LOCAL_MODEL_TIMEOUT_SECONDS','180'))+5):
             result = await reviewer.ainvoke(messages)
 
         review = CriticReview.model_validate(result)
@@ -77,6 +68,13 @@ async def call_critic_agent(
 
             if set(issue.evidence_ids) - evidence_ids:
                 raise ValueError("Unknown evidence ID.")
+
+        evidence_by_id={item.id:item for item in request.evidence}
+        for issue in review.issues:
+            if issue.code=='OBSERVATION_MISMATCH' and issue.candidate_id and issue.evidence_ids:
+                attributed=[evidence_by_id[i].disease_id for i in issue.evidence_ids]
+                if all(attributed) and issue.candidate_id not in attributed:
+                    raise ValueError("Mismatch references only another disease's evidence.")
 
         return review
 

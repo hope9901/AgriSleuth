@@ -1,0 +1,51 @@
+{
+  "name": "AgriSleuth",
+  "track": "Track 2 - The Agent That Can Explain Why",
+  "description": "An evidence-backed crop investigation agent that explains why a hypothesis is supported, what contradicts it, and what the researcher should verify next.",
+  "sponsor_technology": {
+    "Zetaris": "Real SQL API queries over a read-only PostgreSQL JDBC evidence view; no direct disease-search fallback.",
+    "Meterless": "Unmodified Markovian reference runtime governs bounded Controller-selected tool actions, checkpoints and completion; PostgreSQL stores run state. Token accounting is estimated."
+  },
+  "models": [
+    {
+      "provider": "LM Studio",
+      "id": "qwen/qwen3.5-9b",
+      "quantization": "Q4_K_M",
+      "loaded_context_length": 4096
+    }
+  ],
+  "limitations": [
+    "Research support, not confirmed diagnosis",
+    "KMA live observations require authorized access",
+    "No source-verification or licensing guarantee",
+    "No public-hosting authentication",
+    "Image and diagnosis accuracy have not been evaluated on a labeled dataset"
+  ],
+  "ai_assisted_development": true,
+  "agent_policy": {
+    "max_actions_default": 5,
+    "deadline_seconds_default": 480,
+    "tools": [
+      "search_diseases",
+      "get_weather",
+      "reanalyze_image",
+      "verify_evidence",
+      "finish_investigation"
+    ],
+    "completion_requires": "Fresh source/crop-valid hypotheses and passing Critic/Judge, with unchanged evidence and claims"
+  },
+  "submission_artifacts": {
+    "package": "submission/README.md",
+    "video": "submission/AgriSleuth-Track2-demo.mp4",
+    "sponsor_explanation": "submission/SPONSOR_TECH.md",
+    "live_validation": "submission/live-validation.json"
+  },
+  "verification": {
+    "normal_case": "completed with limitations",
+    "normal_seconds": 146.7,
+    "insufficient_case": "needs_more_evidence",
+    "insufficient_seconds": 151.5,
+    "diagnostic_accuracy_evaluated": false,
+    "weather_live_status": "HTTP 403; unavailable"
+  }
+}

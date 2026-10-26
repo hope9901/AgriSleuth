@@ -15,8 +15,10 @@ ROOT = Path(__file__).resolve().parents[1]
 def connection_options() -> dict:
     # Do not load or print credentials into logs or a command line.
     local = dotenv_values(ROOT / "data" / ".env.postgres")
+    timeout=int(os.getenv("POSTGRES_CONNECT_TIMEOUT","10"))
+    if not 1<=timeout<=30:raise RuntimeError("PostgreSQL connect timeout outside safe bounds.")
     if os.getenv("DATABASE_URL"):
-        return {"conninfo": os.environ["DATABASE_URL"], "connect_timeout": 5}
+        return {"conninfo": os.environ["DATABASE_URL"], "connect_timeout": timeout}
     user = os.getenv("POSTGRES_USER") or local.get("POSTGRES_USER")
     password = os.getenv("POSTGRES_PASSWORD") or local.get("POSTGRES_PASSWORD")
     db = os.getenv("POSTGRES_DB") or local.get("POSTGRES_DB")
@@ -24,7 +26,7 @@ def connection_options() -> dict:
         raise RuntimeError("PostgreSQL credentials are not configured.")
     return dict(host=os.getenv("POSTGRES_HOST", "127.0.0.1"),
                 port=int(os.getenv("POSTGRES_PORT", "5432")),
-                user=user, password=password, dbname=db, connect_timeout=5)
+                user=user, password=password, dbname=db, connect_timeout=timeout)
 
 
 async def save_investigation(*, result, crop, region, observed_date,
@@ -89,3 +91,75 @@ async def read_weather(case_id):
         cur = await conn.execute("SELECT payload FROM investigation_weather WHERE investigation_id=%s",(case_id,))
         row = await cur.fetchone()
         return row['payload'] if row else None
+
+
+async def analysis_case(case_id):
+    async with await psycopg.AsyncConnection.connect(**connection_options(),row_factory=dict_row) as conn:
+        cur=await conn.execute('SELECT * FROM investigations WHERE id=%s',(case_id,))
+        return await cur.fetchone()
+
+async def claim_analysis(case_id):
+    async with await psycopg.AsyncConnection.connect(**connection_options()) as conn:
+        cur=await conn.execute("""UPDATE investigations SET status='researching',result=jsonb_set(result,'{status}','"researching"'),updated_at=now()
+            WHERE id=%s AND (status NOT IN ('researching','reviewing') OR updated_at < now()-interval '10 minutes') RETURNING id""",(case_id,))
+        return await cur.fetchone() is not None
+
+async def update_analysis(case_id,result):
+    async with await psycopg.AsyncConnection.connect(**connection_options()) as conn:
+        await conn.execute('UPDATE investigations SET status=%s,result=%s,updated_at=now() WHERE id=%s',(result['status'],Jsonb(result),case_id))
+
+async def fail_analysis(case_id,message):
+    case=await analysis_case(case_id)
+    if not case:return
+    result=case['result'];result.update(status='failed',nextAction=message)
+    result.setdefault('limitations',[]).append(message)
+    await update_analysis(case_id,result)
+
+async def save_round(case_id,record):
+    async with await psycopg.AsyncConnection.connect(**connection_options()) as conn:
+        await conn.execute('INSERT INTO investigation_rounds (investigation_id,payload) VALUES (%s,%s)',(case_id,Jsonb(record)))
+
+async def save_engine(case_id,engine,rounds):
+    async with await psycopg.AsyncConnection.connect(**connection_options()) as conn:
+        await conn.execute('INSERT INTO engine_runs (id,investigation_id,payload) VALUES (%s,%s,%s)',(UUID(engine['id']),case_id,Jsonb(engine)))
+
+async def analysis_history(case_id):
+    async with await psycopg.AsyncConnection.connect(**connection_options(),row_factory=dict_row) as conn:
+        rounds=await conn.execute('SELECT payload FROM investigation_rounds WHERE investigation_id=%s ORDER BY id',(case_id,))
+        engines=await conn.execute('SELECT payload FROM engine_runs WHERE investigation_id=%s ORDER BY created_at',(case_id,))
+        return dict(rounds=[r['payload'] for r in await rounds.fetchall()],engines=[r['payload'] for r in await engines.fetchall()])
+
+
+async def supplement(case_id,addition):
+    async with await psycopg.AsyncConnection.connect(**connection_options(),row_factory=dict_row) as conn:
+        cur=await conn.execute('SELECT symptoms,status,result FROM investigations WHERE id=%s FOR UPDATE',(case_id,))
+        case=await cur.fetchone()
+        if not case:return None
+        if case['status'] in ('researching','reviewing'):raise ValueError('Wait for the active investigation to finish.')
+        if not addition:raise ValueError('Additional observations must not be blank.')
+        symptoms=case['symptoms']+'\nAdditional observations: '+addition
+        if len(symptoms)>5000:raise ValueError('Combined symptom observations exceed 5000 characters.')
+        result=case['result'];result.update(status='ready',questions=[],summary='Additional observations saved. Start investigation to reassess.',nextAction='Start investigation with the updated observations.')
+        await conn.execute('UPDATE investigations SET symptoms=%s,status=%s,result=%s,updated_at=now() WHERE id=%s',(symptoms,'ready',Jsonb(result),case_id))
+        return result
+
+
+async def save_agent_state(run_id,case_id,state):
+    async with await psycopg.AsyncConnection.connect(**connection_options()) as conn:
+        await conn.execute("""INSERT INTO agent_runs (id,investigation_id,payload) VALUES (%s,%s,%s)
+          ON CONFLICT (id) DO UPDATE SET payload=excluded.payload,updated_at=now()""",(run_id,case_id,Jsonb(state)))
+
+async def read_agent_state(case_id):
+    async with await psycopg.AsyncConnection.connect(**connection_options(),row_factory=dict_row) as conn:
+        cur=await conn.execute('SELECT payload FROM agent_runs WHERE investigation_id=%s ORDER BY created_at DESC LIMIT 1',(case_id,))
+        row=await cur.fetchone();return row['payload'] if row else None
+
+async def read_agent_location(case_id):
+    async with await psycopg.AsyncConnection.connect(**connection_options(),row_factory=dict_row) as conn:
+        cur=await conn.execute('SELECT payload FROM investigation_locations WHERE investigation_id=%s',(case_id,))
+        row=await cur.fetchone();return row['payload'] if row else None
+
+async def save_agent_location(case_id,location):
+    async with await psycopg.AsyncConnection.connect(**connection_options()) as conn:
+        await conn.execute("""INSERT INTO investigation_locations (investigation_id,payload) VALUES (%s,%s)
+          ON CONFLICT (investigation_id) DO UPDATE SET payload=excluded.payload,updated_at=now()""",(case_id,Jsonb(location)))
