@@ -6,7 +6,7 @@ from uuid import UUID, uuid4
 from pathlib import Path
 from typing import TypedDict
 
-from dotenv import load_dotenv
+from config import load_environment
 from fastapi import FastAPI, File, Form, HTTPException, UploadFile, Response
 import psycopg
 from database import save_investigation, get_investigation, get_photo
@@ -29,7 +29,7 @@ from schemas import (
 )
 
 
-load_dotenv(Path(__file__).resolve().parent / ".env")
+load_environment()
 
 
 # ---------- Original intake workflow ----------
@@ -56,23 +56,17 @@ def execution_event(node: str, summary: str) -> dict:
 
 
 def validate_input(state: IntakeState) -> dict:
-    required_fields = {
-        "region": "Please provide the growing location.",
-        "observed_date": "Please provide the observation date.",
-        "symptoms": "Please describe the observed symptoms.",
-    }
+    # The photograph was already validated by the upload endpoint.
+    # Missing metadata limits available tools rather than preventing a run.
+    missing = []
+    required_fields = {}
 
-    missing = [
-        field
-        for field in required_fields
-        if not state[field].strip()
-    ]
 
     return {
         "missing_fields": missing,
         "questions": [required_fields[field] for field in missing],
         "trace": state["trace"] + ["validate_input"],
-        "events": state["events"] + [execution_event("validate_input", "Checked required observation fields.")],
+        "events": state["events"] + [execution_event("validate_input", "Checked optional observation context; photograph is required.")],
     }
 
 
@@ -401,8 +395,8 @@ async def run_investigation(investigation_id: UUID):
     try:
         case=await analysis_case(investigation_id)
         if case is None: raise HTTPException(404,'Investigation not found.')
-        if not all((case['region'],case['observed_date'],case['symptoms'])):
-            raise HTTPException(422,'Complete location, observation date and symptoms before running.')
+        if not case['result'].get('photoId'):
+            raise HTTPException(422,'Attach a symptom photograph before running.')
         if analysis_tasks:
             raise HTTPException(409,'Another investigation is running on this local model. Wait for it to finish.')
         if not await claim_analysis(investigation_id):

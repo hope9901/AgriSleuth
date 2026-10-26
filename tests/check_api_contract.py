@@ -1,7 +1,7 @@
 import os,sys
 from pathlib import Path
 from io import BytesIO
-from unittest.mock import AsyncMock
+from unittest.mock import AsyncMock, patch
 os.environ['LM_STUDIO_MODEL']=''
 sys.dont_write_bytecode=True
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'critic'))
@@ -23,11 +23,15 @@ with TestClient(app) as c:
  assert [e['node'] for e in data['events']]==['validate_upload','validate_input','prepare']
  print('PASS multipart contract and actual events')
  r=c.post('/api/investigations',data={**base,'symptoms':' '},files={'photo':('test.png',payload,'image/png')})
- assert r.status_code==200 and r.json()['status']=='needs_input';print('PASS missing observations')
+ assert r.status_code==200 and r.json()['status']=='ready';print('PASS optional missing observations')
  r=c.post('/api/investigations',data=base,files={'photo':('fake.png',b'not an image','image/png')})
  assert r.status_code==422;print('PASS invalid image')
  r=c.post('/api/investigations',data=base,files={'photo':('test.jpg',payload,'image/jpeg')})
  assert r.status_code==415;print('PASS mismatched MIME')
+ r=c.post('/api/investigations',data={'crop':'rice'},files={'photo':('photo-only.png',payload,'image/png')})
+ assert r.status_code==200 and r.json()['status']=='ready';print('PASS photograph-only upload')
+ r=c.post('/api/investigations',data={'crop':'rice'})
+ assert r.status_code==422;print('PASS missing photograph rejected')
  r=c.post('/api/investigations',data={**base,'observed_date':'bad-date'},files={'photo':('test.png',payload,'image/png')})
  assert r.status_code==422;print('PASS invalid date')
  r=c.post('/api/investigations',data=base,files={'photo':('big.png',b'x'*(10*1024*1024+1),'image/png')})
@@ -45,4 +49,13 @@ with TestClient(app) as c:
  assert r.json()['action']=='finalize_with_limitations' and r.json()['trace']==['critic','judge'];print('PASS review graph with explicitly mocked model')
  assert c.post('/api/reviews',json={**review,'candidates':[]}).json()['action']=='retrieve_evidence';print('PASS empty evidence gate')
  p=load_prompt();assert 'Implement the initial' not in p and '## Output rules' in p;print('PASS runtime-only Markdown prompt')
-print('All 11 checks passed. No live model or weather calls performed.')
+print('All intake and review checks passed. No live model or weather calls performed.')
+
+# Starting a saved photograph-only case must not demand optional metadata.
+from uuid import uuid4
+case_id=uuid4()
+with TestClient(app) as c:
+ with patch('main.analysis_case',AsyncMock(return_value={'result':{'photoId':str(uuid4())}})),patch('main.claim_analysis',AsyncMock(return_value=True)),patch('main.execute',AsyncMock()):
+  response=c.post(f'/api/investigations/{case_id}/run')
+  assert response.status_code==202,response.text
+print('PASS photograph-only start accepts missing optional metadata (mocked execution)')

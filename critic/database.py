@@ -7,21 +7,21 @@ from uuid import UUID
 import psycopg
 from psycopg.rows import dict_row
 from psycopg.types.json import Jsonb
-from dotenv import dotenv_values
+from config import load_environment
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def connection_options() -> dict:
     # Do not load or print credentials into logs or a command line.
-    local = dotenv_values(ROOT / "data" / ".env.postgres")
+    load_environment()
     timeout=int(os.getenv("POSTGRES_CONNECT_TIMEOUT","10"))
     if not 1<=timeout<=30:raise RuntimeError("PostgreSQL connect timeout outside safe bounds.")
     if os.getenv("DATABASE_URL"):
         return {"conninfo": os.environ["DATABASE_URL"], "connect_timeout": timeout}
-    user = os.getenv("POSTGRES_USER") or local.get("POSTGRES_USER")
-    password = os.getenv("POSTGRES_PASSWORD") or local.get("POSTGRES_PASSWORD")
-    db = os.getenv("POSTGRES_DB") or local.get("POSTGRES_DB")
+    user = os.getenv("POSTGRES_USER")
+    password = os.getenv("POSTGRES_PASSWORD")
+    db = os.getenv("POSTGRES_DB")
     if not all([user, password, db]):
         raise RuntimeError("PostgreSQL credentials are not configured.")
     return dict(host=os.getenv("POSTGRES_HOST", "127.0.0.1"),

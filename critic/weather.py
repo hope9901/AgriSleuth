@@ -1,4 +1,6 @@
 """World GTS observations from KMA; geocoding is separate from weather evidence."""
+from config import load_environment
+load_environment()
 import asyncio
 import csv
 import io
@@ -191,7 +193,7 @@ def parse_bufr_synop(text, station_id, instant):
 
 async def fetch_weather(location_id, day):
     key=os.getenv('KMA_AUTH_KEY','').strip()
-    if not key: raise WeatherError("Set KMA_AUTH_KEY in critic/.env and authorize the KMA world GTS services.")
+    if not key: raise WeatherError("Set KMA_AUTH_KEY in the repository-root .env and authorize the KMA world GTS services.")
     async with httpx.AsyncClient(timeout=35) as client:
         place=await resolve_location(client,location_id)
         start,end,times=observation_times(day,place['timezone'])

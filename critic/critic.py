@@ -1,3 +1,5 @@
+from config import load_environment
+load_environment()
 import asyncio
 import json
 import os

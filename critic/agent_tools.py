@@ -1,4 +1,6 @@
 """Validated tool registry, reusing existing transport, VLM, Diagnosis, Critic and Judge."""
+from config import load_environment
+load_environment()
 import asyncio
 import hashlib
 import json
@@ -76,6 +78,8 @@ class Tools:
         self.state['disease_candidates']=[c for c in self.state['disease_candidates'] if set(c['evidence_ids'])<=retained]
         return dict(source='Zetaris',new_source_ids=added,source_ids=[e['id'] for e in selected],disease_names={e['disease_id']:e['name_en'] for e in selected},disease_ids=sorted({e['disease_id'] for e in selected}),summary=f'Zetaris evidence: {len(selected)} excerpts, {len(added)} new source IDs.')
     async def get_weather(self,args):
+        if not self.case.get('observed_date'):
+            raise ValueError('An observation date is needed for historical weather; do not assume today.')
         end=args.end_date or self.case['observed_date'];start=args.start_date or end
         if start>end or end>self.case['observed_date'] or (end-start).days>2:raise ValueError('Weather period must cover 1–3 days on/before the observation date.')
         place=self.state.get('location')

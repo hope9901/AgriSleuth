@@ -51,3 +51,9 @@ A later weather-inclusive run completed all tool executions in 156.6 seconds wit
 
 
 Latest same-sample recheck after adding supplied case context: 141.2 s, all tool executions completed; WEATHER_WINDOW_GAP selected as a direct match; final status needs_more_evidence with Rice blast retained. This rerun reused the KMA snapshot collected in the preceding 156.6-second run. Records: docs/environment-sample-latest.json and docs/environment-English-first-live.json (relative to repository root). It is one attributed sample with constructed metadata, not independent ground truth. Critic remains conservative: the recorded question still asks for region/heading information despite supplied region and vegetative leaf context. Scenario selection is a review aid, not a guarantee of biological relevance. The old MP4 predates these changes.
+
+
+## Final narrated pitch and configuration
+Use the repository-root `AgriSleuth_3min_Pitch.mp4` for the current three-minute English narrated pitch with burned-in captions. It explains Critic roles, scenario review, Judge separation and a measured 43.6-second Critic phase within the 141.2-second recorded run. These are edited presentation scenes with synthetic narration, not an unedited live demo or a diagnostic accuracy evaluation. The older 98-second MP4 remains a historical artifact.
+
+All application configuration now uses the ignored repository-root `.env` and the single `.env.example` template. Direct HTTP/SQL tools implement the working sponsor integrations. No MCP server is required for the current architecture.

@@ -1,4 +1,6 @@
 """Read-only evidence retrieval through the real Zetaris SQL API."""
+from config import load_environment
+load_environment()
 import json
 import os
 import re

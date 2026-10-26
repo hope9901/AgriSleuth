@@ -1,4 +1,6 @@
 """Image observations only: no disease identification or invented field context."""
+from config import load_environment
+load_environment()
 import base64
 import os
 from io import BytesIO

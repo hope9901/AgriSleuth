@@ -1,4 +1,6 @@
 """Strict JSON adapter for LM Studio, including its Qwen response-channel quirk."""
+from config import load_environment
+load_environment()
 import json
 import asyncio
 import os

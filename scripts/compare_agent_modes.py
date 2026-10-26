@@ -2,9 +2,10 @@
 import argparse,asyncio,json,sys,time
 from pathlib import Path
 from uuid import UUID
-from dotenv import load_dotenv
 ROOT=Path(__file__).resolve().parents[1]
-sys.path.insert(0,str(ROOT/'critic'));load_dotenv(ROOT/'critic/.env')
+sys.path.insert(0,str(ROOT/'critic'))
+from config import load_environment
+load_environment()
 import database
 from pipeline import generate
 from retrieval import retrieve,rank_evidence

@@ -1,4 +1,6 @@
 """Observe/reason/select/execute/evaluate/replan, bounded by Meterless and host guards."""
+from config import load_environment
+load_environment()
 import asyncio,json,os,shutil,time
 from pathlib import Path
 from uuid import UUID,uuid4
@@ -34,6 +36,7 @@ async def execute(case_id):
         case=await database.analysis_case(case_id);result=case['result'];saved=await database.read_weather(case_id)
         location=await database.read_agent_location(case_id) or (saved or {}).get('location')
         state=dict(investigation_id=str(case_id),crop=case['crop'],location=location,observed_symptoms=[case['symptoms']],image_reference=result.get('photoId'),image_observations=None,disease_candidates=[],supporting_evidence=[],contradicting_evidence=[],missing_evidence=[],tool_history=[],critic_findings=[],judge_decisions=[],hypothesis_history=[],iteration=0,max_iterations=steps,status='investigating',next_action=None,weather=saved,carryover='',questions=[],uncertainties=[],run_id=str(run_id),budget_seconds=seconds,elapsed_seconds=0)
+        state['weather_context_available']=bool(case['observed_date'] and (case['region'] or location))
         result['events'].append(event('agent_initialize','Agent Controller will choose tools from the allowed registry.'))
         async def persist():
             state['elapsed_seconds']=round(time.monotonic()-started,2)

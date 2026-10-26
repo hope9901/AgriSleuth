@@ -93,6 +93,7 @@ export default function ObservationForm({
   const [activePresetId, setActivePresetId] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [fileError, setFileError] = useState("");
+  const [dateError, setDateError] = useState("");
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const activePreset = SAMPLE_PRESETS.find((p) => p.id === activePresetId);
@@ -142,6 +143,14 @@ export default function ObservationForm({
       return;
     }
 
+    if (observedDate) {
+      const parsed = new Date(`${observedDate}T00:00:00Z`);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(observedDate) || Number.isNaN(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== observedDate) {
+        setDateError("Enter a valid date in YYYY-MM-DD format, or leave it blank.");
+        return;
+      }
+    }
+    setDateError("");
     await onSubmit({
       crop,
       photo,
@@ -164,9 +173,10 @@ export default function ObservationForm({
           <p className="eyebrow">01 / START HERE</p>
           <h2 id="observation-title">Field observations</h2>
         </div>
-        <span className="subtle-label">Required inputs</span>
+        <span className="subtle-label">Photograph required · Other details optional</span>
       </header>
 
+      <p className="helper-text" id="observation-help">A symptom photograph is required. All other details are optional. Adding location, observation date, growth stage, affected part, and symptom notes can help the agent make a more specific assessment and reduce uncertainty.</p>
       <div className="sample-preset-bar" aria-label="Quick demo presets">
         <div className="sample-preset-header">
           <span className="sample-preset-title">
@@ -196,7 +206,7 @@ export default function ObservationForm({
         </div>
       </div>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} noValidate aria-describedby="observation-help">
         <fieldset
           disabled={busy}
           style={{ border: 0, margin: 0, padding: 0 }}
@@ -254,6 +264,8 @@ export default function ObservationForm({
                 ref={fileInputRef}
                 id="photo"
                 type="file"
+                hidden
+                style={{ display: "none" }}
                 accept="image/jpeg,image/png,image/webp"
                 required={!photo}
                 aria-describedby="photo-help photo-error"
@@ -284,6 +296,8 @@ export default function ObservationForm({
                 }}
               />
 
+              <button type="button" className="secondary-button" onClick={() => fileInputRef.current?.click()} aria-describedby="photo-help photo-error">{photo ? "Change photograph" : "Choose photograph"}</button>
+              <p className="helper-text" aria-live="polite">{photo ? photo.name : "No photograph selected"}</p>
               <small id="photo-help">JPG, PNG or WEBP · Up to 10 MB</small>
 
               {previewUrl && photo && (
@@ -327,7 +341,7 @@ export default function ObservationForm({
             <div className="field">
               <label htmlFor="region">
                 Growing location
-                <span className="required-label">Required</span>
+                <span className="subtle-label">Optional</span>
               </label>
               <input
                 id="region"
@@ -335,32 +349,36 @@ export default function ObservationForm({
                 type="text"
                 placeholder="e.g., Gimje-si, Jeonbuk"
                 maxLength={200}
-                pattern={".*\\S.*"}
                 value={region}
                 onChange={(event) => setRegion(event.target.value)}
-                required
               />
             </div>
 
             <div className="field">
               <label htmlFor="observed-date">
                 Observation date
-                <span className="required-label">Required</span>
+                <span className="subtle-label">Optional</span>
               </label>
               <input
                 id="observed-date"
                 name="observed_date"
-                type="date"
+                type="text"
+                inputMode="numeric"
+                placeholder="YYYY-MM-DD"
+                maxLength={10}
+                aria-describedby="observed-date-help observed-date-error"
+                aria-invalid={Boolean(dateError)}
                 value={observedDate}
-                onChange={(event) => setObservedDate(event.target.value)}
-                required
+                onChange={(event) => { setObservedDate(event.target.value); setDateError(""); }}
               />
             </div>
           </div>
 
+          <p id="observed-date-help" className="helper-text">Optional date in YYYY-MM-DD format. Location and observation date are needed only for historical weather lookup.</p>
+          <p id="observed-date-error" className="error-text" role="alert">{dateError}</p>
           <div className="field-grid">
             <div className="field">
-              <label htmlFor="growth-stage">Growth stage</label>
+              <label htmlFor="growth-stage">Growth stage <span className="subtle-label">Optional</span></label>
               <select
                 id="growth-stage"
                 name="growth_stage"
@@ -377,7 +395,7 @@ export default function ObservationForm({
             </div>
 
             <div className="field">
-              <label htmlFor="affected-part">Affected part</label>
+              <label htmlFor="affected-part">Affected part <span className="subtle-label">Optional</span></label>
               <select
                 id="affected-part"
                 name="affected_part"
@@ -397,7 +415,7 @@ export default function ObservationForm({
           <div className="field">
             <label htmlFor="symptoms">
               What have you observed?
-              <span className="required-label">Required</span>
+              <span className="subtle-label">Optional</span>
             </label>
             <textarea
               id="symptoms"
@@ -407,7 +425,6 @@ export default function ObservationForm({
               placeholder="Describe lesion shape, color, progression speed, weather conditions, and whether neighboring plants show similar symptoms."
               value={symptoms}
               onChange={(event) => setSymptoms(event.target.value)}
-              required
             />
           </div>
 

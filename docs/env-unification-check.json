@@ -1,0 +1,25 @@
+{
+  "configuration_file": ".env",
+  "template": ".env.example",
+  "legacy_project_env_files_removed": true,
+  "explicit_process_environment_precedence": true,
+  "frontend_exposure": "VITE_ prefix only",
+  "tests": [
+    "root path independent of working directory",
+    "process-variable precedence",
+    "API input/review contracts including photo-only input",
+    "real PostgreSQL upload and rollback",
+    "weather/environment checks",
+    "autonomous A-G using explicit model/provider fixtures",
+    "frontend build and lint"
+  ],
+  "live_checks": {
+    "Zetaris_rice_evidence_rows": 289,
+    "API_health": 200,
+    "saved_case_read": 200,
+    "KMA_country_station_endpoint": 200
+  },
+  "model_rerun_performed": false,
+  "database_credentials_rotated": false,
+  "private_values_in_report": false
+}

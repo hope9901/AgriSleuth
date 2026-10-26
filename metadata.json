@@ -37,9 +37,10 @@
   },
   "submission_artifacts": {
     "package": "submission/README.md",
-    "video": "submission/AgriSleuth-Track2-demo.mp4",
+    "video": "AgriSleuth_3min_Pitch.mp4",
     "sponsor_explanation": "submission/SPONSOR_TECH.md",
-    "live_validation": "submission/live-validation.json"
+    "live_validation": "submission/live-validation.json",
+    "previous_demo_video": "submission/AgriSleuth-Track2-demo.mp4"
   },
   "verification": {
     "normal_case": "completed with limitations",
@@ -59,5 +60,11 @@
     "selection": "direct match or nearest scenario with explicit rationale; validated known IDs",
     "judge_unchanged": true
   },
-  "working_language": "English"
+  "working_language": "English",
+  "configuration": {
+    "env_file": ".env (ignored, server-side secrets)",
+    "template": ".env.example",
+    "frontend_public_prefix": "VITE_",
+    "transport": "Direct validated Python tools with HTTP/SQL/Node bridge; MCP not required by this build"
+  }
 }

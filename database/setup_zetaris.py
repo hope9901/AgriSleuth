@@ -1,5 +1,6 @@
 """Register the JDBC evidence view. No passwords or provider response bodies are logged."""
 import argparse
+import os
 import secrets
 import sys
 from pathlib import Path
@@ -11,16 +12,18 @@ from dotenv import dotenv_values
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'critic'))
 from database import connection_options
+from config import ENV_PATH, load_environment
 
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--platform-env',type=Path,help='Optional local Zetaris platform .env (never committed)')
     args=parser.parse_args()
-    env=ROOT/'critic/.env';local=dotenv_values(env)
+    load_environment()
+    env=ENV_PATH;local=dotenv_values(env)
     platform=dotenv_values(args.platform_env) if args.platform_env else {}
-    username=local.get('ZETARIS_USERNAME') or platform.get('ZETARIS_ADMIN_EMAIL')
-    password=local.get('ZETARIS_PASSWORD') or platform.get('ZETARIS_ADMIN_PASSWORD')
-    if not username or not password:raise SystemExit('Set Zetaris credentials in critic/.env.')
+    username=os.getenv('ZETARIS_USERNAME') or local.get('ZETARIS_USERNAME') or platform.get('ZETARIS_ADMIN_EMAIL')
+    password=os.getenv('ZETARIS_PASSWORD') or local.get('ZETARIS_PASSWORD') or platform.get('ZETARIS_ADMIN_PASSWORD')
+    if not username or not password:raise SystemExit('Set Zetaris credentials in the repository-root .env.')
     source_password=local.get('ZETARIS_SOURCE_PASSWORD') or secrets.token_urlsafe(24)
     with psycopg.connect(**connection_options()) as conn:
         conn.execute((ROOT/'database/evidence_view.sql').read_text())

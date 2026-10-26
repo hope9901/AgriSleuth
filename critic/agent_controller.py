@@ -1,4 +1,6 @@
 """LLM policy: select one allow-listed action, never execute arbitrary instructions."""
+from config import load_environment
+load_environment()
 import json
 import os
 from typing import Literal
@@ -18,7 +20,7 @@ async def select_action(state,carryover):
     if not state.get('search_no_progress'):allowed.append('search_diseases')
     if state['supporting_evidence'] and not state.get('verification_blocked'):allowed.append('verify_evidence')
     if state['image_reference']:allowed.append('reanalyze_image')
-    if not state.get('weather_blocked'):allowed.append('get_weather')
+    if not state.get('weather_blocked') and state.get('weather_context_available',True):allowed.append('get_weather')
     schema=create_model('AvailableToolDecision',__base__=ToolDecision,tool=(Literal[tuple(allowed)],...))
     model=LocalStructuredModel(os.getenv('LM_STUDIO_BASE_URL','http://localhost:1234/v1'),os.getenv('LM_STUDIO_MODEL',''),os.getenv('LM_STUDIO_API_KEY','lm-studio'),schema,max_tokens=400)
     context=dict(crop=state['crop'],observed_symptoms=[s[:900] for s in state['observed_symptoms'][:1]],
@@ -33,6 +35,7 @@ async def select_action(state,carryover):
     context['observation_date']=state.get('observation_date')
     context['environment_assessments']=[{k:a.get(k) for k in ('disease_id','assessment','required_inputs')} for a in (state.get('weather') or {}).get('environment_assessments',[]) if a['disease_id'] in {e['disease_id'] for e in state['supporting_evidence']}][:2]
     context['weather_status']=(state.get('weather') or {}).get('status','missing')
+    context['weather_context_available']=state.get('weather_context_available',True)
     context['location_confirmed']=bool(state.get('location'))
     context['recent_tools']=[dict(tool=t['tool'],status=t['status'],summary=t.get('summary','')[:180],error_code=t.get('error_code')) for t in state['tool_history'][-3:]]
     context['checkpoint']=carryover[:350]
