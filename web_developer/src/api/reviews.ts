@@ -1,8 +1,10 @@
+import { responseError } from "./errors";
 import { API_BASE_URL } from "./investigations";
 import type { Crop } from "../types/investigation";
 
 export interface ReviewRequest {
   crop: Crop;
+  case_context?: { region?: string; observed_date?: string | null; growth_stage?: string; affected_part?: string };
   observations: string;
   candidates: { id: string; name: string; claim: string; evidence_ids: string[] }[];
   evidence: { disease_id?: string | null; disease_name?: string | null; id: string; text: string; source: string; location: string }[];
@@ -39,12 +41,7 @@ export async function submitReview(input: ReviewRequest): Promise<ReviewResponse
     signal: AbortSignal.timeout(190_000),
   });
   if (!response.ok) {
-    let message = `Critic review failed: HTTP ${response.status}`;
-    try {
-      const body = await response.json();
-      if (typeof body.detail === "string") message = body.detail;
-    } catch { /* Preserve status for non-JSON responses. */ }
-    throw new Error(message);
+    throw await responseError(response, `Critic review failed: HTTP ${response.status}`);
   }
   return response.json();
 }

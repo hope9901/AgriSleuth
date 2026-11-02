@@ -35,3 +35,39 @@ async def attach_environment(report,crop):
     refs=await database.weather_references(crop)
     report['environment_assessments']=evaluate_environment(refs,report)
     return report
+
+
+def review_weather_context(weather, case, disease_ids):
+    """Select relevant review context; retain unmodified source records in storage.
+
+    Exclude panicle-only rice-blast windows only when both vegetative stage and
+    leaf involvement are explicit. Unknown stages retain all applicable options.
+    Missing inputs describe infection-model requirements, not diagnosis blockers.
+    """
+    leaf_case = (case.get('growth_stage', '').strip().lower() == 'vegetative'
+                 and case.get('affected_part', '').strip().lower() == 'leaf')
+    assessments = []
+    for assessment in weather.get('environment_assessments') or []:
+        if assessment['disease_id'] not in disease_ids:
+            continue
+        leaf_blast = leaf_case and assessment['disease_id'] == 'rice_001'
+        windows = [window for window in assessment.get('windows', [])
+                   if window.get('core') and not (leaf_blast and
+                       'panicle' in (window.get('applies_to') or '').lower())]
+        inputs = [item for item in assessment.get('required_inputs', [])
+                  if not (leaf_blast and item.lower() == 'heading date')
+                  and not (case.get('region') and item.lower() == 'region')]
+        assessments.append(dict(
+            disease_id=assessment['disease_id'], assessment=assessment['assessment'],
+            scope='Vegetative leaf symptoms; panicle-only windows excluded.' if leaf_blast else 'Stage/part relevance must be checked.',
+            infection_model_inputs=inputs,
+            interpretation='Sample overlap is not infection proof. Missing infection inputs do not by themselves block a tentative symptom hypothesis.',
+            checks=[{key:check[key] for key in ('metric','samples_matching','valid_samples')}
+                    for check in assessment.get('checks', [])][:2],
+            windows=[{key:window.get(key) for key in ('window_id','applies_to','coverage','covered_days','required_days')}
+                     for window in windows][:2]))
+        if len(assessments) == 1:
+            break
+    return dict(status=weather.get('status'),observed_date=weather.get('observed_date'),
+                environment_assessments=assessments,
+                limitations=[item[:130] for item in (weather.get('limitations') or [])[:2]])

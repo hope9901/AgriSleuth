@@ -20,6 +20,8 @@ from critic import (
     create_critic_reviewer,
     load_prompt,
 )
+from fastapi.responses import JSONResponse
+from runtime_errors import RuntimeReportedError, RuntimeUnreachableError
 from judge import judge_review
 from schemas import (
     CriticReview,
@@ -186,6 +188,16 @@ app = FastAPI(
     version="0.2.0",
     lifespan=lifespan,
 )
+
+@app.exception_handler(RuntimeReportedError)
+async def runtime_reported_error(request, error):
+    return JSONResponse(status_code=error.status, content=error.as_openai_error())
+
+
+@app.exception_handler(RuntimeUnreachableError)
+async def runtime_unreachable_error(request, error):
+    return JSONResponse(status_code=503, content={"error": {"message": str(error), "type": "transport_error", "code": error.code}, "actions": list(error.actions)})
+
 
 app.add_middleware(
     CORSMiddleware,

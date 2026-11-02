@@ -52,7 +52,21 @@ class Candidate(Schema):
     evidence_ids: list[str]
 
 
+class CaseContext(Schema):
+    region: str = ""
+    observed_date: date | None = None
+    growth_stage: str = ""
+    affected_part: str = ""
+
+    @classmethod
+    def from_case(cls, case):
+        values = {key: case.get(key) or "" for key in cls.model_fields}
+        values["observed_date"] = case.get("observed_date") or None
+        return cls(**values)
+
+
 class ReviewRequest(Schema):
+    case_context: CaseContext = Field(default_factory=CaseContext)
     crop: Literal["rice", "maize"]
     observations: str = Field(min_length=1, max_length=5000)
     candidates: list[Candidate] = Field(max_length=3)

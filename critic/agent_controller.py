@@ -33,7 +33,9 @@ async def select_action(state,carryover):
     image=state.get('image_observations') or {}
     context['image_observations']={k:[v[:100] for v in image.get(k,[])[:3]] for k in ('visible_findings','limitations')}
     context['observation_date']=state.get('observation_date')
-    context['environment_assessments']=[{k:a.get(k) for k in ('disease_id','assessment','required_inputs')} for a in (state.get('weather') or {}).get('environment_assessments',[]) if a['disease_id'] in {e['disease_id'] for e in state['supporting_evidence']}][:2]
+    from environment import review_weather_context
+    context['case_context']=state.get('case_context',{})
+    context['environment_assessments']=review_weather_context(state.get('weather') or {},context['case_context'],{e['disease_id'] for e in state['supporting_evidence']})['environment_assessments']
     context['weather_status']=(state.get('weather') or {}).get('status','missing')
     context['weather_context_available']=state.get('weather_context_available',True)
     context['location_confirmed']=bool(state.get('location'))

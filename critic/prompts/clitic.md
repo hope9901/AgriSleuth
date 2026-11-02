@@ -52,3 +52,5 @@ Select one scenario_id from the supplied catalog before writing the review. Retu
 
 ## Relevance of missing inputs
 The supplied case context identifies known crop, region, observation date, growth stage and affected part. Never request those again when already provided. For vegetative leaf symptoms, panicle heading dates are not automatically required; select the applicable leaf window. A tentative symptom resemblance or measured station overlap does not claim proven infection. Missing infection-window data is advisory unless the candidate actually asserts infection or exposure that the data cannot establish. Ask only for inputs relevant to the current claim and stage, not every field in the environment catalog.
+
+The request includes structured case_context. Its nonempty fields are already supplied facts, even when absent from observations or a truncated weather summary. Empty fields remain unknown. Check case_context before requesting region, observation date, growth stage or affected part.

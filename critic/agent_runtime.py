@@ -6,9 +6,11 @@ from pathlib import Path
 from uuid import UUID,uuid4
 from pydantic import ValidationError
 import database
+from runtime_errors import RuntimeReportedError, RuntimeUnreachableError
 from agent_controller import select_action,ToolDecision
 from agent_tools import Tools,SCHEMAS,digest,material_fingerprint,log_arguments
 from pipeline import event,strip_control_markers
+from schemas import CaseContext
 ROOT=Path(__file__).resolve().parents[1]
 
 
@@ -36,6 +38,7 @@ async def execute(case_id):
         case=await database.analysis_case(case_id);result=case['result'];saved=await database.read_weather(case_id)
         location=await database.read_agent_location(case_id) or (saved or {}).get('location')
         state=dict(investigation_id=str(case_id),crop=case['crop'],location=location,observed_symptoms=[case['symptoms']],image_reference=result.get('photoId'),image_observations=None,disease_candidates=[],supporting_evidence=[],contradicting_evidence=[],missing_evidence=[],tool_history=[],critic_findings=[],judge_decisions=[],hypothesis_history=[],iteration=0,max_iterations=steps,status='investigating',next_action=None,weather=saved,carryover='',questions=[],uncertainties=[],run_id=str(run_id),budget_seconds=seconds,elapsed_seconds=0)
+        state['case_context']=CaseContext.from_case(case).model_dump(mode='json')
         state['weather_context_available']=bool(case['observed_date'] and (case['region'] or location))
         result['events'].append(event('agent_initialize','Agent Controller will choose tools from the allowed registry.'))
         async def persist():
@@ -101,6 +104,10 @@ async def execute(case_id):
                     except (ValidationError,ValueError) as exc:
                         # Validation errors are summarized without echoing raw user arguments or values.
                         entry.update(status='rejected',summary=('Invalid argument fields: '+', '.join(str(error['loc'][0]) if error['loc'] and str(error['loc'][0]) in SCHEMAS[decision.tool].model_fields else 'unexpected field' for error in exc.errors()))[:300] if isinstance(exc,ValidationError) else str(exc)[:300])
+                    except (RuntimeReportedError, RuntimeUnreachableError) as exc:
+                        entry.update(status='failed', summary=str(exc), error_code=exc.code,
+                                     runtime_error=dict(code=exc.code,status=exc.status,fix=exc.fix,chatCarrier=exc.chatCarrier))
+                        state.update(status='failed',finish_reason=str(exc))
                     except Exception as exc:
                         entry['error_code']=type(exc).__name__
                         if decision.tool=='verify_evidence':state['verification_blocked']=True
@@ -130,6 +137,11 @@ async def execute(case_id):
             state.update(status='abstained',finish_reason='Time budget exhausted. No diagnosis was confirmed.')
             if state['tool_history'] and state['tool_history'][-1]['status']=='running':state['tool_history'][-1]['status']='timed_out'
             await persist()
+    except (RuntimeReportedError, RuntimeUnreachableError) as exc:
+        if state:
+            state.update(status='failed',finish_reason=str(exc),runtime_error=dict(code=exc.code,status=exc.status,fix=exc.fix,chatCarrier=exc.chatCarrier))
+            await database.save_agent_state(run_id,case_id,state)
+        await database.fail_analysis(case_id,str(exc))
     except Exception:
         if state:
             state.update(status='failed',finish_reason='Agent execution failed. Partial history retained; check local services.')

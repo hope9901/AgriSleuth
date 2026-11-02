@@ -1,0 +1,115 @@
+{
+  "checked_at": "2026-11-01T07:45:49.209778+00:00",
+  "scope": "Software/provider-fixture contracts and actual PostgreSQL/Meterless checks; not diagnostic accuracy.",
+  "checks": [
+    {
+      "name": "config",
+      "passed": true,
+      "elapsed_seconds": 0.15,
+      "output": "PASS env discovery from a different working directory\nPASS single root env discovery and process-variable precedence\nPASS legacy env files are absent\n"
+    },
+    {
+      "name": "api_contract",
+      "passed": true,
+      "elapsed_seconds": 0.95,
+      "output": "PASS multipart contract and actual events\nPASS optional missing observations\nPASS invalid image\nPASS mismatched MIME\nPASS photograph-only upload\nPASS missing photograph rejected\nPASS invalid date\nPASS oversized upload\nPASS browser CORS\nPASS unconfigured Critic does not pass\nPASS review graph with explicitly mocked model\nPASS empty evidence gate\nPASS runtime-only Markdown prompt\nAll intake and review checks passed. No live model or weather calls performed.\nPASS photograph-only start accepts missing optional metadata (mocked execution)\n"
+    },
+    {
+      "name": "database",
+      "passed": true,
+      "elapsed_seconds": 0.89,
+      "output": "PASS real upload, persisted result and exact photo retrieval\nPASS observation context and image metadata\nPASS missing record handling\nPASS failed photo insert rolls back the investigation\nRemoved disposable test schema; public application records untouched.\n"
+    },
+    {
+      "name": "weather",
+      "passed": true,
+      "elapsed_seconds": 0.73,
+      "output": "PASS local/UTC boundaries, DST, future dates, genuine negative temperature, missing/zero values\nPASS strict station header and station/time provenance checks\nPASS source-gated temperature comparison and conflict abstention\nPASS unavailable evidence persistence, missing case, invalid ID and geocoding failure contracts\nPASS mocked provider integration, eight local-day timestamps, key redaction and no rain summation\nAll offline weather checks passed; live evidence is recorded separately.\nPASS BUFR wrong station/time, denied response, RH code mapping and new endpoint arguments\n"
+    },
+    {
+      "name": "weather_database",
+      "passed": true,
+      "elapsed_seconds": 0.25,
+      "output": "PASS real PostgreSQL snapshot round-trip, replacement and foreign-key protection\nDisposable schema cleaned; application investigations untouched.\n"
+    },
+    {
+      "name": "environment",
+      "passed": true,
+      "elapsed_seconds": 0.23,
+      "output": "PASS real reference DB 12 rice profiles, English provenance, incomplete window and missing-value abstention\nPASS country XML pagination and key exclusion (explicit synthetic provider)\n"
+    },
+    {
+      "name": "weather_scope",
+      "passed": true,
+      "elapsed_seconds": 0.03,
+      "output": "PASS stage-specific windows, known-region exclusion, unknown-stage conservatism, input scope, original-source preservation and review budget\n"
+    },
+    {
+      "name": "local_model",
+      "passed": true,
+      "elapsed_seconds": 0.3,
+      "output": "PASS strict content JSON, exact alternate-channel JSON, prose rejection, truncation rejection, extra-field rejection and finish-reason validation\nPASS request-specific candidate/source enum constraints and null alternative references\nPASS bounded local generation candidate/citation output budgets\n"
+    },
+    {
+      "name": "critic_scenarios",
+      "passed": true,
+      "elapsed_seconds": 0.22,
+      "output": "PASS eight-scenario catalog, runtime prompt injection, nearest rationale preservation and unknown-scenario rejection (mocked model)\n"
+    },
+    {
+      "name": "critic_attribution",
+      "passed": true,
+      "elapsed_seconds": 0.22,
+      "output": "PASS candidate mismatch must cite its own disease; case-wide alternative evidence remains allowed\n"
+    },
+    {
+      "name": "critic_context",
+      "passed": true,
+      "elapsed_seconds": 0.28,
+      "output": "PASS actual verification tool retains structured case context with maximum-length symptoms\nPASS known/unknown context, dates, legacy API compatibility and serialized Critic input (mocked model)\n"
+    },
+    {
+      "name": "pipeline",
+      "passed": true,
+      "elapsed_seconds": 1.7,
+      "output": "PASS actual Meterless two-chunk revision loop, checkpoint, round persistence and duplicate-run lock\nPASS human clarification stops loop and saved follow-up allows reassessment\nPASS three-chunk hard limit and abstention\nPASS no new retrieval evidence leads to explicit abstention\nPASS no evidence never generates a diagnosis\nPASS provider failure remains failure, not completed\nPASS deterministic citation provenance rejection\nTemporary schema removed. No live model or clinical accuracy claims.\n"
+    },
+    {
+      "name": "autonomous",
+      "passed": true,
+      "elapsed_seconds": 3.34,
+      "output": "PASS A: missing weather -> selected get_weather -> executed and persisted\nPASS B: contradiction -> policy-selected image reinspection -> re-verification -> Judge approval\nPASS C: sufficient verified evidence -> finish without unnecessary tools\nPASS D: missing observations -> human question, trace export and follow-up retained\nPASS E: invented/cross-crop candidate and unverified completion rejected\nPASS F: duplicate calls execute once; action cap abstains\nPASS G: comparison exposes steps/tools/time/flags and no unlabeled accuracy claim\nPASS fresh-verification guard after hypothesis modification\nDisposable schema removed. A-G use synthetic policy/model/provider fixtures; real-service selection is tested separately.\n"
+    },
+    {
+      "name": "runtime_errors",
+      "passed": true,
+      "elapsed_seconds": 0.11,
+      "output": "test_authentication_statuses_append_token_instruction (__main__.Messages.test_authentication_statuses_append_token_instruction) ... ok\ntest_carrier_code_never_claims_machine_limitation (__main__.Messages.test_carrier_code_never_claims_machine_limitation) ... ok\ntest_carrier_false_suppresses_code_hint (__main__.Messages.test_carrier_false_suppresses_code_hint) ... ok\ntest_completed_partial_model_is_not_painted (__main__.Messages.test_completed_partial_model_is_not_painted) ... ok\ntest_explicit_empty_fix_suppresses_hint (__main__.Messages.test_explicit_empty_fix_suppresses_hint) ... ok\ntest_http_error_keeps_nested_metadata (__main__.Messages.test_http_error_keeps_nested_metadata) ... ok\ntest_mesh_and_texture_are_resident_only (__main__.Messages.test_mesh_and_texture_are_resident_only) ... ok\ntest_paint_lane_missing_on_both_paths (__main__.Messages.test_paint_lane_missing_on_both_paths) ... ok\ntest_rate_limit_asks_for_key_without_retry (__main__.Messages.test_rate_limit_asks_for_key_without_retry) ... ok\ntest_server_fix_wins (__main__.Messages.test_server_fix_wins) ... ok\ntest_server_message_always_first (__main__.Messages.test_server_message_always_first) ... ok\ntest_network_failure_offers_runtime_actions (__main__.Routing.test_network_failure_offers_runtime_actions) ... ok\ntest_no_jobs_shows_original_server_error (__main__.Routing.test_no_jobs_shows_original_server_error) ... ok\ntest_only_transport_can_fall_back (__main__.Routing.test_only_transport_can_fall_back) ... ok\ntest_programming_error_does_not_fall_back (__main__.Routing.test_programming_error_does_not_fall_back) ... ok\ntest_repeated_jobs_refusal_cannot_loop_or_fall_back (__main__.Routing.test_repeated_jobs_refusal_cannot_loop_or_fall_back) ... ok\ntest_replan_each_ambiguous_refusal_to_jobs_once (__main__.Routing.test_replan_each_ambiguous_refusal_to_jobs_once) ... ok\ntest_same_route_does_not_retry (__main__.Routing.test_same_route_does_not_retry) ... ok\ntest_typed_rate_limit_and_server_failure_never_fall_back (__main__.Routing.test_typed_rate_limit_and_server_failure_never_fall_back) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.014s\n\nOK\n"
+    },
+    {
+      "name": "runtime_http",
+      "passed": true,
+      "elapsed_seconds": 0.77,
+      "output": "PASS actual HTTP adapter, Critic and API preserve typed refusal status/reason/fix/carrier without retry\nPASS network failure survives model/Critic/API boundaries and offers both runtime actions\n"
+    },
+    {
+      "name": "web_error_metadata",
+      "passed": true,
+      "elapsed_seconds": 0.12,
+      "output": "PASS web error message, code, status, fix and chatCarrier; legacy/non-JSON/nested metadata\n(node:6463) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    },
+    {
+      "name": "web_build",
+      "passed": true,
+      "elapsed_seconds": 1.96,
+      "output": "\n> frontend@0.0.0 build\n> tsc -b && vite build\n\nvite v8.3.5 building client environment for production...\ntransforming...\n\u2713 25 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.64 kB \u2502 gzip:  0.39 kB\ndist/assets/index-C-ilYMum.css   18.86 kB \u2502 gzip:  4.65 kB\ndist/assets/index-C6B2oLlV.js   258.91 kB \u2502 gzip: 79.24 kB\n\n\u2713 built in 99ms\n"
+    },
+    {
+      "name": "web_lint",
+      "passed": true,
+      "elapsed_seconds": 1.59,
+      "output": "\n> frontend@0.0.0 lint\n> eslint .\n\n"
+    }
+  ],
+  "passed": true
+}

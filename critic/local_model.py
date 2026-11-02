@@ -5,6 +5,7 @@ import json
 import asyncio
 import os
 import httpx
+from runtime_errors import RuntimeUnreachableError, check_runtime_response
 
 MODEL_LOCK=asyncio.Lock()
 
@@ -55,8 +56,12 @@ class LocalStructuredModel:
         timeout=int(os.getenv('LOCAL_MODEL_TIMEOUT_SECONDS','180'))
         if not 10<=timeout<=180:raise ValueError('Local model timeout outside safe bounds.')
         async with MODEL_LOCK, httpx.AsyncClient(timeout=timeout) as client:
-            response=await client.post(self.base_url+'/chat/completions',headers={'Authorization':'Bearer '+self.api_key},json=payload)
-            response.raise_for_status();body=response.json()
+            try:
+                response=await client.post(self.base_url+'/chat/completions',headers={'Authorization':'Bearer '+self.api_key},json=payload)
+            except httpx.TransportError as error:
+                raise RuntimeUnreachableError(self.base_url) from error
+            check_runtime_response(response)
+            body=response.json()
         choice=body['choices'][0]
         if choice.get('finish_reason')!='stop':raise ValueError(f"Model response did not finish normally ({choice.get('finish_reason')}; output budget {self.max_tokens}).")
         message=choice['message'];text=message.get('content') or ''

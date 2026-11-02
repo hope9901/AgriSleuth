@@ -10,7 +10,7 @@ from datetime import datetime,timezone
 from uuid import uuid4
 from pydantic import BaseModel,Field,ConfigDict
 from langchain_core.messages import HumanMessage,SystemMessage
-from schemas import Candidate,ReviewRequest
+from schemas import Candidate,CaseContext,ReviewRequest
 from critic import call_critic_agent,create_critic_reviewer
 from judge import judge_review
 from retrieval import retrieve,rank_evidence,RetrievalError
@@ -115,7 +115,7 @@ async def execute_fixed(case_id):
                     action='abstain';review=None;reason='The model could not support a candidate with the supplied evidence.'
                 else:
                     result['status']='reviewing';result['events'].append(event('critic',f'Round {step}: checking claims and citation provenance.'));await database.update_analysis(case_id,result)
-                    request=ReviewRequest(crop=case['crop'],observations=case['symptoms'],candidates=proposal.candidates,evidence=[dict(id=e['id'],disease_id=e['disease_id'],disease_name=e['name_en'],text=e['description'][:4000],source=e['source_name'],location=e['source_location'] or 'Unspecified') for e in selected],weather_summary=weather_summary,review_round=step)
+                    request=ReviewRequest(case_context=CaseContext.from_case(case),crop=case['crop'],observations=case['symptoms'],candidates=proposal.candidates,evidence=[dict(id=e['id'],disease_id=e['disease_id'],disease_name=e['name_en'],text=e['description'][:4000],source=e['source_name'],location=e['source_location'] or 'Unspecified') for e in selected],weather_summary=weather_summary,review_round=step)
                     review=await call_critic_agent(reviewer,request)
                     action,reason=judge_review(review,step)
                 result['reviewIssues']=[dict(id=f'r{step}_{i}',severity=issue.severity,reason=issue.reason) for i,issue in enumerate(review.issues)] if review else []

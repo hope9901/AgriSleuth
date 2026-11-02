@@ -8,6 +8,7 @@ from pathlib import Path
 from langchain_core.messages import HumanMessage, SystemMessage
 
 from schemas import CriticReview, ReviewRequest
+from runtime_errors import RuntimeReportedError, RuntimeUnreachableError
 
 
 PROMPT_PATH = (
@@ -82,6 +83,9 @@ async def call_critic_agent(
                     raise ValueError("Mismatch references only another disease's evidence.")
 
         return review
+
+    except (RuntimeReportedError, RuntimeUnreachableError):
+        raise
 
     except TimeoutError:
         raise CriticAgentError("Critic Agent timed out.") from None

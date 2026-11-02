@@ -14,7 +14,7 @@ from retrieval import retrieve,rank_evidence
 from vision import observe_photo
 from weather import fetch_weather,search_locations
 from critic import create_critic_reviewer,call_critic_agent
-from schemas import ReviewRequest
+from schemas import CaseContext,ReviewRequest
 from judge import judge_review
 
 class Args(BaseModel):model_config=ConfigDict(extra='forbid')
@@ -135,11 +135,8 @@ class Tools:
         self.state.pop('verified_fingerprint',None)
         self.state.pop('verified_candidates',None)
         feedback=self.state.get('last_review')
-        self.case['weather_context']={k:(self.state.get('weather') or {}).get(k) for k in ('status','observed_date','summary','limitations','environment_assessments')}
-        weather_context=self.case['weather_context']
-        weather_context['environment_assessments']=[dict(disease_id=a['disease_id'],assessment=a['assessment'],required_inputs=a['required_inputs'],checks=[{k:c[k] for k in ('metric','samples_matching','valid_samples')} for c in a['checks']],windows=[{k:w.get(k) for k in ('window_id','coverage','covered_days','required_days')} for w in a['windows'] if w['core']][:2]) for a in weather_context.get('environment_assessments') or [] if a['disease_id'] in {e['disease_id'] for e in evidence}][:2]
-        weather_context['environment_assessments']=weather_context['environment_assessments'][:1]
-        weather_context['limitations']=[text[:130] for text in (weather_context.get('limitations') or [])[:2]]
+        from environment import review_weather_context
+        self.case['weather_context']=review_weather_context(self.state.get('weather') or {},self.case,{e['disease_id'] for e in evidence})
         await self.notify('diagnosis','Generating source-linked hypotheses from the current evidence.')
         proposal=await generate(self.case,evidence,self.state.get('carryover',''),feedback)
         validate_proposal(proposal,evidence)
@@ -151,7 +148,7 @@ class Tools:
         reviewer=create_critic_reviewer(base_url=os.getenv('LM_STUDIO_BASE_URL','http://localhost:1234/v1'),model_name=os.getenv('LM_STUDIO_MODEL',''),api_key=os.getenv('LM_STUDIO_API_KEY','lm-studio'))
         observations='Already supplied case context: '+json.dumps({k:str(self.case.get(k) or 'unknown') for k in ('crop','region','observed_date','growth_stage','affected_part')})+'\nObserved symptoms: '+self.case['symptoms']
         if self.state.get('image_observations'):observations+='\nUnconfirmed AI image observations: '+json.dumps(self.state['image_observations'])[:1500]
-        request=ReviewRequest(crop=self.case['crop'],observations=observations[:5000],candidates=proposal.candidates,evidence=[dict(id=e['id'],disease_id=e['disease_id'],disease_name=e['name_en'],text=e['description'][:4000],source=e['source_name'],location=e.get('source_location') or 'Unspecified') for e in evidence],weather_summary=json.dumps(self.case['weather_context'],default=str)[:2000],review_round=min(len(self.state['judge_decisions'])+1,3))
+        request=ReviewRequest(case_context=CaseContext.from_case(self.case),crop=self.case['crop'],observations=observations[:5000],candidates=proposal.candidates,evidence=[dict(id=e['id'],disease_id=e['disease_id'],disease_name=e['name_en'],text=e['description'][:4000],source=e['source_name'],location=e.get('source_location') or 'Unspecified') for e in evidence],weather_summary=json.dumps(self.case['weather_context'],default=str)[:2000],review_round=min(len(self.state['judge_decisions'])+1,3))
         await self.notify('critic','Critic is checking hypothesis claims, sources and unresolved observations.')
         review=await call_critic_agent(reviewer,request)
         await self.notify('judge','Deterministic Judge is evaluating the current Critic findings.')
